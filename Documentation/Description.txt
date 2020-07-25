@@ -1,0 +1,63 @@
+RAM2GS II (GW4201D) expands the Apple IIgs's 
+fast memory to 8 MB. 
+
+
+Low-Power, SDRAM-Based Design
+----------------------------------------
+Thanks to a modern, low-power design, 
+RAM2GS II uses a maximum of 0.15 watts when idle
+(30 mA @ 5V) and 0.3W in active use (60 mA @ 5V). 
+Unlike other IIgs expansion RAM cards, which are 
+built with vintage asynchronous DRAM chips, 
+RAM2GS II uses modern SDRAM. This design allows for 
+low power consumption and improved reliability 
+over other memory cards using 15+ year old chips. 
+
+
+Small Size, Low-Profile
+----------------------------------------
+RAM2GS II features a small board outline and is the 
+thinnest Apple IIgs expansion memory card ever produced, 
+at under 4mm thin. Small and thin dimensions improve 
+the mechanical compatibility between RAM2GS II and 
+peripheral cards installed into the IIgs's Slot 7.
+
+
+Adjustable Capacity, Highly Compatible
+----------------------------------------
+The Apple IIgs can utilize up to 8 MB of fast memory, 
+but due to limitations of the Apple IIgs hardware, 
+not all 8 MB is considered "DMA-compatible."
+Only 4 MB of the 8 MB provided by an expansion RAM 
+card such as the RAM2GS II is DMA-compatible, 
+and peripheral cards which use DMA are 
+not able to access expansion memory beyond 4 MB. 
+RAM2GS II implements an adjustable capacity 
+feature, allowing the user to select between 
+fully DMA-compatible 4 MB capacity, or
+partially DMA-compatible 8MB capacity.
+Capacity settings can be set temporarily 
+or saved in nonvolatile memory. 
+The capacity adjustment utility is available on 
+_RAM2GS II's support page_.
+
+
+Ecologically Friendly, Gold-Plated PCB
+----------------------------------------
+RAM2GS II features a lead-free, ENIG gold-plated,
+4-layer PCB and is fully EU RoHS-compliant. 
+All units are tested extensively before shipment. 
+Only new parts are used to build RAM2GS II, 
+and all RAM2GS II cards are manufactured in our 
+semi-automated facility in Columbus, Ohio, 
+in the United States. 
+
+
+Open-Source Design
+----------------------------------------
+RAM2GS II's design is fully open-source. 
+The schematics, board layouts, CPLD firmware, 
+and utility software are all freely available 
+for commercial and noncommercial use. 
+To download the design files, visit the 
+_Garrett's Workshop GitHub page_. 
