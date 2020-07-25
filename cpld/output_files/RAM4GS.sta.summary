@@ -1,0 +1,69 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'ARCLK'
+Slack : -99.000
+TNS   : -99.000
+
+Type  : Setup 'DRCLK'
+Slack : -99.000
+TNS   : -99.000
+
+Type  : Setup 'PHI2'
+Slack : -9.292
+TNS   : -92.804
+
+Type  : Setup 'RCLK'
+Slack : -8.365
+TNS   : -253.063
+
+Type  : Setup 'nCRAS'
+Slack : -0.490
+TNS   : -0.577
+
+Type  : Hold 'DRCLK'
+Slack : -16.306
+TNS   : -16.306
+
+Type  : Hold 'ARCLK'
+Slack : -16.272
+TNS   : -16.272
+
+Type  : Hold 'RCLK'
+Slack : -0.874
+TNS   : -0.874
+
+Type  : Hold 'PHI2'
+Slack : -0.396
+TNS   : -0.396
+
+Type  : Hold 'nCRAS'
+Slack : -0.125
+TNS   : -0.125
+
+Type  : Minimum Pulse Width 'ARCLK'
+Slack : -29.500
+TNS   : -59.000
+
+Type  : Minimum Pulse Width 'DRCLK'
+Slack : -29.500
+TNS   : -59.000
+
+Type  : Minimum Pulse Width 'PHI2'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'RCLK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'nCCAS'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'nCRAS'
+Slack : -2.289
+TNS   : -2.289
+
+------------------------------------------------------------
