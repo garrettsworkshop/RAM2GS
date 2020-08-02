@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "GW4201D (RAM2GS II)"
+Date "2020-08-02"
+Rev "1.0"
+Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
 Comment3 ""
