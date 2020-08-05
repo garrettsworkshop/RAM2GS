@@ -1912,4 +1912,5 @@ Wire Wire Line
 	3900 1050 4100 1050
 Text Label 4900 1050 0    50   ~ 0
 ~CSEL~
+NoConn ~ 8700 3400
 $EndSCHEMATC
