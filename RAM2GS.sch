@@ -5,8 +5,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "GW4201D (RAM2GS II)"
-Date "2020-09-29"
-Rev "1.1"
+Date "2021-03-02"
+Rev "1.2"
 Comp "Garrett's Workshop"
 Comment1 ""
 Comment2 ""
@@ -374,8 +374,6 @@ F 3 "" H 8700 4200 50  0001 C CNN
 	1    8700 4200
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	8700 4200 8700 4100
 $Comp
 L power:+3V3 #PWR0131
 U 1 1 5E97F038
@@ -1904,7 +1902,6 @@ NoConn ~ 8550 4950
 NoConn ~ 8550 5050
 Text Label 4900 1050 0    50   ~ 0
 ~CSEL~
-NoConn ~ 8700 3400
 $Comp
 L Mechanical:MountingHole_Pad H5
 U 1 1 5F88103E
@@ -2018,5 +2015,19 @@ F 3 "" H 3500 1600 60  0001 C CNN
 F 4 "C173388" H 3500 1500 50  0001 C CNN "LCSC Part"
 	1    3500 1500
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 4200 8700 4100
+Connection ~ 8700 4200
+$Comp
+L power:GND #PWR?
+U 1 1 607C165A
+P 8700 3400
+F 0 "#PWR?" H 8700 3150 50  0001 C CNN
+F 1 "GND" H 8700 3250 50  0000 C CNN
+F 2 "" H 8700 3400 50  0001 C CNN
+F 3 "" H 8700 3400 50  0001 C CNN
+	1    8700 3400
+	0    1    -1   0   
 $EndComp
 $EndSCHEMATC
