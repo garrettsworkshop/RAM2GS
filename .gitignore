@@ -27,3 +27,6 @@ fp-info-cache
 
 *.DS_Store
 Documentation/~$4201DManual.docx
+cpld/db/RAM4GS.db_info
+cpld/db/RAM4GS.tmw_info
+cpld/RAM4GS.qws
