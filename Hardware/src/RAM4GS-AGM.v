@@ -2,8 +2,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			  nCCAS, nCRAS, nFWE,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML,
-			  nUFMCSout, UFMCLKout, UFMSDIout, UFMSDOout,
-			  nUFMCSin , UFMCLKin , UFMSDIin , UFMSDOin);
+			  nUFMCSout, UFMCLKout, UFMSDIout, UFMSDOout, In);
 
 	/* 65816 Phase 2 Clock */
 	input PHI2;
@@ -330,10 +329,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	output UFMCLKout = UFMCLK;
 	output UFMSDIout = UFMSDI;
 	output UFMSDOout = UFMSDO;
-	input nUFMCSin;
-	input UFMCLKin;
-	input UFMSDIin;
-	input UFMSDOin;
+	input [3:0] In;
 	always @(posedge RCLK) begin
 		if (~InitReady && FS[17:10]==8'h00) begin
 			nUFMCS <= 1'b1;
