@@ -2,8 +2,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			  nCCAS, nCRAS, nFWE,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML,
-			  nUFMCSout, UFMCLKout, UFMSDIout, UFMSDOout,
-			  nUFMCSin , UFMCLKin , UFMSDIin , UFMSDOin);
+			  nUFMCS, UFMCLK, UFMSDI, UFMSDO);
 
 	/* 65816 Phase 2 Clock */
 	input PHI2;
@@ -54,20 +53,10 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
 	/* UFM Interface */
-	reg nUFMCS = 1;
-	reg UFMCLK = 0;
-	reg UFMSDI = 0;
-	wire UFMSDO;
-	wire UFMOsc;
-	alta_ufms u_alta_ufms (
-		.i_ufm_set (1'b1), 
-		.i_osc_ena (1'b1), 
-		.i_ufm_flash_csn (nUFMCS), 
-		.i_ufm_flash_sclk (UFMCLK), 
-		.i_ufm_flash_sdi (UFMSDI), 
-		.o_ufm_flash_sdo (UFMSDO), 
-		.o_osc (UFMOsc) 
-	);
+	output reg nUFMCS = 1;
+	output reg UFMCLK = 0;
+	output reg UFMSDI = 0;
+	input UFMSDO;
 
 	/* UFM Command Interface */
 	reg C1Submitted = 0;
@@ -326,14 +315,6 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	end
 
 	/* UFM Control */
-	output nUFMCSout = nUFMCS;
-	output UFMCLKout = UFMCLK;
-	output UFMSDIout = UFMSDI;
-	output UFMSDOout = UFMSDO;
-	input nUFMCSin;
-	input UFMCLKin;
-	input UFMSDIin;
-	input UFMSDOin;
 	always @(posedge RCLK) begin
 		if (~InitReady && FS[17:10]==8'h00) begin
 			nUFMCS <= 1'b1;
