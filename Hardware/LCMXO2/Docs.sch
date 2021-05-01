@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
-Title "GW4201D (RAM2GS II) - EPM240 / 5M240Z / AG256"
+Title "GW4201D (RAM2GS II) - LCMXO256"
 Date "2021-04-30"
 Rev "2.0"
 Comp "Garrett's Workshop"

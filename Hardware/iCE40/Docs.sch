@@ -5,7 +5,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title "GW4201D (RAM2GS II) - iCE40HX1K"
-Date "2021-04-29"
+Date "2021-04-30"
 Rev "2.0"
 Comp "Garrett's Workshop"
 Comment1 ""
