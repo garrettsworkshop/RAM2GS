@@ -337,24 +337,13 @@ $EndComp
 $Comp
 L power:+3V3 #PWR0133
 U 1 1 5E9850F8
-P 2050 3850
-F 0 "#PWR0133" H 2050 3700 50  0001 C CNN
-F 1 "+3V3" H 2050 4000 50  0000 C CNN
-F 2 "" H 2050 3850 50  0001 C CNN
-F 3 "" H 2050 3850 50  0001 C CNN
-	1    2050 3850
+P 2150 3850
+F 0 "#PWR0133" H 2150 3700 50  0001 C CNN
+F 1 "+3V3" H 2150 4000 50  0000 C CNN
+F 2 "" H 2150 3850 50  0001 C CNN
+F 3 "" H 2150 3850 50  0001 C CNN
+	1    2150 3850
 	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR0134
-U 1 1 5E9856CC
-P 1150 3850
-F 0 "#PWR0134" H 1150 3700 50  0001 C CNN
-F 1 "+5V" H 1150 4000 50  0000 C CNN
-F 2 "" H 1150 3850 50  0001 C CNN
-F 3 "" H 1150 3850 50  0001 C CNN
-	1    1150 3850
-	-1   0    0    -1  
 $EndComp
 $Sheet
 S 5300 7200 500  150 
@@ -371,7 +360,7 @@ F 1 "W9812G6KH-6" H 9400 1450 50  0000 C CNN
 F 2 "stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm" H 9400 1250 50  0001 C CIN
 F 3 "" H 9400 2650 50  0001 C CNN
 F 4 "C62379" H 9400 2900 50  0001 C CNN "LCSC Part"
-F 5 "Winbond W9812G6KH-6 Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G" H 9400 2900 50  0001 C CNN "Mfg. Part Numbers"
+F 5 "Winbond W9812G6KH-6, Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G" H 9400 2900 50  0001 C CNN "Mfg. Part Numbers"
 F 6 "Most 166 MHz 128/256 Mbit SDRAM is acceptable." H 9400 2900 50  0001 C CNN "Notes"
 	1    9400 2900
 	1    0    0    -1  
@@ -409,8 +398,8 @@ $Comp
 L GW_PLD:5M240ZT100 U1
 U 1 1 5E9D5897
 P 6250 3300
-F 0 "U1" H 6200 5850 50  0000 C CNN
-F 1 "EPM240T100C5N" H 6200 5750 50  0000 C CNN
+F 0 "U1" H 6250 3350 50  0000 C CNN
+F 1 "EPM240T100C5N" H 6250 3250 50  0000 C CNN
 F 2 "stdpads:TQFP-100_14x14mm_P0.5mm" H 6250 3200 20  0001 C CNN
 F 3 "" H 6250 3300 50  0001 C CNN
 F 4 "C10041" H 6250 3300 50  0001 C CNN "LCSC Part"
@@ -728,7 +717,7 @@ F 2 "stdpads:Crystal_SMD_7050-4Pin_7.0x5.0mm_SiTime" H 9950 5050 50  0001 C CNN
 F 3 "" H 9950 5050 50  0001 C CNN
 F 4 "C26255" H 9950 5050 50  0001 C CNN "LCSC Part"
 F 5 "SiTime SIT1602AI-82-33E-60.000000Y, Shenzhen SCTF S7D60.000000B20F30T, Taiten OCETGLJTNF-60MHZ" H 9950 5050 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Most 60-62.5 MHz crystal oscillator or silicon oscillator is acceptable. Do not use crystal resonator or ceramic resonator." H 9950 5050 50  0001 C CNN "Notes"
+F 6 "Most 60-62.5 MHz 3.3V crystal oscillator or silicon oscillator is acceptable. Do not use crystal resonator or ceramic resonator." H 9950 5050 50  0001 C CNN "Notes"
 	1    9950 5050
 	-1   0    0    -1  
 $EndComp
@@ -1957,10 +1946,6 @@ F 6 "Any manufacturer's part is acceptable." H 4000 1150 50  0001 C CNN "Notes"
 	1    4000 1150
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	2050 3850 1850 3850
-Wire Wire Line
-	1150 3850 1250 3850
 Connection ~ 2250 6950
 Connection ~ 2250 7350
 Connection ~ 2250 7750
@@ -2044,16 +2029,6 @@ F 3 "" H 1550 4950 50  0001 C CNN
 	1    1550 4950
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 4650 1150 4650
-Wire Wire Line
-	1150 4650 1150 4550
-Connection ~ 1150 3850
-Wire Wire Line
-	1250 4550 1150 4550
-Connection ~ 1150 4550
-Wire Wire Line
-	1150 4550 1150 3850
 $Comp
 L Regulator_Linear:AP2127K-1.8 U11
 U 1 1 8719FB68
@@ -2068,58 +2043,52 @@ F 5 "Diodes AP2127K-1.8TRG1, Torex XC6228D182VR" H 1550 4650 50  0001 C CNN "Mfg
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 4550 2050 4550
+	1850 4550 1950 4550
 $Comp
 L Device:C_Small C28
 U 1 1 871B6E7B
-P 2050 4650
-F 0 "C28" H 2142 4696 50  0000 L CNN
-F 1 "2u2" H 2142 4605 50  0000 L CNN
-F 2 "stdpads:C_0603" H 2050 4650 50  0001 C CNN
-F 3 "" H 2050 4650 50  0001 C CNN
-F 4 "C23630" H 2050 4650 50  0001 C CNN "LCSC Part"
-F 5 "Samsung CL10A225KO8NNNC" H 2050 4650 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 2050 4650 50  0001 C CNN "Notes"
-	1    2050 4650
+P 2150 4650
+F 0 "C28" H 2242 4696 50  0000 L CNN
+F 1 "2u2" H 2242 4605 50  0000 L CNN
+F 2 "stdpads:C_0603" H 2150 4650 50  0001 C CNN
+F 3 "" H 2150 4650 50  0001 C CNN
+F 4 "C23630" H 2150 4650 50  0001 C CNN "LCSC Part"
+F 5 "Samsung CL10A225KO8NNNC" H 2150 4650 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 2150 4650 50  0001 C CNN "Notes"
+	1    2150 4650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 4750 2050 4950
+	2150 4750 2150 4950
 Wire Wire Line
-	2050 4950 1550 4950
+	2150 4950 1550 4950
 Connection ~ 1550 4950
 $Comp
 L power:+1V8 #PWR0160
 U 1 1 871BC45D
-P 2050 4550
-F 0 "#PWR0160" H 2050 4400 50  0001 C CNN
-F 1 "+1V8" H 2050 4700 50  0000 C CNN
-F 2 "" H 2050 4550 50  0001 C CNN
-F 3 "" H 2050 4550 50  0001 C CNN
-	1    2050 4550
+P 2150 4550
+F 0 "#PWR0160" H 2150 4400 50  0001 C CNN
+F 1 "+1V8" H 2150 4700 50  0000 C CNN
+F 2 "" H 2150 4550 50  0001 C CNN
+F 3 "" H 2150 4550 50  0001 C CNN
+	1    2150 4550
 	1    0    0    -1  
 $EndComp
-Connection ~ 2050 4550
+Connection ~ 2150 4550
 $Comp
 L Device:R_Small R4
 U 1 1 871C5B73
-P 1850 4200
-F 0 "R4" H 1791 4246 50  0000 R CNN
-F 1 "0" H 1791 4155 50  0000 R CNN
-F 2 "stdpads:R_0805" H 1850 4200 50  0001 C CNN
-F 3 "" H 1850 4200 50  0001 C CNN
-F 4 "C17477" H 1850 4200 50  0001 C CNN "LCSC Part"
-F 5 "Uniroyal 0805W8F0000T5E" H 1850 4200 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Any manufacturer's part is acceptable." H 1850 4200 50  0001 C CNN "Notes"
-	1    1850 4200
+P 1950 4200
+F 0 "R4" H 1891 4246 50  0000 R CNN
+F 1 "0" H 1891 4155 50  0000 R CNN
+F 2 "stdpads:R_0805" H 1950 4200 50  0001 C CNN
+F 3 "" H 1950 4200 50  0001 C CNN
+F 4 "C17477" H 1950 4200 50  0001 C CNN "LCSC Part"
+F 5 "Uniroyal 0805W8F0000T5E" H 1950 4200 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Any manufacturer's part is acceptable." H 1950 4200 50  0001 C CNN "Notes"
+	1    1950 4200
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1850 4100 1850 3850
-Connection ~ 1850 3850
-Connection ~ 1850 4550
-Wire Wire Line
-	1850 4300 1850 4550
 Wire Wire Line
 	6650 5700 6550 5700
 Connection ~ 6650 5700
@@ -2233,4 +2202,39 @@ Text Label 7250 4000 0    50   ~ 0
 SCK
 Text Label 7250 4200 0    50   ~ 0
 S~CS~
+Wire Wire Line
+	1950 4300 1950 4550
+Connection ~ 1950 4550
+Wire Wire Line
+	1950 4550 2150 4550
+Wire Wire Line
+	1950 4100 1950 3850
+Wire Wire Line
+	2150 3850 1950 3850
+Wire Wire Line
+	1950 3850 1850 3850
+Connection ~ 1950 3850
+$Comp
+L power:+5V #PWR0134
+U 1 1 5E9856CC
+P 1050 3850
+F 0 "#PWR0134" H 1050 3700 50  0001 C CNN
+F 1 "+5V" H 1050 4000 50  0000 C CNN
+F 2 "" H 1050 3850 50  0001 C CNN
+F 3 "" H 1050 3850 50  0001 C CNN
+	1    1050 3850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 3850 1250 3850
+Connection ~ 1050 3850
+Wire Wire Line
+	1050 4650 1050 4550
+Wire Wire Line
+	1250 4650 1050 4650
+Connection ~ 1050 4550
+Wire Wire Line
+	1250 4550 1050 4550
+Wire Wire Line
+	1050 4550 1050 3850
 $EndSCHEMATC

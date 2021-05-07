@@ -219,7 +219,7 @@ F 1 "W9812G6KH-6" H 9400 1450 50  0000 C CNN
 F 2 "stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm" H 9400 1250 50  0001 C CIN
 F 3 "" H 9400 2650 50  0001 C CNN
 F 4 "C62379" H 9400 2900 50  0001 C CNN "LCSC Part"
-F 5 "Winbond W9812G6KH-6 Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G" H 9400 2900 50  0001 C CNN "Mfg. Part Numbers"
+F 5 "Winbond W9812G6KH-6, Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G" H 9400 2900 50  0001 C CNN "Mfg. Part Numbers"
 F 6 "Most 166 MHz 128/256 Mbit SDRAM is acceptable." H 9400 2900 50  0001 C CNN "Notes"
 	1    9400 2900
 	1    0    0    -1  
@@ -511,7 +511,7 @@ F 2 "stdpads:Crystal_SMD_7050-4Pin_7.0x5.0mm_SiTime" H 9950 5050 50  0001 C CNN
 F 3 "" H 9950 5050 50  0001 C CNN
 F 4 "C26255" H 9950 5050 50  0001 C CNN "LCSC Part"
 F 5 "SiTime SIT1602AI-82-33E-60.000000Y, Shenzhen SCTF S7D60.000000B20F30T, Taiten OCETGLJTNF-60MHZ" H 9950 5050 50  0001 C CNN "Mfg. Part Numbers"
-F 6 "Most 60-62.5 MHz crystal oscillator or silicon oscillator is acceptable. Do not use crystal resonator or ceramic resonator." H 9950 5050 50  0001 C CNN "Notes"
+F 6 "Most 60-62.5 MHz 3.3V crystal oscillator or silicon oscillator is acceptable. Do not use crystal resonator or ceramic resonator." H 9950 5050 50  0001 C CNN "Notes"
 	1    9950 5050
 	-1   0    0    -1  
 $EndComp
@@ -1710,14 +1710,6 @@ F 3 "" H 8900 3400 50  0001 C CNN
 	1    8900 3400
 	0    1    -1   0   
 $EndComp
-Text Label 7450 3100 0    50   ~ 0
-S~CS~
-Text Label 7450 2700 0    50   ~ 0
-SCK
-Text Label 7450 2900 0    50   ~ 0
-MOSI
-Text Label 7450 3000 0    50   ~ 0
-MISO
 Text Label 7450 4400 0    50   ~ 0
 Ain1
 Text Label 7450 4700 0    50   ~ 0
@@ -1778,16 +1770,6 @@ F 6 "Most SPI flash in SOIC-8 (3.9mm / 150 mil width) package is acceptale." H 8
 	1    8550 6300
 	1    0    0    -1  
 $EndComp
-Text Label 8000 6100 2    50   ~ 0
-S~CS~
-Text Label 9100 6300 0    50   ~ 0
-SCK
-Text Label 9100 6400 0    50   ~ 0
-MOSI
-Text Label 8000 6200 2    50   ~ 0
-MISO
-Text Label 9100 6200 0    50   ~ 0
-~HOLD~
 $Comp
 L power:+1V2 #PWR0163
 U 1 1 86F7120A
@@ -1991,34 +1973,19 @@ $EndComp
 $Comp
 L power:+3V3 #PWR0169
 U 1 1 6140B7B1
-P 5300 6700
-F 0 "#PWR0169" H 5300 6550 50  0001 C CNN
-F 1 "+3V3" H 5300 6850 50  0000 C CNN
-F 2 "" H 5300 6700 50  0001 C CNN
-F 3 "" H 5300 6700 50  0001 C CNN
-	1    5300 6700
+P 5400 6500
+F 0 "#PWR0169" H 5400 6350 50  0001 C CNN
+F 1 "+3V3" H 5400 6650 50  0000 C CNN
+F 2 "" H 5400 6500 50  0001 C CNN
+F 3 "" H 5400 6500 50  0001 C CNN
+	1    5400 6500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5500 6500 5500 6700
-Wire Wire Line
-	5500 6700 5300 6700
+	5500 6500 5400 6500
 Wire Wire Line
 	5500 6400 5500 6500
 Connection ~ 5500 6500
-$Comp
-L power:GND #PWR0171
-U 1 1 6142683D
-P 6200 6300
-F 0 "#PWR0171" H 6200 6050 50  0001 C CNN
-F 1 "GND" H 6200 6150 50  0000 C CNN
-F 2 "" H 6200 6300 50  0001 C CNN
-F 3 "" H 6200 6300 50  0001 C CNN
-	1    6200 6300
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6200 6300 5900 6300
 Text Label 5900 6500 0    50   ~ 0
 CCK
 Text Label 5900 6400 0    50   ~ 0
@@ -2121,23 +2088,6 @@ Connection ~ 3050 7550
 NoConn ~ 7450 2800
 NoConn ~ 7450 3200
 $Comp
-L power:+3V3 #PWR0165
-U 1 1 60B47A34
-P 7800 6400
-F 0 "#PWR0165" H 7800 6250 50  0001 C CNN
-F 1 "+3V3" H 7800 6550 50  0000 C CNN
-F 2 "" H 7800 6400 50  0001 C CNN
-F 3 "" H 7800 6400 50  0001 C CNN
-	1    7800 6400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	8000 6300 7900 6300
-Wire Wire Line
-	7900 6300 7900 6400
-Wire Wire Line
-	7900 6400 7800 6400
-$Comp
 L power:+3V3 #PWR0153
 U 1 1 6140B25C
 P 5900 6200
@@ -2146,19 +2096,6 @@ F 1 "+3V3" H 5900 6350 50  0000 C CNN
 F 2 "" H 5900 6200 50  0001 C CNN
 F 3 "" H 5900 6200 50  0001 C CNN
 	1    5900 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 6300 5300 6300
-$Comp
-L power:GND #PWR0170
-U 1 1 61419AAE
-P 5300 6300
-F 0 "#PWR0170" H 5300 6050 50  0001 C CNN
-F 1 "GND" H 5300 6150 50  0000 C CNN
-F 2 "" H 5300 6300 50  0001 C CNN
-F 3 "" H 5300 6300 50  0001 C CNN
-	1    5300 6300
 	1    0    0    -1  
 $EndComp
 Text Label 5500 6200 2    50   ~ 0
@@ -2180,8 +2117,6 @@ $EndComp
 Connection ~ 1050 3850
 Wire Wire Line
 	1050 3850 1250 3850
-Wire Wire Line
-	2050 3850 1850 3850
 Wire Wire Line
 	2150 3550 2650 3550
 Connection ~ 2650 3550
@@ -2218,17 +2153,6 @@ F 2 "" H 1050 3850 50  0001 C CNN
 F 3 "" H 1050 3850 50  0001 C CNN
 	1    1050 3850
 	-1   0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0133
-U 1 1 5E9850F8
-P 2050 3850
-F 0 "#PWR0133" H 2050 3700 50  0001 C CNN
-F 1 "+3V3" H 2050 4000 50  0000 C CNN
-F 2 "" H 2050 3850 50  0001 C CNN
-F 3 "" H 2050 3850 50  0001 C CNN
-	1    2050 3850
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0132
@@ -2379,38 +2303,38 @@ $EndComp
 $Comp
 L power:+1V2 #PWR0162
 U 1 1 86F3BCA1
-P 2050 5250
-F 0 "#PWR0162" H 2050 5100 50  0001 C CNN
-F 1 "+1V2" H 2050 5400 50  0000 C CNN
-F 2 "" H 2050 5250 50  0001 C CNN
-F 3 "" H 2050 5250 50  0001 C CNN
-	1    2050 5250
+P 2150 5250
+F 0 "#PWR0162" H 2150 5100 50  0001 C CNN
+F 1 "+1V2" H 2150 5400 50  0000 C CNN
+F 2 "" H 2150 5250 50  0001 C CNN
+F 3 "" H 2150 5250 50  0001 C CNN
+	1    2150 5250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2050 5250 1850 5250
+	2150 5250 1850 5250
 $Comp
 L Device:C_Small C28
 U 1 1 86F60831
-P 2050 5450
-F 0 "C28" H 2142 5496 50  0000 L CNN
-F 1 "2u2" H 2142 5405 50  0000 L CNN
-F 2 "stdpads:C_0603" H 2050 5450 50  0001 C CNN
-F 3 "" H 2050 5450 50  0001 C CNN
-F 4 "C23630" H 2050 5450 50  0001 C CNN "LCSC Part"
-F 5 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 2050 5450 50  0001 C CNN "Notes"
-F 6 "Samsung CL10A225KO8NNNC" H 2050 5450 50  0001 C CNN "Mfg. Part Numbers"
-	1    2050 5450
+P 2150 5450
+F 0 "C28" H 2242 5496 50  0000 L CNN
+F 1 "2u2" H 2242 5405 50  0000 L CNN
+F 2 "stdpads:C_0603" H 2150 5450 50  0001 C CNN
+F 3 "" H 2150 5450 50  0001 C CNN
+F 4 "C23630" H 2150 5450 50  0001 C CNN "LCSC Part"
+F 5 "10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred." H 2150 5450 50  0001 C CNN "Notes"
+F 6 "Samsung CL10A225KO8NNNC" H 2150 5450 50  0001 C CNN "Mfg. Part Numbers"
+	1    2150 5450
 	1    0    0    -1  
 $EndComp
 Connection ~ 1550 5650
 Wire Wire Line
-	1550 5650 2050 5650
+	1550 5650 2150 5650
 Wire Wire Line
-	2050 5550 2050 5650
+	2150 5550 2150 5650
 Wire Wire Line
-	2050 5350 2050 5250
-Connection ~ 2050 5250
+	2150 5350 2150 5250
+Connection ~ 2150 5250
 $Comp
 L Regulator_Linear:AP2127K-2.5 U13
 U 1 1 60C3F51B
@@ -2424,8 +2348,6 @@ F 5 "Diodes AP2127K-2.5TRG1, Torex XC6206J252MR" H 1550 4600 50  0001 C CNN "Mfg
 	1    1550 4600
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1250 4600 1050 4600
 $Comp
 L power:GND #PWR0166
 U 1 1 60C4BA13
@@ -2437,29 +2359,11 @@ F 3 "" H 1550 4900 50  0001 C CNN
 	1    1550 4900
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+2V5 #PWR0168
-U 1 1 60CB2E7A
-P 2050 4500
-F 0 "#PWR0168" H 2050 4350 50  0001 C CNN
-F 1 "+2V5" H 2065 4673 50  0000 C CNN
-F 2 "" H 2050 4500 50  0001 C CNN
-F 3 "" H 2050 4500 50  0001 C CNN
-	1    2050 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 4500 1850 4500
 Wire Wire Line
 	1250 4500 1050 4500
 Wire Wire Line
 	1050 3850 1050 4500
 Connection ~ 1050 4500
-Wire Wire Line
-	1050 4500 1050 4600
-Wire Wire Line
-	1050 4600 1050 5250
-Connection ~ 1050 4600
 Connection ~ 1050 5250
 $Comp
 L Device:C_Small C34
@@ -2492,81 +2396,111 @@ F 3 "" H 3050 6550 50  0001 C CNN
 $EndComp
 Connection ~ 3050 6550
 $Comp
-L Device:R_Small R5
-U 1 1 60C1D2E2
-P 9600 6300
-F 0 "R5" H 9541 6346 50  0000 R CNN
-F 1 "DNP" H 9541 6255 50  0000 R CNN
-F 2 "stdpads:R_0805" H 9600 6300 50  0001 C CNN
-F 3 "" H 9600 6300 50  0001 C CNN
-F 4 "" H 9600 6300 50  0001 C CNN "LCSC Part"
-F 5 "" H 9600 6300 50  0001 C CNN "Notes"
-F 6 "" H 9600 6300 50  0001 C CNN "Mfg. Part Numbers"
-	1    9600 6300
-	1    0    0    -1  
-$EndComp
-Text Label 9900 6100 2    50   ~ 0
-SCK
-Text Label 9900 6300 2    50   ~ 0
-MOSI
-Text Label 9900 6200 2    50   ~ 0
-~HOLD~
-$Comp
-L power:+3V3 #PWR0174
-U 1 1 60BFD6D3
-P 10300 6100
-F 0 "#PWR0174" H 10300 5950 50  0001 C CNN
-F 1 "+3V3" H 10300 6250 50  0000 C CNN
-F 2 "" H 10300 6100 50  0001 C CNN
-F 3 "" H 10300 6100 50  0001 C CNN
-	1    10300 6100
-	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0173
-U 1 1 60BFD329
-P 10300 6400
-F 0 "#PWR0173" H 10300 6150 50  0001 C CNN
-F 1 "GND" H 10300 6250 50  0000 C CNN
-F 2 "" H 10300 6400 50  0001 C CNN
-F 3 "" H 10300 6400 50  0001 C CNN
-	1    10300 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0172
-U 1 1 60BF3027
-P 9900 6400
-F 0 "#PWR0172" H 9900 6150 50  0001 C CNN
-F 1 "GND" H 9900 6250 50  0000 C CNN
-F 2 "" H 9900 6400 50  0001 C CNN
-F 3 "" H 9900 6400 50  0001 C CNN
-	1    9900 6400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9900 6200 9600 6200
-Wire Wire Line
-	9900 6400 9600 6400
-Wire Wire Line
-	10300 6100 10300 6200
-$Comp
 L Device:R_Pack04 RN6
 U 1 1 60E88DC4
-P 10100 6200
-F 0 "RN6" V 10300 6200 50  0000 C CNN
-F 1 "4x10k" V 9800 6200 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 10375 6200 50  0001 C CNN
-F 3 "" H 10100 6200 50  0001 C CNN
-F 4 "C25725" H 10100 6200 50  0001 C CNN "LCSC Part"
-F 5 "Any manufacturer's part is acceptable." H 10100 6200 50  0001 C CNN "Notes"
-F 6 "Uniroyal 4D02WGJ0103TCE" H 10100 6200 50  0001 C CNN "Mfg. Part Numbers"
-	1    10100 6200
-	0    1    -1   0   
+P 9900 6300
+F 0 "RN6" V 10100 6300 50  0000 C CNN
+F 1 "4x33" V 9600 6300 50  0000 C CNN
+F 2 "stdpads:R4_0402" V 10175 6300 50  0001 C CNN
+F 3 "" H 9900 6300 50  0001 C CNN
+F 4 "C25725" H 9900 6300 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 9900 6300 50  0001 C CNN "Notes"
+F 6 "Uniroyal 4D02WGJ0103TCE" H 9900 6300 50  0001 C CNN "Mfg. Part Numbers"
+	1    9900 6300
+	0    1    1    0   
 $EndComp
-Connection ~ 9900 6400
+Text Label 5500 6300 2    50   ~ 0
+CDONE
 Wire Wire Line
-	10300 6300 10300 6200
-Connection ~ 10300 6200
-Connection ~ 10300 6100
+	2150 4500 1850 4500
+$Comp
+L power:+2V5 #PWR0168
+U 1 1 60CB2E7A
+P 2150 4500
+F 0 "#PWR0168" H 2150 4350 50  0001 C CNN
+F 1 "+2V5" H 2165 4673 50  0000 C CNN
+F 2 "" H 2150 4500 50  0001 C CNN
+F 3 "" H 2150 4500 50  0001 C CNN
+	1    2150 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 3850 1850 3850
+$Comp
+L power:+3V3 #PWR0133
+U 1 1 5E9850F8
+P 2150 3850
+F 0 "#PWR0133" H 2150 3700 50  0001 C CNN
+F 1 "+3V3" H 2150 4000 50  0000 C CNN
+F 2 "" H 2150 3850 50  0001 C CNN
+F 3 "" H 2150 3850 50  0001 C CNN
+	1    2150 3850
+	1    0    0    -1  
+$EndComp
+Text Label 9100 6400 0    50   ~ 0
+CDOr
+Text Label 8000 6200 2    50   ~ 0
+CDIr
+Text Label 9100 6300 0    50   ~ 0
+CCKr
+Text Label 8000 6100 2    50   ~ 0
+C~CS~r
+Wire Wire Line
+	1050 4500 1050 5250
+$Comp
+L power:+3V3 #PWR0165
+U 1 1 6096E9CB
+P 850 4600
+F 0 "#PWR0165" H 850 4450 50  0001 C CNN
+F 1 "+3V3" H 850 4750 50  0000 C CNN
+F 2 "" H 850 4600 50  0001 C CNN
+F 3 "" H 850 4600 50  0001 C CNN
+	1    850  4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  4600 1250 4600
+Text Label 9700 6300 2    50   ~ 0
+C~CS~r
+Text Label 9700 6200 2    50   ~ 0
+CDOr
+Text Label 9700 6400 2    50   ~ 0
+CCKr
+Text Label 10100 6100 0    50   ~ 0
+CDI
+Text Label 10100 6300 0    50   ~ 0
+C~CS~
+Text Label 10100 6200 0    50   ~ 0
+CDO
+Text Label 10100 6400 0    50   ~ 0
+CCK
+Text Label 9700 6100 2    50   ~ 0
+CDIr
+Wire Wire Line
+	9100 6100 9100 6200
+Connection ~ 9100 6100
+$Comp
+L power:+3V3 #PWR0170
+U 1 1 60A59920
+P 7800 6400
+F 0 "#PWR0170" H 7800 6250 50  0001 C CNN
+F 1 "+3V3" H 7800 6550 50  0000 C CNN
+F 2 "" H 7800 6400 50  0001 C CNN
+F 3 "" H 7800 6400 50  0001 C CNN
+	1    7800 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 6300 7900 6300
+Wire Wire Line
+	7900 6300 7900 6400
+Wire Wire Line
+	7900 6400 7800 6400
+Wire Wire Line
+	5900 6200 5900 6300
+Connection ~ 5900 6200
+NoConn ~ 7450 2700
+NoConn ~ 7450 2900
+NoConn ~ 7450 3000
+NoConn ~ 7450 3100
 $EndSCHEMATC

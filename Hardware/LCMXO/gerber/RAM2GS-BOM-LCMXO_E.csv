@@ -1,0 +1,23 @@
+Reference, Quantity, Value, Footprint, Datasheet, Notes, LCSC Part, Mfg. Part Numbers
+C4 C3 C2 C1 C26 ,5,10u,stdpads:C_0805,,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred.",C15850,Samsung CL21A106KAYNNNE
+C5 C25 C24 C23 C22 C21 C20 C19 C18 C17 C16 C15 C14 C13 C12 C11 C10 C9 C8 C7 C6 C27 C28 C29 ,24,2u2,stdpads:C_0603,,"10V or higher. Any manufacturer's part is acceptable but Samsung, Murata, Yageo preferred.",C23630,Samsung CL10A225KO8NNNC
+FID1 FID2 FID3 FID4 ,4,Fiducial,stdpads:Fiducial,,DNP - SMT vision system fiducial,,
+H1 H2 H4 H5 ,4, ,stdpads:PasteHole_1.152mm_NPTH,,DNP - mounting hole for solder paste printing,,
+H3 ,1, ,stdpads:PasteHole_1.1mm_PTH,,DNP - mounting hole,,
+J1 ,1,Memory Expansion,stdpads:AppleIIgsMemoryExpansion_Edge,,DNP - edge connector,,
+J2 ,1,JTAG,Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical,,DNP - test pad connector,,
+R1 R2 ,2,22k,stdpads:R_0805,,Any manufacturer's part is acceptable.,C17560,Uniroyal 0805W8F2202T5E
+R3 ,1,100,stdpads:R_0805,,Any manufacturer's part is acceptable.,C17408,Uniroyal 0805W8F1000T5E
+R4 ,1,DNP,stdpads:R_0805,,,,
+R5 ,1,DNP,stdpads:R_0805,,,,
+RN2 RN3 RN5 RN4 RN1 ,5,4x33,stdpads:R4_0402,,Any manufacturer's part is acceptable.,C25501,Uniroyal 4D02WGJ0330TCE
+RN6 ,1,4x10k,stdpads:R4_0402,,Any manufacturer's part is acceptable.,C25725,Uniroyal 4D02WGJ0103TCE
+U1 ,1,LCMXO256E-3TN100C,stdpads:TQFP-100_14x14mm_P0.5mm,,,C1521848,"Lattice LCMXO256E-3TN100C, Lattice LCMXO256E-4TN100C, Lattice LCMXO256E-5TN100C"
+U10 U9 ,2,74LVC1G04GW,stdpads:SOT-353,,,C10237,"NXP 74LVC1G04GW, TI SN74LVC1G04DCK"
+U11 ,1,AP2127K-1.2TRG1,stdpads:SOT-23-5,,,C151376,"Diodes AP2127K-1.2TRG1, Torex XC6228D122VR"
+U12 ,1,25F010,stdpads:SOIC-8_3.9mm,,Most SPI flash in SOIC-8 (3.9mm / 150 mil width) package is acceptale.,,"Zetta ZD25WD20BTIGT, Adesto AT25SF081-SSHD, Winbond W25X20CLSNIG"
+U2 ,1,W9812G6KH-6,stdpads:TSOP-II-54_22.2x10.16mm_P0.8mm,,Most 166 MHz 128/256 Mbit SDRAM is acceptable.,C62379,"Winbond W9812G6KH-6, Winbond W9812G6KH-6I, Winbond W9825G6KH-6, Winbond W9825G6KH-6I, ISSI IS42S16160J-6TL, ISSI IS42S16160J-6TLI, Micron MT48LC16M16A2P-6A :G, Micron MT48LC16M16A2P-6A IT:G"
+U3 ,1,60M,stdpads:Crystal_SMD_7050-4Pin_7.0x5.0mm_SiTime,,Most 60-62.5 MHz 3.3V crystal oscillator or silicon oscillator is acceptable. Do not use crystal resonator or ceramic resonator.,C26255,"SiTime SIT1602AI-82-33E-60.000000Y, Shenzhen SCTF S7D60.000000B20F30T, Taiten OCETGLJTNF-60MHZ"
+U4 ,1,74AHCT245PW,stdpads:TSSOP-20_4.4x6.5mm_P0.65mm,,,C173388,"NXP 74AHCT245PW, TI SN74AHCT245PW"
+U6 U7 U5 ,3,74LVC245APW,stdpads:TSSOP-20_4.4x6.5mm_P0.65mm,,,C6082,"NXP 74LVC245APW, TI SN74LVC245APW"
+U8 ,1,AZ1117CH-3.3TRG1,stdpads:SOT-223,,Most 1117-type 3.3V regulator in SOT-223 package is acceptable.,C92102,"Diodes AZ1117CH-3.3TRG1, Diodes AZ1117EH-3.3TRG1"
