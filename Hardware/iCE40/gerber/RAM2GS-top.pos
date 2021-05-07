@@ -1,4 +1,4 @@
-### Module positions - created on Friday, April 30, 2021 at 04:13:15 AM ###
+### Module positions - created on Tuesday, May 04, 2021 at 04:37:33 AM ###
 ### Printed by Pcbnew version kicad (5.1.5-0-10_14)
 ## Unit = mm, Angle = deg.
 ## Side : top
@@ -42,13 +42,12 @@ FID2      Fiducial          Fiducial                                 100.3300   
 FID3      Fiducial          Fiducial                                 110.2360  -117.9830    0.0000  top
 FID4      Fiducial          Fiducial                                  58.8010  -125.8570    0.0000  top
 R3        100               R_0805                                    71.7000  -125.6500    0.0000  top
-R5        DNP               R_0805                                    47.7000  -126.0500  270.0000  top
 RN1       4x33              R4_0402                                   71.9000  -107.9000    0.0000  top
 RN2       4x33              R4_0402                                   70.3500  -102.3000  270.0000  top
 RN3       4x33              R4_0402                                   70.3500  -104.9000  270.0000  top
 RN4       4x33              R4_0402                                  103.9500  -120.1500    0.0000  top
 RN5       4x33              R4_0402                                  106.6000  -120.1500    0.0000  top
-RN6       4x10k             R4_0402                                   49.3000  -123.0000    0.0000  top
+RN6       4x33              R4_0402                                   48.9500  -123.2500    0.0000  top
 RN7       4x10k             R4_0402                                   97.2000  -103.1000  135.0000  top
 U1        iCE40HX1K-VQ100   TQFP-100_14x14mm_P0.5mm                   85.4000  -108.5500  270.0000  top
 U2        W9812G6KH-6       TSOP-II-54_22.2x10.16mm_P0.8mm            59.1500  -111.6500    0.0000  top
