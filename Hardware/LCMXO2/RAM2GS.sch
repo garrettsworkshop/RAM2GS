@@ -2209,8 +2209,6 @@ Text Label 5200 6650 2    50   ~ 0
 DONE
 Wire Wire Line
 	5600 6650 5600 6550
-Text Label 7550 3200 0    50   ~ 0
-DONE
 Wire Wire Line
 	7250 3200 7550 3200
 Connection ~ 5600 6550
@@ -2222,9 +2220,9 @@ F 0 "RN7" V 5100 6650 50  0000 C CNN
 F 1 "4x10k" V 5600 6650 50  0000 C CNN
 F 2 "stdpads:R4_0402" V 5675 6650 50  0001 C CNN
 F 3 "" H 5400 6650 50  0001 C CNN
-F 4 "C25501" H 5400 6650 50  0001 C CNN "LCSC Part"
+F 4 "C25725" H 5400 6650 50  0001 C CNN "LCSC Part"
 F 5 "Any manufacturer's part is acceptable." H 5400 6650 50  0001 C CNN "Notes"
-F 6 "Uniroyal 4D02WGJ0330TCE" H 5400 6650 50  0001 C CNN "Mfg. Part Numbers"
+F 6 "Uniroyal 4D02WGJ0103TCE" H 5400 6650 50  0001 C CNN "Mfg. Part Numbers"
 	1    5400 6650
 	0    -1   -1   0   
 $EndComp
@@ -2243,4 +2241,39 @@ Text Label 5200 6750 2    50   ~ 0
 Wire Wire Line
 	5600 6650 5600 6750
 Connection ~ 5600 6650
+$Comp
+L Device:R_Small R1
+U 1 1 61FFED1D
+P 7650 2900
+F 0 "R1" H 7591 2946 50  0000 R CNN
+F 1 "2k2" H 7591 2855 50  0000 R CNN
+F 2 "stdpads:R_0603" H 7650 2900 50  0001 C CNN
+F 3 "" H 7650 2900 50  0001 C CNN
+F 4 "C4190" H 7650 2900 50  0001 C CNN "LCSC Part"
+F 5 "Any manufacturer's part is acceptable." H 7650 2900 50  0001 C CNN "Notes"
+F 6 "Uniroyal 0603WAF2201T5E" H 7650 2900 50  0001 C CNN "Mfg. Part Numbers"
+	1    7650 2900
+	-1   0    0    -1  
+$EndComp
+Text Label 7550 3200 0    50   ~ 0
+DONE
+$Comp
+L power:GND #PWR0159
+U 1 1 620004FF
+P 8050 2900
+F 0 "#PWR0159" H 8050 2650 50  0001 C CNN
+F 1 "GND" H 8050 2750 50  0000 C CNN
+F 2 "" H 8050 2900 50  0001 C CNN
+F 3 "" H 8050 2900 50  0001 C CNN
+	1    8050 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 3000 7900 3000
+Wire Wire Line
+	7900 3000 7900 2900
+Wire Wire Line
+	7900 2900 8050 2900
+Wire Wire Line
+	7650 2800 7250 2800
 $EndSCHEMATC

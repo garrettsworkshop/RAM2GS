@@ -1956,39 +1956,9 @@ F 6 "Samsung CL10A225KO8NNNC" H 3050 6850 50  0001 C CNN "Mfg. Part Numbers"
 $EndComp
 Connection ~ 3050 7750
 Connection ~ 2650 7350
-$Comp
-L Device:R_Pack04 RN7
-U 1 1 614034CA
-P 5700 6400
-F 0 "RN7" V 5400 6400 50  0000 C CNN
-F 1 "4x10k" V 5900 6400 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 5975 6400 50  0001 C CNN
-F 3 "" H 5700 6400 50  0001 C CNN
-F 4 "C25725" H 5700 6400 50  0001 C CNN "LCSC Part"
-F 5 "Any manufacturer's part is acceptable." H 5700 6400 50  0001 C CNN "Notes"
-F 6 "Uniroyal 4D02WGJ0103TCE" H 5700 6400 50  0001 C CNN "Mfg. Part Numbers"
-	1    5700 6400
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR0169
-U 1 1 6140B7B1
-P 5400 6500
-F 0 "#PWR0169" H 5400 6350 50  0001 C CNN
-F 1 "+3V3" H 5400 6650 50  0000 C CNN
-F 2 "" H 5400 6500 50  0001 C CNN
-F 3 "" H 5400 6500 50  0001 C CNN
-	1    5400 6500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5500 6500 5400 6500
-Wire Wire Line
-	5500 6400 5500 6500
-Connection ~ 5500 6500
-Text Label 5900 6500 0    50   ~ 0
+Text Label 5500 6950 2    50   ~ 0
 CCK
-Text Label 5900 6400 0    50   ~ 0
+Text Label 5500 6700 2    50   ~ 0
 C~CS~
 Connection ~ 6800 5700
 Wire Wire Line
@@ -2087,19 +2057,6 @@ Connection ~ 2650 6750
 Connection ~ 3050 7550
 NoConn ~ 7450 2800
 NoConn ~ 7450 3200
-$Comp
-L power:+3V3 #PWR0153
-U 1 1 6140B25C
-P 5900 6200
-F 0 "#PWR0153" H 5900 6050 50  0001 C CNN
-F 1 "+3V3" H 5900 6350 50  0000 C CNN
-F 2 "" H 5900 6200 50  0001 C CNN
-F 3 "" H 5900 6200 50  0001 C CNN
-	1    5900 6200
-	1    0    0    -1  
-$EndComp
-Text Label 5500 6200 2    50   ~ 0
-C~RST~
 $Comp
 L Regulator_Linear:LD1117S33TR_SOT223 U8
 U 1 1 5E983A08
@@ -2395,21 +2352,7 @@ F 3 "" H 3050 6550 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Connection ~ 3050 6550
-$Comp
-L Device:R_Pack04 RN6
-U 1 1 60E88DC4
-P 9900 6300
-F 0 "RN6" V 10100 6300 50  0000 C CNN
-F 1 "4x33" V 9600 6300 50  0000 C CNN
-F 2 "stdpads:R4_0402" V 10175 6300 50  0001 C CNN
-F 3 "" H 9900 6300 50  0001 C CNN
-F 4 "C25725" H 9900 6300 50  0001 C CNN "LCSC Part"
-F 5 "Any manufacturer's part is acceptable." H 9900 6300 50  0001 C CNN "Notes"
-F 6 "Uniroyal 4D02WGJ0103TCE" H 9900 6300 50  0001 C CNN "Mfg. Part Numbers"
-	1    9900 6300
-	0    1    1    0   
-$EndComp
-Text Label 5500 6300 2    50   ~ 0
+Text Label 5500 6450 2    50   ~ 0
 CDONE
 Wire Wire Line
 	2150 4500 1850 4500
@@ -2438,13 +2381,13 @@ F 3 "" H 2150 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 9100 6400 0    50   ~ 0
-CDOr
+CDO
 Text Label 8000 6200 2    50   ~ 0
-CDIr
+CDI
 Text Label 9100 6300 0    50   ~ 0
 CCKr
 Text Label 8000 6100 2    50   ~ 0
-C~CS~r
+C~CS~
 Wire Wire Line
 	1050 4500 1050 5250
 $Comp
@@ -2460,22 +2403,10 @@ F 3 "" H 850 4600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	850  4600 1250 4600
-Text Label 9700 6300 2    50   ~ 0
-C~CS~r
-Text Label 9700 6200 2    50   ~ 0
-CDOr
-Text Label 9700 6400 2    50   ~ 0
+Text Label 9900 6400 0    50   ~ 0
 CCKr
-Text Label 10100 6100 0    50   ~ 0
-CDI
-Text Label 10100 6300 0    50   ~ 0
-C~CS~
-Text Label 10100 6200 0    50   ~ 0
-CDO
-Text Label 10100 6400 0    50   ~ 0
+Text Label 9700 6400 2    50   ~ 0
 CCK
-Text Label 9700 6100 2    50   ~ 0
-CDIr
 Wire Wire Line
 	9100 6100 9100 6200
 Connection ~ 9100 6100
@@ -2496,11 +2427,93 @@ Wire Wire Line
 	7900 6300 7900 6400
 Wire Wire Line
 	7900 6400 7800 6400
-Wire Wire Line
-	5900 6200 5900 6300
-Connection ~ 5900 6200
 NoConn ~ 7450 2700
 NoConn ~ 7450 2900
 NoConn ~ 7450 3000
 NoConn ~ 7450 3100
+Text Label 5500 6200 2    50   ~ 0
+C~RST~
+$Comp
+L Device:R_Small R1
+U 1 1 687E63CA
+P 5600 6200
+F 0 "R1" V 5450 6200 50  0000 C CNN
+F 1 "33" V 5550 6200 50  0000 C BNN
+F 2 "stdpads:R_0603" H 5600 6200 50  0001 C CNN
+F 3 "~" H 5600 6200 50  0001 C CNN
+	1    5600 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 687E7527
+P 5600 6450
+F 0 "R4" V 5450 6450 50  0000 C CNN
+F 1 "33" V 5550 6450 50  0000 C BNN
+F 2 "stdpads:R_0603" H 5600 6450 50  0001 C CNN
+F 3 "~" H 5600 6450 50  0001 C CNN
+	1    5600 6450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 687E7710
+P 5600 6700
+F 0 "R5" V 5450 6700 50  0000 C CNN
+F 1 "33" V 5550 6700 50  0000 C BNN
+F 2 "stdpads:R_0603" H 5600 6700 50  0001 C CNN
+F 3 "~" H 5600 6700 50  0001 C CNN
+	1    5600 6700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0153
+U 1 1 6140B25C
+P 5800 6200
+F 0 "#PWR0153" H 5800 6050 50  0001 C CNN
+F 1 "+3V3" H 5800 6350 50  0000 C CNN
+F 2 "" H 5800 6200 50  0001 C CNN
+F 3 "" H 5800 6200 50  0001 C CNN
+	1    5800 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 6200 5800 6200
+Connection ~ 5800 6200
+Wire Wire Line
+	5800 6450 5700 6450
+Wire Wire Line
+	5800 6200 5800 6450
+Wire Wire Line
+	5800 6700 5700 6700
+$Comp
+L Device:R_Small R2
+U 1 1 6880B9BD
+P 9800 6400
+F 0 "R2" V 9650 6400 50  0000 C CNN
+F 1 "33" V 9750 6400 50  0000 C BNN
+F 2 "stdpads:R_0603" H 9800 6400 50  0001 C CNN
+F 3 "~" H 9800 6400 50  0001 C CNN
+	1    9800 6400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 6881D7E4
+P 5600 6950
+F 0 "R6" V 5450 6950 50  0000 C CNN
+F 1 "33" V 5550 6950 50  0000 C BNN
+F 2 "stdpads:R_0603" H 5600 6950 50  0001 C CNN
+F 3 "~" H 5600 6950 50  0001 C CNN
+	1    5600 6950
+	0    1    1    0   
+$EndComp
+Connection ~ 5800 6450
+Connection ~ 5800 6700
+Wire Wire Line
+	5800 6450 5800 6700
+Wire Wire Line
+	5800 6950 5700 6950
+Wire Wire Line
+	5800 6700 5800 6950
 $EndSCHEMATC

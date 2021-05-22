@@ -400,7 +400,7 @@ F 3 "" H 8900 1900 50  0001 C CNN
 $EndComp
 Text Label 8900 3900 2    50   ~ 0
 RClk
-Text Label 7250 2300 0    50   ~ 0
+Text Label 7450 2300 0    50   ~ 0
 AClk
 Wire Wire Line
 	8900 1900 8900 2000
@@ -419,12 +419,12 @@ $EndComp
 $Comp
 L power:GND #PWR0136
 U 1 1 5E9DF65F
-P 6600 5700
-F 0 "#PWR0136" H 6600 5450 50  0001 C CNN
-F 1 "GND" H 6600 5550 50  0000 C CNN
-F 2 "" H 6600 5700 50  0001 C CNN
-F 3 "" H 6600 5700 50  0001 C CNN
-	1    6600 5700
+P 6800 5700
+F 0 "#PWR0136" H 6800 5450 50  0001 C CNN
+F 1 "GND" H 6800 5550 50  0000 C CNN
+F 2 "" H 6800 5700 50  0001 C CNN
+F 3 "" H 6800 5700 50  0001 C CNN
+	1    6800 5700
 	-1   0    0    -1  
 $EndComp
 Text Label 8900 2200 2    50   ~ 0
@@ -597,9 +597,9 @@ Text Label 5350 3100 2    50   ~ 0
 ~WE~in
 Text Label 5350 3200 2    50   ~ 0
 Ain0
-Text Label 5350 3600 2    50   ~ 0
+Text Label 5350 3800 2    50   ~ 0
 CROWin1
-Text Label 5350 3500 2    50   ~ 0
+Text Label 5350 3700 2    50   ~ 0
 CROWin0
 Text Label 5350 3400 2    50   ~ 0
 ~CCAS~in
@@ -619,43 +619,43 @@ Text Label 5350 4800 2    50   ~ 0
 Ain6
 Text Label 5350 4900 2    50   ~ 0
 Ain8
-Text Label 7250 3000 0    50   ~ 0
+Text Label 7450 3200 0    50   ~ 0
 DQMH
-Text Label 7250 2800 0    50   ~ 0
+Text Label 7450 3000 0    50   ~ 0
 R~CAS~
-Text Label 7250 2600 0    50   ~ 0
+Text Label 7450 2600 0    50   ~ 0
 CKE
-Text Label 7250 3400 0    50   ~ 0
+Text Label 7450 3400 0    50   ~ 0
 R~RAS~
-Text Label 7250 3100 0    50   ~ 0
+Text Label 7450 3100 0    50   ~ 0
 R~CS~
-Text Label 7250 2900 0    50   ~ 0
+Text Label 7450 4400 0    50   ~ 0
 BA0
-Text Label 7250 2700 0    50   ~ 0
+Text Label 7450 2900 0    50   ~ 0
 RA11
-Text Label 7250 2500 0    50   ~ 0
+Text Label 7450 2500 0    50   ~ 0
 BA1
-Text Label 7250 2400 0    50   ~ 0
+Text Label 7450 2400 0    50   ~ 0
 RA9
-Text Label 7250 2200 0    50   ~ 0
+Text Label 7450 2200 0    50   ~ 0
 RA10
-Text Label 7250 1700 0    50   ~ 0
+Text Label 7450 1700 0    50   ~ 0
 RA8
-Text Label 7250 1500 0    50   ~ 0
+Text Label 7450 1500 0    50   ~ 0
 RA0
-Text Label 7250 1300 0    50   ~ 0
+Text Label 7450 1300 0    50   ~ 0
 RA7
-Text Label 7250 2100 0    50   ~ 0
+Text Label 7450 2100 0    50   ~ 0
 RA1
-Text Label 7250 2000 0    50   ~ 0
+Text Label 7450 2000 0    50   ~ 0
 RA6
-Text Label 7250 1900 0    50   ~ 0
+Text Label 7450 1900 0    50   ~ 0
 RA2
-Text Label 7250 1600 0    50   ~ 0
+Text Label 7450 1600 0    50   ~ 0
 RA3
-Text Label 7250 1400 0    50   ~ 0
+Text Label 7450 1400 0    50   ~ 0
 RA4
-Text Label 7250 1800 0    50   ~ 0
+Text Label 7450 1800 0    50   ~ 0
 RA5
 $Comp
 L power:+3V3 #PWR0129
@@ -1986,37 +1986,37 @@ F 3 "" H 8900 3400 50  0001 C CNN
 	1    8900 3400
 	0    1    -1   0   
 $EndComp
-Text Label 7250 5200 0    50   ~ 0
+Text Label 7450 5200 0    50   ~ 0
 S~CS~
-Text Label 7250 4700 0    50   ~ 0
+Text Label 7450 4700 0    50   ~ 0
 SCK
-Text Label 7250 4900 0    50   ~ 0
+Text Label 7450 4900 0    50   ~ 0
 MOSI
-Text Label 7250 5000 0    50   ~ 0
+Text Label 7450 5000 0    50   ~ 0
 MISO
 Text Label 5350 4100 2    50   ~ 0
 Ain1
 Text Label 5350 4000 2    50   ~ 0
 Ain2
-Text Label 7250 3200 0    50   ~ 0
+Text Label 7450 3500 0    50   ~ 0
 R~WE~
-Text Label 7250 3500 0    50   ~ 0
+Text Label 7450 4500 0    50   ~ 0
 DQML
-Text Label 7250 4300 0    50   ~ 0
+Text Label 7450 4300 0    50   ~ 0
 RD0r
-Text Label 7250 3600 0    50   ~ 0
+Text Label 7450 3600 0    50   ~ 0
 RD7r
-Text Label 7250 3700 0    50   ~ 0
+Text Label 7450 3700 0    50   ~ 0
 RD6r
-Text Label 7250 3900 0    50   ~ 0
+Text Label 7450 3900 0    50   ~ 0
 RD5r
-Text Label 7250 3800 0    50   ~ 0
+Text Label 7450 3800 0    50   ~ 0
 RD4r
-Text Label 7250 4100 0    50   ~ 0
+Text Label 7450 4100 0    50   ~ 0
 RD3r
-Text Label 7250 4000 0    50   ~ 0
+Text Label 7450 4000 0    50   ~ 0
 RD2r
-Text Label 7250 4200 0    50   ~ 0
+Text Label 7450 4200 0    50   ~ 0
 RD1r
 Text Label 5350 5400 2    50   ~ 0
 TMS
@@ -2149,64 +2149,24 @@ F 3 "" H 2250 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 2250 6750
-Text Label 7250 5400 0    50   ~ 0
+Text Label 7450 5400 0    50   ~ 0
 Ain9
-Connection ~ 6200 5700
-Connection ~ 6600 5700
-Connection ~ 6400 5700
-Connection ~ 6200 900 
-Wire Wire Line
-	6300 5700 6400 5700
-Wire Wire Line
-	6200 5700 6300 5700
-Connection ~ 6300 5700
-Wire Wire Line
-	6300 900  6400 900 
-Wire Wire Line
-	6200 900  6300 900 
-Connection ~ 6300 900 
-Wire Wire Line
-	6100 5700 6200 5700
-Connection ~ 6100 5700
-Wire Wire Line
-	6100 900  6200 900 
-Connection ~ 6100 900 
-Wire Wire Line
-	6500 5700 6600 5700
-Wire Wire Line
-	6400 5700 6500 5700
-Connection ~ 6500 5700
 Wire Wire Line
 	6600 900  6700 900 
 Wire Wire Line
-	6000 900  6100 900 
-Wire Wire Line
-	5900 900  6000 900 
-Connection ~ 6000 900 
-Wire Wire Line
-	6000 5700 6100 5700
-Wire Wire Line
-	5900 5700 6000 5700
-Connection ~ 6000 5700
-Connection ~ 5900 900 
-Wire Wire Line
 	4000 6950 4000 7050
 Connection ~ 4000 6950
-Connection ~ 6400 900 
-Wire Wire Line
-	6400 900  6500 900 
 $Comp
 L power:+1V2 #PWR0150
 U 1 1 8715E9C7
-P 6600 900
-F 0 "#PWR0150" H 6600 750 50  0001 C CNN
-F 1 "+1V2" H 6600 1050 50  0000 C CNN
-F 2 "" H 6600 900 50  0001 C CNN
-F 3 "" H 6600 900 50  0001 C CNN
-	1    6600 900 
+P 6800 900
+F 0 "#PWR0150" H 6800 750 50  0001 C CNN
+F 1 "+1V2" H 6800 1050 50  0000 C CNN
+F 2 "" H 6800 900 50  0001 C CNN
+F 3 "" H 6800 900 50  0001 C CNN
+	1    6800 900 
 	1    0    0    -1  
 $EndComp
-Connection ~ 6600 900 
 Wire Wire Line
 	1450 6950 1850 6950
 $Comp
@@ -2352,31 +2312,10 @@ F 6 "Uniroyal 4D02WGJ0103TCE" H 10100 6300 50  0001 C CNN "Mfg. Part Numbers"
 	1    10100 6300
 	0    1    1    0   
 $EndComp
-$Comp
-L GW_PLD:LCMXO256-TQFP-100 U1
-U 1 1 86DF1B11
-P 6300 3300
-F 0 "U1" H 6300 3350 50  0000 C CNN
-F 1 "LCMXO256C-3TN100C" H 6300 3250 40  0000 C CNN
-F 2 "stdpads:TQFP-100_14x14mm_P0.5mm" H 6300 3200 40  0001 C CNN
-F 3 "" H 6300 3400 50  0001 C CNN
-F 4 "C1521848" H 6300 3300 50  0001 C CNN "LCSC Part"
-F 5 "Lattice LCMXO256C-3TN100C, Lattice LCMXO256C-4TN100C, Lattice LCMXO256C-5TN100C" H 6300 3300 50  0001 C CNN "Mfg. Part Numbers"
-	1    6300 3300
-	1    0    0    -1  
-$EndComp
 NoConn ~ 5350 2000
 NoConn ~ 5350 2100
 NoConn ~ 5350 2200
-NoConn ~ 5350 3700
-NoConn ~ 5350 3800
 NoConn ~ 5350 3900
-NoConn ~ 7250 4400
-NoConn ~ 7250 4500
-NoConn ~ 7250 4600
-NoConn ~ 7250 4800
-NoConn ~ 7250 5100
-NoConn ~ 7250 5300
 Wire Wire Line
 	1950 4300 1950 4550
 Connection ~ 1950 4550
@@ -2388,16 +2327,77 @@ Connection ~ 1950 3850
 Wire Wire Line
 	1950 3850 1850 3850
 $Comp
-L power:GND #PWR?
-U 1 1 60E703CE
-P 7550 1200
-F 0 "#PWR?" H 7550 950 50  0001 C CNN
-F 1 "GND" H 7550 1050 50  0000 C CNN
-F 2 "" H 7550 1200 50  0001 C CNN
-F 3 "" H 7550 1200 50  0001 C CNN
-	1    7550 1200
-	-1   0    0    -1  
+L power:+3V3 #PWR0168
+U 1 1 626AF4E6
+P 7450 1200
+F 0 "#PWR0168" H 7450 1050 50  0001 C CNN
+F 1 "+3V3" H 7450 1350 50  0000 C CNN
+F 2 "" H 7450 1200 50  0001 C CNN
+F 3 "" H 7450 1200 50  0001 C CNN
+	1    7450 1200
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7550 1200 7250 1200
+	5900 900  6000 900 
+Wire Wire Line
+	5900 5700 6000 5700
+$Comp
+L GW_PLD:LCMXO640-TQFP-100 U1
+U 1 1 62C26D47
+P 6400 3300
+F 0 "U1" H 6400 811 50  0000 C CNN
+F 1 "LCMXO640-TQFP-100" H 6400 727 40  0000 C CNN
+F 2 "stdpads:TQFP-100" H 6400 3200 40  0001 C CNN
+F 3 "" H 6400 3400 50  0001 C CNN
+	1    6400 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5900 900 
+Wire Wire Line
+	6800 5700 6700 5700
+Connection ~ 6800 5700
+Connection ~ 6000 5700
+Connection ~ 6100 5700
+Wire Wire Line
+	6100 5700 6000 5700
+Connection ~ 6200 5700
+Wire Wire Line
+	6200 5700 6100 5700
+Connection ~ 6300 5700
+Wire Wire Line
+	6300 5700 6200 5700
+Connection ~ 6400 5700
+Wire Wire Line
+	6400 5700 6300 5700
+Connection ~ 6500 5700
+Wire Wire Line
+	6500 5700 6400 5700
+Connection ~ 6600 5700
+Wire Wire Line
+	6600 5700 6500 5700
+Connection ~ 6700 5700
+Wire Wire Line
+	6700 5700 6600 5700
+Wire Wire Line
+	6500 900  6400 900 
+Connection ~ 6000 900 
+Connection ~ 6100 900 
+Wire Wire Line
+	6100 900  6000 900 
+Connection ~ 6200 900 
+Wire Wire Line
+	6200 900  6100 900 
+Connection ~ 6300 900 
+Wire Wire Line
+	6300 900  6200 900 
+Connection ~ 6400 900 
+Wire Wire Line
+	6400 900  6300 900 
+Wire Wire Line
+	6600 900  6500 900 
+Connection ~ 6600 900 
+Connection ~ 6500 900 
+Wire Wire Line
+	6800 900  6900 900 
+Connection ~ 6800 900 
 $EndSCHEMATC
