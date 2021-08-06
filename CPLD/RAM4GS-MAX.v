@@ -1,10 +1,14 @@
-module RAM4GS(PHI2, MAin, CROW, Din, Dout,
-			  nCCAS, nCRAS, nFWE,
+module RAM2GS(PHI2, MAin, CROW, Din, Dout,
+			  nCCAS, nCRAS, nFWE, LED,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML);
 
 	/* 65816 Phase 2 Clock */
 	input PHI2;
+
+	/* Activity LED */
+	reg LEDEN = 0;
+	output LED = ~(~nCRAS &&  LEDEN);
 
 	/* Async. DRAM Control Inputs */
 	input nCCAS, nCRAS;
@@ -52,7 +56,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
 	/* UFM Interface */
-	reg UFMD = 0; // UFM data register bit 15
+	reg [15] UFMD = 0; // UFM data register bit 15
 	reg ARCLK = 0; // UFM address register clock
 	// UFM address register data input tied to 0
 	reg ARShift = 0; // 1 to Shift UFM address in, 0 to increment
@@ -366,26 +370,34 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 				DRDIn <= 1'b0; // DRDIn is don't care
 				DRShift <= 1'b0; // Parallel transfer to data register
 			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h4) begin
-				// Shift UFM
+				// Shift UFM data shift register
 				ARCLK <= 1'b0; // Don't clock address register
 				ARShift <= 1'b0; // ARShift is don't care
 				DRCLK <= FS[3]; // Clock data register
 				DRDIn <= 1'b0; // DRDIn is don't care
 				DRShift <= 1'b1; // Shift data register
 				// Capture bit 15 of this UFM word in UFMD register
-				if (FS[3:0]==4'h7) UFMD <= DRDOut;
+				if (FS[3:0]==4'h7) UFMD[15] <= DRDOut;
 			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h5) begin
-				// Check saved capacity entry
-				if (UFMD) UFMInitDone <= 1'b1; // If erased, quit iterating
+				// Shift UFM data shift register
+				ARCLK <= 1'b0; // Don't clock address register
+				ARShift <= 1'b0; // ARShift is don't care
+				DRCLK <= FS[3]; // Clock data register
+				DRDIn <= 1'b0; // DRDIn is don't care
+				DRShift <= 1'b1; // Shift data register
+				// If valid setting here, set capacity setting to UFMD[14]
+				if (FS[3:0]==4'h7 && ~UFMD[15]) n8MEGEN <= ~DRDOut;
+			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h6) begin
+				if (UFMD[15]) UFMInitDone <= 1'b1; // If current spot erased, quit iterating
 				else begin // If valid setting here
-					n8MEGEN <= ~DRDOut; // Set capacity setting
+					LEDEN <= ~DRDOut; // LED enabled if UFMD[13]==0
 					// If last byte in sector, mark need to erase
 					if (FS[15:8]==8'hFF) begin
 						UFMReqErase <= 1'b1; // Mark need to wrap around
 						UFMInitDone <= 1'b1; // Quit iterating
 					end
 				end
-			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h6) begin
+
 				// Increment UFM address
 				ARCLK <= FS[3]; // Clock address register
 				ARShift <= 1'b0; // Increment UFM address
