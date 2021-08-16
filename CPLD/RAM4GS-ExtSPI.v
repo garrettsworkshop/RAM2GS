@@ -1,11 +1,15 @@
 module RAM4GS(PHI2, MAin, CROW, Din, Dout,
-			  nCCAS, nCRAS, nFWE,
+			  nCCAS, nCRAS, nFWE, LED,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML,
 			  nUFMCS, UFMCLK, UFMSDI, UFMSDO);
 
 	/* 65816 Phase 2 Clock */
 	input PHI2;
+
+	/* Activity LED */
+	reg LEDEN = 0;
+	output LED = ~(~nCRAS &&  LEDEN);
 
 	/* Async. DRAM Control Inputs */
 	input nCCAS, nCRAS;
@@ -363,13 +367,14 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			endcase
 		end else if (~InitReady && FS[17:10]==8'h03) begin
 			nUFMCS <= 1'b0;
-			UFMCLK <= 1'b0;
+			UFMCLK <= FS[4];
 			UFMSDI <= 1'b0;
-			// Latch n8MEGEN
-			if (FS[9:4]==6'h00 && FS[3:0]==4'hF) n8MEGEN <= ~UFMSDO;
+			// Latch n8MEGEN and LEDEN
+			if (FS[9:5]==5'h00 && FS[4:0]==5'h1F) n8MEGEN <= ~UFMSDO;
+			if (FS[9:5]==5'h01 && FS[4:0]==5'h1F) LEDEN <= ~UFMSDO;
 		end else if (~InitReady && FS[17:10]!=8'hFE && FS[17:10]!=8'hFF) begin
 			nUFMCS <= 1'b0;
-			UFMCLK <= FS[1];
+			UFMCLK <= FS[4];
 			UFMSDI <= 1'b0;
 		end else if (~InitReady) begin
 			nUFMCS <= 1'b1;
