@@ -1,0 +1,528 @@
+
+ibisgen "RAM2GS_LCMXO640C_impl1.pad" "C:/lscc/diamond/3.12/cae_library/ibis/machxo.ibs"   
+IBIS Models Generator: Lattice Diamond (64-bit) 3.12.0.240.2
+
+Mon Aug 16 21:36:33 2021
+
+Comp: CROW[0]
+ Site: 32
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: CROW[1]
+ Site: 34
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[0]
+ Site: 21
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[1]
+ Site: 15
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[2]
+ Site: 14
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[3]
+ Site: 16
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[4]
+ Site: 18
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[5]
+ Site: 17
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[6]
+ Site: 20
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Din[7]
+ Site: 19
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: Dout[0]
+ Site: 1
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[1]
+ Site: 7
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[2]
+ Site: 8
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[3]
+ Site: 6
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[4]
+ Site: 4
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[5]
+ Site: 5
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[6]
+ Site: 2
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[7]
+ Site: 3
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: LED
+ Site: 57
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=16mA 
+ SLEW=SLOW 
+-----------------------
+Comp: MAin[0]
+ Site: 23
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[1]
+ Site: 38
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[2]
+ Site: 37
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[3]
+ Site: 47
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[4]
+ Site: 46
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[5]
+ Site: 45
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[6]
+ Site: 49
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[7]
+ Site: 44
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[8]
+ Site: 50
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: MAin[9]
+ Site: 51
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: PHI2
+ Site: 39
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: RA[0]
+ Site: 98
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[10]
+ Site: 87
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[11]
+ Site: 79
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[1]
+ Site: 89
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[2]
+ Site: 94
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[3]
+ Site: 97
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[4]
+ Site: 99
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[5]
+ Site: 95
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[6]
+ Site: 91
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[7]
+ Site: 100
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[8]
+ Site: 96
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[9]
+ Site: 85
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RBA[0]
+ Site: 63
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RBA[1]
+ Site: 83
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RCKE
+ Site: 82
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RCLK
+ Site: 86
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: RDQMH
+ Site: 76
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RDQML
+ Site: 61
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[0]
+ Site: 64
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[1]
+ Site: 65
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[2]
+ Site: 66
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[3]
+ Site: 67
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[4]
+ Site: 68
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[5]
+ Site: 69
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[6]
+ Site: 70
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: RD[7]
+ Site: 71
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+ PULL=KEEPER 
+-----------------------
+Comp: UFMCLK
+ Site: 58
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: UFMSDI
+ Site: 56
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: UFMSDO
+ Site: 55
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+ PULL=KEEPER 
+-----------------------
+Comp: nCCAS
+ Site: 27
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: nCRAS
+ Site: 43
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: nFWE
+ Site: 22
+ Type: IN
+ IO_TYPE=LVTTL33 
+ SLEW=FAST 
+-----------------------
+Comp: nRCAS
+ Site: 78
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRCS
+ Site: 77
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRRAS
+ Site: 73
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRWE
+ Site: 72
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nUFMCS
+ Site: 53
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Created design models.
+
+
+Generating: C:\Users\Dog\Documents\GitHub\RAM2GS\CPLD\LCMXO\LCMXO640C\impl1\IBIS\RAM2GS_LCMXO640C_im~.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+tmcheck -par "RAM2GS_LCMXO640C_impl1.par" 
+
+bitgen -w "RAM2GS_LCMXO640C_impl1.ncd" -f "RAM2GS_LCMXO640C_impl1.t2b" "RAM2GS_LCMXO640C_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file RAM2GS_LCMXO640C_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO640C
+Package:     TQFP100
+Performance: 3
+Loading device for application Bitgen from file 'mj5g12x10.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status: Version 1.124.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from RAM2GS_LCMXO640C_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                             ES  |                           No**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+Saving bit stream in "RAM2GS_LCMXO640C_impl1.bit".
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 46 MB
+
+ddtcmd -dev LCMXO640C-XXT100 -if "RAM2GS_LCMXO640C_impl1.bit" -oft -jed -of "RAM2GS_LCMXO640C_impl1.jed"  -comment "RAM2GS_LCMXO640C_impl1.alt" 
+Lattice Diamond Deployment Tool 3.12 Command Line
+
+Loading Programmer Device Database...
+
+Generating JED.....
+Device Name: LCMXO640C-XXT100
+Reading Input File: RAM2GS_LCMXO640C_impl1.bit
+Output File: RAM2GS_LCMXO640C_impl1.jed
+Comment file RAM2GS_LCMXO640C_impl1.alt.
+Generating JEDEC.....
+File RAM2GS_LCMXO640C_impl1.jed generated successfully.
+Lattice Diamond Deployment Tool has exited successfully.
+

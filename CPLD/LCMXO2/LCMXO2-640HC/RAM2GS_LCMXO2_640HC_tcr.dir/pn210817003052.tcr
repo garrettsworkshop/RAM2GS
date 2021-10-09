@@ -1,0 +1,6 @@
+#Start recording tcl command: 8/16/2021 23:26:11
+#Project Location: C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC; Project name: RAM2GS_LCMXO2_640HC
+prj_project new -name "RAM2GS_LCMXO2_640HC" -impl "impl1" -dev LCMXO2-640HC-4TG100C -synthesis "lse"
+prj_src add "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/RAM2GS-LCMXO2.v"
+prj_project save
+#Stop recording: 8/17/2021 00:30:52

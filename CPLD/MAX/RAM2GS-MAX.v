@@ -8,7 +8,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 	/* Activity LED */
 	reg LEDEN = 0;
-	output LED = ~(~nCRAS &&  LEDEN);
+	output LED;
+	assign LED = ~(~nCRAS &&  LEDEN);
 
 	/* Async. DRAM Control Inputs */
 	input nCCAS, nCRAS;
@@ -22,7 +23,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 	/* 65816 Data */
 	input [7:0] Din;
-	output [7:0] Dout = RD[7:0];
+	output [7:0] Dout;
+	assign Dout[7:0] = RD[7:0];
 
 	/* Latched 65816 Bank Address */
 	reg [7:0] Bank;
@@ -50,8 +52,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	assign RA[11] = RA11;
 	assign RA[10] = RA10;
 	assign RA[9:0] = ~nRowColSel ? RowA[9:0] : MAin[9:0];
-	output RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
-	output RDQMH = ~nRowColSel ? 1'b1 : MAin[9];
+	output RDQML, RDQMH;
+	assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
+	assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
 	reg [7:0] WRD;
 	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
@@ -97,6 +100,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	reg ADSubmitted = 0;
 	reg CmdEnable = 0;
 	reg CmdSubmitted = 0;
+	reg CmdLEDEN = 0;
 	reg Cmdn8MEGEN = 0;
 	reg CmdDRCLK = 0;
 	reg CmdDRDIn = 0;
@@ -339,9 +343,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 			if (Din[7:4]==4'h0) begin
 				XOR8MEG <= Din[0];
 			end else if (Din[7:4]==4'h1) begin
+				CmdLEDEN <= ~Din[1];
 				Cmdn8MEGEN <= ~Din[0];
 				CmdSubmitted <= 1'b1;
-			end else if (Din[7:4]==4'h2) begin
+			end else if (Din[7:4]==4'h2 && Din[3]==1'b0) begin
+				CmdLEDEN <= LEDEN;
 				Cmdn8MEGEN <= n8MEGEN;
 				CmdUFMErase <= Din[3];
 				CmdUFMPrgm <= Din[2];

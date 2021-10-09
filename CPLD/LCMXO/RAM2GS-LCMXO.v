@@ -1,4 +1,4 @@
-module RAM4GS(PHI2, MAin, CROW, Din, Dout,
+module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 			  nCCAS, nCRAS, nFWE, LED,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML,
@@ -9,7 +9,8 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 
 	/* Activity LED */
 	reg LEDEN = 0;
-	output LED = ~(~nCRAS &&  LEDEN);
+	output LED;
+	assign LED = ~(~nCRAS &&  LEDEN);
 
 	/* Async. DRAM Control Inputs */
 	input nCCAS, nCRAS;
@@ -23,7 +24,8 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 
 	/* 65816 Data */
 	input [7:0] Din;
-	output [7:0] Dout = RD[7:0];
+	output [7:0] Dout;
+	assign Dout[7:0] = RD[7:0];
 
 	/* Latched 65816 Bank Address */
 	reg [7:0] Bank;
@@ -51,8 +53,9 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	assign RA[11] = RA11;
 	assign RA[10] = RA10;
 	assign RA[9:0] = ~nRowColSel ? RowA[9:0] : MAin[9:0];
-	output RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
-	output RDQMH = ~nRowColSel ? 1'b1 : MAin[9];
+	output RDQML, RDQMH;
+	assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
+	assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
 	reg [7:0] WRD;
 	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
@@ -67,6 +70,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	reg ADSubmitted = 0;
 	reg CmdEnable = 0;
 	reg CmdSubmitted = 0;
+	reg CmdLEDEN = 0;
 	reg Cmdn8MEGEN = 0;
 	reg CmdUFMCLK = 0;
 	reg CmdUFMSDI = 0;
@@ -306,9 +310,11 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			if (Din[7:4]==4'h0) begin
 				XOR8MEG <= Din[0];
 			end else if (Din[7:4]==4'h1) begin
+				CmdLEDEN <= ~Din[1];
 				Cmdn8MEGEN <= ~Din[0];
 				CmdSubmitted <= 1'b1;
-			end else if (Din[7:4]==4'h3) begin
+			end else if (Din[7:4]==4'h3 && ~Din[3]) begin
+				CmdLEDEN <= LEDEN;
 				Cmdn8MEGEN <= n8MEGEN;
 				CmdUFMCS <= Din[2];
 				CmdUFMCLK <= Din[1];
@@ -372,8 +378,12 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			// Latch n8MEGEN and LEDEN
 			if (FS[9:5]==5'h00 && FS[4:0]==5'h1F) n8MEGEN <= ~UFMSDO;
 			if (FS[9:5]==5'h01 && FS[4:0]==5'h1F) LEDEN <= ~UFMSDO;
-		end else if (~InitReady && FS[17:10]!=8'hFE && FS[17:10]!=8'hFF) begin
+		end else if (~InitReady && FS[17:10]==8'h04) begin
 			nUFMCS <= 1'b0;
+			UFMCLK <= FS[4];
+			UFMSDI <= 1'b0;
+		end else if (~InitReady && FS[17:10]==8'h05) begin
+			nUFMCS <= 1'b1;
 			UFMCLK <= FS[4];
 			UFMSDI <= 1'b0;
 		end else if (~InitReady) begin
@@ -382,7 +392,8 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 			UFMSDI <= 1'b0;
 		end else if (~PHI2r2 & PHI2r3 & CmdSubmitted) begin
 			// Set user command signals after PHI2 falls
-			// Cmdn8MEGEN, CmdUFMCS, CmdUFMCLK, CmdUFMSDI
+			// CmdnLEDEN, Cmdn8MEGEN, CmdUFMCS, CmdUFMCLK, CmdUFMSDI
+			LEDEN <= CmdLEDEN;
 			n8MEGEN <= Cmdn8MEGEN;
 			nUFMCS <= ~CmdUFMCS;
 			UFMCLK <= CmdUFMCLK;
