@@ -1952,9 +1952,9 @@ Text Label 5350 5200 2    50   ~ 0
 DQML
 Text Label 5350 3900 2    50   ~ 0
 Ain9
-Text Label 7250 4400 0    50   ~ 0
-RA9
 Text Label 7250 4500 0    50   ~ 0
+RA9
+Text Label 7250 4400 0    50   ~ 0
 AClk
 $Comp
 L power:+1V2 #PWR0135
