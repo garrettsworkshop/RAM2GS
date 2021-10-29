@@ -1,0 +1,402 @@
+
+            Lattice Mapping Report File for Design Module 'RAM2GS'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO -p LCMXO640C -t TQFP100 -s 3 -oc Commercial
+     RAM2GS_LCMXO640C_impl1.ngd -o RAM2GS_LCMXO640C_impl1_map.ncd -pr
+     RAM2GS_LCMXO640C_impl1.prf -mp RAM2GS_LCMXO640C_impl1.mrp -lpf C:/Users/Dog
+     /Documents/GitHub/RAM2GS/CPLD/LCMXO/LCMXO640C/impl1/RAM2GS_LCMXO640C_impl1.
+     lpf -lpf C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO/LCMXO640C/RAM2GS_L
+     CMXO640C.lpf -c 0 -gui -msgset
+     C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO/LCMXO640C/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO640CTQFP100
+Target Performance:   3
+Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.0.240.2
+Mapped on:  08/16/21  21:33:30
+
+Design Summary
+--------------
+
+   Number of PFU registers:   102 out of   640 (16%)
+   Number of SLICEs:        65 out of   320 (20%)
+      SLICEs as Logic/ROM:     65 out of   320 (20%)
+      SLICEs as RAM:            0 out of   192 (0%)
+      SLICEs as Carry:          9 out of   320 (3%)
+   Number of LUT4s:        129 out of   640 (20%)
+      Number used as logic LUTs:        111
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       18
+      Number used as shift registers:     0
+   Number of external PIOs: 67 out of 74 (91%)
+   Number of GSRs:  0 out of 1 (0%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   Number of TSALL: 0 out of 1 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net RCLK_c: 39 loads, 39 rising, 0 falling (Driver: PIO RCLK )
+     Net PHI2_c: 13 loads, 5 rising, 8 falling (Driver: PIO PHI2 )
+     Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
+     Net nCRAS_c: 7 loads, 0 rising, 7 falling (Driver: PIO nCRAS )
+   Number of Clock Enables:  13
+     Net PHI2_N_114_enable_7: 2 loads, 2 LSLICEs
+     Net RCLK_c_enable_6: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_4: 3 loads, 3 LSLICEs
+     Net RCLK_c_enable_24: 2 loads, 2 LSLICEs
+     Net RCLK_c_enable_3: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_7: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_23: 8 loads, 8 LSLICEs
+     Net PHI2_N_114_enable_1: 1 loads, 1 LSLICEs
+     Net PHI2_N_114_enable_8: 1 loads, 1 LSLICEs
+     Net PHI2_N_114_enable_6: 2 loads, 2 LSLICEs
+     Net PHI2_N_114_enable_2: 1 loads, 1 LSLICEs
+
+                                    Page 1
+
+
+
+
+Design:  RAM2GS                                        Date:  08/16/21  21:33:30
+
+Design Summary (cont)
+---------------------
+     Net RCLK_c_enable_25: 1 loads, 1 LSLICEs
+     Net Ready_N_268: 1 loads, 1 LSLICEs
+   Number of LSRs:  9
+     Net RASr2: 1 loads, 1 LSLICEs
+     Net C1Submitted_N_225: 2 loads, 2 LSLICEs
+     Net n2299: 1 loads, 1 LSLICEs
+     Net nRowColSel_N_35: 1 loads, 1 LSLICEs
+     Net nRowColSel_N_34: 1 loads, 1 LSLICEs
+     Net LEDEN_N_88: 1 loads, 1 LSLICEs
+     Net n2291: 2 loads, 2 LSLICEs
+     Net Ready: 7 loads, 7 LSLICEs
+     Net nRWE_N_173: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net Ready: 19 loads
+     Net InitReady: 17 loads
+     Net RASr2: 16 loads
+     Net nRowColSel_N_35: 14 loads
+     Net nRowColSel: 13 loads
+     Net Din_c_6: 9 loads
+     Net MAin_c_1: 9 loads
+     Net Din_c_5: 8 loads
+     Net FS_11: 8 loads
+     Net MAin_c_0: 8 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+------------+
+| IO Name             | Direction | Levelmode | IO         | FIXEDDELAY |
+|                     |           |  IO_TYPE  | Register   |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[7]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[6]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[5]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[4]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[3]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[2]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  RAM2GS                                        Date:  08/16/21  21:33:30
+
+IO (PIO) Attributes (cont)
+--------------------------
+| RD[1]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RD[0]               | BIDIR     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[7]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[6]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[5]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[4]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[3]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[2]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[1]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Dout[0]             | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| LED                 | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RBA[1]              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RBA[0]              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[11]              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[10]              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[9]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[8]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[7]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[6]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[5]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[4]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[3]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[2]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[1]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RA[0]               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nRCS                | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RCKE                | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nRWE                | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  RAM2GS                                        Date:  08/16/21  21:33:30
+
+IO (PIO) Attributes (cont)
+--------------------------
+| nRRAS               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nRCAS               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RDQMH               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RDQML               | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nUFMCS              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| UFMCLK              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| UFMSDI              | OUTPUT    | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| PHI2                | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[9]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[8]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[7]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[6]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[5]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[4]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[3]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[2]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[1]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| MAin[0]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| CROW[1]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| CROW[0]             | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[7]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[6]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[5]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[4]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[3]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[2]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[1]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| Din[0]              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+                                    Page 4
+
+
+
+
+Design:  RAM2GS                                        Date:  08/16/21  21:33:30
+
+IO (PIO) Attributes (cont)
+--------------------------
+| nCCAS               | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nCRAS               | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| nFWE                | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| RCLK                | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+| UFMSDO              | INPUT     | LVTTL33   |            |            |
++---------------------+-----------+-----------+------------+------------+
+
+Removed logic
+-------------
+
+Block i2 undriven or does not drive anything - clipped.
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal PHI2_N_114 was merged into signal PHI2_c
+Signal nCRAS_N_9 was merged into signal nCRAS_c
+Signal nCCAS_N_3 was merged into signal nCCAS_c
+Signal n2302 was merged into signal nRowColSel_N_35
+Signal nRWE_N_172 was merged into signal nRWE_N_173
+Signal n2307 was merged into signal Ready
+Signal RASr2_N_63 was merged into signal RASr2
+Signal n1377 was merged into signal nRowColSel_N_34
+Signal n2306 was merged into signal nFWE_c
+Signal UFMSDO_N_74 was merged into signal UFMSDO_c
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal FS_577_add_4_14/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_16/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_12/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_2/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_4/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_6/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_18/CO1 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_18/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_8/CO0 undriven or does not drive anything - clipped.
+Signal FS_577_add_4_10/CO0 undriven or does not drive anything - clipped.
+Block i1962 was optimized away.
+Block i1961 was optimized away.
+Block i1963 was optimized away.
+Block i1070_1_lut_rep_25 was optimized away.
+Block nRWE_I_49_1_lut was optimized away.
+Block i604_1_lut_rep_30 was optimized away.
+Block RASr2_I_0_1_lut was optimized away.
+Block i1069_1_lut was optimized away.
+Block i1_1_lut_rep_29 was optimized away.
+Block UFMSDO_I_0_1_lut was optimized away.
+Block i1 was optimized away.
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 30 MB
+
+                                    Page 5
+
+
+
+
+Design:  RAM2GS                                        Date:  08/16/21  21:33:30
+
+Run Time and Memory Usage (cont)
+--------------------------------
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 6
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
