@@ -1,0 +1,418 @@
+<HTML>
+<HEAD><TITLE>PAD Specification File</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Pad"></A>PAD Specification File
+***************************
+
+PART TYPE:        LCMXO640C
+Performance Grade:      3
+PACKAGE:          TQFP100
+Package Status:                     Final          Version 1.17
+
+Mon Aug 16 21:33:36 2021
+
+Pinout by Port Name:
++-----------+----------+--------------+-------+----------------------------------+
+| Port Name | Pin/Bank | Buffer Type  | Site  | Properties                       |
++-----------+----------+--------------+-------+----------------------------------+
+| CROW[0]   | 32/2     | LVTTL33_IN   | PB4C  | SLEW:FAST                        |
+| CROW[1]   | 34/2     | LVTTL33_IN   | PB4E  | SLEW:FAST                        |
+| Din[0]    | 21/3     | LVTTL33_IN   | PL10C | SLEW:FAST                        |
+| Din[1]    | 15/3     | LVTTL33_IN   | PL7B  | SLEW:FAST                        |
+| Din[2]    | 14/3     | LVTTL33_IN   | PL5B  | SLEW:FAST                        |
+| Din[3]    | 16/3     | LVTTL33_IN   | PL8C  | SLEW:FAST                        |
+| Din[4]    | 18/3     | LVTTL33_IN   | PL9A  | SLEW:FAST                        |
+| Din[5]    | 17/3     | LVTTL33_IN   | PL8D  | SLEW:FAST                        |
+| Din[6]    | 20/3     | LVTTL33_IN   | PL10A | SLEW:FAST                        |
+| Din[7]    | 19/3     | LVTTL33_IN   | PL9C  | SLEW:FAST                        |
+| Dout[0]   | 1/3      | LVTTL33_OUT  | PL2A  | DRIVE:4mA SLEW:SLOW              |
+| Dout[1]   | 7/3      | LVTTL33_OUT  | PL3C  | DRIVE:4mA SLEW:SLOW              |
+| Dout[2]   | 8/3      | LVTTL33_OUT  | PL3D  | DRIVE:4mA SLEW:SLOW              |
+| Dout[3]   | 6/3      | LVTTL33_OUT  | PL3B  | DRIVE:4mA SLEW:SLOW              |
+| Dout[4]   | 4/3      | LVTTL33_OUT  | PL2D  | DRIVE:4mA SLEW:SLOW              |
+| Dout[5]   | 5/3      | LVTTL33_OUT  | PL3A  | DRIVE:4mA SLEW:SLOW              |
+| Dout[6]   | 2/3      | LVTTL33_OUT  | PL2C  | DRIVE:4mA SLEW:SLOW              |
+| Dout[7]   | 3/3      | LVTTL33_OUT  | PL2B  | DRIVE:4mA SLEW:SLOW              |
+| LED       | 57/1     | LVTTL33_OUT  | PR10B | DRIVE:16mA SLEW:SLOW             |
+| MAin[0]   | 23/3     | LVTTL33_IN   | PL11C | SLEW:FAST                        |
+| MAin[1]   | 38/2     | LVTTL33_IN   | PB6B  | SLEW:FAST                        |
+| MAin[2]   | 37/2     | LVTTL33_IN   | PB5D  | SLEW:FAST                        |
+| MAin[3]   | 47/2     | LVTTL33_IN   | PB9C  | SLEW:FAST                        |
+| MAin[4]   | 46/2     | LVTTL33_IN   | PB9A  | SLEW:FAST                        |
+| MAin[5]   | 45/2     | LVTTL33_IN   | PB8D  | SLEW:FAST                        |
+| MAin[6]   | 49/2     | LVTTL33_IN   | PB9D  | SLEW:FAST                        |
+| MAin[7]   | 44/2     | LVTTL33_IN   | PB8C  | SLEW:FAST                        |
+| MAin[8]   | 50/2     | LVTTL33_IN   | PB9F  | SLEW:FAST                        |
+| MAin[9]   | 51/1     | LVTTL33_IN   | PR11D | SLEW:FAST                        |
+| PHI2      | 39/2     | LVTTL33_IN   | PB6C  | SLEW:FAST                        |
+| RA[0]     | 98/0     | LVTTL33_OUT  | PT2B  | DRIVE:4mA SLEW:SLOW              |
+| RA[10]    | 87/0     | LVTTL33_OUT  | PT5A  | DRIVE:4mA SLEW:SLOW              |
+| RA[11]    | 79/0     | LVTTL33_OUT  | PT9A  | DRIVE:4mA SLEW:SLOW              |
+| RA[1]     | 89/0     | LVTTL33_OUT  | PT4F  | DRIVE:4mA SLEW:SLOW              |
+| RA[2]     | 94/0     | LVTTL33_OUT  | PT3B  | DRIVE:4mA SLEW:SLOW              |
+| RA[3]     | 97/0     | LVTTL33_OUT  | PT2E  | DRIVE:4mA SLEW:SLOW              |
+| RA[4]     | 99/0     | LVTTL33_OUT  | PT2C  | DRIVE:4mA SLEW:SLOW              |
+| RA[5]     | 95/0     | LVTTL33_OUT  | PT3A  | DRIVE:4mA SLEW:SLOW              |
+| RA[6]     | 91/0     | LVTTL33_OUT  | PT3F  | DRIVE:4mA SLEW:SLOW              |
+| RA[7]     | 100/0    | LVTTL33_OUT  | PT2A  | DRIVE:4mA SLEW:SLOW              |
+| RA[8]     | 96/0     | LVTTL33_OUT  | PT2F  | DRIVE:4mA SLEW:SLOW              |
+| RA[9]     | 85/0     | LVTTL33_OUT  | PT6B  | DRIVE:4mA SLEW:SLOW              |
+| RBA[0]    | 63/1     | LVTTL33_OUT  | PR7B  | DRIVE:4mA SLEW:SLOW              |
+| RBA[1]    | 83/0     | LVTTL33_OUT  | PT7A  | DRIVE:4mA SLEW:SLOW              |
+| RCKE      | 82/0     | LVTTL33_OUT  | PT7E  | DRIVE:4mA SLEW:SLOW              |
+| RCLK      | 86/0     | LVTTL33_IN   | PT5B  | SLEW:FAST                        |
+| RDQMH     | 76/0     | LVTTL33_OUT  | PT9F  | DRIVE:4mA SLEW:SLOW              |
+| RDQML     | 61/1     | LVTTL33_OUT  | PR9B  | DRIVE:4mA SLEW:SLOW              |
+| RD[0]     | 64/1     | LVTTL33_BIDI | PR6C  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[1]     | 65/1     | LVTTL33_BIDI | PR6B  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[2]     | 66/1     | LVTTL33_BIDI | PR5D  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[3]     | 67/1     | LVTTL33_BIDI | PR5B  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[4]     | 68/1     | LVTTL33_BIDI | PR4D  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[5]     | 69/1     | LVTTL33_BIDI | PR4B  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[6]     | 70/1     | LVTTL33_BIDI | PR3D  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| RD[7]     | 71/1     | LVTTL33_BIDI | PR3B  | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
+| UFMCLK    | 58/1     | LVTTL33_OUT  | PR10A | DRIVE:4mA SLEW:SLOW              |
+| UFMSDI    | 56/1     | LVTTL33_OUT  | PR10C | DRIVE:4mA SLEW:SLOW              |
+| UFMSDO    | 55/1     | LVTTL33_IN   | PR10D | SLEW:FAST PULL:KEEPER            |
+| nCCAS     | 27/2     | LVTTL33_IN   | PB2C  | SLEW:FAST                        |
+| nCRAS     | 43/2     | LVTTL33_IN   | PB8B  | SLEW:FAST                        |
+| nFWE      | 22/3     | LVTTL33_IN   | PL11A | SLEW:FAST                        |
+| nRCAS     | 78/0     | LVTTL33_OUT  | PT9C  | DRIVE:4mA SLEW:SLOW              |
+| nRCS      | 77/0     | LVTTL33_OUT  | PT9E  | DRIVE:4mA SLEW:SLOW              |
+| nRRAS     | 73/1     | LVTTL33_OUT  | PR2B  | DRIVE:4mA SLEW:SLOW              |
+| nRWE      | 72/1     | LVTTL33_OUT  | PR2D  | DRIVE:4mA SLEW:SLOW              |
+| nUFMCS    | 53/1     | LVTTL33_OUT  | PR11C | DRIVE:4mA SLEW:SLOW              |
++-----------+----------+--------------+-------+----------------------------------+
+
+Vccio by Bank:
++------+-------+
+| Bank | Vccio |
++------+-------+
+| 0    | 3.3V  |
+| 1    | 3.3V  |
+| 2    |       |
+| 3    | 3.3V  |
++------+-------+
+
+
+<A name="pad_vref"></A><B><U><big>Vref by Bank:</big></U></B>
++------+-----+-----------------+---------+
+| Vref | Pin | Bank # / Vref # | Load(s) |
++------+-----+-----------------+---------+
++------+-----+-----------------+---------+
+
+<A name="pad_pin"></A><B><U><big>Pinout by Pin Number:</big></U></B>
++----------+---------------------+------------+--------------+-------+---------------+
+| Pin/Bank | Pin Info            | Preference | Buffer Type  | Site  | Dual Function |
++----------+---------------------+------------+--------------+-------+---------------+
+| 1/3      | Dout[0]             | LOCATED    | LVTTL33_OUT  | PL2A  |               |
+| 2/3      | Dout[6]             | LOCATED    | LVTTL33_OUT  | PL2C  |               |
+| 3/3      | Dout[7]             | LOCATED    | LVTTL33_OUT  | PL2B  |               |
+| 4/3      | Dout[4]             | LOCATED    | LVTTL33_OUT  | PL2D  |               |
+| 5/3      | Dout[5]             | LOCATED    | LVTTL33_OUT  | PL3A  |               |
+| 6/3      | Dout[3]             | LOCATED    | LVTTL33_OUT  | PL3B  |               |
+| 7/3      | Dout[1]             | LOCATED    | LVTTL33_OUT  | PL3C  |               |
+| 8/3      | Dout[2]             | LOCATED    | LVTTL33_OUT  | PL3D  |               |
+| 9/3      |     unused, PULL:UP |            |              | PL4A  |               |
+| 11/3     |     unused, PULL:UP |            |              | PL4C  |               |
+| 13/3     |     unused, PULL:UP |            |              | PL4D  |               |
+| 14/3     | Din[2]              | LOCATED    | LVTTL33_IN   | PL5B  | GSR_PADN      |
+| 15/3     | Din[1]              | LOCATED    | LVTTL33_IN   | PL7B  |               |
+| 16/3     | Din[3]              | LOCATED    | LVTTL33_IN   | PL8C  | TSALLPAD      |
+| 17/3     | Din[5]              | LOCATED    | LVTTL33_IN   | PL8D  |               |
+| 18/3     | Din[4]              | LOCATED    | LVTTL33_IN   | PL9A  |               |
+| 19/3     | Din[7]              | LOCATED    | LVTTL33_IN   | PL9C  |               |
+| 20/3     | Din[6]              | LOCATED    | LVTTL33_IN   | PL10A |               |
+| 21/3     | Din[0]              | LOCATED    | LVTTL33_IN   | PL10C |               |
+| 22/3     | nFWE                | LOCATED    | LVTTL33_IN   | PL11A |               |
+| 23/3     | MAin[0]             | LOCATED    | LVTTL33_IN   | PL11C |               |
+| 27/2     | nCCAS               | LOCATED    | LVTTL33_IN   | PB2C  |               |
+| 32/2     | CROW[0]             | LOCATED    | LVTTL33_IN   | PB4C  |               |
+| 34/2     | CROW[1]             | LOCATED    | LVTTL33_IN   | PB4E  |               |
+| 36/2     |     unused, PULL:UP |            |              | PB5B  | PCLKT2_1      |
+| 37/2     | MAin[2]             | LOCATED    | LVTTL33_IN   | PB5D  |               |
+| 38/2     | MAin[1]             | LOCATED    | LVTTL33_IN   | PB6B  | PCLKT2_0      |
+| 39/2     | PHI2                | LOCATED    | LVTTL33_IN   | PB6C  |               |
+| 43/2     | nCRAS               | LOCATED    | LVTTL33_IN   | PB8B  |               |
+| 44/2     | MAin[7]             | LOCATED    | LVTTL33_IN   | PB8C  |               |
+| 45/2     | MAin[5]             | LOCATED    | LVTTL33_IN   | PB8D  |               |
+| 46/2     | MAin[4]             | LOCATED    | LVTTL33_IN   | PB9A  |               |
+| 47/2     | MAin[3]             | LOCATED    | LVTTL33_IN   | PB9C  |               |
+| 49/2     | MAin[6]             | LOCATED    | LVTTL33_IN   | PB9D  |               |
+| 50/2     | MAin[8]             | LOCATED    | LVTTL33_IN   | PB9F  |               |
+| 51/1     | MAin[9]             | LOCATED    | LVTTL33_IN   | PR11D |               |
+| 52/1     |     unused, PULL:UP |            |              | PR11B |               |
+| 53/1     | nUFMCS              | LOCATED    | LVTTL33_OUT  | PR11C |               |
+| 54/1     |     unused, PULL:UP |            |              | PR11A |               |
+| 55/1     | UFMSDO              | LOCATED    | LVTTL33_IN   | PR10D |               |
+| 56/1     | UFMSDI              | LOCATED    | LVTTL33_OUT  | PR10C |               |
+| 57/1     | LED                 | LOCATED    | LVTTL33_OUT  | PR10B |               |
+| 58/1     | UFMCLK              | LOCATED    | LVTTL33_OUT  | PR10A |               |
+| 59/1     |     unused, PULL:UP |            |              | PR9D  |               |
+| 61/1     | RDQML               | LOCATED    | LVTTL33_OUT  | PR9B  |               |
+| 63/1     | RBA[0]              | LOCATED    | LVTTL33_OUT  | PR7B  |               |
+| 64/1     | RD[0]               | LOCATED    | LVTTL33_BIDI | PR6C  |               |
+| 65/1     | RD[1]               | LOCATED    | LVTTL33_BIDI | PR6B  |               |
+| 66/1     | RD[2]               | LOCATED    | LVTTL33_BIDI | PR5D  |               |
+| 67/1     | RD[3]               | LOCATED    | LVTTL33_BIDI | PR5B  |               |
+| 68/1     | RD[4]               | LOCATED    | LVTTL33_BIDI | PR4D  |               |
+| 69/1     | RD[5]               | LOCATED    | LVTTL33_BIDI | PR4B  |               |
+| 70/1     | RD[6]               | LOCATED    | LVTTL33_BIDI | PR3D  |               |
+| 71/1     | RD[7]               | LOCATED    | LVTTL33_BIDI | PR3B  |               |
+| 72/1     | nRWE                | LOCATED    | LVTTL33_OUT  | PR2D  |               |
+| 73/1     | nRRAS               | LOCATED    | LVTTL33_OUT  | PR2B  |               |
+| 76/0     | RDQMH               | LOCATED    | LVTTL33_OUT  | PT9F  |               |
+| 77/0     | nRCS                | LOCATED    | LVTTL33_OUT  | PT9E  |               |
+| 78/0     | nRCAS               | LOCATED    | LVTTL33_OUT  | PT9C  |               |
+| 79/0     | RA[11]              | LOCATED    | LVTTL33_OUT  | PT9A  |               |
+| 82/0     | RCKE                | LOCATED    | LVTTL33_OUT  | PT7E  | D7            |
+| 83/0     | RBA[1]              | LOCATED    | LVTTL33_OUT  | PT7A  | D6            |
+| 85/0     | RA[9]               | LOCATED    | LVTTL33_OUT  | PT6B  | PCLKT0_1      |
+| 86/0     | RCLK                | LOCATED    | LVTTL33_IN   | PT5B  | PCLKT0_0      |
+| 87/0     | RA[10]              | LOCATED    | LVTTL33_OUT  | PT5A  |               |
+| 89/0     | RA[1]               | LOCATED    | LVTTL33_OUT  | PT4F  |               |
+| 91/0     | RA[6]               | LOCATED    | LVTTL33_OUT  | PT3F  | D3            |
+| 94/0     | RA[2]               | LOCATED    | LVTTL33_OUT  | PT3B  |               |
+| 95/0     | RA[5]               | LOCATED    | LVTTL33_OUT  | PT3A  |               |
+| 96/0     | RA[8]               | LOCATED    | LVTTL33_OUT  | PT2F  | D2            |
+| 97/0     | RA[3]               | LOCATED    | LVTTL33_OUT  | PT2E  |               |
+| 98/0     | RA[0]               | LOCATED    | LVTTL33_OUT  | PT2B  | D1            |
+| 99/0     | RA[4]               | LOCATED    | LVTTL33_OUT  | PT2C  |               |
+| 100/0    | RA[7]               | LOCATED    | LVTTL33_OUT  | PT2A  |               |
+| PB2A/2   |     unused, PULL:UP |            |              | PB2A  |               |
+| PB2B/2   |     unused, PULL:UP |            |              | PB2B  |               |
+| PB2D/2   |     unused, PULL:UP |            |              | PB2D  |               |
+| PB3A/2   |     unused, PULL:UP |            |              | PB3A  |               |
+| PB3B/2   |     unused, PULL:UP |            |              | PB3B  |               |
+| PB3C/2   |     unused, PULL:UP |            |              | PB3C  |               |
+| PB3D/2   |     unused, PULL:UP |            |              | PB3D  |               |
+| PB4A/2   |     unused, PULL:UP |            |              | PB4A  |               |
+| PB4B/2   |     unused, PULL:UP |            |              | PB4B  |               |
+| PB4D/2   |     unused, PULL:UP |            |              | PB4D  |               |
+| PB4F/2   |     unused, PULL:UP |            |              | PB4F  |               |
+| PB5A/2   |     unused, PULL:UP |            |              | PB5A  |               |
+| PB5C/2   |     unused, PULL:UP |            |              | PB5C  |               |
+| PB6A/2   |     unused, PULL:UP |            |              | PB6A  |               |
+| PB6D/2   |     unused, PULL:UP |            |              | PB6D  |               |
+| PB7A/2   |     unused, PULL:UP |            |              | PB7A  |               |
+| PB7B/2   |     unused, PULL:UP |            |              | PB7B  |               |
+| PB7C/2   |     unused, PULL:UP |            |              | PB7C  |               |
+| PB7D/2   |     unused, PULL:UP |            |              | PB7D  |               |
+| PB7E/2   |     unused, PULL:UP |            |              | PB7E  |               |
+| PB7F/2   |     unused, PULL:UP |            |              | PB7F  |               |
+| PB8A/2   |     unused, PULL:UP |            |              | PB8A  |               |
+| PB9B/2   |     unused, PULL:UP |            |              | PB9B  |               |
+| PB9E/0   |     unused, PULL:UP |            |              | PB9E  |               |
+| PL4B/3   |     unused, PULL:UP |            |              | PL4B  |               |
+| PL5A/3   |     unused, PULL:UP |            |              | PL5A  |               |
+| PL5C/3   |     unused, PULL:UP |            |              | PL5C  |               |
+| PL5D/3   |     unused, PULL:UP |            |              | PL5D  |               |
+| PL6A/3   |     unused, PULL:UP |            |              | PL6A  |               |
+| PL6B/3   |     unused, PULL:UP |            |              | PL6B  |               |
+| PL6C/3   |     unused, PULL:UP |            |              | PL6C  |               |
+| PL6D/3   |     unused, PULL:UP |            |              | PL6D  |               |
+| PL7A/3   |     unused, PULL:UP |            |              | PL7A  |               |
+| PL7C/3   |     unused, PULL:UP |            |              | PL7C  |               |
+| PL7D/3   |     unused, PULL:UP |            |              | PL7D  |               |
+| PL8A/3   |     unused, PULL:UP |            |              | PL8A  |               |
+| PL8B/3   |     unused, PULL:UP |            |              | PL8B  |               |
+| PL9B/3   |     unused, PULL:UP |            |              | PL9B  |               |
+| PL9D/3   |     unused, PULL:UP |            |              | PL9D  |               |
+| PL10B/3  |     unused, PULL:UP |            |              | PL10B |               |
+| PL10D/3  |     unused, PULL:UP |            |              | PL10D |               |
+| PL11B/3  |     unused, PULL:UP |            |              | PL11B |               |
+| PL11D/3  |     unused, PULL:UP |            |              | PL11D |               |
+| PR2A/1   |     unused, PULL:UP |            |              | PR2A  |               |
+| PR2C/1   |     unused, PULL:UP |            |              | PR2C  |               |
+| PR3A/1   |     unused, PULL:UP |            |              | PR3A  |               |
+| PR3C/1   |     unused, PULL:UP |            |              | PR3C  |               |
+| PR4A/1   |     unused, PULL:UP |            |              | PR4A  |               |
+| PR4C/1   |     unused, PULL:UP |            |              | PR4C  |               |
+| PR5A/1   |     unused, PULL:UP |            |              | PR5A  |               |
+| PR5C/1   |     unused, PULL:UP |            |              | PR5C  |               |
+| PR6A/1   |     unused, PULL:UP |            |              | PR6A  |               |
+| PR6D/1   |     unused, PULL:UP |            |              | PR6D  |               |
+| PR7A/1   |     unused, PULL:UP |            |              | PR7A  |               |
+| PR7C/1   |     unused, PULL:UP |            |              | PR7C  |               |
+| PR7D/1   |     unused, PULL:UP |            |              | PR7D  |               |
+| PR8A/1   |     unused, PULL:UP |            |              | PR8A  |               |
+| PR8B/1   |     unused, PULL:UP |            |              | PR8B  |               |
+| PR8C/1   |     unused, PULL:UP |            |              | PR8C  |               |
+| PR8D/1   |     unused, PULL:UP |            |              | PR8D  |               |
+| PR9A/1   |     unused, PULL:UP |            |              | PR9A  |               |
+| PR9C/1   |     unused, PULL:UP |            |              | PR9C  |               |
+| PT2D/0   |     unused, PULL:UP |            |              | PT2D  |               |
+| PT3C/0   |     unused, PULL:UP |            |              | PT3C  |               |
+| PT3D/0   |     unused, PULL:UP |            |              | PT3D  |               |
+| PT3E/0   |     unused, PULL:UP |            |              | PT3E  |               |
+| PT4A/0   |     unused, PULL:UP |            |              | PT4A  |               |
+| PT4B/0   |     unused, PULL:UP |            |              | PT4B  |               |
+| PT4C/0   |     unused, PULL:UP |            |              | PT4C  |               |
+| PT4D/0   |     unused, PULL:UP |            |              | PT4D  |               |
+| PT4E/0   |     unused, PULL:UP |            |              | PT4E  |               |
+| PT5C/0   |     unused, PULL:UP |            |              | PT5C  |               |
+| PT5D/0   |     unused, PULL:UP |            |              | PT5D  |               |
+| PT6A/0   |     unused, PULL:UP |            |              | PT6A  |               |
+| PT6C/0   |     unused, PULL:UP |            |              | PT6C  |               |
+| PT6D/0   |     unused, PULL:UP |            |              | PT6D  |               |
+| PT7B/0   |     unused, PULL:UP |            |              | PT7B  |               |
+| PT7C/0   |     unused, PULL:UP |            |              | PT7C  |               |
+| PT7D/0   |     unused, PULL:UP |            |              | PT7D  |               |
+| PT7F/0   |     unused, PULL:UP |            |              | PT7F  |               |
+| PT8A/0   |     unused, PULL:UP |            |              | PT8A  |               |
+| PT8B/0   |     unused, PULL:UP |            |              | PT8B  |               |
+| PT8C/0   |     unused, PULL:UP |            |              | PT8C  |               |
+| PT8D/0   |     unused, PULL:UP |            |              | PT8D  |               |
+| PT9B/0   |     unused, PULL:UP |            |              | PT9B  |               |
+| PT9D/0   |     unused, PULL:UP |            |              | PT9D  |               |
+| TCK/2    |                     |            |              | TCK   | TCK           |
+| TDI/2    |                     |            |              | TDI   | TDID0         |
+| TDO/2    |                     |            |              | TDO   | TDO           |
+| TMS/2    |                     |            |              | TMS   | TMS           |
++----------+---------------------+------------+--------------+-------+---------------+
+
+
+List of All Pins' Locate Preferences Based on Final Placement After PAR 
+to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
+
+LOCATE  COMP  "CROW[0]"  SITE  "32";
+LOCATE  COMP  "CROW[1]"  SITE  "34";
+LOCATE  COMP  "Din[0]"  SITE  "21";
+LOCATE  COMP  "Din[1]"  SITE  "15";
+LOCATE  COMP  "Din[2]"  SITE  "14";
+LOCATE  COMP  "Din[3]"  SITE  "16";
+LOCATE  COMP  "Din[4]"  SITE  "18";
+LOCATE  COMP  "Din[5]"  SITE  "17";
+LOCATE  COMP  "Din[6]"  SITE  "20";
+LOCATE  COMP  "Din[7]"  SITE  "19";
+LOCATE  COMP  "Dout[0]"  SITE  "1";
+LOCATE  COMP  "Dout[1]"  SITE  "7";
+LOCATE  COMP  "Dout[2]"  SITE  "8";
+LOCATE  COMP  "Dout[3]"  SITE  "6";
+LOCATE  COMP  "Dout[4]"  SITE  "4";
+LOCATE  COMP  "Dout[5]"  SITE  "5";
+LOCATE  COMP  "Dout[6]"  SITE  "2";
+LOCATE  COMP  "Dout[7]"  SITE  "3";
+LOCATE  COMP  "LED"  SITE  "57";
+LOCATE  COMP  "MAin[0]"  SITE  "23";
+LOCATE  COMP  "MAin[1]"  SITE  "38";
+LOCATE  COMP  "MAin[2]"  SITE  "37";
+LOCATE  COMP  "MAin[3]"  SITE  "47";
+LOCATE  COMP  "MAin[4]"  SITE  "46";
+LOCATE  COMP  "MAin[5]"  SITE  "45";
+LOCATE  COMP  "MAin[6]"  SITE  "49";
+LOCATE  COMP  "MAin[7]"  SITE  "44";
+LOCATE  COMP  "MAin[8]"  SITE  "50";
+LOCATE  COMP  "MAin[9]"  SITE  "51";
+LOCATE  COMP  "PHI2"  SITE  "39";
+LOCATE  COMP  "RA[0]"  SITE  "98";
+LOCATE  COMP  "RA[10]"  SITE  "87";
+LOCATE  COMP  "RA[11]"  SITE  "79";
+LOCATE  COMP  "RA[1]"  SITE  "89";
+LOCATE  COMP  "RA[2]"  SITE  "94";
+LOCATE  COMP  "RA[3]"  SITE  "97";
+LOCATE  COMP  "RA[4]"  SITE  "99";
+LOCATE  COMP  "RA[5]"  SITE  "95";
+LOCATE  COMP  "RA[6]"  SITE  "91";
+LOCATE  COMP  "RA[7]"  SITE  "100";
+LOCATE  COMP  "RA[8]"  SITE  "96";
+LOCATE  COMP  "RA[9]"  SITE  "85";
+LOCATE  COMP  "RBA[0]"  SITE  "63";
+LOCATE  COMP  "RBA[1]"  SITE  "83";
+LOCATE  COMP  "RCKE"  SITE  "82";
+LOCATE  COMP  "RCLK"  SITE  "86";
+LOCATE  COMP  "RDQMH"  SITE  "76";
+LOCATE  COMP  "RDQML"  SITE  "61";
+LOCATE  COMP  "RD[0]"  SITE  "64";
+LOCATE  COMP  "RD[1]"  SITE  "65";
+LOCATE  COMP  "RD[2]"  SITE  "66";
+LOCATE  COMP  "RD[3]"  SITE  "67";
+LOCATE  COMP  "RD[4]"  SITE  "68";
+LOCATE  COMP  "RD[5]"  SITE  "69";
+LOCATE  COMP  "RD[6]"  SITE  "70";
+LOCATE  COMP  "RD[7]"  SITE  "71";
+LOCATE  COMP  "UFMCLK"  SITE  "58";
+LOCATE  COMP  "UFMSDI"  SITE  "56";
+LOCATE  COMP  "UFMSDO"  SITE  "55";
+LOCATE  COMP  "nCCAS"  SITE  "27";
+LOCATE  COMP  "nCRAS"  SITE  "43";
+LOCATE  COMP  "nFWE"  SITE  "22";
+LOCATE  COMP  "nRCAS"  SITE  "78";
+LOCATE  COMP  "nRCS"  SITE  "77";
+LOCATE  COMP  "nRRAS"  SITE  "73";
+LOCATE  COMP  "nRWE"  SITE  "72";
+LOCATE  COMP  "nUFMCS"  SITE  "53";
+
+
+
+
+
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Aug 16 21:33:36 2021
+
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

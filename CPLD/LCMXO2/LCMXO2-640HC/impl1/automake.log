@@ -1,0 +1,1344 @@
+
+map -a "MachXO2" -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial   "RAM2GS_LCMXO2_640HC_impl1.ngd" -o "RAM2GS_LCMXO2_640HC_impl1_map.ncd" -pr "RAM2GS_LCMXO2_640HC_impl1.prf" -mp "RAM2GS_LCMXO2_640HC_impl1.mrp" -lpf "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/impl1/RAM2GS_LCMXO2_640HC_impl1.lpf" -lpf "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/RAM2GS_LCMXO2_640HC.lpf"  -c 0           
+map:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+   Process the file: RAM2GS_LCMXO2_640HC_impl1.ngd
+   Picdevice="LCMXO2-640HC"
+
+   Pictype="TQFP100"
+
+   Picspeed=4
+
+   Remove unused logic
+
+   Do not produce over sized NCDs.
+
+Part used: LCMXO2-640HCTQFP100, Performance used: 4.
+
+Loading device for application baspr from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+
+Running general design DRC...
+
+Removing unused logic...
+
+Optimizing...
+
+
+
+
+Design Summary:
+   Number of registers:    119 out of   877 (14%)
+      PFU registers:          119 out of   640 (19%)
+      PIO registers:            0 out of   237 (0%)
+   Number of SLICEs:       131 out of   320 (41%)
+      SLICEs as Logic/ROM:    131 out of   320 (41%)
+      SLICEs as RAM:            0 out of   240 (0%)
+      SLICEs as Carry:         10 out of   320 (3%)
+   Number of LUT4s:        255 out of   640 (40%)
+      Number used as logic LUTs:        235
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       20
+      Number used as shift registers:     0
+   Number of PIO sites used: 63 + 4(JTAG) out of 79 (85%)
+   Number of block RAMs:  0 out of 2 (0%)
+   Number of GSRs:        0 out of 1 (0%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
+   Number of clocks:  5
+     Net RCLK_c: 52 loads, 52 rising, 0 falling (Driver: PIO RCLK )
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: wb_clk_550 )
+     Net PHI2_c: 13 loads, 5 rising, 8 falling (Driver: PIO PHI2 )
+     Net nCRAS_c: 7 loads, 0 rising, 7 falling (Driver: PIO nCRAS )
+     Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
+   Number of Clock Enables:  14
+     Net RCLK_c_enable_27: 8 loads, 8 LSLICEs
+     Net RCLK_c_enable_20: 4 loads, 4 LSLICEs
+     Net RCLK_c_enable_29: 2 loads, 2 LSLICEs
+     Net RCLK_c_enable_25: 2 loads, 2 LSLICEs
+     Net InitReady: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_24: 2 loads, 2 LSLICEs
+     Net PHI2_N_151_enable_1: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_26: 1 loads, 1 LSLICEs
+     Net PHI2_N_151_enable_3: 1 loads, 1 LSLICEs
+     Net PHI2_N_151_enable_5: 2 loads, 2 LSLICEs
+     Net Ready_N_280: 1 loads, 1 LSLICEs
+     Net PHI2_N_151_enable_6: 1 loads, 1 LSLICEs
+     Net RCLK_c_enable_28: 1 loads, 1 LSLICEs
+     Net PHI2_N_151_enable_7: 1 loads, 1 LSLICEs
+   Number of LSRs:  8
+     Net RASr2: 1 loads, 1 LSLICEs
+     Net nRowColSel_N_34: 1 loads, 1 LSLICEs
+     Net wb_rst: 1 loads, 0 LSLICEs
+     Net nRWE_N_210: 1 loads, 1 LSLICEs
+     Net C1Submitted_N_232: 2 loads, 2 LSLICEs
+     Net wb_adr_7__N_92: 2 loads, 2 LSLICEs
+     Net nRowColSel_N_35: 1 loads, 1 LSLICEs
+     Net Ready: 7 loads, 7 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net InitReady: 36 loads
+     Net FS_10: 32 loads
+     Net FS_11: 32 loads
+     Net FS_9: 26 loads
+     Net FS_7: 25 loads
+     Net FS_8: 23 loads
+     Net FS_5: 21 loads
+     Net FS_6: 21 loads
+     Net FS_12: 20 loads
+     Net Ready: 18 loads
+ 
+
+   Number of warnings:  0
+   Number of errors:    0
+
+
+
+Total CPU Time: 0 secs  
+Total REAL Time: 0 secs  
+Peak Memory Usage: 36 MB
+
+Dumping design to file RAM2GS_LCMXO2_640HC_impl1_map.ncd.
+
+ncd2vdb "RAM2GS_LCMXO2_640HC_impl1_map.ncd" ".vdbs/RAM2GS_LCMXO2_640HC_impl1_map.vdb"
+
+Loading device for application ncd2vdb from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+
+trce -f "RAM2GS_LCMXO2_640HC_impl1.mt" -o "RAM2GS_LCMXO2_640HC_impl1.tw1" "RAM2GS_LCMXO2_640HC_impl1_map.ncd" "RAM2GS_LCMXO2_640HC_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file ram2gs_lcmxo2_640hc_impl1_map.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Tue Aug 17 06:20:51 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Design file:     ram2gs_lcmxo2_640hc_impl1_map.ncd
+Preference file: ram2gs_lcmxo2_640hc_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.135 V (Bank 0)
+                   3.135 V (Bank 1)
+                   3.135 V (Bank 2)
+                   3.135 V (Bank 3)
+                   2.375 V (Bank 4)
+                   2.375 V (Bank 5)
+                   2.375 V (Bank 6)
+                   2.375 V (Bank 7)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1548 paths, 9 nets, and 889 connections (78.60% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Tue Aug 17 06:20:51 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Design file:     ram2gs_lcmxo2_640hc_impl1_map.ncd
+Preference file: ram2gs_lcmxo2_640hc_impl1.prf
+Device,speed:    LCMXO2-640HC,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.135 V (Bank 0)
+                   3.135 V (Bank 1)
+                   3.135 V (Bank 2)
+                   3.135 V (Bank 3)
+                   2.375 V (Bank 4)
+                   2.375 V (Bank 5)
+                   2.375 V (Bank 6)
+                   2.375 V (Bank 7)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1548 paths, 9 nets, and 889 connections (78.60% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 40 MB
+
+
+mpartrce -p "RAM2GS_LCMXO2_640HC_impl1.p2t" -f "RAM2GS_LCMXO2_640HC_impl1.p3t" -tf "RAM2GS_LCMXO2_640HC_impl1.pt" "RAM2GS_LCMXO2_640HC_impl1_map.ncd" "RAM2GS_LCMXO2_640HC_impl1.ncd"
+
+---- MParTrce Tool ----
+Removing old design directory at request of -rem command line option to this program.
+Running par. Please wait . . .
+
+Lattice Place and Route Report for Design "RAM2GS_LCMXO2_640HC_impl1_map.ncd"
+Tue Aug 17 06:20:51 2021
+
+PAR: Place And Route Diamond (64-bit) 3.12.0.240.2.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.dir/5_1.ncd RAM2GS_LCMXO2_640HC_impl1.prf
+Preference file: RAM2GS_LCMXO2_640HC_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file RAM2GS_LCMXO2_640HC_impl1_map.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application par from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+Device utilization summary:
+
+   PIO (prelim)   63+4(JTAG)/80      84% used
+                  63+4(JTAG)/79      85% bonded
+
+   SLICE            131/320          40% used
+
+   EFB                1/1           100% used
+
+
+Number of Signals: 401
+Number of Connections: 1131
+
+Pin Constraint Summary:
+   63 out of 63 pins locked (100% locked).
+
+The following 4 signals are selected to use the primary clock routing resources:
+    RCLK_c (driver: RCLK, clk load #: 52)
+    PHI2_c (driver: PHI2, clk load #: 13)
+    nCRAS_c (driver: nCRAS, clk load #: 7)
+    nCCAS_c (driver: nCCAS, clk load #: 4)
+
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="PHI2_c" arg1="Primary" arg2="PHI2" arg3="8" arg4="Primary"  />
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="nCRAS_c" arg1="Primary" arg2="nCRAS" arg3="17" arg4="Primary"  />
+    <postMsg mid="61061008" type="Warning" dynamic="5" navigation="0" arg0="nCCAS_c" arg1="Primary" arg2="nCCAS" arg3="9" arg4="Primary"  />
+
+No signal is selected as secondary clock.
+
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+............
+Finished Placer Phase 0.  REAL time: 0 secs 
+
+Starting Placer Phase 1.
+....................
+Placer score = 65362.
+Finished Placer Phase 1.  REAL time: 6 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  65089
+Finished Placer Phase 2.  REAL time: 6 secs 
+
+
+------------------ Clock Report ------------------
+
+Global Clock Resources:
+  CLK_PIN    : 1 out of 8 (12%)
+  General PIO: 3 out of 80 (3%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY "RCLK_c" from comp "RCLK" on CLK_PIN site "63 (PR5C)", clk load = 52
+  PRIMARY "PHI2_c" from comp "PHI2" on PIO site "8 (PL3B)", clk load = 13
+  PRIMARY "nCRAS_c" from comp "nCRAS" on PIO site "17 (PL6B)", clk load = 7
+  PRIMARY "nCCAS_c" from comp "nCCAS" on PIO site "9 (PL3C)", clk load = 4
+
+  PRIMARY  : 4 out of 8 (50%)
+  SECONDARY: 0 out of 8 (0%)
+
+--------------- End of Clock Report ---------------
+
+
+I/O Usage Summary (final):
+   63 + 4(JTAG) out of 80 (83.8%) PIO sites used.
+   63 + 4(JTAG) out of 79 (84.8%) bonded PIO sites used.
+   Number of PIO comps: 63; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 13 / 19 ( 68%) | 3.3V       | -         |
+| 1        | 20 / 20 (100%) | 3.3V       | -         |
+| 2        | 12 / 20 ( 60%) | 3.3V       | -         |
+| 3        | 18 / 20 ( 90%) | 3.3V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file RAM2GS_LCMXO2_640HC_impl1.dir/5_1.ncd.
+
+0 connections routed; 1131 unrouted.
+Starting router resource preassignment
+    <postMsg mid="62061008" type="Warning" dynamic="1" navigation="0" arg0="PHI2_c"  />
+    <postMsg mid="62061008" type="Warning" dynamic="1" navigation="0" arg0="nCRAS_c"  />
+    <postMsg mid="62061008" type="Warning" dynamic="1" navigation="0" arg0="nCCAS_c"  />
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=wb_clk loads=1 clock_loads=1"  />
+
+Completed router resource preassignment. Real time: 8 secs 
+
+Start NBR router at 06:20:59 08/17/21
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 06:20:59 08/17/21
+
+Start NBR section for initial routing at 06:20:59 08/17/21
+Level 1, iteration 1
+0(0.00%) conflict; 980(86.65%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.167ns/0.000ns; real time: 8 secs 
+Level 2, iteration 1
+1(0.00%) conflict; 970(85.76%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.141ns/0.000ns; real time: 9 secs 
+Level 3, iteration 1
+1(0.00%) conflict; 904(79.93%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 4, iteration 1
+26(0.06%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 06:21:00 08/17/21
+Level 1, iteration 1
+1(0.00%) conflict; 28(2.48%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 2, iteration 1
+1(0.00%) conflict; 28(2.48%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 3, iteration 1
+1(0.00%) conflict; 28(2.48%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 4, iteration 1
+12(0.03%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 4, iteration 2
+5(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+Level 4, iteration 3
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 06:21:00 08/17/21
+
+Start NBR section for re-routing at 06:21:00 08/17/21
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: 1.135ns/0.000ns; real time: 9 secs 
+
+Start NBR section for post-routing at 06:21:00 08/17/21
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack<setup> : 1.135ns
+  Timing score<setup> : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+    <postMsg mid="66011008" type="Warning" dynamic="1" navigation="0" arg0="&#xA;   Signal=wb_clk loads=1 clock_loads=1"  />
+
+Total CPU time 9 secs 
+Total REAL time: 10 secs 
+Completely routed.
+End of route.  1131 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file RAM2GS_LCMXO2_640HC_impl1.dir/5_1.ncd.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack<setup/<ns>> = 1.135
+PAR_SUMMARY::Timing score<setup/<ns>> = 0.000
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.304
+PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 9 secs 
+Total REAL time to completion: 10 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Exiting par with exit code 0
+Exiting mpartrce with exit code 0
+
+trce -f "RAM2GS_LCMXO2_640HC_impl1.pt" -o "RAM2GS_LCMXO2_640HC_impl1.twr" "RAM2GS_LCMXO2_640HC_impl1.ncd" "RAM2GS_LCMXO2_640HC_impl1.prf"
+trce:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application trce from file ram2gs_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application trce from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
+Tue Aug 17 06:21:01 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o RAM2GS_LCMXO2_640HC_impl1.twr -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Design file:     ram2gs_lcmxo2_640hc_impl1.ncd
+Preference file: ram2gs_lcmxo2_640hc_impl1.prf
+Device,speed:    LCMXO2-640HC,4
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.135 V (Bank 0)
+                   3.135 V (Bank 1)
+                   3.135 V (Bank 2)
+                   3.135 V (Bank 3)
+                   2.375 V (Bank 4)
+                   2.375 V (Bank 5)
+                   2.375 V (Bank 6)
+                   2.375 V (Bank 7)
+
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1548 paths, 9 nets, and 900 connections (79.58% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
+Tue Aug 17 06:21:01 2021
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 10 -gt -sethld -sp 4 -sphld m -o RAM2GS_LCMXO2_640HC_impl1.twr -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Design file:     ram2gs_lcmxo2_640hc_impl1.ncd
+Preference file: ram2gs_lcmxo2_640hc_impl1.prf
+Device,speed:    LCMXO2-640HC,m
+Report level:    verbose report, limited to 10 items per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+--------------------------------------------------------------------------------
+
+
+Derating parameters
+-------------------
+Voltage:    3.300 V
+
+VCCIO Voltage:
+                   3.135 V (Bank 0)
+                   3.135 V (Bank 1)
+                   3.135 V (Bank 2)
+                   3.135 V (Bank 3)
+                   2.375 V (Bank 4)
+                   2.375 V (Bank 5)
+                   2.375 V (Bank 6)
+                   2.375 V (Bank 7)
+
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1548 paths, 9 nets, and 900 connections (79.58% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 40 MB
+
+
+iotiming  "RAM2GS_LCMXO2_640HC_impl1.ncd" "RAM2GS_LCMXO2_640HC_impl1.prf"
+I/O Timing Report:
+:  version Diamond (64-bit) 3.12.0.240.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Loading design for application iotiming from file ram2gs_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application iotiming from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 4
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file ram2gs_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 5
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 5
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file ram2gs_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 6
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: 6
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+
+Loading design for application iotiming from file ram2gs_lcmxo2_640hc_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: M
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+Running Performance Grade: M
+Computing Setup Time ...
+Computing Max Clock to Output Delay ...
+Computing Hold Time ...
+Computing Min Clock to Output Delay ...
+Done.
+
+ibisgen "RAM2GS_LCMXO2_640HC_impl1.pad" "C:/lscc/diamond/3.12/cae_library/ibis/machxo2.ibs"   
+IBIS Models Generator: Lattice Diamond (64-bit) 3.12.0.240.2
+
+Tue Aug 17 06:21:03 2021
+
+Comp: CROW[0]
+ Site: 10
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: CROW[1]
+ Site: 16
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[0]
+ Site: 3
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[1]
+ Site: 96
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[2]
+ Site: 88
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[3]
+ Site: 97
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[4]
+ Site: 99
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[5]
+ Site: 98
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[6]
+ Site: 2
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Din[7]
+ Site: 1
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: Dout[0]
+ Site: 76
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[1]
+ Site: 86
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[2]
+ Site: 87
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[3]
+ Site: 85
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[4]
+ Site: 83
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[5]
+ Site: 84
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[6]
+ Site: 78
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: Dout[7]
+ Site: 82
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: LED
+ Site: 34
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=16mA 
+ SLEW=SLOW 
+-----------------------
+Comp: MAin[0]
+ Site: 14
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[1]
+ Site: 12
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[2]
+ Site: 13
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[3]
+ Site: 21
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[4]
+ Site: 20
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[5]
+ Site: 19
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[6]
+ Site: 24
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[7]
+ Site: 18
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[8]
+ Site: 25
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: MAin[9]
+ Site: 32
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: PHI2
+ Site: 8
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: RA[0]
+ Site: 66
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[10]
+ Site: 64
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[11]
+ Site: 59
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[1]
+ Site: 67
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[2]
+ Site: 69
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[3]
+ Site: 71
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[4]
+ Site: 74
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[5]
+ Site: 70
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[6]
+ Site: 68
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[7]
+ Site: 75
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[8]
+ Site: 65
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RA[9]
+ Site: 62
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RBA[0]
+ Site: 58
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RBA[1]
+ Site: 60
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RCKE
+ Site: 53
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RCLK
+ Site: 63
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: RDQMH
+ Site: 51
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RDQML
+ Site: 48
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[0]
+ Site: 36
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[1]
+ Site: 37
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[2]
+ Site: 38
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[3]
+ Site: 39
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[4]
+ Site: 40
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[5]
+ Site: 41
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[6]
+ Site: 42
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: RD[7]
+ Site: 43
+ Type: BIDI
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ PULL=KEEPER 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+ SLEW=SLOW 
+-----------------------
+Comp: nCCAS
+ Site: 9
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: nCRAS
+ Site: 17
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: nFWE
+ Site: 15
+ Type: IN
+ IO_TYPE=LVTTL33 
+ CLAMP=ON 
+ HYSTERESIS=SMALL 
+-----------------------
+Comp: nRCAS
+ Site: 52
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRCS
+ Site: 57
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRRAS
+ Site: 54
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Comp: nRWE
+ Site: 49
+ Type: OUT
+ IO_TYPE=LVTTL33 
+ DRIVE=4mA 
+ SLEW=SLOW 
+-----------------------
+Created design models.
+
+
+Generating: C:\Users\Dog\Documents\GitHub\RAM2GS\CPLD\LCMXO2\LCMXO2-640HC\impl1\IBIS\RAM2GS_LCMXO2_640HC~.ibs
+
+
+    <postMsg mid="1191031" type="Info"    dynamic="0" navigation="0"  />
+
+tmcheck -par "RAM2GS_LCMXO2_640HC_impl1.par" 
+
+bitgen -f "RAM2GS_LCMXO2_640HC_impl1.t2b" -w "RAM2GS_LCMXO2_640HC_impl1.ncd"  "RAM2GS_LCMXO2_640HC_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file RAM2GS_LCMXO2_640HC_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application Bitgen from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from RAM2GS_LCMXO2_640HC_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "RAM2GS_LCMXO2_640HC_impl1.bit".
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 245 MB
+
+tmcheck -par "RAM2GS_LCMXO2_640HC_impl1.par" 
+
+bitgen -f "RAM2GS_LCMXO2_640HC_impl1.t2b" -w "RAM2GS_LCMXO2_640HC_impl1.ncd"  -jedec "RAM2GS_LCMXO2_640HC_impl1.prf"
+
+
+BITGEN: Bitstream Generator Diamond (64-bit) 3.12.0.240.2
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+Loading design for application Bitgen from file RAM2GS_LCMXO2_640HC_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-640HC
+Package:     TQFP100
+Performance: 4
+Loading device for application Bitgen from file 'xo2c640.nph' in environment: C:/lscc/diamond/3.12/ispfpga.
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+
+Running DRC.
+DRC detected 0 errors and 0 warnings.
+Reading Preference File from RAM2GS_LCMXO2_640HC_impl1.prf.
+
+Preference Summary:
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                       ENABLE**  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "RAM2GS_LCMXO2_640HC_impl1.jed".
+ 
+===========
+UFM Summary.
+===========
+UFM Size:        191 Pages (128*191 Bits).
+UFM Utilization: General Purpose Flash Memory.
+ 
+Available General Purpose Flash Memory:  191 Pages (Page 0 to Page 190).
+Initialized UFM Pages:                     0 Page.
+ 
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 245 MB

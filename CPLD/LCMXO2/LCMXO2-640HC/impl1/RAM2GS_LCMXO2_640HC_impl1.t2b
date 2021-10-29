@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC"  
