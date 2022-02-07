@@ -4,12 +4,11 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 17 06:20:51 2021
+Sat Oct 09 01:19:16 2021
 
 C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f RAM2GS_LCMXO2_640HC_impl1.p2t
 RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.dir
-RAM2GS_LCMXO2_640HC_impl1.prf -gui -msgset
-C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml
+RAM2GS_LCMXO2_640HC_impl1.prf -gui
 
 
 Preference file: RAM2GS_LCMXO2_640HC_impl1.prf.
@@ -17,11 +16,11 @@ Preference file: RAM2GS_LCMXO2_640HC_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            1.135        0            0.304        0            10           Completed
+5_1   *      0            1.135        0            0.304        0            07           Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 10 secs 
+Total (real) run time for 1-seed: 7 secs 
 
 par done!
 

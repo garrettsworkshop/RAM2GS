@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.0.240.2
-Tue Aug 17 06:20:51 2021
+Sat Oct 09 01:19:15 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,7 +23,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
 Design file:     ram2gs_lcmxo2_640hc_impl1_map.ncd
 Preference file: ram2gs_lcmxo2_640hc_impl1.prf
 Device,speed:    LCMXO2-640HC,4
@@ -1302,7 +1302,7 @@ Constraints cover 1548 paths, 9 nets, and 889 connections (78.60% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.0.240.2
-Tue Aug 17 06:20:51 2021
+Sat Oct 09 01:19:15 2021
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1312,7 +1312,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui -msgset C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO2_640HC_impl1.tw1 -gui RAM2GS_LCMXO2_640HC_impl1_map.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
 Design file:     ram2gs_lcmxo2_640hc_impl1_map.ncd
 Preference file: ram2gs_lcmxo2_640hc_impl1.prf
 Device,speed:    LCMXO2-640HC,M

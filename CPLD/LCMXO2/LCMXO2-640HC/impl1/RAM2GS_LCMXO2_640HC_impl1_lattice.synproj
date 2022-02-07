@@ -30,12 +30,12 @@
 
 
 -lpf 1
--p "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC"
--ver "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/RAM2GS-LCMXO2.v"
+-p "C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC"
+-ver "C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/RAM2GS-LCMXO2.v"
 -top RAM2GS
 
 
--p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/impl1" "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC"
+-p "C:/lscc/diamond/3.12/ispfpga/xo2c00/data" "C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/impl1" "C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC"
 
 -ngd "RAM2GS_LCMXO2_640HC_impl1.ngd"
 

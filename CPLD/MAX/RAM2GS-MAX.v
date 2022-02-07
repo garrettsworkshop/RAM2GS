@@ -340,13 +340,17 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 		// Submit command
 		if (CMDWR & CmdEnable) begin
-			if (Din[7:4]==4'h0) begin
+			if (Din[7:4]==4'h0 && Din[3:2]==2'b01) begin
+				// LCMXO, LCMXO2, iCE40 ignore this unless Din[2] and Din[1] set
+				// MAX w/ LED ignores this unless Din[2] set
+				// MAX w/o LED does not check Din[3:1].
 				XOR8MEG <= Din[0];
 			end else if (Din[7:4]==4'h1) begin
 				CmdLEDEN <= ~Din[1];
 				Cmdn8MEGEN <= ~Din[0];
 				CmdSubmitted <= 1'b1;
-			end else if (Din[7:4]==4'h2 && Din[3]==1'b0) begin
+			end else if (Din[7:4]==4'h2) begin
+				// MAX commands
 				CmdLEDEN <= LEDEN;
 				Cmdn8MEGEN <= n8MEGEN;
 				CmdUFMErase <= Din[3];
@@ -354,6 +358,15 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				CmdDRCLK <= Din[1];
 				CmdDRDIn <= Din[0];
 				CmdSubmitted <= 1'b1;
+			end else if (Din[7:4]==4'h3 && ~Din[3]) begin
+				// Reserved for LCMXO2 commands
+				// Din[1] - Shift when high, execute when low
+				// Din[0] - Shift data
+			end else if (Din[7:4]==4'h3 && Din[3]) begin
+				// Reserved for SPI (LCMXO, iCE40) commands
+				// Din[2] - CS
+				// Din[1] - SCK
+				// Din[0] - SDI
 			end
 		end
 	end

@@ -1,9 +1,9 @@
 <top name = "RAM2GS"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "PHI2"  type = "port" />
-    <clockitem name = "nCCAS"  type = "port" />
     <clockitem name = "nCRAS"  type = "port" />
+    <clockitem name = "nCCAS"  type = "port" />
+    <clockitem name = "PHI2"  type = "port" />
     <clockitem name = "RCLK"  type = "port" />
     <clockitem name = "wb_clk"  type = "net" />
 </clocks>
