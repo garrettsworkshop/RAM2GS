@@ -1,0 +1,6 @@
+#Start recording tcl command: 10/9/2021 01:18:46
+#Project Location: C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC; Project name: RAM2GS_LCMXO2_640HC
+prj_project open "C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/RAM2GS_LCMXO2_640HC.ldf"
+prj_run Map -impl impl1 -forceAll
+prj_run PAR -impl impl1 -forceAll
+#Stop recording: 10/10/2021 06:41:44

@@ -8,15 +8,14 @@ Design Information
 Command line:   map -a MachXO2 -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial
      RAM2GS_LCMXO2_640HC_impl1.ngd -o RAM2GS_LCMXO2_640HC_impl1_map.ncd -pr
      RAM2GS_LCMXO2_640HC_impl1.prf -mp RAM2GS_LCMXO2_640HC_impl1.mrp -lpf C:/Use
-     rs/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/impl1/RAM2GS_LCMXO2
-     _640HC_impl1.lpf -lpf C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMX
-     O2-640HC/RAM2GS_LCMXO2_640HC.lpf -c 0 -gui -msgset
-     C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/promote.xml 
+     rs/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/LCMXO2-640HC/impl1/RAM2GS_LCMX
+     O2_640HC_impl1.lpf -lpf C:/Users/zanek/Documents/GitHub/RAM2GS/CPLD/LCMXO2/
+     LCMXO2-640HC/RAM2GS_LCMXO2_640HC.lpf -c 0 -gui 
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.0.240.2
-Mapped on:  08/17/21  06:20:50
+Mapped on:  10/09/21  01:19:14
 
 Design Summary
 --------------
@@ -60,17 +59,17 @@ Design Summary
      Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
    Number of Clock Enables:  14
      Net RCLK_c_enable_27: 8 loads, 8 LSLICEs
+     Net RCLK_c_enable_20: 4 loads, 4 LSLICEs
 
                                     Page 1
 
 
 
 
-Design:  RAM2GS                                        Date:  08/17/21  06:20:50
+Design:  RAM2GS                                        Date:  10/09/21  01:19:14
 
 Design Summary (cont)
 ---------------------
-     Net RCLK_c_enable_20: 4 loads, 4 LSLICEs
      Net RCLK_c_enable_29: 2 loads, 2 LSLICEs
      Net RCLK_c_enable_25: 2 loads, 2 LSLICEs
      Net InitReady: 1 loads, 1 LSLICEs
@@ -126,17 +125,17 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+
 | RCLK                | INPUT     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
+| nFWE                | INPUT     | LVTTL33   |            |
 
                                     Page 2
 
 
 
 
-Design:  RAM2GS                                        Date:  08/17/21  06:20:50
+Design:  RAM2GS                                        Date:  10/09/21  01:19:14
 
 IO (PIO) Attributes (cont)
 --------------------------
-| nFWE                | INPUT     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
 | nCRAS               | INPUT     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
@@ -192,17 +191,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | nRRAS               | OUTPUT    | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
+| nRWE                | OUTPUT    | LVTTL33   |            |
 
                                     Page 3
 
 
 
 
-Design:  RAM2GS                                        Date:  08/17/21  06:20:50
+Design:  RAM2GS                                        Date:  10/09/21  01:19:14
 
 IO (PIO) Attributes (cont)
 --------------------------
-| nRWE                | OUTPUT    | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
 | RCKE                | OUTPUT    | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
@@ -258,17 +257,17 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+
 | RD[1]               | BIDIR     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
+| RD[2]               | BIDIR     | LVTTL33   |            |
 
                                     Page 4
 
 
 
 
-Design:  RAM2GS                                        Date:  08/17/21  06:20:50
+Design:  RAM2GS                                        Date:  10/09/21  01:19:14
 
 IO (PIO) Attributes (cont)
 --------------------------
-| RD[2]               | BIDIR     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
 | RD[3]               | BIDIR     | LVTTL33   |            |
 +---------------------+-----------+-----------+------------+
@@ -324,17 +323,17 @@ Embedded Functional Block Connection Summary
       PLL0 Connection:               DISABLED
       PLL1 Connection:               DISABLED
    I2C Function Summary:
+   --------------------
 
                                     Page 5
 
 
 
 
-Design:  RAM2GS                                        Date:  08/17/21  06:20:50
+Design:  RAM2GS                                        Date:  10/09/21  01:19:14
 
 Embedded Functional Block Connection Summary (cont)
 ---------------------------------------------------
-   --------------------
       None
    SPI Function Summary:
    --------------------
@@ -366,8 +365,9 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 36 MB
+   Peak Memory Usage: 37 MB
         
+
 
 
 
