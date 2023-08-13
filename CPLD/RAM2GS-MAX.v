@@ -19,7 +19,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	/* Activity LED */
 	reg LEDEN = 0;
 	output LED;
-	assign LED = !(!nCRAS && !CBR && LEDEN);
+	assign LED = !(!nCRAS && !CBR && !LEDEN);
 
 	/* 65816 Data */
 	input [7:0] Din;
@@ -340,18 +340,33 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 		// Submit command
 		if (CMDWR & CmdEnable) begin
-			if (Din[7:4]==4'h0) begin
+			if (Din[7:4]==4'h0 && Din[3:1]==3'b000) begin // MAX w/LED 
+			// if (Din[7:4]==4'h0) begin // MAX w/o LED
+			// if (Din[7:4]==4'h0 && Din[3:2]==3'b01) begin // LCMXO / iCE40 / AGM
+			// if (Din[7:4]==4'h0 && Din[3:1]==3'b10) begin // LCMXO2
 				XOR8MEG <= Din[0];
 			end else if (Din[7:4]==4'h1) begin
+				CmdLEDEN <= ~Din[1];
 				Cmdn8MEGEN <= ~Din[0];
 				CmdSubmitted <= 1'b1;
 			end else if (Din[7:4]==4'h2) begin
+				// MAX commands
+				CmdLEDEN <= LEDEN;
 				Cmdn8MEGEN <= n8MEGEN;
 				CmdUFMErase <= Din[3];
 				CmdUFMPrgm <= Din[2];
 				CmdDRCLK <= Din[1];
 				CmdDRDIn <= Din[0];
 				CmdSubmitted <= 1'b1;
+			end else if (Din[7:4]==4'h3 && ~Din[3]) begin
+				// Reserved for LCMXO2 commands
+				// Din[1] - Shift when high, execute when low
+				// Din[0] - Shift data
+			end else if (Din[7:4]==4'h3 && Din[3]) begin
+				// Reserved for SPI (LCMXO, iCE40) commands
+				// Din[2] - CS
+				// Din[1] - SCK
+				// Din[0] - SDI
 			end
 		end
 	end
@@ -374,7 +389,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				DRDIn <= 1'b0; // DRDIn is don't care
 				DRShift <= 1'b0; // Parallel transfer to data register
 			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h4) begin
-				// Shift UFM
+				// Shift UFM data shift register
 				ARCLK <= 1'b0; // Don't clock address register
 				ARShift <= 1'b0; // ARShift is don't care
 				DRCLK <= FS[3]; // Clock data register
