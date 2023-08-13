@@ -23,6 +23,6 @@ DATA_RADIX=HEX;
 
 CONTENT BEGIN
 	[000..0FD]  :   0000;
-	0FE  :   5FFF;
+	0FE  :   7FFF;
 	[0FF..1FF]  :   FFFF;
 END;
