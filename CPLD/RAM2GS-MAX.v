@@ -19,7 +19,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	/* Activity LED */
 	reg LEDEN = 0;
 	output LED;
-	assign LED = !(!nCRAS && !CBR && !LEDEN);
+	assign LED = !(!nCRAS && !CBR && LEDEN);
 
 	/* 65816 Data */
 	input [7:0] Din;
@@ -398,17 +398,25 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				// Capture bit 15 of this UFM word in UFMD register
 				if (FS[3:0]==4'h7) UFMD <= DRDOut;
 			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h5) begin
-				// Check saved capacity entry
+				// Shift UFM data shift register
+				ARCLK <= 1'b0; // Don't clock address register
+				ARShift <= 1'b0; // ARShift is don't care
+				DRCLK <= FS[3]; // Clock data register
+				DRDIn <= 1'b0; // DRDIn is don't care
+				DRShift <= 1'b1; // Shift data register
+				// If valid setting here, set capacity setting to UFMD[14]
+				if (FS[3:0]==4'h7 && ~UFMD) n8MEGEN <= ~DRDOut;
+			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h6) begin
 				if (UFMD) UFMInitDone <= 1'b1; // If erased, quit iterating
 				else begin // If valid setting here
-					n8MEGEN <= ~DRDOut; // Set capacity setting
+					LEDEN <= ~DRDOut; // LED enabled if UFMD[13]==0
 					// If last byte in sector, mark need to erase
 					if (FS[15:8]==8'hFF) begin
 						UFMReqErase <= 1'b1; // Mark need to wrap around
 						UFMInitDone <= 1'b1; // Quit iterating
 					end
 				end
-			end else if (~UFMInitDone & FS[17:16]==2'b01 & FS[7:4]==4'h6) begin
+				
 				// Increment UFM address
 				ARCLK <= FS[3]; // Clock address register
 				ARShift <= 1'b0; // Increment UFM address
@@ -442,6 +450,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 			// Set user command signals after PHI2 falls
 			if (~PHI2r2 & PHI2r3 & CmdSubmitted) begin
+				LEDEN <= CmdLEDEN;
 				n8MEGEN <= Cmdn8MEGEN;
 				DRCLK <= CmdDRCLK;
 				DRDIn <= CmdDRDIn;

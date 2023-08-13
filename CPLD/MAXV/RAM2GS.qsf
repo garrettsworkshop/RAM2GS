@@ -38,7 +38,7 @@
 
 
 set_global_assignment -name FAMILY "MAX V"
-set_global_assignment -name DEVICE 5M240ZT100C5
+set_global_assignment -name DEVICE 5M240ZT100C4
 set_global_assignment -name TOP_LEVEL_ENTITY RAM2GS
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:28:29  AUGUST 12, 2023"
@@ -48,15 +48,11 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
 set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE FASTEST
 #
 #
 set_global_assignment -name VERILOG_FILE "../RAM2GS-MAX.v"
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-
-
-set_global_assignment -name QIP_FILE UFM.qip
-#set_global_assignment -name MIF_FILE "../RAM2GS.mif"
 
 
 
@@ -197,3 +193,4 @@ set_instance_assignment -name SLOW_SLEW_RATE ON -to RD
 set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to RD
 
 set_location_assignment PIN_88 -to LED
+set_global_assignment -name QIP_FILE UFM.qip

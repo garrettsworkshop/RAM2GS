@@ -1,5 +1,5 @@
 Fitter report for RAM2GS
-Sun Aug 13 00:02:08 2023
+Sun Aug 13 01:10:56 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -59,14 +59,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sun Aug 13 00:02:08 2023       ;
+; Fitter Status         ; Successful - Sun Aug 13 01:10:56 2023       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name         ; RAM2GS                                      ;
 ; Top-level Entity Name ; RAM2GS                                      ;
 ; Family                ; MAX V                                       ;
-; Device                ; 5M240ZT100C5                                ;
+; Device                ; 5M240ZT100C4                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 173 / 240 ( 72 % )                          ;
+; Total logic elements  ; 174 / 240 ( 73 % )                          ;
 ; Total pins            ; 63 / 79 ( 80 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 1 / 1 ( 100 % )                             ;
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------+--------------------------------+--------------------------------+
 ; Option                                                             ; Setting                        ; Default Value                  ;
 +--------------------------------------------------------------------+--------------------------------+--------------------------------+
-; Device                                                             ; 5M240ZT100C5                   ;                                ;
+; Device                                                             ; 5M240ZT100C4                   ;                                ;
 ; Minimum Core Junction Temperature                                  ; 0                              ;                                ;
 ; Maximum Core Junction Temperature                                  ; 85                             ;                                ;
 ; Fit Attempts to Skip                                               ; 0                              ; 0.0                            ;
@@ -130,13 +130,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.05        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   1.6%      ;
-;     Processors 3-4         ;   1.2%      ;
+;     Processors 3-4         ;   1.5%      ;
 +----------------------------+-------------+
 
 
@@ -151,28 +151,28 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 +---------------------------------------------+-----------------------+
 ; Resource                                    ; Usage                 ;
 +---------------------------------------------+-----------------------+
-; Total logic elements                        ; 173 / 240 ( 72 % )    ;
-;     -- Combinational with no register       ; 77                    ;
-;     -- Register only                        ; 20                    ;
-;     -- Combinational with a register        ; 76                    ;
+; Total logic elements                        ; 174 / 240 ( 73 % )    ;
+;     -- Combinational with no register       ; 76                    ;
+;     -- Register only                        ; 21                    ;
+;     -- Combinational with a register        ; 77                    ;
 ;                                             ;                       ;
 ; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 58                    ;
-;     -- 3 input functions                    ; 44                    ;
-;     -- 2 input functions                    ; 42                    ;
+;     -- 4 input functions                    ; 57                    ;
+;     -- 3 input functions                    ; 47                    ;
+;     -- 2 input functions                    ; 40                    ;
 ;     -- 1 input functions                    ; 8                     ;
 ;     -- 0 input functions                    ; 1                     ;
 ;                                             ;                       ;
 ; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 157                   ;
+;     -- normal mode                          ; 158                   ;
 ;     -- arithmetic mode                      ; 16                    ;
 ;     -- qfbk mode                            ; 7                     ;
 ;     -- register cascade mode                ; 0                     ;
-;     -- synchronous clear/load mode          ; 22                    ;
+;     -- synchronous clear/load mode          ; 23                    ;
 ;     -- asynchronous clear/load mode         ; 0                     ;
 ;                                             ;                       ;
-; Total registers                             ; 96 / 240 ( 40 % )     ;
-; Total LABs                                  ; 22 / 24 ( 92 % )      ;
+; Total registers                             ; 98 / 240 ( 41 % )     ;
+; Total LABs                                  ; 21 / 24 ( 88 % )      ;
 ; Logic elements in carry chains              ; 17                    ;
 ; Virtual pins                                ; 0                     ;
 ; I/O pins                                    ; 63 / 79 ( 80 % )      ;
@@ -186,12 +186,12 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 ; Global signals                              ; 4                     ;
 ;     -- Global clocks                        ; 4 / 4 ( 100 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 25.7% / 30.6% / 20.5% ;
-; Peak interconnect usage (total/H/V)         ; 25.7% / 30.6% / 20.5% ;
-; Maximum fan-out                             ; 54                    ;
-; Highest non-global fan-out                  ; 40                    ;
-; Total fan-out                               ; 652                   ;
-; Average fan-out                             ; 2.75                  ;
+; Average interconnect usage (total/H/V)      ; 24.0% / 26.3% / 21.7% ;
+; Peak interconnect usage (total/H/V)         ; 24.0% / 26.3% / 21.7% ;
+; Maximum fan-out                             ; 55                    ;
+; Highest non-global fan-out                  ; 41                    ;
+; Total fan-out                               ; 660                   ;
+; Average fan-out                             ; 2.77                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -203,7 +203,7 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 ; CROW[0] ; 54    ; 2        ; 8            ; 1            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; CROW[1] ; 55    ; 2        ; 8            ; 1            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; Din[0]  ; 42    ; 1        ; 5            ; 0            ; 0           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
-; Din[1]  ; 36    ; 1        ; 4            ; 0            ; 2           ; 5                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
+; Din[1]  ; 36    ; 1        ; 4            ; 0            ; 2           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; Din[2]  ; 35    ; 1        ; 3            ; 0            ; 0           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; Din[3]  ; 37    ; 1        ; 4            ; 0            ; 1           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; Din[4]  ; 39    ; 1        ; 5            ; 0            ; 3           ; 6                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
@@ -220,8 +220,8 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 ; MAin[7] ; 68    ; 2        ; 8            ; 3            ; 1           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; MAin[8] ; 73    ; 2        ; 8            ; 4            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; MAin[9] ; 74    ; 2        ; 8            ; 4            ; 0           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
-; PHI2    ; 52    ; 2        ; 8            ; 1            ; 4           ; 21                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
-; RCLK    ; 12    ; 1        ; 1            ; 3            ; 3           ; 54                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
+; PHI2    ; 52    ; 2        ; 8            ; 1            ; 4           ; 22                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
+; RCLK    ; 12    ; 1        ; 1            ; 3            ; 3           ; 55                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; nCCAS   ; 53    ; 2        ; 8            ; 1            ; 3           ; 11                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; nCRAS   ; 67    ; 2        ; 8            ; 3            ; 2           ; 16                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
 ; nFWE    ; 48    ; 1        ; 6            ; 0            ; 0           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVCMOS ; User                 ; no             ;
@@ -243,7 +243,7 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 ; Dout[7] ; 43    ; 1        ; 6            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; LED     ; 88    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[0]   ; 18    ; 1        ; 1            ; 1            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; RA[10]  ; 16    ; 1        ; 1            ; 2            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; RA[10]  ; 16    ; 1        ; 1            ; 2            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[11]  ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[1]   ; 20    ; 1        ; 1            ; 1            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RA[2]   ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -259,10 +259,10 @@ The pin-out file can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/o
 ; RCKE    ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RDQMH   ; 2     ; 1        ; 1            ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; RDQML   ; 98    ; 2        ; 2            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 8mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; nRCAS   ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
+; nRCAS   ; 4     ; 1        ; 1            ; 4            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; nRCS    ; 3     ; 1        ; 1            ; 4            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; nRRAS   ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; nRWE    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; nRRAS   ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; nRWE    ; 100   ; 2        ; 2            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVCMOS ; 4mA              ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
 +---------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -425,7 +425,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                    ; Entity Name         ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2GS                                                   ; 173 (173)   ; 96           ; 1          ; 63   ; 0            ; 77 (77)      ; 20 (20)           ; 76 (76)          ; 17 (17)         ; 7 (7)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
+; |RAM2GS                                                   ; 174 (174)   ; 98           ; 1          ; 63   ; 0            ; 76 (76)      ; 21 (21)           ; 77 (77)          ; 17 (17)         ; 7 (7)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;       |UFM_altufm_none_38r:UFM_altufm_none_38r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component ; UFM_altufm_none_38r ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
@@ -486,10 +486,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; MAin[7] ; Input    ; (0)           ;
 ; MAin[8] ; Input    ; (0)           ;
 ; MAin[9] ; Input    ; (0)           ;
+; RCLK    ; Input    ; (0)           ;
 ; nCCAS   ; Input    ; (0)           ;
 ; CROW[0] ; Input    ; (1)           ;
 ; CROW[1] ; Input    ; (1)           ;
-; RCLK    ; Input    ; (0)           ;
 ; PHI2    ; Input    ; (0)           ;
 ; Din[6]  ; Input    ; (1)           ;
 ; nFWE    ; Input    ; (1)           ;
@@ -503,21 +503,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+----------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                     ;
-+----------------+-------------+---------+-------------------------+--------+----------------------+------------------+
-; Name           ; Location    ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ;
-+----------------+-------------+---------+-------------------------+--------+----------------------+------------------+
-; CmdDRDIn~1     ; LC_X6_Y2_N8 ; 4       ; Clock enable            ; no     ; --                   ; --               ;
-; CmdSubmitted~0 ; LC_X6_Y1_N8 ; 2       ; Clock enable            ; no     ; --                   ; --               ;
-; PHI2           ; PIN_52      ; 21      ; Clock                   ; yes    ; Global Clock         ; GCLK1            ;
-; RCLK           ; PIN_12      ; 54      ; Clock                   ; yes    ; Global Clock         ; GCLK0            ;
-; Ready          ; LC_X3_Y3_N9 ; 39      ; Sync. clear, Sync. load ; no     ; --                   ; --               ;
-; always8~7      ; LC_X7_Y2_N0 ; 3       ; Clock enable            ; no     ; --                   ; --               ;
-; comb~0         ; LC_X3_Y4_N0 ; 8       ; Output enable           ; no     ; --                   ; --               ;
-; nCCAS          ; PIN_53      ; 11      ; Clock                   ; yes    ; Global Clock         ; GCLK2            ;
-; nCRAS          ; PIN_67      ; 16      ; Clock                   ; yes    ; Global Clock         ; GCLK3            ;
-+----------------+-------------+---------+-------------------------+--------+----------------------+------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                 ;
++------------+-------------+---------+-------------------------+--------+----------------------+------------------+
+; Name       ; Location    ; Fan-Out ; Usage                   ; Global ; Global Resource Used ; Global Line Name ;
++------------+-------------+---------+-------------------------+--------+----------------------+------------------+
+; CmdDRDIn~2 ; LC_X5_Y4_N8 ; 4       ; Clock enable            ; no     ; --                   ; --               ;
+; CmdLEDEN~1 ; LC_X5_Y4_N5 ; 3       ; Clock enable            ; no     ; --                   ; --               ;
+; DRDIn~1    ; LC_X4_Y1_N5 ; 2       ; Clock enable            ; no     ; --                   ; --               ;
+; PHI2       ; PIN_52      ; 22      ; Clock                   ; yes    ; Global Clock         ; GCLK1            ;
+; RCLK       ; PIN_12      ; 55      ; Clock                   ; yes    ; Global Clock         ; GCLK0            ;
+; Ready      ; LC_X4_Y3_N6 ; 40      ; Sync. clear, Sync. load ; no     ; --                   ; --               ;
+; always8~7  ; LC_X5_Y4_N9 ; 3       ; Clock enable            ; no     ; --                   ; --               ;
+; comb~0     ; LC_X4_Y4_N8 ; 8       ; Output enable           ; no     ; --                   ; --               ;
+; nCCAS      ; PIN_53      ; 11      ; Clock                   ; yes    ; Global Clock         ; GCLK2            ;
+; nCRAS      ; PIN_67      ; 16      ; Clock                   ; yes    ; Global Clock         ; GCLK3            ;
++------------+-------------+---------+-------------------------+--------+----------------------+------------------+
 
 
 +----------------------------------------------------------------------+
@@ -525,8 +526,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-------+----------+---------+----------------------+------------------+
-; PHI2  ; PIN_52   ; 21      ; Global Clock         ; GCLK1            ;
-; RCLK  ; PIN_12   ; 54      ; Global Clock         ; GCLK0            ;
+; PHI2  ; PIN_52   ; 22      ; Global Clock         ; GCLK1            ;
+; RCLK  ; PIN_12   ; 55      ; Global Clock         ; GCLK0            ;
 ; nCCAS ; PIN_53   ; 11      ; Global Clock         ; GCLK2            ;
 ; nCRAS ; PIN_67   ; 16      ; Global Clock         ; GCLK3            ;
 +-------+----------+---------+----------------------+------------------+
@@ -537,109 +538,112 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 ; Routing Resource Type ; Usage              ;
 +-----------------------+--------------------+
-; C4s                   ; 125 / 784 ( 16 % ) ;
-; Direct links          ; 39 / 888 ( 4 % )   ;
+; C4s                   ; 141 / 784 ( 18 % ) ;
+; Direct links          ; 52 / 888 ( 6 % )   ;
 ; Global clocks         ; 4 / 4 ( 100 % )    ;
 ; LAB clocks            ; 15 / 32 ( 47 % )   ;
-; LUT chains            ; 20 / 216 ( 9 % )   ;
-; Local interconnects   ; 263 / 888 ( 30 % ) ;
-; R4s                   ; 173 / 704 ( 25 % ) ;
+; LUT chains            ; 19 / 216 ( 9 % )   ;
+; Local interconnects   ; 269 / 888 ( 30 % ) ;
+; R4s                   ; 149 / 704 ( 21 % ) ;
 +-----------------------+--------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 7.86) ; Number of LABs  (Total = 22) ;
+; Number of Logic Elements  (Average = 8.29) ; Number of LABs  (Total = 21) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 3                            ;
-; 2                                          ; 0                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 1                            ;
+; 1                                          ; 0                            ;
+; 2                                          ; 3                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 1                            ;
+; 5                                          ; 0                            ;
 ; 6                                          ; 0                            ;
 ; 7                                          ; 0                            ;
-; 8                                          ; 1                            ;
-; 9                                          ; 6                            ;
-; 10                                         ; 10                           ;
+; 8                                          ; 2                            ;
+; 9                                          ; 2                            ;
+; 10                                         ; 13                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.14) ; Number of LABs  (Total = 22) ;
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 21) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 14                           ;
-; 1 Sync. clear                      ; 2                            ;
+; 1 Clock                            ; 11                           ;
+; 1 Clock enable                     ; 6                            ;
+; 1 Sync. clear                      ; 3                            ;
 ; 1 Sync. load                       ; 2                            ;
-; 2 Clocks                           ; 7                            ;
+; 2 Clocks                           ; 10                           ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 8.14) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced  (Average = 8.57) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 3                            ;
-; 2                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 3                            ;
 ; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 4                                           ; 0                            ;
 ; 5                                           ; 1                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 5                            ;
-; 10                                          ; 8                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 10                           ;
+; 11                                          ; 4                            ;
 +---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.27) ; Number of LABs  (Total = 22) ;
+; Number of Signals Sourced Out  (Average = 5.57) ; Number of LABs  (Total = 21) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 3                            ;
-; 2                                               ; 1                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 3                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 2                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 0                            ;
-; 10                                              ; 2                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 5                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 3                            ;
+; 8                                               ; 1                            ;
+; 9                                               ; 3                            ;
+; 10                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                        ;
-+---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 9.77) ; Number of LABs  (Total = 22) ;
-+---------------------------------------------+------------------------------+
-; 0                                           ; 0                            ;
-; 1                                           ; 1                            ;
-; 2                                           ; 3                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 3                            ;
-; 10                                          ; 1                            ;
-; 11                                          ; 2                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 3                            ;
-; 14                                          ; 1                            ;
-; 15                                          ; 1                            ;
-; 16                                          ; 4                            ;
-+---------------------------------------------+------------------------------+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 10.19) ; Number of LABs  (Total = 21) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 3                            ;
+; 12                                           ; 2                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
++----------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -661,8 +665,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; I/O             ; nCRAS                ; 2.4               ;
-; I/O             ; RCLK                 ; 1.8               ;
+; I/O             ; nCRAS                ; 2.2               ;
+; I/O             ; RCLK                 ; 1.9               ;
 +-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
@@ -673,9 +677,9 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------+----------------------+-------------------+
 ; Source Register ; Destination Register ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
-; nCCAS           ; CBR                  ; 2.449             ;
-; PHI2            ; PHI2r                ; 0.948             ;
-; nCRAS           ; RASr                 ; 0.420             ;
+; nCCAS           ; CBR                  ; 2.167             ;
+; PHI2            ; PHI2r                ; 0.871             ;
+; nCRAS           ; RASr                 ; 0.519             ;
 +-----------------+----------------------+-------------------+
 Note: This table only shows the top 3 path(s) that have the largest delay added for hold.
 
@@ -685,19 +689,15 @@ Note: This table only shows the top 3 path(s) that have the largest delay added 
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (119006): Selected device 5M240ZT100C5 for design "RAM2GS"
+Info (119006): Selected device 5M240ZT100C4 for design "RAM2GS"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
-    Info (176445): Device 5M80ZT100C5 is compatible
-    Info (176445): Device 5M80ZT100I5 is compatible
-    Info (176445): Device 5M160ZT100C5 is compatible
-    Info (176445): Device 5M160ZT100I5 is compatible
-    Info (176445): Device 5M240ZT100I5 is compatible
-    Info (176445): Device 5M570ZT100C5 is compatible
-    Info (176445): Device 5M570ZT100I5 is compatible
+    Info (176445): Device 5M80ZT100C4 is compatible
+    Info (176445): Device 5M160ZT100C4 is compatible
+    Info (176445): Device 5M570ZT100C4 is compatible
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'RAM2GS.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -743,15 +743,15 @@ Info (170195): Router estimated average interconnect usage is 18% of the availab
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/output_files/RAM2GS.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 5345 megabytes
-    Info: Processing ended: Sun Aug 13 00:02:08 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Processing ended: Sun Aug 13 01:10:56 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+

@@ -59,7 +59,7 @@
  ---------------------------------------------------------------------------------
 
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-CHIP  "RAM2GS"  ASSIGNED TO AN: 5M240ZT100C5
+CHIP  "RAM2GS"  ASSIGNED TO AN: 5M240ZT100C4
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------

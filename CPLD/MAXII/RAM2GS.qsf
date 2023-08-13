@@ -197,3 +197,4 @@ set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to RD
 set_global_assignment -name MIF_FILE ../RAM2GS.mif
 set_global_assignment -name VERILOG_FILE "../RAM2GS-MAX.v"
 set_global_assignment -name QIP_FILE UFM.qip
+set_location_assignment PIN_88 -to LED

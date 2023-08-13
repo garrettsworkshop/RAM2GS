@@ -15,6 +15,7 @@ PHI2 => CmdUFMPrgm.CLK
 PHI2 => CmdUFMErase.CLK
 PHI2 => CmdSubmitted.CLK
 PHI2 => Cmdn8MEGEN.CLK
+PHI2 => CmdLEDEN.CLK
 PHI2 => XOR8MEG.CLK
 PHI2 => ADSubmitted.CLK
 PHI2 => C1Submitted.CLK
@@ -63,9 +64,9 @@ MAin[7] => Equal3.IN0
 MAin[8] => RA.DATAA
 MAin[8] => RowA.DATAB
 MAin[9] => RA.DATAA
-MAin[9] => comb.DATAA
+MAin[9] => RDQMH.DATAA
 MAin[9] => RowA.DATAB
-MAin[9] => comb.DATAA
+MAin[9] => RDQML.DATAA
 CROW[0] => RBA.DATAB
 CROW[1] => RBA.DATAB
 Din[0] => CmdDRDIn.DATAB
@@ -80,45 +81,49 @@ Din[1] => WRD[1].DATAIN
 Din[1] => Bank[1].DATAIN
 Din[1] => Equal14.IN7
 Din[1] => Equal15.IN7
+Din[1] => Equal17.IN2
+Din[1] => CmdLEDEN.DATAB
 Din[2] => CmdUFMPrgm.DATAB
 Din[2] => WRD[2].DATAIN
 Din[2] => Bank[2].DATAIN
 Din[2] => Equal14.IN6
 Din[2] => Equal15.IN3
+Din[2] => Equal17.IN1
 Din[3] => CmdUFMErase.DATAB
 Din[3] => WRD[3].DATAIN
 Din[3] => Bank[3].DATAIN
 Din[3] => Equal14.IN5
 Din[3] => Equal15.IN2
+Din[3] => Equal17.IN0
 Din[4] => WRD[4].DATAIN
 Din[4] => Bank[4].DATAIN
 Din[4] => Equal14.IN4
 Din[4] => Equal15.IN6
 Din[4] => Equal16.IN3
-Din[4] => Equal17.IN0
-Din[4] => Equal18.IN3
+Din[4] => Equal18.IN0
+Din[4] => Equal19.IN3
 Din[5] => WRD[5].DATAIN
 Din[5] => Bank[5].DATAIN
 Din[5] => Equal14.IN3
 Din[5] => Equal15.IN1
 Din[5] => Equal16.IN2
-Din[5] => Equal17.IN3
-Din[5] => Equal18.IN0
+Din[5] => Equal18.IN3
+Din[5] => Equal19.IN0
 Din[6] => RA11.IN1
 Din[6] => WRD[6].DATAIN
 Din[6] => Bank[6].DATAIN
 Din[6] => Equal14.IN1
 Din[6] => Equal15.IN5
 Din[6] => Equal16.IN1
-Din[6] => Equal17.IN2
 Din[6] => Equal18.IN2
+Din[6] => Equal19.IN2
 Din[7] => WRD[7].DATAIN
 Din[7] => Bank[7].DATAIN
 Din[7] => Equal14.IN0
 Din[7] => Equal15.IN0
 Din[7] => Equal16.IN0
-Din[7] => Equal17.IN1
 Din[7] => Equal18.IN1
+Din[7] => Equal19.IN1
 Dout[0] << Dout[0].DB_MAX_OUTPUT_PORT_TYPE
 Dout[1] << Dout[1].DB_MAX_OUTPUT_PORT_TYPE
 Dout[2] << Dout[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -152,12 +157,14 @@ nCRAS => RowA[8].CLK
 nCRAS => RowA[9].CLK
 nCRAS => RBA[0]~reg0.CLK
 nCRAS => RBA[1]~reg0.CLK
+nCRAS => LED.IN1
 nCRAS => RASr.DATAIN
 nFWE => comb.IN1
 nFWE => CMDWR.IN1
 nFWE => ADWR.IN1
 nFWE => C1WR.IN1
 nFWE => FWEr.DATAIN
+LED << LED.DB_MAX_OUTPUT_PORT_TYPE
 RBA[0] << RBA[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RBA[1] << RBA[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RA[0] << RA.DB_MAX_OUTPUT_PORT_TYPE
@@ -184,8 +191,9 @@ nRCS << nRCS~reg0.DB_MAX_OUTPUT_PORT_TYPE
 RCLK => UFMProgram.CLK
 RCLK => UFMErase.CLK
 RCLK => UFMReqErase.CLK
-RCLK => n8MEGEN.CLK
+RCLK => LEDEN.CLK
 RCLK => UFMInitDone.CLK
+RCLK => n8MEGEN.CLK
 RCLK => UFMD.CLK
 RCLK => DRShift.CLK
 RCLK => DRDIn.CLK
@@ -239,8 +247,8 @@ RCKE << RCKE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nRWE << nRWE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nRRAS << nRRAS~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nRCAS << nRCAS~reg0.DB_MAX_OUTPUT_PORT_TYPE
-RDQMH << comb.DB_MAX_OUTPUT_PORT_TYPE
-RDQML << comb.DB_MAX_OUTPUT_PORT_TYPE
+RDQMH << RDQMH.DB_MAX_OUTPUT_PORT_TYPE
+RDQML << RDQML.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RAM2GS|UFM:UFM_inst
@@ -253,13 +261,13 @@ drshft => drshft.IN1
 erase => erase.IN1
 oscena => oscena.IN1
 program => program.IN1
-busy <= UFM_altufm_none_var:UFM_altufm_none_var_component.busy
-drdout <= UFM_altufm_none_var:UFM_altufm_none_var_component.drdout
-osc <= UFM_altufm_none_var:UFM_altufm_none_var_component.osc
-rtpbusy <= UFM_altufm_none_var:UFM_altufm_none_var_component.rtpbusy
+busy <= UFM_altufm_none_unv:UFM_altufm_none_unv_component.busy
+drdout <= UFM_altufm_none_unv:UFM_altufm_none_unv_component.drdout
+osc <= UFM_altufm_none_unv:UFM_altufm_none_unv_component.osc
+rtpbusy <= UFM_altufm_none_unv:UFM_altufm_none_unv_component.rtpbusy
 
 
-|RAM2GS|UFM:UFM_inst|UFM_altufm_none_var:UFM_altufm_none_var_component
+|RAM2GS|UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component
 arclk => maxii_ufm_block1.ARCLK
 ardin => maxii_ufm_block1.ARDIN
 arshft => maxii_ufm_block1.ARSHFT
