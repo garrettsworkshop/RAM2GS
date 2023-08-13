@@ -1,5 +1,5 @@
 Assembler report for RAM2GS
-Sun Aug 13 00:02:09 2023
+Sun Aug 13 01:10:57 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -38,11 +38,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Aug 13 00:02:09 2023 ;
+; Assembler Status      ; Successful - Sun Aug 13 01:10:57 2023 ;
 ; Revision Name         ; RAM2GS                                ;
 ; Top-level Entity Name ; RAM2GS                                ;
 ; Family                ; MAX V                                 ;
-; Device                ; 5M240ZT100C5                          ;
+; Device                ; 5M240ZT100C4                          ;
 +-----------------------+---------------------------------------+
 
 
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+--------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                        ;
 +----------------+--------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x001725A1                                                                     ;
-; Checksum       ; 0x00172999                                                                     ;
+; JTAG usercode  ; 0x0017386C                                                                     ;
+; Checksum       ; 0x00173C5C                                                                     ;
 +----------------+--------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Aug 13 00:02:09 2023
+    Info: Processing started: Sun Aug 13 01:10:57 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RAM2GS-MAXV -c RAM2GS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4662 megabytes
-    Info: Processing ended: Sun Aug 13 00:02:09 2023
+    Info: Processing ended: Sun Aug 13 01:10:57 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 

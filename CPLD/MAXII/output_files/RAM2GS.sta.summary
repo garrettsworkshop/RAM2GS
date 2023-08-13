@@ -11,36 +11,36 @@ Slack : -99.000
 TNS   : -99.000
 
 Type  : Setup 'PHI2'
-Slack : -8.919
-TNS   : -92.622
+Slack : -8.970
+TNS   : -99.540
 
 Type  : Setup 'RCLK'
-Slack : -8.036
-TNS   : -241.671
+Slack : -7.571
+TNS   : -261.130
 
 Type  : Setup 'nCRAS'
-Slack : -0.777
-TNS   : -2.512
-
-Type  : Hold 'DRCLK'
-Slack : -16.785
-TNS   : -16.785
+Slack : -1.200
+TNS   : -7.385
 
 Type  : Hold 'ARCLK'
-Slack : -16.266
-TNS   : -16.266
+Slack : -16.289
+TNS   : -16.289
 
-Type  : Hold 'RCLK'
-Slack : -1.047
-TNS   : -2.078
+Type  : Hold 'DRCLK'
+Slack : -16.286
+TNS   : -16.286
 
 Type  : Hold 'PHI2'
-Slack : -0.276
-TNS   : -0.276
+Slack : -1.153
+TNS   : -1.956
 
 Type  : Hold 'nCRAS'
-Slack : -0.031
-TNS   : -0.048
+Slack : 0.098
+TNS   : 0.000
+
+Type  : Hold 'RCLK'
+Slack : 1.148
+TNS   : 0.000
 
 Type  : Minimum Pulse Width 'ARCLK'
 Slack : -29.500

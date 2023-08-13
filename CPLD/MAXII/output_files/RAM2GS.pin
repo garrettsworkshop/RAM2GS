@@ -150,7 +150,7 @@ GND*                         : 84        :        :                   :         
 GND*                         : 85        :        :                   :         : 2         :                
 GND*                         : 86        :        :                   :         : 2         :                
 GND*                         : 87        :        :                   :         : 2         :                
-GND*                         : 88        :        :                   :         : 2         :                
+LED                          : 88        : output : 3.3-V LVTTL       :         : 2         : Y              
 RD[2]                        : 89        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
 RD[1]                        : 90        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              
 RD[5]                        : 91        : bidir  : 3.3-V LVCMOS      :         : 2         : Y              

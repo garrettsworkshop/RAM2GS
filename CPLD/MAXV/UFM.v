@@ -140,10 +140,6 @@ module  UFM_altufm_none_38r
 		ufm_osc = wire_maxii_ufm_block1_osc,
 		ufm_oscena = oscena,
 		ufm_program = program;
-	initial/*synthesis enable_verilog_initial_construct*/
- 	begin
-		$display("Warning: Memory initialization file RAM2GS.mif is not found. This may result in inconsistent simulation results.");
-	end
 endmodule //UFM_altufm_none_38r
 //VALID FILE
 
