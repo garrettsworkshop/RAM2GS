@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun Aug 13 01:10:56 2023
+Fitter Status : Successful - Sun Aug 13 04:26:33 2023
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : RAM2GS
 Top-level Entity Name : RAM2GS
 Family : MAX V
 Device : 5M240ZT100C4
 Timing Models : Final
-Total logic elements : 174 / 240 ( 73 % )
+Total logic elements : 175 / 240 ( 73 % )
 Total pins : 63 / 79 ( 80 % )
 Total virtual pins : 0
 UFM blocks : 1 / 1 ( 100 % )

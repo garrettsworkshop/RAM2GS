@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2GS
-Sun Aug 13 01:10:54 2023
+Sun Aug 13 04:26:30 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -46,12 +46,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sun Aug 13 01:10:54 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Aug 13 04:26:30 2023       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; RAM2GS                                      ;
 ; Top-level Entity Name       ; RAM2GS                                      ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 183                                         ;
+; Total logic elements        ; 184                                         ;
 ; Total pins                  ; 63                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                             ;
@@ -161,20 +161,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 183   ;
-;     -- Combinational with no register       ; 85    ;
+; Total logic elements                        ; 184   ;
+;     -- Combinational with no register       ; 86    ;
 ;     -- Register only                        ; 30    ;
 ;     -- Combinational with a register        ; 68    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 57    ;
-;     -- 3 input functions                    ; 47    ;
-;     -- 2 input functions                    ; 40    ;
+;     -- 4 input functions                    ; 56    ;
+;     -- 3 input functions                    ; 48    ;
+;     -- 2 input functions                    ; 41    ;
 ;     -- 1 input functions                    ; 8     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 167   ;
+;     -- normal mode                          ; 168   ;
 ;     -- arithmetic mode                      ; 16    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -187,8 +187,8 @@ https://fpgasoftware.intel.com/eula.
 ; UFM blocks                                  ; 1     ;
 ; Maximum fan-out node                        ; RCLK  ;
 ; Maximum fan-out                             ; 55    ;
-; Total fan-out                               ; 661   ;
-; Average fan-out                             ; 2.68  ;
+; Total fan-out                               ; 662   ;
+; Average fan-out                             ; 2.67  ;
 +---------------------------------------------+-------+
 
 
@@ -197,7 +197,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                    ; Entity Name         ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2GS                                                   ; 183 (183)   ; 98           ; 1          ; 63   ; 0            ; 85 (85)      ; 30 (30)           ; 68 (68)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
+; |RAM2GS                                                   ; 184 (184)   ; 98           ; 1          ; 63   ; 0            ; 86 (86)      ; 30 (30)           ; 68 (68)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;       |UFM_altufm_none_38r:UFM_altufm_none_38r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component ; UFM_altufm_none_38r ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
@@ -270,7 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sun Aug 13 01:10:43 2023
+    Info: Processing started: Sun Aug 13 04:26:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2GS-MAXV -c RAM2GS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -293,18 +293,18 @@ Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot
 Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
 Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
 Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Info (21057): Implemented 247 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 248 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 183 logic cells
+    Info (21061): Implemented 184 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Sun Aug 13 01:10:54 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Sun Aug 13 04:26:30 2023
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
