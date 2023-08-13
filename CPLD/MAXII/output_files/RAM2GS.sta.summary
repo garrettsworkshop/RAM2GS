@@ -1,0 +1,69 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'ARCLK'
+Slack : -99.000
+TNS   : -99.000
+
+Type  : Setup 'DRCLK'
+Slack : -99.000
+TNS   : -99.000
+
+Type  : Setup 'PHI2'
+Slack : -8.919
+TNS   : -92.622
+
+Type  : Setup 'RCLK'
+Slack : -8.036
+TNS   : -241.671
+
+Type  : Setup 'nCRAS'
+Slack : -0.777
+TNS   : -2.512
+
+Type  : Hold 'DRCLK'
+Slack : -16.785
+TNS   : -16.785
+
+Type  : Hold 'ARCLK'
+Slack : -16.266
+TNS   : -16.266
+
+Type  : Hold 'RCLK'
+Slack : -1.047
+TNS   : -2.078
+
+Type  : Hold 'PHI2'
+Slack : -0.276
+TNS   : -0.276
+
+Type  : Hold 'nCRAS'
+Slack : -0.031
+TNS   : -0.048
+
+Type  : Minimum Pulse Width 'ARCLK'
+Slack : -29.500
+TNS   : -59.000
+
+Type  : Minimum Pulse Width 'DRCLK'
+Slack : -29.500
+TNS   : -59.000
+
+Type  : Minimum Pulse Width 'PHI2'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'RCLK'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'nCCAS'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'nCRAS'
+Slack : -2.289
+TNS   : -2.289
+
+------------------------------------------------------------
