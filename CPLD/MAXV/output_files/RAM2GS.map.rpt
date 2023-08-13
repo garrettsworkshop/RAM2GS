@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2GS
-Sat Aug 12 23:47:44 2023
+Sun Aug 13 00:02:05 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -46,12 +46,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Aug 12 23:47:44 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Aug 13 00:02:05 2023       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; RAM2GS                                      ;
 ; Top-level Entity Name       ; RAM2GS                                      ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 181                                         ;
+; Total logic elements        ; 182                                         ;
 ; Total pins                  ; 63                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 1 / 1 ( 100 % )                             ;
@@ -160,20 +160,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 181   ;
-;     -- Combinational with no register       ; 85    ;
+; Total logic elements                        ; 182   ;
+;     -- Combinational with no register       ; 86    ;
 ;     -- Register only                        ; 29    ;
 ;     -- Combinational with a register        ; 67    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 57    ;
-;     -- 3 input functions                    ; 42    ;
-;     -- 2 input functions                    ; 44    ;
+;     -- 4 input functions                    ; 58    ;
+;     -- 3 input functions                    ; 44    ;
+;     -- 2 input functions                    ; 42    ;
 ;     -- 1 input functions                    ; 8     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 165   ;
+;     -- normal mode                          ; 166   ;
 ;     -- arithmetic mode                      ; 16    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
@@ -186,8 +186,8 @@ https://fpgasoftware.intel.com/eula.
 ; UFM blocks                                  ; 1     ;
 ; Maximum fan-out node                        ; RCLK  ;
 ; Maximum fan-out                             ; 54    ;
-; Total fan-out                               ; 647   ;
-; Average fan-out                             ; 2.64  ;
+; Total fan-out                               ; 653   ;
+; Average fan-out                             ; 2.65  ;
 +---------------------------------------------+-------+
 
 
@@ -196,7 +196,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                    ; Entity Name         ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2GS                                                   ; 181 (181)   ; 96           ; 1          ; 63   ; 0            ; 85 (85)      ; 29 (29)           ; 67 (67)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
+; |RAM2GS                                                   ; 182 (182)   ; 96           ; 1          ; 63   ; 0            ; 86 (86)      ; 29 (29)           ; 67 (67)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;       |UFM_altufm_none_38r:UFM_altufm_none_38r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component ; UFM_altufm_none_38r ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
@@ -268,7 +268,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Aug 12 23:47:36 2023
+    Info: Processing started: Sun Aug 13 00:01:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2GS-MAXV -c RAM2GS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -278,10 +278,10 @@ Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
     Info (12023): Found entity 1: UFM_altufm_none_38r File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 47
     Info (12023): Found entity 2: UFM File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 154
 Info (12127): Elaborating entity "RAM2GS" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at RAM2GS-MAX.v(20): object "LEDEN" assigned a value but never read File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 20
-Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(161): truncated value with size 32 to match size of target (2) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 161
-Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(166): truncated value with size 32 to match size of target (18) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 166
-Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(293): truncated value with size 32 to match size of target (4) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 293
+Warning (10036): Verilog HDL or VHDL warning at RAM2GS-MAX.v(103): object "CmdLEDEN" assigned a value but never read File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 103
+Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(162): truncated value with size 32 to match size of target (2) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 162
+Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(167): truncated value with size 32 to match size of target (18) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 167
+Warning (10230): Verilog HDL assignment warning at RAM2GS-MAX.v(294): truncated value with size 32 to match size of target (4) File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 294
 Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst" File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 90
 Info (12128): Elaborating entity "UFM_altufm_none_38r" for hierarchy "UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component" File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 205
 Warning (10649): Verilog HDL Display System Task warning at UFM.v(145):  Memory initialization file RAM2GS.mif is not found. This may result in inconsistent simulation results. File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 145
@@ -293,18 +293,18 @@ Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot
 Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
 Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
 Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Info (21057): Implemented 245 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 246 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 181 logic cells
+    Info (21061): Implemented 182 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
 Info (144001): Generated suppressed messages file D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 4702 megabytes
-    Info: Processing ended: Sat Aug 12 23:47:45 2023
+    Info: Processing ended: Sun Aug 13 00:02:05 2023
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +------------------------------------------+
