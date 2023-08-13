@@ -340,11 +340,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
 		// Submit command
 		if (CMDWR & CmdEnable) begin
-			if (Din[7:4]==4'h0 && Din[3:1]==3'b000) begin // MAX w/LED 
+			if (Din[7:4]==4'h0 && Din[3:2]==2'b00) begin // MAX w/LED 
 			// if (Din[7:4]==4'h0) begin // MAX w/o LED
-			// if (Din[7:4]==4'h0 && Din[3:2]==3'b01) begin // LCMXO / iCE40 / AGM
-			// if (Din[7:4]==4'h0 && Din[3:1]==3'b10) begin // LCMXO2
-				XOR8MEG <= Din[0];
+			// if (Din[7:4]==4'h0 && Din[3:2]==2'b01) begin // LCMXO / iCE40 / AGM
+			// if (Din[7:4]==4'h0 && Din[3:2]==2'b10) begin // LCMXO2
+				XOR8MEG <= Din[0] || (LEDEN && Din[1]);
 			end else if (Din[7:4]==4'h1) begin
 				CmdLEDEN <= ~Din[1];
 				Cmdn8MEGEN <= ~Din[0];
