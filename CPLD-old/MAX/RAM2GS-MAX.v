@@ -6,11 +6,6 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	/* 65816 Phase 2 Clock */
 	input PHI2;
 
-	/* Activity LED */
-	reg LEDEN = 0;
-	output LED;
-	assign LED = ~(~nCRAS &&  LEDEN);
-
 	/* Async. DRAM Control Inputs */
 	input nCCAS, nCRAS;
 
@@ -20,6 +15,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	reg CASr, CASr2, CASr3;
 	reg FWEr;
 	reg CBR;
+
+	/* Activity LED */
+	reg LEDEN = 0;
+	output LED;
+	assign LED = ~(~nCRAS &&  LEDEN);
 
 	/* 65816 Data */
 	input [7:0] Din;

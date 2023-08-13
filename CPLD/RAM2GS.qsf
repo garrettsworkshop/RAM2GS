@@ -74,6 +74,11 @@ set_global_assignment -name SAFE_STATE_MACHINE ON
 
 
 
+set_global_assignment -name MIF_FILE RAM4GS.mif
+set_global_assignment -name QIP_FILE UFM.qip
+
+
+
 set_location_assignment PIN_12 -to RCLK
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RCLK
 
@@ -174,7 +179,6 @@ set_location_assignment PIN_95 -to RD[6]
 set_location_assignment PIN_97 -to RD[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
 
-set_global_assignment -name MIF_FILE RAM4GS.mif
 set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCRAS
 set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCCAS
 set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to nFWE
@@ -210,4 +214,3 @@ set_instance_assignment -name SLOW_SLEW_RATE OFF -to RDQML
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RD
 set_instance_assignment -name SLOW_SLEW_RATE ON -to RD
 set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to RD
-set_global_assignment -name QIP_FILE UFM.qip

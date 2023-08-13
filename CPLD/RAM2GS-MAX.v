@@ -1,5 +1,5 @@
-module RAM4GS(PHI2, MAin, CROW, Din, Dout,
-			  nCCAS, nCRAS, nFWE,
+module RAM2GS(PHI2, MAin, CROW, Din, Dout,
+			  nCCAS, nCRAS, nFWE, LED,
 			  RBA, RA, RD, nRCS, RCLK, RCKE,
 			  nRWE, nRRAS, nRCAS, RDQMH, RDQML);
 
@@ -16,9 +16,15 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	reg FWEr;
 	reg CBR;
 
+	/* Activity LED */
+	reg LEDEN = 0;
+	output LED;
+	assign LED = !(!nCRAS && !CBR && LEDEN);
+
 	/* 65816 Data */
 	input [7:0] Din;
-	output [7:0] Dout = RD[7:0];
+	output [7:0] Dout;
+	assign Dout[7:0] = RD[7:0];
 
 	/* Latched 65816 Bank Address */
 	reg [7:0] Bank;
@@ -46,8 +52,9 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	assign RA[11] = RA11;
 	assign RA[10] = RA10;
 	assign RA[9:0] = ~nRowColSel ? RowA[9:0] : MAin[9:0];
-	output RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
-	output RDQMH = ~nRowColSel ? 1'b1 : MAin[9];
+	output RDQML, RDQMH;
+	assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
+	assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
 	reg [7:0] WRD;
 	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
@@ -93,6 +100,7 @@ module RAM4GS(PHI2, MAin, CROW, Din, Dout,
 	reg ADSubmitted = 0;
 	reg CmdEnable = 0;
 	reg CmdSubmitted = 0;
+	reg CmdLEDEN = 0;
 	reg Cmdn8MEGEN = 0;
 	reg CmdDRCLK = 0;
 	reg CmdDRDIn = 0;
