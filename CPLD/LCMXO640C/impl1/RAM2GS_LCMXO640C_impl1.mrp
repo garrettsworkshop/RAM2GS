@@ -17,7 +17,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO640CTQFP100
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/15/23  05:03:22
+Mapped on:  08/15/23  05:22:26
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  RAM2GS                                        Date:  08/15/23  05:03:22
+Design:  RAM2GS                                        Date:  08/15/23  05:22:26
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ IO (PIO) Attributes
 
 
 
-Design:  RAM2GS                                        Date:  08/15/23  05:03:22
+Design:  RAM2GS                                        Date:  08/15/23  05:22:26
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -198,7 +198,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2GS                                        Date:  08/15/23  05:03:22
+Design:  RAM2GS                                        Date:  08/15/23  05:22:26
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2GS                                        Date:  08/15/23  05:03:22
+Design:  RAM2GS                                        Date:  08/15/23  05:22:26
 
 IO (PIO) Attributes (cont)
 --------------------------

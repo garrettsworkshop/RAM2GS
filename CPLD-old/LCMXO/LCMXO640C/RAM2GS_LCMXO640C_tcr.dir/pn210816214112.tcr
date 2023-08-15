@@ -1,6 +1,0 @@
-#Start recording tcl command: 8/16/2021 21:33:25
-#Project Location: C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO/LCMXO640C; Project name: RAM2GS_LCMXO640C
-prj_project open "C:/Users/Dog/Documents/GitHub/RAM2GS/CPLD/LCMXO/LCMXO640C/RAM2GS_LCMXO640C.ldf"
-prj_run Export -impl impl1 -forceAll
-prj_run Export -impl impl1 -forceOne
-#Stop recording: 8/16/2021 21:41:12

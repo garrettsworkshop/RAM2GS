@@ -25,7 +25,7 @@ FS_610_add_4_8/CO0
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Tue Aug 15 05:03:22 2023
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Tue Aug 15 05:22:26 2023
 
 SYSCONFIG INBUF=ON CONFIG_SECURE=OFF ;
 LOCATE COMP "RD[7]" SITE "71" ;

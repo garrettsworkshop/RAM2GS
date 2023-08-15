@@ -29,7 +29,7 @@ Performance Hardware Data Status: Version 1.124.
 // Package: TQFP100
 // ncd File: ram2gs_lcmxo256c_impl1.ncd
 // Version: Diamond (64-bit) 3.12.1.454
-// Written on Tue Aug 15 05:03:30 2023
+// Written on Tue Aug 15 05:22:30 2023
 // M: Minimum Performance Grade
 // iotiming RAM2GS_LCMXO256C_impl1.ncd RAM2GS_LCMXO256C_impl1.prf -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/promote.xml
 

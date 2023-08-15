@@ -13,5 +13,5 @@
             <Options/>
         </Source>
     </Implementation>
-    <Strategy name="Strategy1" file="RAM2GS_LCMXO2_640HC1.sty"/>
+    <Strategy name="Strategy1" file="RAM2GS_LCMXO2_1200HC1.sty"/>
 </BaliProject>

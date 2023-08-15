@@ -1,7 +1,7 @@
 (DELAYFILE
   (SDFVERSION "3.0")
   (DESIGN "RAM2GS")
-  (DATE "Tue Aug 15 05:03:22 2023")
+  (DATE "Tue Aug 15 05:22:23 2023")
   (VENDOR "Lattice")
   (PROGRAM "ldbanno")
   (VERSION "Diamond (64-bit) 3.12.1.454")
