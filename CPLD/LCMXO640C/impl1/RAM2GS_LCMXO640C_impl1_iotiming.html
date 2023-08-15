@@ -1,0 +1,203 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file ram2gs_lcmxo640c_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO640C
+Package:     TQFP100
+Performance: 4
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status: Version 1.124.
+Loading design for application iotiming from file ram2gs_lcmxo640c_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO640C
+Package:     TQFP100
+Performance: 5
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status: Version 1.124.
+Loading design for application iotiming from file ram2gs_lcmxo640c_impl1.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO640C
+Package:     TQFP100
+Performance: M
+Package Status:                     Final          Version 1.17.
+Performance Hardware Data Status: Version 1.124.
+// Design: RAM2GS
+// Package: TQFP100
+// ncd File: ram2gs_lcmxo640c_impl1.ncd
+// Version: Diamond (64-bit) 3.12.1.454
+// Written on Tue Aug 15 05:03:31 2023
+// M: Minimum Performance Grade
+// iotiming RAM2GS_LCMXO640C_impl1.ncd RAM2GS_LCMXO640C_impl1.prf -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 5, 4, 3):
+
+// Input Setup and Hold Times
+
+Port    Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+CROW[0] nCRAS F    -0.236      M       3.076     3
+CROW[1] nCRAS F    -0.216      M       2.985     3
+Din[0]  PHI2  F     6.373      3       2.684     3
+Din[0]  nCCAS F     1.094      3       0.245     3
+Din[1]  PHI2  F     5.890      3       2.684     3
+Din[1]  nCCAS F     1.106      3       0.247     3
+Din[2]  PHI2  F     4.774      3       2.292     3
+Din[2]  nCCAS F     1.207      3       0.231     3
+Din[3]  PHI2  F     8.665      3       1.537     3
+Din[3]  nCCAS F     0.786      3       0.612     3
+Din[4]  PHI2  F     5.483      3       1.881     3
+Din[4]  nCCAS F     1.180      3       0.282     3
+Din[5]  PHI2  F     7.162      3       1.124     3
+Din[5]  nCCAS F     0.802      3       0.635     3
+Din[6]  PHI2  F     8.125      3       1.435     3
+Din[6]  nCCAS F     1.142      3       0.086     3
+Din[7]  PHI2  F     8.015      3       1.300     3
+Din[7]  nCCAS F     1.259      3      -0.010     M
+MAin[0] PHI2  F     6.577      3       0.639     3
+MAin[0] nCRAS F    -0.004      M       2.291     3
+MAin[1] PHI2  F     6.880      3       1.958     3
+MAin[1] nCRAS F     1.424      3       1.006     3
+MAin[2] PHI2  F     4.559      3       0.456     3
+MAin[2] nCRAS F    -0.209      M       2.966     3
+MAin[3] PHI2  F     5.604      3      -0.096     M
+MAin[3] nCRAS F    -0.323      M       3.369     3
+MAin[4] PHI2  F     6.263      3      -0.211     M
+MAin[4] nCRAS F    -0.086      M       2.536     3
+MAin[5] PHI2  F     4.291      3       0.703     3
+MAin[5] nCRAS F     1.052      3       1.326     3
+MAin[6] PHI2  F     5.837      3      -0.133     M
+MAin[6] nCRAS F    -0.017      M       2.334     3
+MAin[7] PHI2  F     6.302      3      -0.241     M
+MAin[7] nCRAS F    -0.106      M       2.631     3
+MAin[8] nCRAS F    -0.086      M       2.542     3
+MAin[9] nCRAS F     0.549      3       1.796     3
+PHI2    RCLK  R     4.937      3      -0.562     M
+UFMSDO  RCLK  R     2.296      3      -0.152     M
+nCCAS   RCLK  R     1.639      3      -0.029     M
+nCCAS   nCRAS F    -0.229      M       3.059     3
+nCRAS   RCLK  R     1.104      3       0.341     3
+nFWE    PHI2  F     5.086      3       1.672     3
+nFWE    nCRAS F     0.037      3       2.231     3
+
+
+// Clock to Output Delay
+
+Port   Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+LED    RCLK  R     7.152         3        1.423          M
+LED    nCRAS F    12.128         3        2.429          M
+RA[0]  RCLK  R     9.839         3        1.974          M
+RA[0]  nCRAS F    12.557         3        2.494          M
+RA[10] RCLK  R     5.747         3        1.141          M
+RA[11] PHI2  R     7.990         3        1.574          M
+RA[1]  RCLK  R    10.012         3        2.010          M
+RA[1]  nCRAS F    12.750         3        2.545          M
+RA[2]  RCLK  R    10.522         3        2.116          M
+RA[2]  nCRAS F    12.564         3        2.494          M
+RA[3]  RCLK  R    10.341         3        2.077          M
+RA[3]  nCRAS F    11.973         3        2.372          M
+RA[4]  RCLK  R     9.672         3        1.940          M
+RA[4]  nCRAS F    13.443         3        2.679          M
+RA[5]  RCLK  R     9.440         3        1.890          M
+RA[5]  nCRAS F    10.958         3        2.155          M
+RA[6]  RCLK  R    10.605         3        2.138          M
+RA[6]  nCRAS F    13.114         3        2.628          M
+RA[7]  RCLK  R     8.842         3        1.782          M
+RA[7]  nCRAS F    10.779         3        2.148          M
+RA[8]  RCLK  R    10.258         3        2.067          M
+RA[8]  nCRAS F    12.925         3        2.579          M
+RA[9]  RCLK  R     7.160         3        1.425          M
+RA[9]  nCRAS F     9.857         3        1.950          M
+RBA[0] nCRAS F    10.935         3        2.169          M
+RBA[1] nCRAS F    10.976         3        2.184          M
+RCKE   RCLK  R     5.747         3        1.141          M
+RDQMH  RCLK  R     9.890         3        1.991          M
+RDQML  RCLK  R     9.338         3        1.859          M
+RD[0]  nCCAS F     7.488         3        1.591          M
+RD[1]  nCCAS F     8.012         3        1.701          M
+RD[2]  nCCAS F     8.965         3        1.912          M
+RD[3]  nCCAS F     8.965         3        1.912          M
+RD[4]  nCCAS F     7.951         3        1.691          M
+RD[5]  nCCAS F     7.951         3        1.691          M
+RD[6]  nCCAS F     8.012         3        1.701          M
+RD[7]  nCCAS F     8.384         3        1.785          M
+UFMCLK RCLK  R     7.986         3        1.598          M
+UFMSDI RCLK  R     5.747         3        1.141          M
+nRCAS  RCLK  R     5.747         3        1.141          M
+nRCS   RCLK  R     5.747         3        1.141          M
+nRRAS  RCLK  R     6.929         3        1.373          M
+nRWE   RCLK  R     7.375         3        1.459          M
+nUFMCS RCLK  R     7.996         3        1.601          M
+WARNING: you must also run trce with hold speed: 3
+WARNING: you must also run trce with setup speed: M
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

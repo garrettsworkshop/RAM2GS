@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1692090225"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1692090207">
+            <Task name="Map" build_result="2" update_result="0" update_time="1692090207"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1692090208"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1692090210"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1692090211"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1692090219">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1692090219"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1692090220"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1692090221"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1692090206">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1692090206"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1692090225"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="0" update_result="3" update_time="0"/>
+            <Task name="BKM" build_result="0" update_result="3" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/RAM2GS_LCMXO2_1200HC_impl1_map.vdb" last_build_time="1692090207" last_build_size="70832"/>
+        <Report name=".vdbs/RAM2GS_LCMXO2_640HC_impl1_map.vdb" last_build_time="1692089743" last_build_size="67964"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.bgn" last_build_time="1692090225" last_build_size="4432"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.ior" last_build_time="1692090221" last_build_size="6877"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.jed" last_build_time="1692090225" last_build_size="351905"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.lsedata" last_build_time="1692090205" last_build_size="237766"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.ncd" last_build_time="1692090219" last_build_size="197895"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.ngd" last_build_time="1692090206" last_build_size="156243"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.tw1" last_build_time="1692090208" last_build_size="14613"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1.twr" last_build_time="1692090220" last_build_size="88214"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1_map.ncd" last_build_time="1692090207" last_build_size="140118"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1_mapvho.sdf" last_build_time="1692090211" last_build_size="118434"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1_mapvho.vho" last_build_time="1692090211" last_build_size="973593"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1_mapvo.sdf" last_build_time="1692090210" last_build_size="117902"/>
+        <Report name="RAM2GS_LCMXO2_1200HC_impl1_mapvo.vo" last_build_time="1692090210" last_build_size="127959"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.bgn" last_build_time="1692089755" last_build_size="4349"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.ior" last_build_time="1692089751" last_build_size="6793"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.jed" last_build_time="1692089755" last_build_size="177183"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.lsedata" last_build_time="1692089741" last_build_size="237766"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.ncd" last_build_time="1692089750" last_build_size="194841"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.ngd" last_build_time="1692089742" last_build_size="156242"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.tw1" last_build_time="1692089743" last_build_size="14448"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1.twr" last_build_time="1692089750" last_build_size="88131"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1_map.ncd" last_build_time="1692089742" last_build_size="137575"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1_mapvho.sdf" last_build_time="1692089745" last_build_size="118434"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1_mapvho.vho" last_build_time="1692089744" last_build_size="973515"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1_mapvo.sdf" last_build_time="1692089744" last_build_size="117902"/>
+        <Report name="RAM2GS_LCMXO2_640HC_impl1_mapvo.vo" last_build_time="1692089744" last_build_size="127881"/>
+    </Strategy>
+</BuildStatus>

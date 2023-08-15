@@ -1,0 +1,21 @@
+----------------------------------------------------------------------
+Report for cell RAM2GS.TECH
+Register bits:  102 of 877 (11.631%)
+I/O cells:      67
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB         8          100.0
+                              CCU2D        10          100.0
+                            FD1P3AX        29          100.0
+                            FD1P3AY         5          100.0
+                            FD1P3IX         3          100.0
+                            FD1S3AX        47          100.0
+                            FD1S3IX        14          100.0
+                            FD1S3JX         4          100.0
+                                GSR         1          100.0
+                                 IB        26          100.0
+                                INV         3          100.0
+                               LUT4       122          100.0
+                                 OB        33          100.0
+                              PFUMX         1          100.0
+                              TOTAL       306
