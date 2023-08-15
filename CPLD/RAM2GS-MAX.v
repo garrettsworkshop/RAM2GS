@@ -344,7 +344,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 			// if (Din[7:4]==4'h0) begin // MAX w/o LED
 			// if (Din[7:4]==4'h0 && Din[3:2]==2'b01) begin // LCMXO / iCE40 / AGM
 			// if (Din[7:4]==4'h0 && Din[3:2]==2'b10) begin // LCMXO2
-				XOR8MEG <= Din[0] || (LEDEN && Din[1]);
+				XOR8MEG <= Din[0] && !(LEDEN && Din[1]);
+			end else if (Din[7:4]==4'h0) begin // Unsupported type 
+				XOR8MEG <= 0;
 			end else if (Din[7:4]==4'h1) begin
 				CmdLEDEN <= Din[1];
 				Cmdn8MEGEN <= ~Din[0];

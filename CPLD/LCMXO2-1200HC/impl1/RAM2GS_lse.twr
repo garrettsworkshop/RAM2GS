@@ -1,0 +1,297 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Tue Aug 15 05:03:26 2023
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     RAM2GS
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk3 [get_nets nCCAS_c]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk2 [get_nets nCRAS_c]
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk1 [get_nets PHI2_c]
+            122 items scored, 119 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 7.418ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             Bank_i1  (from PHI2_c +)
+   Destination:    FD1P3AX    SP             CmdEnable_405  (to PHI2_c -)
+
+   Delay:                   9.633ns  (30.2% logic, 69.8% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.633ns data_path Bank_i1 to CmdEnable_405 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 7.418ns
+
+ Path Details: Bank_i1 to CmdEnable_405
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              Bank_i1 (from PHI2_c)
+Route         1   e 0.941                                  Bank[1]
+LUT4        ---     0.493              D to Z              i8_4_lut
+Route         2   e 1.141                                  n22
+LUT4        ---     0.493              B to Z              i11_3_lut_rep_20
+Route         7   e 1.502                                  n2369
+LUT4        ---     0.493              A to Z              i1_2_lut_rep_13_3_lut
+Route         1   e 0.941                                  n2362
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_13
+Route         3   e 1.258                                  C1Submitted_N_237
+LUT4        ---     0.493              C to Z              i34_4_lut
+Route         1   e 0.941                                  PHI2_N_120_enable_1
+                  --------
+                    9.633  (30.2% logic, 69.8% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 7.418ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             Bank_i4  (from PHI2_c +)
+   Destination:    FD1P3AX    SP             CmdEnable_405  (to PHI2_c -)
+
+   Delay:                   9.633ns  (30.2% logic, 69.8% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.633ns data_path Bank_i4 to CmdEnable_405 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 7.418ns
+
+ Path Details: Bank_i4 to CmdEnable_405
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              Bank_i4 (from PHI2_c)
+Route         1   e 0.941                                  Bank[4]
+LUT4        ---     0.493              C to Z              i8_4_lut
+Route         2   e 1.141                                  n22
+LUT4        ---     0.493              B to Z              i11_3_lut_rep_20
+Route         7   e 1.502                                  n2369
+LUT4        ---     0.493              A to Z              i1_2_lut_rep_13_3_lut
+Route         1   e 0.941                                  n2362
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_13
+Route         3   e 1.258                                  C1Submitted_N_237
+LUT4        ---     0.493              C to Z              i34_4_lut
+Route         1   e 0.941                                  PHI2_N_120_enable_1
+                  --------
+                    9.633  (30.2% logic, 69.8% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 7.256ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             Bank_i3  (from PHI2_c +)
+   Destination:    FD1P3AX    SP             CmdEnable_405  (to PHI2_c -)
+
+   Delay:                   9.471ns  (30.7% logic, 69.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.471ns data_path Bank_i3 to CmdEnable_405 violates
+      2.500ns delay constraint less
+      0.285ns LCE_S requirement (totaling 2.215ns) by 7.256ns
+
+ Path Details: Bank_i3 to CmdEnable_405
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              Bank_i3 (from PHI2_c)
+Route         1   e 0.941                                  Bank[3]
+LUT4        ---     0.493              B to Z              i1989_2_lut
+Route         1   e 0.941                                  n2287
+LUT4        ---     0.493              C to Z              i12_4_lut
+Route         8   e 1.540                                  n26
+LUT4        ---     0.493              B to Z              i1_2_lut_rep_13_3_lut
+Route         1   e 0.941                                  n2362
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_13
+Route         3   e 1.258                                  C1Submitted_N_237
+LUT4        ---     0.493              C to Z              i34_4_lut
+Route         1   e 0.941                                  PHI2_N_120_enable_1
+                  --------
+                    9.471  (30.7% logic, 69.3% route), 6 logic levels.
+
+Warning: 9.918 ns is the maximum delay for this constraint.
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets RCLK_c]
+            498 items scored, 186 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.319ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             FS_610__i13  (from RCLK_c +)
+   Destination:    FD1P3AY    D              nUFMCS_415  (to RCLK_c +)
+
+   Delay:                   8.159ns  (29.6% logic, 70.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      8.159ns data_path FS_610__i13 to nUFMCS_415 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.319ns
+
+ Path Details: FS_610__i13 to nUFMCS_415
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              FS_610__i13 (from RCLK_c)
+Route         3   e 1.315                                  FS[13]
+LUT4        ---     0.493              B to Z              i3_4_lut_adj_7
+Route         5   e 1.405                                  n10
+LUT4        ---     0.493              C to Z              i1_2_lut_rep_19_3_lut
+Route         2   e 1.141                                  n2368
+LUT4        ---     0.493              B to Z              i1_2_lut_4_lut
+Route         1   e 0.941                                  n64
+LUT4        ---     0.493              B to Z              i1448_4_lut
+Route         1   e 0.941                                  nUFMCS_N_199
+                  --------
+                    8.159  (29.6% logic, 70.4% route), 5 logic levels.
+
+
+Error:  The following path violates requirements by 3.319ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             FS_610__i15  (from RCLK_c +)
+   Destination:    FD1P3AY    D              nUFMCS_415  (to RCLK_c +)
+
+   Delay:                   8.159ns  (29.6% logic, 70.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      8.159ns data_path FS_610__i15 to nUFMCS_415 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.319ns
+
+ Path Details: FS_610__i15 to nUFMCS_415
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              FS_610__i15 (from RCLK_c)
+Route         3   e 1.315                                  FS[15]
+LUT4        ---     0.493              C to Z              i3_4_lut_adj_7
+Route         5   e 1.405                                  n10
+LUT4        ---     0.493              C to Z              i1_2_lut_rep_19_3_lut
+Route         2   e 1.141                                  n2368
+LUT4        ---     0.493              B to Z              i1_2_lut_4_lut
+Route         1   e 0.941                                  n64
+LUT4        ---     0.493              B to Z              i1448_4_lut
+Route         1   e 0.941                                  nUFMCS_N_199
+                  --------
+                    8.159  (29.6% logic, 70.4% route), 5 logic levels.
+
+
+Error:  The following path violates requirements by 3.319ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3AX    CK             FS_610__i16  (from RCLK_c +)
+   Destination:    FD1P3AY    D              nUFMCS_415  (to RCLK_c +)
+
+   Delay:                   8.159ns  (29.6% logic, 70.4% route), 5 logic levels.
+
+ Constraint Details:
+
+      8.159ns data_path FS_610__i16 to nUFMCS_415 violates
+      5.000ns delay constraint less
+      0.160ns L_S requirement (totaling 4.840ns) by 3.319ns
+
+ Path Details: FS_610__i16 to nUFMCS_415
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              FS_610__i16 (from RCLK_c)
+Route         3   e 1.315                                  FS[16]
+LUT4        ---     0.493              D to Z              i3_4_lut_adj_7
+Route         5   e 1.405                                  n10
+LUT4        ---     0.493              C to Z              i1_2_lut_rep_19_3_lut
+Route         2   e 1.141                                  n2368
+LUT4        ---     0.493              B to Z              i1_2_lut_4_lut
+Route         1   e 0.941                                  n64
+LUT4        ---     0.493              B to Z              i1448_4_lut
+Route         1   e 0.941                                  nUFMCS_N_199
+                  --------
+                    8.159  (29.6% logic, 70.4% route), 5 logic levels.
+
+Warning: 8.319 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets nCCAS_c]                 |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets nCRAS_c]                 |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets PHI2_c]                  |     5.000 ns|    19.836 ns|     6 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets RCLK_c]                  |     5.000 ns|     8.319 ns|     5 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n26                                     |       8|      84|     27.54%
+                                        |        |        |
+n1997                                   |       1|      36|     11.80%
+                                        |        |        |
+n1996                                   |       1|      35|     11.48%
+                                        |        |        |
+n1995                                   |       1|      33|     10.82%
+                                        |        |        |
+n10                                     |       5|      32|     10.49%
+                                        |        |        |
+n1998                                   |       1|      32|     10.49%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 305  Score: 1313492
+
+Constraints cover  621 paths, 182 nets, and 471 connections (64.2% coverage)
+
+
+Peak memory: 57921536 bytes, TRCE: 2363392 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

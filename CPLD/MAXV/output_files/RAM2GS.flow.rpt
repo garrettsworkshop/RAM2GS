@@ -1,5 +1,5 @@
 Flow report for RAM2GS
-Sun Aug 13 04:50:05 2023
+Sun Aug 13 06:36:32 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sun Aug 13 04:50:03 2023       ;
+; Flow Status           ; Successful - Sun Aug 13 06:36:30 2023       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name         ; RAM2GS                                      ;
 ; Top-level Entity Name ; RAM2GS                                      ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/13/2023 04:49:50 ;
+; Start date & time ; 08/13/2023 06:36:15 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RAM2GS              ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name               ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID         ; 207120313862967.169191659008924 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID         ; 207120313862967.169192297509168 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP        ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP        ; 0                               ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air     ; --            ; --          ; --         ;
@@ -84,11 +84,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4702 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:01     ; 1.0                     ; 5345 MB             ; 00:00:02                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4662 MB             ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4702 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:02     ; 1.0                     ; 5346 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4662 MB             ; 00:00:00                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:25                           ;
+; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,0 +1,75 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Tue Aug 15 05:03:45 2023 *
+NOTE DESIGN NAME: RAM2GS *
+NOTE DEVICE NAME: LCMXO2-1200HC-4TQFP100 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS RD[7] : 43 : inout *
+NOTE PINS RD[6] : 42 : inout *
+NOTE PINS RD[5] : 41 : inout *
+NOTE PINS RD[4] : 40 : inout *
+NOTE PINS RD[3] : 39 : inout *
+NOTE PINS RD[2] : 38 : inout *
+NOTE PINS RD[1] : 37 : inout *
+NOTE PINS RD[0] : 36 : inout *
+NOTE PINS Dout[7] : 82 : out *
+NOTE PINS Dout[6] : 78 : out *
+NOTE PINS Dout[5] : 84 : out *
+NOTE PINS Dout[4] : 83 : out *
+NOTE PINS Dout[3] : 85 : out *
+NOTE PINS Dout[2] : 87 : out *
+NOTE PINS Dout[1] : 86 : out *
+NOTE PINS Dout[0] : 76 : out *
+NOTE PINS LED : 34 : out *
+NOTE PINS RBA[1] : 60 : out *
+NOTE PINS RBA[0] : 58 : out *
+NOTE PINS RA[11] : 59 : out *
+NOTE PINS RA[10] : 64 : out *
+NOTE PINS RA[9] : 63 : out *
+NOTE PINS RA[8] : 65 : out *
+NOTE PINS RA[7] : 75 : out *
+NOTE PINS RA[6] : 68 : out *
+NOTE PINS RA[5] : 70 : out *
+NOTE PINS RA[4] : 74 : out *
+NOTE PINS RA[3] : 71 : out *
+NOTE PINS RA[2] : 69 : out *
+NOTE PINS RA[1] : 67 : out *
+NOTE PINS RA[0] : 66 : out *
+NOTE PINS nRCS : 57 : out *
+NOTE PINS RCKE : 53 : out *
+NOTE PINS nRWE : 49 : out *
+NOTE PINS nRRAS : 54 : out *
+NOTE PINS nRCAS : 52 : out *
+NOTE PINS RDQMH : 51 : out *
+NOTE PINS RDQML : 48 : out *
+NOTE PINS nUFMCS : 47 : out *
+NOTE PINS UFMCLK : 29 : out *
+NOTE PINS UFMSDI : 30 : out *
+NOTE PINS PHI2 : 8 : in *
+NOTE PINS MAin[9] : 32 : in *
+NOTE PINS MAin[8] : 25 : in *
+NOTE PINS MAin[7] : 18 : in *
+NOTE PINS MAin[6] : 24 : in *
+NOTE PINS MAin[5] : 19 : in *
+NOTE PINS MAin[4] : 20 : in *
+NOTE PINS MAin[3] : 21 : in *
+NOTE PINS MAin[2] : 13 : in *
+NOTE PINS MAin[1] : 12 : in *
+NOTE PINS MAin[0] : 14 : in *
+NOTE PINS CROW[1] : 16 : in *
+NOTE PINS CROW[0] : 10 : in *
+NOTE PINS Din[7] : 1 : in *
+NOTE PINS Din[6] : 2 : in *
+NOTE PINS Din[5] : 98 : in *
+NOTE PINS Din[4] : 99 : in *
+NOTE PINS Din[3] : 97 : in *
+NOTE PINS Din[2] : 88 : in *
+NOTE PINS Din[1] : 96 : in *
+NOTE PINS Din[0] : 3 : in *
+NOTE PINS nCCAS : 9 : in *
+NOTE PINS nCRAS : 17 : in *
+NOTE PINS nFWE : 28 : in *
+NOTE PINS RCLK : 62 : in *
+NOTE PINS UFMSDO : 27 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

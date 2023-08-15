@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "RAM2GS_LCMXO2_1200HC_impl1.log"
+-o "RAM2GS_LCMXO2_1200HC_impl1.csv"
+-pr "RAM2GS_LCMXO2_1200HC_impl1.prf"
