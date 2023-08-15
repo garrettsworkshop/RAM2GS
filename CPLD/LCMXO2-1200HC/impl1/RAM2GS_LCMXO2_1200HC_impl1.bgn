@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 05:03:42 2023
+Tue Aug 15 05:22:19 2023
 
 
 Command: bitgen -g RamCfg:Reset -path D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC -w -jedec -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/promote.xml RAM2GS_LCMXO2_1200HC_impl1.ncd RAM2GS_LCMXO2_1200HC_impl1.prf 
@@ -81,6 +81,6 @@ UFM Utilization: General Purpose Flash Memory.
 Available General Purpose Flash Memory:  511 Pages (Page 0 to Page 510).
 Initialized UFM Pages:                     0 Page.
  
-Total CPU Time: 2 secs 
-Total REAL Time: 3 secs 
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
 Peak Memory Usage: 253 MB

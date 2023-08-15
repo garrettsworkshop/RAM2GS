@@ -6,7 +6,7 @@ NOTE Readback:       Off*
 NOTE Security:      Off*
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue Aug 15 05:03:33 2023 *
+NOTE DATE CREATED: Tue Aug 15 05:22:34 2023 *
 NOTE DESIGN NAME: RAM2GS *
 NOTE DEVICE NAME: LCMXO640C-3TQFP100 *
 NOTE PIN ASSIGNMENTS *
@@ -1742,4 +1742,4 @@ L000000
 C2594*
 N User Electronic Signature Data*
 U00000000000000000000000000000000*
-451D
+451F

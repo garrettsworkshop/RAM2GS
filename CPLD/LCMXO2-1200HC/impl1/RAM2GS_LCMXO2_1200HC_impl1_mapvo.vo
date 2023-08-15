@@ -2,8 +2,8 @@
 // Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.12.1.454
 
 // ldbanno -n Verilog -o RAM2GS_LCMXO2_1200HC_impl1_mapvo.vo -w -neg -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/promote.xml RAM2GS_LCMXO2_1200HC_impl1_map.ncd 
-// Netlist created on Tue Aug 15 05:03:26 2023
-// Netlist written on Tue Aug 15 05:03:29 2023
+// Netlist created on Tue Aug 15 05:22:05 2023
+// Netlist written on Tue Aug 15 05:22:08 2023
 // Design is for device LCMXO2-1200HC
 // Design is for package TQFP100
 // Design is for performance grade 4

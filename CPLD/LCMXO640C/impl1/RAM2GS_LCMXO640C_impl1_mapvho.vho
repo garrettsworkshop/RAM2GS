@@ -2,8 +2,8 @@
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.12.1.454
 
 -- ldbanno -n VHDL -o RAM2GS_LCMXO640C_impl1_mapvho.vho -w -neg -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C/promote.xml RAM2GS_LCMXO640C_impl1_map.ncd 
--- Netlist created on Tue Aug 15 05:03:22 2023
--- Netlist written on Tue Aug 15 05:03:24 2023
+-- Netlist created on Tue Aug 15 05:22:26 2023
+-- Netlist written on Tue Aug 15 05:22:28 2023
 -- Design is for device LCMXO640C
 -- Design is for package TQFP100
 -- Design is for performance grade 3
