@@ -1,5 +1,5 @@
 Flow report for RAM2GS
-Sun Aug 13 06:36:35 2023
+Wed Aug 16 03:23:21 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Sun Aug 13 06:36:33 2023       ;
+; Flow Status           ; Successful - Wed Aug 16 03:23:18 2023       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name         ; RAM2GS                                      ;
 ; Top-level Entity Name ; RAM2GS                                      ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/13/2023 06:36:18 ;
+; Start date & time ; 08/16/2023 03:23:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; RAM2GS              ;
 +-------------------+---------------------+
@@ -71,9 +71,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                           ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+---------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 207120313862967.169192297814284 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 207120313862967.169217058515824 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                              ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                               ; --            ; --          ; --         ;
+; NUM_PARALLEL_PROCESSORS               ; 4                               ; --            ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                            ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION         ; No Heat Sink With Still Air     ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                    ; --            ; --          ; --         ;
@@ -85,11 +86,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4702 MB             ; 00:00:26                           ;
-; Fitter               ; 00:00:01     ; 1.0                     ; 5345 MB             ; 00:00:03                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4662 MB             ; 00:00:00                           ;
+; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 4701 MB             ; 00:00:24                           ;
+; Fitter               ; 00:00:02     ; 1.0                     ; 5345 MB             ; 00:00:03                           ;
+; Assembler            ; 00:00:00     ; 1.0                     ; 4662 MB             ; 00:00:00                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4676 MB             ; 00:00:01                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:30                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

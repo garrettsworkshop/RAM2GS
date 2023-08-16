@@ -1,0 +1,4 @@
+ckid0_0:@|S:RCLK@|E:nRWE@|F:@syn_dgcc_clockid0_0==1@|M:ClockId_0_0
+ckid0_1:@|S:PHI2@|E:RA11@|F:@syn_dgcc_clockid0_1==1@|M:ClockId_0_1
+ckid0_2:@|S:nCCAS@|E:WRD[7:0]@|F:@syn_dgcc_clockid0_2==1@|M:ClockId_0_2
+ckid0_3:@|S:nCRAS@|E:RowA[9:0]@|F:@syn_dgcc_clockid0_3==1@|M:ClockId_0_3

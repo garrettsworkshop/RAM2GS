@@ -1,0 +1,4 @@
+@E: CG419 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":60:16:60:16|Port assignments allowed for only variable types.
+@E: CG342 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":292:4:292:12|Expecting target variable, found CmdEnable -- possible misspelling
+@E: CS187 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":411:0:411:8|Expecting endmodule
+

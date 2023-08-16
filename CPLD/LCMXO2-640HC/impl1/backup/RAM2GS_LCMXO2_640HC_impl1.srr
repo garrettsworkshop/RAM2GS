@@ -1,0 +1,911 @@
+#Build: Synplify Pro (R) R-2021.03L-SP1, Build 093R, Aug 10 2021
+#install: C:\lscc\diamond\3.12\synpbase
+#OS: Windows 8 6.2
+#Hostname: ZANEPC
+
+# Tue Aug 15 22:17:22 2023
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v" (library work)
+Verilog syntax check successful!
+Selecting top level module RAM2GS
+@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":1:7:1:12|Synthesizing module RAM2GS in library work.
+Running optimization stage 1 on RAM2GS .......
+Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Running optimization stage 2 on RAM2GS .......
+Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 94MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 93MB peak: 94MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Aug 15 22:17:22 2023
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Aug 15 22:17:22 2023
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\RAM2GS_LCMXO2_640HC_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 23MB peak: 23MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Aug 15 22:17:23 2023
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Tue Aug 15 22:17:24 2023
+
+###########################################################]
+Premap Report
+
+# Tue Aug 15 22:17:24 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 122MB peak: 130MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\RAM2GS_LCMXO2_640HC_impl1_scck.rpt 
+See clock summary report "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\RAM2GS_LCMXO2_640HC_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 124MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 138MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@N: FX493 |Applying initial value "0" on instance InitReady.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance Ready.
+@N: FX493 |Applying initial value "0" on instance RCKE.
+@N: FX493 |Applying initial value "0" on instance LEDEN.
+@N: FX493 |Applying initial value "1" on instance nRCAS.
+@N: FX493 |Applying initial value "0" on instance CmdLEDEN.
+@N: FX493 |Applying initial value "0" on instance Cmdn8MEGEN.
+@N: FX493 |Applying initial value "0" on instance n8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRCS.
+@N: FX493 |Applying initial value "1" on instance nRRAS.
+@N: FX493 |Applying initial value "0" on instance CmdUFMCLK.
+@N: FX493 |Applying initial value "0" on instance CmdUFMCS.
+@N: FX493 |Applying initial value "0" on instance CmdUFMSDI.
+@N: FX493 |Applying initial value "0" on instance C1Submitted.
+@N: FX493 |Applying initial value "0" on instance CmdSubmitted.
+@N: FX493 |Applying initial value "0" on instance ADSubmitted.
+@N: FX493 |Applying initial value "0" on instance XOR8MEG.
+@N: FX493 |Applying initial value "1" on instance nUFMCS.
+@N: FX493 |Applying initial value "0" on instance UFMSDI.
+@N: FX493 |Applying initial value "0" on instance UFMCLK.
+@N: FX493 |Applying initial value "0" on instance CmdEnable.
+@N: FX493 |Applying initial value "1" on instance nRWE.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 170MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 170MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 171MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 171MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=2 on top level netlist RAM2GS 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 171MB)
+
+
+
+Clock Summary
+******************
+
+          Start            Requested     Requested     Clock        Clock                   Clock
+Level     Clock            Frequency     Period        Type         Group                   Load 
+-------------------------------------------------------------------------------------------------
+0 -       RAM2GS|RCLK      200.0 MHz     5.000         inferred     Inferred_clkgroup_0     48   
+                                                                                                 
+0 -       RAM2GS|PHI2      200.0 MHz     5.000         inferred     Inferred_clkgroup_1     19   
+                                                                                                 
+0 -       RAM2GS|nCRAS     200.0 MHz     5.000         inferred     Inferred_clkgroup_2     14   
+                                                                                                 
+0 -       RAM2GS|nCCAS     200.0 MHz     5.000         inferred     Inferred_clkgroup_3     8    
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                 Clock     Source          Clock Pin       Non-clock Pin     Non-clock Pin     
+Clock            Load      Pin             Seq Example     Seq Example       Comb Example      
+-----------------------------------------------------------------------------------------------
+RAM2GS|RCLK      48        RCLK(port)      CASr2.C         -                 -                 
+                                                                                               
+RAM2GS|PHI2      19        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
+                                                                                               
+RAM2GS|nCRAS     14        nCRAS(port)     CBR.C           RASr.D[0]         RASr_2.I[0](inv)  
+                                                                                               
+RAM2GS|nCCAS     8         nCCAS(port)     WRD[7:0].C      CASr.D[0]         CASr_2.I[0](inv)  
+===============================================================================================
+
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":147:1:147:6|Found inferred clock RAM2GS|RCLK which controls 48 sequential elements including nRWE. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":288:1:288:6|Found inferred clock RAM2GS|PHI2 which controls 19 sequential elements including CmdEnable. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":105:1:105:6|Found inferred clock RAM2GS|nCRAS which controls 14 sequential elements including RowA[9:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":123:1:123:6|Found inferred clock RAM2GS|nCCAS which controls 8 sequential elements including WRD[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+For details review file gcc_ICG_report.rpt
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+4 non-gated/non-generated clock tree(s) driving 89 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       RCLK                port                   48         nRWE           
+@KP:ckid0_1       PHI2                port                   19         RA11           
+@KP:ckid0_2       nCCAS               port                   8          WRD[7:0]       
+@KP:ckid0_3       nCRAS               port                   14         RowA[9:0]      
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 172MB peak: 172MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 88MB peak: 173MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Aug 15 22:17:26 2023
+
+###########################################################]
+Map & Optimize Report
+
+# Tue Aug 15 22:17:26 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 129MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 129MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 133MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 167MB peak: 167MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":147:1:147:6|Found counter in view:work.RAM2GS(verilog) instance IS[3:0] 
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":134:1:134:6|Found counter in view:work.RAM2GS(verilog) instance FS[17:0] 
+@N: FX493 |Applying initial value "0" on instance IS[0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance IS[1].
+@N: FX493 |Applying initial value "0" on instance IS[2].
+@N: FX493 |Applying initial value "0" on instance IS[3].
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 173MB peak: 173MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 173MB peak: 173MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:01s; Memory used current: 174MB peak: 174MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 175MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 175MB peak: 176MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 176MB peak: 176MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 176MB peak: 176MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		    -2.87ns		 132 /        89
+   2		0h:00m:01s		    -2.87ns		 142 /        89
+   3		0h:00m:01s		    -2.50ns		 140 /        89
+   4		0h:00m:01s		    -2.50ns		 139 /        89
+   5		0h:00m:01s		    -2.50ns		 139 /        89
+   6		0h:00m:01s		    -2.50ns		 140 /        89
+@N: FX271 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":98:1:98:6|Replicating instance Bank[5] (in view: work.RAM2GS(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":98:1:98:6|Replicating instance Bank[7] (in view: work.RAM2GS(verilog)) with 4 loads 1 time to improve timing.
+Timing driven replication report
+Added 2 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   7		0h:00m:01s		    -1.81ns		 164 /        91
+   8		0h:00m:01s		    -1.74ns		 164 /        91
+   9		0h:00m:01s		    -1.71ns		 165 /        91
+  10		0h:00m:01s		    -1.37ns		 167 /        91
+  11		0h:00m:01s		    -2.03ns		 168 /        91
+
+  12		0h:00m:01s		    -1.83ns		 166 /        91
+  13		0h:00m:01s		    -2.00ns		 167 /        91
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 176MB peak: 177MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 177MB peak: 177MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 142MB peak: 177MB)
+
+Writing Analyst data base D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\RAM2GS_LCMXO2_640HC_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 178MB peak: 178MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\RAM2GS_LCMXO2_640HC_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 183MB peak: 183MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 183MB peak: 184MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 181MB peak: 184MB)
+
+@W: MT420 |Found inferred clock RAM2GS|RCLK with period 5.00ns. Please declare a user-defined clock on port RCLK.
+@W: MT420 |Found inferred clock RAM2GS|PHI2 with period 5.00ns. Please declare a user-defined clock on port PHI2.
+@W: MT420 |Found inferred clock RAM2GS|nCRAS with period 5.00ns. Please declare a user-defined clock on port nCRAS.
+@W: MT420 |Found inferred clock RAM2GS|nCCAS with period 5.00ns. Please declare a user-defined clock on port nCCAS.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Tue Aug 15 22:17:29 2023
+#
+
+
+Top view:               RAM2GS
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        3
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -2.370
+
+                   Requested     Estimated     Requested     Estimated                Clock        Clock              
+Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+RAM2GS|PHI2        200.0 MHz     102.7 MHz     5.000         9.740         -2.370     inferred     Inferred_clkgroup_1
+RAM2GS|RCLK        200.0 MHz     185.7 MHz     5.000         5.385         -0.385     inferred     Inferred_clkgroup_0
+RAM2GS|nCCAS       200.0 MHz     NA            5.000         NA            NA         inferred     Inferred_clkgroup_3
+RAM2GS|nCRAS       200.0 MHz     NA            5.000         NA            NA         inferred     Inferred_clkgroup_2
+======================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                     |    rise  to  rise    |    fall  to  fall    |    rise  to  fall    |    fall  to  rise 
+--------------------------------------------------------------------------------------------------------------------
+Starting      Ending       |  constraint  slack   |  constraint  slack   |  constraint  slack   |  constraint  slack
+--------------------------------------------------------------------------------------------------------------------
+RAM2GS|RCLK   RAM2GS|RCLK  |  5.000       -0.385  |  No paths    -       |  No paths    -       |  No paths    -    
+RAM2GS|RCLK   RAM2GS|PHI2  |  Diff grp    -       |  No paths    -       |  Diff grp    -       |  No paths    -    
+RAM2GS|PHI2   RAM2GS|RCLK  |  No paths    -       |  No paths    -       |  No paths    -       |  Diff grp    -    
+RAM2GS|PHI2   RAM2GS|PHI2  |  No paths    -       |  5.000       -0.639  |  2.500       -2.370  |  2.500       0.864
+RAM2GS|nCRAS  RAM2GS|RCLK  |  No paths    -       |  No paths    -       |  No paths    -       |  Diff grp    -    
+====================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: RAM2GS|PHI2
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                     Starting                                              Arrival           
+Instance             Reference       Type         Pin     Net              Time        Slack 
+                     Clock                                                                   
+---------------------------------------------------------------------------------------------
+Bank_fast_0io[5]     RAM2GS|PHI2     IFS1P3DX     Q       Bank_fast[5]     1.044       -2.370
+Bank_0io[2]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[2]          1.220       -1.457
+Bank_0io[6]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[6]          1.204       -1.441
+Bank_0io[0]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[0]          0.972       -1.429
+Bank_0io[1]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[1]          0.972       -1.429
+Bank_0io[3]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[3]          0.972       -1.429
+Bank_0io[4]          RAM2GS|PHI2     IFS1P3DX     Q       Bank[4]          0.972       -1.429
+Bank_fast_0io[7]     RAM2GS|PHI2     IFS1P3DX     Q       Bank_fast[7]     1.148       -1.385
+Bank[5]              RAM2GS|PHI2     FD1S3AX      Q       Bank[5]          1.148       -1.345
+Bank[7]              RAM2GS|PHI2     FD1S3AX      Q       Bank[7]          1.108       -1.305
+=============================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                 Starting                                              Required           
+Instance         Reference       Type        Pin     Net               Time         Slack 
+                 Clock                                                                    
+------------------------------------------------------------------------------------------
+CmdSubmitted     RAM2GS|PHI2     FD1S3AX     D       N_377_0           2.589        -2.370
+CmdLEDEN         RAM2GS|PHI2     FD1S3AX     D       CmdLEDENe_0       2.589        -1.429
+Cmdn8MEGEN       RAM2GS|PHI2     FD1S3AX     D       Cmdn8MEGENe_0     2.589        -1.429
+XOR8MEG          RAM2GS|PHI2     FD1S3AX     D       XOR8MEGe_0        2.589        -1.429
+ADSubmitted      RAM2GS|PHI2     FD1S3AX     D       ADSubmitted_r     2.589        -1.365
+C1Submitted      RAM2GS|PHI2     FD1S3AX     D       C1Submitted_s     2.589        -1.365
+CmdUFMCLK        RAM2GS|PHI2     FD1S3AX     D       CmdUFMCLKe_0      2.589        -1.365
+CmdUFMCS         RAM2GS|PHI2     FD1S3AX     D       CmdUFMCSe_0       2.589        -1.365
+CmdUFMSDI        RAM2GS|PHI2     FD1S3AX     D       CmdUFMSDIe_0      2.589        -1.353
+CmdEnable        RAM2GS|PHI2     FD1S3AX     D       CmdEnable_s       2.589        -1.337
+==========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      2.500
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         2.589
+
+    - Propagation time:                      4.959
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -2.370
+
+    Number of logic level(s):                4
+    Starting point:                          Bank_fast_0io[5] / Q
+    Ending point:                            CmdSubmitted / D
+    The start point is clocked by            RAM2GS|PHI2 [rising] (rise=0.000 fall=2.500 period=5.000) on pin SCLK
+    The end   point is clocked by            RAM2GS|PHI2 [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+Bank_fast_0io[5]              IFS1P3DX     Q        Out     1.044     1.044 r     -         
+Bank_fast[5]                  Net          -        -       -         -           2         
+Bank_fast_0io_RNI2FJ23[5]     ORCALUT4     A        In      0.000     1.044 r     -         
+Bank_fast_0io_RNI2FJ23[5]     ORCALUT4     Z        Out     1.089     2.133 r     -         
+g0_17_1                       Net          -        -       -         -           2         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     D        In      0.000     2.133 r     -         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     Z        Out     1.193     3.325 f     -         
+un1_ADWR_i_o3_12              Net          -        -       -         -           4         
+CmdSubmitted_1_sqmuxa         ORCALUT4     D        In      0.000     3.325 f     -         
+CmdSubmitted_1_sqmuxa         ORCALUT4     Z        Out     1.017     4.342 r     -         
+CmdSubmitted_1_sqmuxa         Net          -        -       -         -           1         
+CmdSubmitted_RNO              ORCALUT4     A        In      0.000     4.342 r     -         
+CmdSubmitted_RNO              ORCALUT4     Z        Out     0.617     4.959 r     -         
+N_377_0                       Net          -        -       -         -           1         
+CmdSubmitted                  FD1S3AX      D        In      0.000     4.959 r     -         
+============================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      2.500
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         2.589
+
+    - Propagation time:                      4.046
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.457
+
+    Number of logic level(s):                3
+    Starting point:                          Bank_0io[2] / Q
+    Ending point:                            CmdSubmitted / D
+    The start point is clocked by            RAM2GS|PHI2 [rising] (rise=0.000 fall=2.500 period=5.000) on pin SCLK
+    The end   point is clocked by            RAM2GS|PHI2 [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+Bank_0io[2]                   IFS1P3DX     Q        Out     1.220     1.220 r     -         
+Bank[2]                       Net          -        -       -         -           8         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     A        In      0.000     1.220 r     -         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     Z        Out     1.193     2.413 r     -         
+un1_ADWR_i_o3_12              Net          -        -       -         -           4         
+CmdSubmitted_1_sqmuxa         ORCALUT4     D        In      0.000     2.413 r     -         
+CmdSubmitted_1_sqmuxa         ORCALUT4     Z        Out     1.017     3.429 f     -         
+CmdSubmitted_1_sqmuxa         Net          -        -       -         -           1         
+CmdSubmitted_RNO              ORCALUT4     A        In      0.000     3.429 f     -         
+CmdSubmitted_RNO              ORCALUT4     Z        Out     0.617     4.046 f     -         
+N_377_0                       Net          -        -       -         -           1         
+CmdSubmitted                  FD1S3AX      D        In      0.000     4.046 f     -         
+============================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      2.500
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         2.589
+
+    - Propagation time:                      4.030
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.441
+
+    Number of logic level(s):                3
+    Starting point:                          Bank_0io[6] / Q
+    Ending point:                            CmdSubmitted / D
+    The start point is clocked by            RAM2GS|PHI2 [rising] (rise=0.000 fall=2.500 period=5.000) on pin SCLK
+    The end   point is clocked by            RAM2GS|PHI2 [falling] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                             Pin      Pin               Arrival     No. of    
+Name                          Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------------
+Bank_0io[6]                   IFS1P3DX     Q        Out     1.204     1.204 r     -         
+Bank[6]                       Net          -        -       -         -           7         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     B        In      0.000     1.204 r     -         
+Bank_fast_0io_RNIV4MF3[7]     ORCALUT4     Z        Out     1.193     2.397 f     -         
+un1_ADWR_i_o3_12              Net          -        -       -         -           4         
+CmdSubmitted_1_sqmuxa         ORCALUT4     D        In      0.000     2.397 f     -         
+CmdSubmitted_1_sqmuxa         ORCALUT4     Z        Out     1.017     3.413 r     -         
+CmdSubmitted_1_sqmuxa         Net          -        -       -         -           1         
+CmdSubmitted_RNO              ORCALUT4     A        In      0.000     3.413 r     -         
+CmdSubmitted_RNO              ORCALUT4     Z        Out     0.617     4.030 r     -         
+N_377_0                       Net          -        -       -         -           1         
+CmdSubmitted                  FD1S3AX      D        In      0.000     4.030 r     -         
+============================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: RAM2GS|RCLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+              Starting                                          Arrival           
+Instance      Reference       Type        Pin     Net           Time        Slack 
+              Clock                                                               
+----------------------------------------------------------------------------------
+FS[0]         RAM2GS|RCLK     FD1S3AX     Q       FS[0]         1.044       -0.385
+FS[1]         RAM2GS|RCLK     FD1S3AX     Q       FS[1]         1.108       -0.306
+FS[12]        RAM2GS|RCLK     FD1S3AX     Q       FS[12]        1.148       -0.279
+FS[14]        RAM2GS|RCLK     FD1S3AX     Q       FS[14]        1.148       -0.279
+FS[15]        RAM2GS|RCLK     FD1S3AX     Q       FS[15]        1.148       -0.279
+FS[2]         RAM2GS|RCLK     FD1S3AX     Q       FS[2]         1.044       -0.242
+FS[4]         RAM2GS|RCLK     FD1S3AX     Q       FS[4]         1.108       -0.164
+FS[3]         RAM2GS|RCLK     FD1S3AX     Q       FS[3]         1.044       -0.100
+InitReady     RAM2GS|RCLK     FD1S3AX     Q       InitReady     1.272       -0.082
+FS[5]         RAM2GS|RCLK     FD1S3AX     Q       FS[5]         1.108       -0.021
+==================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+             Starting                                           Required           
+Instance     Reference       Type        Pin     Net            Time         Slack 
+             Clock                                                                 
+-----------------------------------------------------------------------------------
+FS[17]       RAM2GS|RCLK     FD1S3AX     D       FS_s[17]       4.894        -0.385
+UFMSDI       RAM2GS|RCLK     FD1S3AX     D       UFMSDI_RNO     5.462        -0.279
+FS[15]       RAM2GS|RCLK     FD1S3AX     D       FS_s[15]       4.894        -0.242
+FS[16]       RAM2GS|RCLK     FD1S3AX     D       FS_s[16]       4.894        -0.242
+FS[13]       RAM2GS|RCLK     FD1S3AX     D       FS_s[13]       4.894        -0.100
+FS[14]       RAM2GS|RCLK     FD1S3AX     D       FS_s[14]       4.894        -0.100
+UFMCLK       RAM2GS|RCLK     FD1S3AX     D       N_16_i         5.089        -0.082
+nUFMCS       RAM2GS|RCLK     FD1S3AY     D       nUFMCS_s_0     5.089        -0.038
+FS[11]       RAM2GS|RCLK     FD1S3AX     D       FS_s[11]       4.894        0.043 
+FS[12]       RAM2GS|RCLK     FD1S3AX     D       FS_s[12]       4.894        0.043 
+===================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.894
+
+    - Propagation time:                      5.280
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.385
+
+    Number of logic level(s):                10
+    Starting point:                          FS[0] / Q
+    Ending point:                            FS[17] / D
+    The start point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+FS[0]              FD1S3AX     Q        Out     1.044     1.044 r     -         
+FS[0]              Net         -        -       -         -           2         
+FS_cry_0[0]        CCU2D       A1       In      0.000     1.044 r     -         
+FS_cry_0[0]        CCU2D       COUT     Out     1.544     2.588 r     -         
+FS_cry[0]          Net         -        -       -         -           1         
+FS_cry_0[1]        CCU2D       CIN      In      0.000     2.588 r     -         
+FS_cry_0[1]        CCU2D       COUT     Out     0.143     2.731 r     -         
+FS_cry[2]          Net         -        -       -         -           1         
+FS_cry_0[3]        CCU2D       CIN      In      0.000     2.731 r     -         
+FS_cry_0[3]        CCU2D       COUT     Out     0.143     2.874 r     -         
+FS_cry[4]          Net         -        -       -         -           1         
+FS_cry_0[5]        CCU2D       CIN      In      0.000     2.874 r     -         
+FS_cry_0[5]        CCU2D       COUT     Out     0.143     3.017 r     -         
+FS_cry[6]          Net         -        -       -         -           1         
+FS_cry_0[7]        CCU2D       CIN      In      0.000     3.017 r     -         
+FS_cry_0[7]        CCU2D       COUT     Out     0.143     3.159 r     -         
+FS_cry[8]          Net         -        -       -         -           1         
+FS_cry_0[9]        CCU2D       CIN      In      0.000     3.159 r     -         
+FS_cry_0[9]        CCU2D       COUT     Out     0.143     3.302 r     -         
+FS_cry[10]         Net         -        -       -         -           1         
+FS_cry_0[11]       CCU2D       CIN      In      0.000     3.302 r     -         
+FS_cry_0[11]       CCU2D       COUT     Out     0.143     3.445 r     -         
+FS_cry[12]         Net         -        -       -         -           1         
+FS_cry_0[13]       CCU2D       CIN      In      0.000     3.445 r     -         
+FS_cry_0[13]       CCU2D       COUT     Out     0.143     3.588 r     -         
+FS_cry[14]         Net         -        -       -         -           1         
+FS_cry_0[15]       CCU2D       CIN      In      0.000     3.588 r     -         
+FS_cry_0[15]       CCU2D       COUT     Out     0.143     3.731 r     -         
+FS_cry[16]         Net         -        -       -         -           1         
+FS_s_0[17]         CCU2D       CIN      In      0.000     3.731 r     -         
+FS_s_0[17]         CCU2D       S0       Out     1.549     5.280 r     -         
+FS_s[17]           Net         -        -       -         -           1         
+FS[17]             FD1S3AX     D        In      0.000     5.280 r     -         
+================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.106
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.894
+
+    - Propagation time:                      5.201
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.306
+
+    Number of logic level(s):                9
+    Starting point:                          FS[1] / Q
+    Ending point:                            FS[17] / D
+    The start point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                 Pin      Pin               Arrival     No. of    
+Name               Type        Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------
+FS[1]              FD1S3AX     Q        Out     1.108     1.108 r     -         
+FS[1]              Net         -        -       -         -           3         
+FS_cry_0[1]        CCU2D       A0       In      0.000     1.108 r     -         
+FS_cry_0[1]        CCU2D       COUT     Out     1.544     2.652 r     -         
+FS_cry[2]          Net         -        -       -         -           1         
+FS_cry_0[3]        CCU2D       CIN      In      0.000     2.652 r     -         
+FS_cry_0[3]        CCU2D       COUT     Out     0.143     2.795 r     -         
+FS_cry[4]          Net         -        -       -         -           1         
+FS_cry_0[5]        CCU2D       CIN      In      0.000     2.795 r     -         
+FS_cry_0[5]        CCU2D       COUT     Out     0.143     2.938 r     -         
+FS_cry[6]          Net         -        -       -         -           1         
+FS_cry_0[7]        CCU2D       CIN      In      0.000     2.938 r     -         
+FS_cry_0[7]        CCU2D       COUT     Out     0.143     3.081 r     -         
+FS_cry[8]          Net         -        -       -         -           1         
+FS_cry_0[9]        CCU2D       CIN      In      0.000     3.081 r     -         
+FS_cry_0[9]        CCU2D       COUT     Out     0.143     3.224 r     -         
+FS_cry[10]         Net         -        -       -         -           1         
+FS_cry_0[11]       CCU2D       CIN      In      0.000     3.224 r     -         
+FS_cry_0[11]       CCU2D       COUT     Out     0.143     3.366 r     -         
+FS_cry[12]         Net         -        -       -         -           1         
+FS_cry_0[13]       CCU2D       CIN      In      0.000     3.366 r     -         
+FS_cry_0[13]       CCU2D       COUT     Out     0.143     3.509 r     -         
+FS_cry[14]         Net         -        -       -         -           1         
+FS_cry_0[15]       CCU2D       CIN      In      0.000     3.509 r     -         
+FS_cry_0[15]       CCU2D       COUT     Out     0.143     3.652 r     -         
+FS_cry[16]         Net         -        -       -         -           1         
+FS_s_0[17]         CCU2D       CIN      In      0.000     3.652 r     -         
+FS_s_0[17]         CCU2D       S0       Out     1.549     5.201 r     -         
+FS_s[17]           Net         -        -       -         -           1         
+FS[17]             FD1S3AX     D        In      0.000     5.201 r     -         
+================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            -0.462
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.462
+
+    - Propagation time:                      5.741
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.279
+
+    Number of logic level(s):                5
+    Starting point:                          FS[12] / Q
+    Ending point:                            UFMSDI / D
+    The start point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+    The end   point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=2.500 period=5.000) on pin CK
+
+Instance / Net                          Pin      Pin               Arrival     No. of    
+Name                       Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------
+FS[12]                     FD1S3AX      Q        Out     1.148     1.148 r     -         
+FS[12]                     Net          -        -       -         -           4         
+UFMSDI_ens2_i_o4_N_2L1     ORCALUT4     A        In      0.000     1.148 r     -         
+UFMSDI_ens2_i_o4_N_2L1     ORCALUT4     Z        Out     1.017     2.165 f     -         
+UFMSDI_ens2_i_o4_N_2L1     Net          -        -       -         -           1         
+UFMSDI_ens2_i_o4           ORCALUT4     D        In      0.000     2.165 f     -         
+UFMSDI_ens2_i_o4           ORCALUT4     Z        Out     1.153     3.317 r     -         
+N_29                       Net          -        -       -         -           3         
+nUFMCS15_0_a2              ORCALUT4     D        In      0.000     3.317 r     -         
+nUFMCS15_0_a2              ORCALUT4     Z        Out     1.193     4.510 f     -         
+nUFMCS15                   Net          -        -       -         -           4         
+UFMSDI_RNO_0               ORCALUT4     B        In      0.000     4.510 f     -         
+UFMSDI_RNO_0               ORCALUT4     Z        Out     1.017     5.527 r     -         
+UFMSDI_RNO_0               Net          -        -       -         -           1         
+UFMSDI_RNO                 PFUMX        ALUT     In      0.000     5.527 r     -         
+UFMSDI_RNO                 PFUMX        Z        Out     0.214     5.741 r     -         
+UFMSDI_RNO                 Net          -        -       -         -           1         
+UFMSDI                     FD1S3AX      D        In      0.000     5.741 r     -         
+=========================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 182MB peak: 184MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 182MB peak: 184MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_640hc-4
+
+Register bits: 91 of 640 (14%)
+PIC Latch:       0
+I/O cells:       67
+
+
+Details:
+BB:             8
+CCU2D:          10
+FD1P3AX:        2
+FD1S3AX:        50
+FD1S3AY:        1
+FD1S3IX:        3
+GSR:            1
+IB:             26
+IFS1P3DX:       9
+IFS1P3IX:       10
+IFS1P3JX:       2
+INV:            7
+OB:             33
+OFS1P3BX:       4
+OFS1P3DX:       8
+OFS1P3IX:       1
+OFS1P3JX:       1
+ORCALUT4:       163
+PFUMX:          1
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 65MB peak: 184MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Tue Aug 15 22:17:29 2023
+
+###########################################################]

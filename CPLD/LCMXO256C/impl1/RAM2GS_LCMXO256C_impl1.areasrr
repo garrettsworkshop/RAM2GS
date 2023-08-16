@@ -1,0 +1,26 @@
+----------------------------------------------------------------------
+Report for cell RAM2GS.verilog
+
+Register bits: 92 of 256 (36%)
+PIC Latch:       0
+I/O cells:       67
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        8       100.0
+                               CCU2        9       100.0
+                            FD1P3AX       11       100.0
+                            FD1S3AX       59       100.0
+                            FD1S3AY        5       100.0
+                            FD1S3IX       14       100.0
+                            FD1S3JX        3       100.0
+                                GSR        1       100.0
+                                 IB       26       100.0
+                                INV        8       100.0
+                                 OB       33       100.0
+                           ORCALUT4      119       100.0
+                              PFUMX        2       100.0
+                                PUR        1       100.0
+                                VHI        1       100.0
+                                VLO        1       100.0
+                            
+                         TOTAL           301           

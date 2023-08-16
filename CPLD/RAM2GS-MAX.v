@@ -56,7 +56,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
 	assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
 	reg [7:0] WRD;
-	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
+	inout [7:0] RD;
+	assign RD[7:0] = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
 	/* UFM Interface */
 	reg UFMD = 0; // UFM data register bit 15
@@ -100,8 +101,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	reg ADSubmitted = 0;
 	reg CmdEnable = 0;
 	reg CmdSubmitted = 0;
-	reg CmdLEDEN = 0;
 	reg Cmdn8MEGEN = 0;
+	reg CmdLEDEN = 0;
 	reg CmdDRCLK = 0;
 	reg CmdDRDIn = 0;
 	reg CmdUFMErase = 0; // Set by user command. Programs UFM
@@ -116,7 +117,6 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	reg [1:0] S = 0; // post-RAS State counter
 	reg [17:0] FS = 0; // Fast init state counter
 	reg [3:0] IS = 0; // Init state counter
-	reg WriteDone;
 	
 	/* Synchronize PHI2, RAS, CAS */
 	always @(posedge RCLK) begin
@@ -159,12 +159,12 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	always @(posedge RCLK) begin
 		if (~RASr2) S <= 0;
 		else if (S==2'h3) S <= 2'h3;
-		else S <= S+1;
+		else S <= S+2'h1;
 	end
 	/* Init state counter */
 	always @(posedge RCLK) begin
 		// Wait ~4.178ms (at 62.5 MHz) before starting init sequence
-		FS <= FS+1;
+		FS <= FS+18'h1;
 		if (FS[17:10] == 8'hFF) InitReady <= 1'b1;
 	end
 
@@ -291,7 +291,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 					nRWE <= 1'b1;
 					RA10 <= 1'b1; // RA10 is don't care
 				end
-				IS <= IS+1;
+				IS <= IS+4'h1;
 			end else begin
 				// NOP
 				nRCS <= 1'b1;
@@ -360,15 +360,15 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				CmdDRCLK <= Din[1];
 				CmdDRDIn <= Din[0];
 				CmdSubmitted <= 1'b1;
-			end else if (Din[7:4]==4'h3 && ~Din[3]) begin
-				// Reserved for LCMXO2 commands
-				// Din[1] - Shift when high, execute when low
-				// Din[0] - Shift data
-			end else if (Din[7:4]==4'h3 && Din[3]) begin
+			end else if (Din[7:4]==4'h3 && !Din[3]) begin
 				// Reserved for SPI (LCMXO, iCE40) commands
 				// Din[2] - CS
 				// Din[1] - SCK
 				// Din[0] - SDI
+			end else if (Din[7:4]==4'h3 &&  Din[3]) begin
+				// Reserved for LCMXO2 commands
+				// Din[1] - Shift when high, execute when low
+				// Din[0] - Shift data
 			end
 		end
 	end

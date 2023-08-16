@@ -1,0 +1,11 @@
+Selecting top level module RAM2GS
+@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":1:7:1:12|Synthesizing module RAM2GS in library work.
+Running optimization stage 1 on RAM2GS .......
+Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 93MB)
+Running optimization stage 2 on RAM2GS .......
+Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO640C\impl1\synwork\layer0.rt.csv
+

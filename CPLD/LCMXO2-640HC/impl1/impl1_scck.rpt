@@ -1,0 +1,59 @@
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+
+# Written on Tue Aug 15 22:34:20 2023
+
+##### FILES SYNTAX CHECKED ##############################################
+Constraint File(s):      "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS.sdc"
+
+#Run constraint checker to find more issues with constraints.
+#########################################################################
+
+
+
+No issues found in constraint syntax.
+
+
+
+Clock Summary
+*************
+
+          Start     Requested     Requested     Clock        Clock                Clock
+Level     Clock     Frequency     Period        Type         Group                Load 
+---------------------------------------------------------------------------------------
+0 -       RCLK      62.5 MHz      16.000        declared     default_clkgroup     48   
+                                                                                       
+0 -       PHI2      2.9 MHz       350.000       declared     default_clkgroup     19   
+                                                                                       
+0 -       nCRAS     2.9 MHz       350.000       declared     default_clkgroup     14   
+                                                                                       
+0 -       nCCAS     2.9 MHz       350.000       declared     default_clkgroup     8    
+=======================================================================================
+
+
+Clock Load Summary
+******************
+
+          Clock     Source          Clock Pin       Non-clock Pin     Non-clock Pin     
+Clock     Load      Pin             Seq Example     Seq Example       Comb Example      
+----------------------------------------------------------------------------------------
+RCLK      48        RCLK(port)      CASr2.C         -                 -                 
+                                                                                        
+PHI2      19        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
+                                                                                        
+nCRAS     14        nCRAS(port)     CBR.C           RASr.D[0]         RASr_2.I[0](inv)  
+                                                                                        
+nCCAS     8         nCCAS(port)     WRD[7:0].C      CASr.D[0]         CASr_2.I[0](inv)  
+========================================================================================

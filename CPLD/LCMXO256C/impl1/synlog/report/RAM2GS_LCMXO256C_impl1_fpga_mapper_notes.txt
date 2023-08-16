@@ -1,0 +1,20 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":147:1:147:6|Found counter in view:work.RAM2GS(verilog) instance IS[3:0] 
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":134:1:134:6|Found counter in view:work.RAM2GS(verilog) instance FS[17:0] 
+@N: FX493 |Applying initial value "0" on instance IS[0].
+@N: FX493 |Applying initial value "0" on instance IS[1].
+@N: FX493 |Applying initial value "0" on instance IS[2].
+@N: FX493 |Applying initial value "0" on instance IS[3].
+@N: FX271 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":105:1:105:6|Replicating instance CBR (in view: work.RAM2GS(verilog)) with 7 loads 1 time to improve timing.
+@N: FX271 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":105:1:105:6|Replicating instance FWEr (in view: work.RAM2GS(verilog)) with 5 loads 1 time to improve timing.
+@N: FX271 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-spi.v":147:1:147:6|Replicating instance Ready (in view: work.RAM2GS(verilog)) with 15 loads 1 time to improve timing.
+@N: FX1056 |Writing EDF file: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO256C\impl1\RAM2GS_LCMXO256C_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+@N: MT615 |Found clock RCLK with period 16.00ns 
+@N: MT615 |Found clock PHI2 with period 350.00ns 
+@N: MT615 |Found clock nCRAS with period 350.00ns 
+@N: MT615 |Found clock nCCAS with period 350.00ns 
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.

@@ -1,425 +1,0 @@
-<HTML>
-<HEAD><TITLE>Project Summary</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Mrp"></A>
-            Lattice Mapping Report File for Design Module 'RAM2GS'
-
-
-
-<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
-
-Command line:   map -a MachXO2 -p LCMXO2-1200HC -t TQFP100 -s 4 -oc Commercial
-     RAM2GS_LCMXO2_1200HC_impl1.ngd -o RAM2GS_LCMXO2_1200HC_impl1_map.ncd -pr
-     RAM2GS_LCMXO2_1200HC_impl1.prf -mp RAM2GS_LCMXO2_1200HC_impl1.mrp -lpf D:/O
-     neDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/impl1/RAM2GS_LCMXO2_1200
-     HC_impl1.lpf -lpf D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/RA
-     M2GS_LCMXO2_1200HC.lpf -c 0 -gui -msgset
-     D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/promote.xml 
-Target Vendor:  LATTICE
-Target Device:  LCMXO2-1200HCTQFP100
-Target Performance:   4
-Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/15/23  05:22:05
-
-
-<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    102 out of  1520 (7%)
-      PFU registers:          102 out of  1280 (8%)
-      PIO registers:            0 out of   240 (0%)
-   Number of SLICEs:        75 out of   640 (12%)
-      SLICEs as Logic/ROM:     75 out of   640 (12%)
-      SLICEs as RAM:            0 out of   480 (0%)
-      SLICEs as Carry:         10 out of   640 (2%)
-   Number of LUT4s:        143 out of  1280 (11%)
-      Number used as logic LUTs:        123
-      Number used as distributed RAM:     0
-      Number used as ripple logic:       20
-      Number used as shift registers:     0
-   Number of PIO sites used: 67 + 4(JTAG) out of 80 (89%)
-   Number of block RAMs:  0 out of 7 (0%)
-   Number of GSRs:        0 out of 1 (0%)
-   EFB used :        No
-   JTAG used :       No
-   Readback used :   No
-   Oscillator used : No
-   Startup used :    No
-   POR :             On
-   Bandgap :         On
-   Number of Power Controller:  0 out of 1 (0%)
-   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
-   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
-   Number of DCCA:  0 out of 8 (0%)
-   Number of DCMA:  0 out of 2 (0%)
-   Number of PLLs:  0 out of 1 (0%)
-   Number of DQSDLLs:  0 out of 2 (0%)
-   Number of CLKDIVC:  0 out of 4 (0%)
-   Number of ECLKSYNCA:  0 out of 4 (0%)
-   Number of ECLKBRIDGECS:  0 out of 2 (0%)
-   Notes:-
-      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
-     distributed RAMs) + 2*(Number of ripple logic)
-      2. Number of logic LUT4s does not include count of distributed RAM and
-     ripple logic.
-   Number of clocks:  4
-     Net RCLK_c: 40 loads, 40 rising, 0 falling (Driver: PIO RCLK )
-
-     Net PHI2_c: 13 loads, 5 rising, 8 falling (Driver: PIO PHI2 )
-     Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
-     Net nCRAS_c: 7 loads, 0 rising, 7 falling (Driver: PIO nCRAS )
-   Number of Clock Enables:  14
-     Net RCLK_c_enable_6: 4 loads, 4 LSLICEs
-     Net RCLK_c_enable_5: 2 loads, 2 LSLICEs
-     Net PHI2_N_120_enable_1: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_2: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_6: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_27: 8 loads, 8 LSLICEs
-     Net RCLK_c_enable_10: 3 loads, 3 LSLICEs
-     Net PHI2_N_120_enable_7: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_16: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_28: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_15: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_3: 1 loads, 1 LSLICEs
-     Net Ready_N_292: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_8: 2 loads, 2 LSLICEs
-   Number of LSRs:  7
-     Net RASr2: 1 loads, 1 LSLICEs
-     Net nRowColSel_N_35: 1 loads, 1 LSLICEs
-     Net Ready: 7 loads, 7 LSLICEs
-     Net nRWE_N_177: 1 loads, 1 LSLICEs
-     Net C1Submitted_N_237: 2 loads, 2 LSLICEs
-     Net n2366: 2 loads, 2 LSLICEs
-     Net nRowColSel_N_34: 1 loads, 1 LSLICEs
-   Number of nets driven by tri-state buffers:  0
-   Top 10 highest fanout non-clock nets:
-     Net Ready: 18 loads
-     Net InitReady: 15 loads
-     Net RASr2: 15 loads
-     Net nRowColSel_N_35: 13 loads
-     Net nRowColSel: 12 loads
-     Net Din_c_4: 10 loads
-     Net MAin_c_1: 10 loads
-     Net Din_c_5: 9 loads
-     Net MAin_c_0: 9 loads
-     Net Din_c_0: 8 loads
-
-
-
-
-   Number of warnings:  0
-   Number of errors:    0
-     
-
-
-
-
-<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
-
-   No errors or warnings present.
-
-
-
-<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
-
-+---------------------+-----------+-----------+------------+
-| IO Name             | Direction | Levelmode | IO         |
-
-|                     |           |  IO_TYPE  | Register   |
-+---------------------+-----------+-----------+------------+
-| RD[7]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[6]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[5]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[4]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[3]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[2]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[1]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RD[0]               | BIDIR     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[7]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[6]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[5]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[4]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[3]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[2]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[1]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Dout[0]             | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| LED                 | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RBA[1]              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RBA[0]              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[11]              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[10]              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[9]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[8]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[7]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[6]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[5]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[4]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-| RA[3]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[2]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[1]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RA[0]               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nRCS                | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RCKE                | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nRWE                | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nRRAS               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nRCAS               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RDQMH               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RDQML               | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nUFMCS              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| UFMCLK              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| UFMSDI              | OUTPUT    | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| PHI2                | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[9]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[8]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[7]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[6]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[5]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[4]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[3]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[2]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[1]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| MAin[0]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| CROW[1]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| CROW[0]             | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[7]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-| Din[6]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[5]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[4]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[3]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[2]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[1]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| Din[0]              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nCCAS               | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nCRAS               | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| nFWE                | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| RCLK                | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-| UFMSDO              | INPUT     | LVCMOS25  |            |
-+---------------------+-----------+-----------+------------+
-
-
-
-<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
-
-Block i2 undriven or does not drive anything - clipped.
-Block GSR_INST undriven or does not drive anything - clipped.
-Signal PHI2_N_120 was merged into signal PHI2_c
-Signal n1407 was merged into signal nRowColSel_N_34
-Signal n2380 was merged into signal Ready
-Signal n1408 was merged into signal nRowColSel_N_35
-Signal nRWE_N_176 was merged into signal nRWE_N_177
-Signal GND_net undriven or does not drive anything - clipped.
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal FS_610_add_4_19/S1 undriven or does not drive anything - clipped.
-Signal FS_610_add_4_19/CO undriven or does not drive anything - clipped.
-Signal FS_610_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal FS_610_add_4_1/CI undriven or does not drive anything - clipped.
-Block i2046 was optimized away.
-Block i1118_1_lut was optimized away.
-Block i637_1_lut_rep_31 was optimized away.
-Block i1119_1_lut was optimized away.
-Block nRWE_I_50_1_lut was optimized away.
-Block i1 was optimized away.
-
-     
-
-
-
-<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
--------------------------
-
-   Total CPU Time: 0 secs  
-   Total REAL Time: 0 secs  
-   Peak Memory Usage: 41 MB
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-     Copyright (c) 1995 AT&T Corp.   All rights reserved.
-     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-     Copyright (c) 2001 Agere Systems   All rights reserved.
-     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
-     reserved.
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

@@ -1,0 +1,162 @@
+# Tue Aug 15 23:12:42 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 130MB)
+
+Reading constraint file: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS.sdc
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\RAM2GS_LCMXO2_640HC_impl1_scck.rpt 
+See clock summary report "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\RAM2GS_LCMXO2_640HC_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 138MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@N: FX493 |Applying initial value "0" on instance InitReady.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance Ready.
+@N: FX493 |Applying initial value "0" on instance RCKE.
+@N: FX493 |Applying initial value "1" on instance nRCAS.
+@N: FX493 |Applying initial value "0" on instance CmdLEDEN.
+@N: FX493 |Applying initial value "0" on instance Cmdn8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRCS.
+@N: FX493 |Applying initial value "0" on instance LEDEN.
+@N: FX493 |Applying initial value "0" on instance n8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRRAS.
+@N: FX493 |Applying initial value "0" on instance CmdUFMCLK.
+@N: FX493 |Applying initial value "0" on instance CmdUFMCS.
+@N: FX493 |Applying initial value "0" on instance CmdUFMSDI.
+@N: FX493 |Applying initial value "0" on instance C1Submitted.
+@N: FX493 |Applying initial value "0" on instance CmdSubmitted.
+@N: FX493 |Applying initial value "0" on instance ADSubmitted.
+@N: FX493 |Applying initial value "0" on instance XOR8MEG.
+@N: FX493 |Applying initial value "1" on instance nUFMCS.
+@N: FX493 |Applying initial value "0" on instance UFMSDI.
+@N: FX493 |Applying initial value "0" on instance UFMCLK.
+@N: FX493 |Applying initial value "0" on instance CmdEnable.
+@N: FX493 |Applying initial value "1" on instance nRWE.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 170MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 171MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=2 on top level netlist RAM2GS 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+
+
+Clock Summary
+******************
+
+          Start     Requested     Requested     Clock        Clock                Clock
+Level     Clock     Frequency     Period        Type         Group                Load 
+---------------------------------------------------------------------------------------
+0 -       RCLK      62.5 MHz      16.000        declared     default_clkgroup     48   
+                                                                                       
+0 -       PHI2      2.9 MHz       350.000       declared     default_clkgroup     19   
+                                                                                       
+0 -       nCRAS     2.9 MHz       350.000       declared     default_clkgroup     14   
+                                                                                       
+0 -       nCCAS     2.9 MHz       350.000       declared     default_clkgroup     8    
+=======================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+          Clock     Source          Clock Pin       Non-clock Pin     Non-clock Pin     
+Clock     Load      Pin             Seq Example     Seq Example       Comb Example      
+----------------------------------------------------------------------------------------
+RCLK      48        RCLK(port)      CASr2.C         -                 -                 
+                                                                                        
+PHI2      19        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
+                                                                                        
+nCRAS     14        nCRAS(port)     CBR.C           RASr.D[0]         RASr_2.I[0](inv)  
+                                                                                        
+nCCAS     8         nCCAS(port)     WRD[7:0].C      CASr.D[0]         CASr_2.I[0](inv)  
+========================================================================================
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+For details review file gcc_ICG_report.rpt
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+4 non-gated/non-generated clock tree(s) driving 89 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       RCLK                port                   48         nRWE           
+@KP:ckid0_1       PHI2                port                   19         RA11           
+@KP:ckid0_2       nCCAS               port                   8          WRD[7:0]       
+@KP:ckid0_3       nCRAS               port                   14         RowA[9:0]      
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 172MB peak: 172MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 88MB peak: 174MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Aug 15 23:12:44 2023
+
+###########################################################]

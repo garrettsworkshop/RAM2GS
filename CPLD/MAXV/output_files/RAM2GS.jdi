@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="2795b72adf7ff67794b3"/>
+    <hash md5_digest_80b="ce0674ca9228d1906c9e"/>
   </project>
   <file_info>
-    <file device="5M240ZT100C4" path="RAM2GS.sof" usercode="0xFFFFFFFF"/>
+    <file device="5M240ZT100C5" path="RAM2GS.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

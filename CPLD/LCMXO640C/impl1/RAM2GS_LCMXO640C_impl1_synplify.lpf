@@ -1,0 +1,24 @@
+#
+# Logical Preferences generated for Lattice by Synplify map202103lat, Build 070R.
+#
+
+# Period Constraints 
+FREQUENCY PORT "PHI2" 2.9 MHz;
+FREQUENCY PORT "nCCAS" 2.9 MHz;
+FREQUENCY PORT "nCRAS" 2.9 MHz;
+FREQUENCY PORT "RCLK" 62.5 MHz;
+
+
+# Output Constraints 
+
+# Input Constraints 
+
+# Point-to-point Delay Constraints 
+
+
+
+# Block Path Constraints 
+
+BLOCK ASYNCPATHS;
+
+# End of generated Logical Preferences.

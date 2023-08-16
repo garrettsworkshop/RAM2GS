@@ -20,14 +20,15 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1.jed</File>
-			<FileTime>08/15/23 04:29:43</FileTime>
-			<JedecChecksum>0xF26B</JedecChecksum>
+			<FileTime>08/16/23 04:29:52</FileTime>
+			<JedecChecksum>0xDA53</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>
 				<PreloadLength>160</PreloadLength>
 				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<Usercode>0x00000000</Usercode>
 				<AccessMode>FLASH</AccessMode>
 			</Option>

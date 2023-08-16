@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/RAM2GS_LCMXO2_640HC_impl1.jed</File>
-			<FileTime>08/15/23 04:55:55</FileTime>
-			<JedecChecksum>0x5769</JedecChecksum>
+			<FileTime>08/15/23 23:30:13</FileTime>
+			<JedecChecksum>0x812F</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
@@ -48,9 +48,5 @@
 		<CableName>USB</CableName>
 		<PortAdd>EzUSB-0</PortAdd>
 		<USBID>\\?\usb#vid_1134&amp;amp;pid_8001#5&amp;amp;887acb0&amp;amp;0&amp;amp;13#</USBID>
-		<JTAGPinSetting>
-			TRST	ABSENT;
-			ISPEN	ABSENT;
-		</JTAGPinSetting>
 	</CableOptions>
 </ispXCF>
