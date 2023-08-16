@@ -1,0 +1,6 @@
+#Start recording tcl command: 8/16/2023 02:14:54
+#Project Location: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C; Project name: RAM2GS_LCMXO256C
+prj_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/RAM2GS_LCMXO256C.ldf"
+prj_run PAR -impl impl1 -task IOTiming
+prj_run Export -impl impl1
+#Stop recording: 8/16/2023 02:28:58

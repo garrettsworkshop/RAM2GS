@@ -1,0 +1,79 @@
+#Start recording tcl command: 8/15/2023 22:16:47
+#Project Location: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC; Project name: RAM2GS_LCMXO2_640HC
+prj_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/RAM2GS_LCMXO2_640HC.ldf"
+prj_run Export -impl impl1
+prj_src add "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS.sdc"
+prj_run Export -impl impl1
+pgr_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1 -forceAll
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+prj_run Export -impl impl1 -forceAll
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+prj_run Export -impl impl1
+launch_synplify_prj impl1
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_strgy set_value -strategy Strategy1 syn_pipelining_retiming=None syn_frequency=70
+prj_strgy set_value -strategy Strategy1 map_io_reg=Both
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_project close
+pgr_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+prj_run Export -impl impl1 -forceAll
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_program run
+prj_run Export -impl impl1
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+prj_run Export -impl impl1
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1 -forceAll
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+prj_run Export -impl impl1
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+pgr_program run
+pgr_program run
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_run Export -impl impl1
+pgr_program run
+pgr_project save "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/impl1.xcf"
+prj_project save
+prj_project close
+#Stop recording: 8/16/2023 01:57:20

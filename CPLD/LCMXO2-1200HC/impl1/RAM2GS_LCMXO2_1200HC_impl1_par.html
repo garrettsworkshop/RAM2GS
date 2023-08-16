@@ -1,397 +1,0 @@
-<HTML>
-<HEAD><TITLE>Place & Route Report</TITLE>
-<STYLE TYPE="text/css">
-<!--
- body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
--->
-</STYLE>
-</HEAD>
-<PRE><A name="Par"></A>PAR: Place And Route Diamond (64-bit) 3.12.1.454.
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 05:22:08 2023
-
-C:/lscc/diamond/3.12/ispfpga\bin\nt64\par -f RAM2GS_LCMXO2_1200HC_impl1.p2t
-RAM2GS_LCMXO2_1200HC_impl1_map.ncd RAM2GS_LCMXO2_1200HC_impl1.dir
-RAM2GS_LCMXO2_1200HC_impl1.prf -gui -msgset
-D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/promote.xml
-
-
-Preference file: RAM2GS_LCMXO2_1200HC_impl1.prf.
-
-<A name="par_cts"></A><B><U><big>Cost Table Summary</big></U></B>
-Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
-Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
-----------   --------     -----        ------       -----------  -----------  ----         ------
-<span style="background-color:red">5_1   *      0            -4.650       391939       0.304        0            07           Completed</span>
-* : Design saved.
-
-Total (real) run time for 1-seed: 7 secs 
-
-par done!
-
-Note: user must run &apos;Trace&apos; for timing closure signoff.
-
-Lattice Place and Route Report for Design &quot;RAM2GS_LCMXO2_1200HC_impl1_map.ncd&quot;
-Tue Aug 15 05:22:08 2023
-
-
-<A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
-PAR: Place And Route Diamond (64-bit) 3.12.1.454.
-Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-1200HC/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF:parASE=1 RAM2GS_LCMXO2_1200HC_impl1_map.ncd RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd RAM2GS_LCMXO2_1200HC_impl1.prf
-Preference file: RAM2GS_LCMXO2_1200HC_impl1.prf.
-Placement level-cost: 5-1.
-Routing Iterations: 6
-
-Loading design for application par from file RAM2GS_LCMXO2_1200HC_impl1_map.ncd.
-Design name: RAM2GS
-NCD version: 3.3
-Vendor:      LATTICE
-Device:      LCMXO2-1200HC
-Package:     TQFP100
-Performance: 4
-Loading device for application par from file &apos;xo2c1200.nph&apos; in environment: C:/lscc/diamond/3.12/ispfpga.
-Package Status:                     Final          Version 1.44.
-Performance Hardware Data Status:   Final          Version 34.4.
-License checked out.
-
-
-Ignore Preference Error(s):  True
-
-<A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
-
-   PIO (prelim)   67+4(JTAG)/108     66% used
-                  67+4(JTAG)/80      89% bonded
-
-   SLICE             75/640          11% used
-
-
-
-Number of Signals: 285
-Number of Connections: 674
-WARNING - par: Placement timing preferences are hard to meet. However, placement will continue. Use static timing analysis to identify errors.
-
-Pin Constraint Summary:
-   66 out of 67 pins locked (98% locked).
-
-The following 2 signals are selected to use the primary clock routing resources:
-    RCLK_c (driver: RCLK, clk load #: 40)
-    PHI2_c (driver: PHI2, clk load #: 13)
-
-WARNING - par: Signal &quot;RCLK_c&quot; is selected to use Primary clock resources. However, its driver comp &quot;RCLK&quot; is located at &quot;62&quot;, which is not a dedicated pin for connecting to Primary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
-WARNING - par: Signal &quot;PHI2_c&quot; is selected to use Primary clock resources. However, its driver comp &quot;PHI2&quot; is located at &quot;8&quot;, which is not a dedicated pin for connecting to Primary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
-
-The following 1 signal is selected to use the secondary clock routing resources:
-    nCRAS_c (driver: nCRAS, clk load #: 7, sr load #: 0, ce load #: 0)
-
-WARNING - par: Signal &quot;nCRAS_c&quot; is selected to use Secondary clock resources. However, its driver comp &quot;nCRAS&quot; is located at &quot;17&quot;, which is not a dedicated pin for connecting to Secondary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
-No signal is selected as Global Set/Reset.
-.
-Starting Placer Phase 0.
-..........
-Finished Placer Phase 0.  REAL time: 0 secs 
-
-Starting Placer Phase 1.
-...................
-Placer score = 143529.
-Finished Placer Phase 1.  REAL time: 4 secs 
-
-Starting Placer Phase 2.
-.
-Placer score =  143450
-Finished Placer Phase 2.  REAL time: 4 secs 
-
-
-
-<A name="par_clk"></A><B><U><big>Clock Report</big></U></B>
-
-Global Clock Resources:
-  CLK_PIN    : 0 out of 8 (0%)
-  General PIO: 3 out of 108 (2%)
-  PLL        : 0 out of 1 (0%)
-  DCM        : 0 out of 2 (0%)
-  DCC        : 0 out of 8 (0%)
-
-Global Clocks:
-  PRIMARY &quot;RCLK_c&quot; from comp &quot;RCLK&quot; on PIO site &quot;62 (PR5D)&quot;, clk load = 40
-  PRIMARY &quot;PHI2_c&quot; from comp &quot;PHI2&quot; on PIO site &quot;8 (PL3D)&quot;, clk load = 13
-  SECONDARY &quot;nCRAS_c&quot; from comp &quot;nCRAS&quot; on PIO site &quot;17 (PL8B)&quot;, clk load = 7, ce load = 0, sr load = 0
-
-  PRIMARY  : 2 out of 8 (25%)
-  SECONDARY: 1 out of 8 (12%)
-
-Edge Clocks:
-  No edge clock selected.
-
-
-
-
-I/O Usage Summary (final):
-   67 + 4(JTAG) out of 108 (65.7%) PIO sites used.
-   67 + 4(JTAG) out of 80 (88.8%) bonded PIO sites used.
-   Number of PIO comps: 67; differential: 0.
-   Number of Vref pins used: 0.
-
-I/O Bank Usage Summary:
-+----------+----------------+------------+-----------+
-| I/O Bank | Usage          | Bank Vccio | Bank Vref |
-+----------+----------------+------------+-----------+
-| 0        | 13 / 19 ( 68%) | 2.5V       | -         |
-| 1        | 20 / 21 ( 95%) | 2.5V       | -         |
-| 2        | 17 / 20 ( 85%) | 2.5V       | -         |
-| 3        | 17 / 20 ( 85%) | 2.5V       | -         |
-+----------+----------------+------------+-----------+
-
-Total placer CPU time: 3 secs 
-
-Dumping design to file RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd.
-
-0 connections routed; 674 unrouted.
-Starting router resource preassignment
-WARNING - par: The driver of primary clock net RCLK_c is not placed on one of the sites dedicated for primary clocks. This primary clock will be routed to an H-spine through general routing resource and might suffer from excessive delay or skew.
-WARNING - par: The driver of primary clock net PHI2_c is not placed on one of the sites dedicated for primary clocks. This primary clock will be routed to an H-spine through general routing resource and might suffer from excessive delay or skew.
-
-WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
-   Signal=nCCAS_c loads=6 clock_loads=4
-
-Completed router resource preassignment. Real time: 6 secs 
-
-Start NBR router at 05:22:14 08/15/23
-
-*****************************************************************
-Info: NBR allows conflicts(one node used by more than one signal)
-      in the earlier iterations. In each iteration, it tries to  
-      solve the conflicts while keeping the critical connections 
-      routed as short as possible. The routing process is said to
-      be completed when no conflicts exist and all connections   
-      are routed.                                                
-Note: NBR uses a different method to calculate timing slacks. The
-      worst slack and total negative slack may not be the same as
-      that in TRCE report. You should always run TRCE to verify  
-      your design.                                               
-*****************************************************************
-
-Start NBR special constraint process at 05:22:14 08/15/23
-
-Start NBR section for initial routing at 05:22:14 08/15/23
-Level 1, iteration 1
-2(0.00%) conflicts; 537(79.67%) untouched conns; 468417 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -5.186ns/-468.418ns; real time: 6 secs 
-Level 2, iteration 1
-11(0.01%) conflicts; 474(70.33%) untouched conns; 377050 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-377.051ns; real time: 7 secs 
-Level 3, iteration 1
-20(0.02%) conflicts; 254(37.69%) untouched conns; 373495 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-373.496ns; real time: 7 secs 
-Level 4, iteration 1
-11(0.01%) conflicts; 0(0.00%) untouched conn; 386254 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-386.255ns; real time: 7 secs 
-
-Info: Initial congestion level at 75% usage is 0
-Info: Initial congestion area  at 75% usage is 0 (0.00%)
-
-Start NBR section for normal routing at 05:22:15 08/15/23
-Level 1, iteration 1
-7(0.01%) conflicts; 4(0.59%) untouched conns; 379537 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-379.537ns; real time: 7 secs 
-Level 4, iteration 1
-9(0.01%) conflicts; 0(0.00%) untouched conn; 380799 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-380.800ns; real time: 7 secs 
-Level 4, iteration 2
-6(0.01%) conflicts; 0(0.00%) untouched conn; 390586 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-390.587ns; real time: 7 secs 
-Level 4, iteration 3
-6(0.01%) conflicts; 0(0.00%) untouched conn; 384718 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-384.719ns; real time: 7 secs 
-Level 4, iteration 4
-6(0.01%) conflicts; 0(0.00%) untouched conn; 384718 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-384.719ns; real time: 7 secs 
-Level 4, iteration 5
-4(0.00%) conflicts; 0(0.00%) untouched conn; 393013 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.014ns; real time: 7 secs 
-Level 4, iteration 6
-3(0.00%) conflicts; 0(0.00%) untouched conn; 393013 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.014ns; real time: 7 secs 
-Level 4, iteration 7
-3(0.00%) conflicts; 0(0.00%) untouched conn; 393874 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.875ns; real time: 7 secs 
-Level 4, iteration 8
-3(0.00%) conflicts; 0(0.00%) untouched conn; 393874 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.875ns; real time: 7 secs 
-Level 4, iteration 9
-2(0.00%) conflicts; 0(0.00%) untouched conn; 409288 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-409.289ns; real time: 7 secs 
-Level 4, iteration 10
-3(0.00%) conflicts; 0(0.00%) untouched conn; 409288 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-409.289ns; real time: 7 secs 
-Level 4, iteration 11
-3(0.00%) conflicts; 0(0.00%) untouched conn; 393035 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.036ns; real time: 7 secs 
-Level 4, iteration 12
-3(0.00%) conflicts; 0(0.00%) untouched conn; 393035 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.364ns/-393.036ns; real time: 7 secs 
-Level 4, iteration 13
-2(0.00%) conflicts; 0(0.00%) untouched conn; 404326 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.574ns/-404.327ns; real time: 7 secs 
-Level 4, iteration 14
-2(0.00%) conflicts; 0(0.00%) untouched conn; 404326 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.574ns/-404.327ns; real time: 7 secs 
-Level 4, iteration 15
-2(0.00%) conflicts; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 16
-3(0.00%) conflicts; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 17
-2(0.00%) conflicts; 0(0.00%) untouched conn; 404668 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.574ns/-404.669ns; real time: 7 secs 
-Level 4, iteration 18
-1(0.00%) conflict; 0(0.00%) untouched conn; 404668 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.574ns/-404.669ns; real time: 7 secs 
-Level 4, iteration 19
-1(0.00%) conflict; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 20
-1(0.00%) conflict; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 21
-1(0.00%) conflict; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 22
-1(0.00%) conflict; 0(0.00%) untouched conn; 411533 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.534ns; real time: 7 secs 
-Level 4, iteration 23
-1(0.00%) conflict; 0(0.00%) untouched conn; 411276 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.277ns; real time: 7 secs 
-Level 4, iteration 24
-1(0.00%) conflict; 0(0.00%) untouched conn; 411276 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.277ns; real time: 7 secs 
-Level 4, iteration 25
-0(0.00%) conflict; 0(0.00%) untouched conn; 411952 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.953ns; real time: 7 secs 
-
-Start NBR section for performance tuning (iteration 1) at 05:22:15 08/15/23
-Level 4, iteration 1
-1(0.00%) conflict; 0(0.00%) untouched conn; 405829 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-405.830ns; real time: 7 secs 
-Level 4, iteration 2
-0(0.00%) conflict; 0(0.00%) untouched conn; 411952 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.953ns; real time: 7 secs 
-
-Start NBR section for re-routing at 05:22:15 08/15/23
-Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 411952 (nbr) score; 
-Estimated worst slack/total negative slack&lt;setup&gt;: -4.650ns/-411.953ns; real time: 7 secs 
-
-Start NBR section for post-routing at 05:22:15 08/15/23
-
-End NBR router with 0 unrouted connection
-
-NBR Summary
------------
-  Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 254 (37.69%)
-  Estimated worst slack&lt;setup&gt; : -4.650ns
-  Timing score&lt;setup&gt; : 391939
------------
-Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
-
-
-
-WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
-   Signal=nCCAS_c loads=6 clock_loads=4
-
-Total CPU time 6 secs 
-Total REAL time: 7 secs 
-Completely routed.
-End of route.  674 routed (100.00%); 0 unrouted.
-
-Hold time timing score: 0, hold timing errors: 0
-
-Timing score: 391939 
-
-Dumping design to file RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd.
-
-
-All signals are completely routed.
-
-
-PAR_SUMMARY::Run status = Completed
-PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = -4.650
-PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 391.939
-PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.304
-PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
-PAR_SUMMARY::Number of errors = 0
-
-Total CPU  time to completion: 6 secs 
-Total REAL time to completion: 7 secs 
-
-par done!
-
-Note: user must run &apos;Trace&apos; for timing closure signoff.
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-
-
-
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-<BR>
-</PRE></FONT>
-</BODY>
-</HTML>

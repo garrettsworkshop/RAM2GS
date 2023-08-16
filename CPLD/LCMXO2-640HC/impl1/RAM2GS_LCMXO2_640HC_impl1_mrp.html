@@ -14,29 +14,29 @@
 <A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
 
 Command line:   map -a MachXO2 -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial
-     RAM2GS_LCMXO2_640HC_impl1.ngd -o RAM2GS_LCMXO2_640HC_impl1_map.ncd -pr
-     RAM2GS_LCMXO2_640HC_impl1.prf -mp RAM2GS_LCMXO2_640HC_impl1.mrp -lpf D:/One
-     Drive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/RAM2GS_LCMXO2_640HC_i
-     mpl1.lpf -lpf D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/RAM2GS_
-     LCMXO2_640HC.lpf -c 0 -gui -msgset
+     -ioreg b RAM2GS_LCMXO2_640HC_impl1.ngd -o RAM2GS_LCMXO2_640HC_impl1_map.ncd
+     -pr RAM2GS_LCMXO2_640HC_impl1.prf -mp RAM2GS_LCMXO2_640HC_impl1.mrp -lpf D:
+     /OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/RAM2GS_LCMXO2_640
+     HC_impl1_synplify.lpf -lpf D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-
+     640HC/RAM2GS_LCMXO2_640HC.lpf -c 0 -gui -msgset
      D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/15/23  05:03:24
+Mapped on:  08/15/23  23:30:05
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    102 out of   877 (12%)
-      PFU registers:          102 out of   640 (16%)
-      PIO registers:            0 out of   237 (0%)
-   Number of SLICEs:        75 out of   320 (23%)
-      SLICEs as Logic/ROM:     75 out of   320 (23%)
+   Number of registers:     93 out of   877 (11%)
+      PFU registers:           64 out of   640 (10%)
+      PIO registers:           29 out of   237 (12%)
+   Number of SLICEs:        81 out of   320 (25%)
+      SLICEs as Logic/ROM:     81 out of   320 (25%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:         10 out of   320 (3%)
-   Number of LUT4s:        143 out of   640 (22%)
-      Number used as logic LUTs:        123
+   Number of LUT4s:        159 out of   640 (25%)
+      Number used as logic LUTs:        139
       Number used as distributed RAM:     0
       Number used as ripple logic:       20
       Number used as shift registers:     0
@@ -60,51 +60,39 @@ Mapped on:  08/15/23  05:03:24
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  4
-     Net RCLK_c: 40 loads, 40 rising, 0 falling (Driver: PIO RCLK )
-     Net PHI2_c: 13 loads, 5 rising, 8 falling (Driver: PIO PHI2 )
-     Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
-     Net nCRAS_c: 7 loads, 0 rising, 7 falling (Driver: PIO nCRAS )
-   Number of Clock Enables:  14
-     Net RCLK_c_enable_6: 4 loads, 4 LSLICEs
-     Net RCLK_c_enable_5: 2 loads, 2 LSLICEs
+     Net PHI2_c: 18 loads, 8 rising, 10 falling (Driver: PIO PHI2 )
+     Net RCLK_c: 39 loads, 39 rising, 0 falling (Driver: PIO RCLK )
+     Net nCRAS_c: 9 loads, 0 rising, 9 falling (Driver: PIO nCRAS )
+     Net nCCAS_c: 8 loads, 0 rising, 8 falling (Driver: PIO nCCAS )
+   Number of Clock Enables:  6
+     Net XOR8MEG18: 3 loads, 3 LSLICEs
+     Net i2_i: 1 loads, 0 LSLICEs
 
-     Net PHI2_N_120_enable_1: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_2: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_6: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_27: 8 loads, 8 LSLICEs
-     Net RCLK_c_enable_10: 3 loads, 3 LSLICEs
-     Net PHI2_N_120_enable_7: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_16: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_28: 1 loads, 1 LSLICEs
-     Net RCLK_c_enable_15: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_3: 1 loads, 1 LSLICEs
-     Net Ready_N_292: 1 loads, 1 LSLICEs
-     Net PHI2_N_120_enable_8: 2 loads, 2 LSLICEs
-   Number of LSRs:  7
-     Net RASr2: 1 loads, 1 LSLICEs
-     Net nRowColSel_N_35: 1 loads, 1 LSLICEs
-     Net Ready: 7 loads, 7 LSLICEs
-     Net nRWE_N_177: 1 loads, 1 LSLICEs
-     Net C1Submitted_N_237: 2 loads, 2 LSLICEs
-     Net n2366: 2 loads, 2 LSLICEs
-     Net nRowColSel_N_34: 1 loads, 1 LSLICEs
+     Net N_26: 1 loads, 1 LSLICEs
+     Net N_28: 1 loads, 1 LSLICEs
+     Net N_188_i: 2 loads, 2 LSLICEs
+     Net CmdUFMCLK_1_sqmuxa: 3 loads, 0 LSLICEs
+   Number of LSRs:  3
+     Net RA10s_i: 1 loads, 0 LSLICEs
+     Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net RASr2: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net Ready: 18 loads
-     Net InitReady: 15 loads
-     Net RASr2: 15 loads
-     Net nRowColSel_N_35: 13 loads
+     Net InitReady: 17 loads
+     Net Ready: 15 loads
+     Net Ready_fast: 14 loads
+     Net Din_c[5]: 12 loads
      Net nRowColSel: 12 loads
-     Net Din_c_4: 10 loads
-     Net MAin_c_1: 10 loads
-     Net Din_c_5: 9 loads
-     Net MAin_c_0: 9 loads
-     Net Din_c_0: 8 loads
+     Net S[1]: 12 loads
+     Net RASr2: 10 loads
+     Net CO0: 9 loads
+     Net Din_c[3]: 9 loads
+     Net Din_c[4]: 9 loads
 
 
 
 
-   Number of warnings:  0
+   Number of warnings:  6
    Number of errors:    0
      
 
@@ -113,7 +101,18 @@ Mapped on:  08/15/23  05:03:24
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
-   No errors or warnings present.
+WARNING - map: Output register UFMSDI$r0 is replicated for UFMSDI_pad.
+WARNING - map: Output register nUFMCS$r1 is replicated for nUFMCS_pad.
+WARNING - map: Output register RCKE$r2 is replicated for RCKE_pad.
+WARNING - map: Register Bank_0io[0] cannot be packed into IOC as intended by its
+     primitive type or preference due to command option or architecture
+     limitation. The register was packed into SLICE instead.
+WARNING - map: Register Bank_0io[1] cannot be packed into IOC as intended by its
+     primitive type or preference due to command option or architecture
+     limitation. The register was packed into SLICE instead.
+WARNING - map: Register Bank_0io[2] cannot be packed into IOC as intended by its
+     primitive type or preference due to command option or architecture
+     limitation. The register was packed into SLICE instead.
 
 
 
@@ -123,167 +122,161 @@ Mapped on:  08/15/23  05:03:24
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| RD[7]               | BIDIR     | LVCMOS25  |            |
+| RD[0]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RD[6]               | BIDIR     | LVCMOS25  |            |
+| Dout[0]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| PHI2                | INPUT     | LVCMOS33  | IN         |
 
-| RD[5]               | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| RD[4]               | BIDIR     | LVCMOS25  |            |
+| UFMSDO              | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RD[3]               | BIDIR     | LVCMOS25  |            |
+| UFMSDI              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RD[2]               | BIDIR     | LVCMOS25  |            |
+| UFMCLK              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RD[1]               | BIDIR     | LVCMOS25  |            |
+| nUFMCS              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RD[0]               | BIDIR     | LVCMOS25  |            |
+| RDQML               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Dout[7]             | OUTPUT    | LVCMOS25  |            |
+| RDQMH               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Dout[6]             | OUTPUT    | LVCMOS25  |            |
+| nRCAS               | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| Dout[5]             | OUTPUT    | LVCMOS25  |            |
+| nRRAS               | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| Dout[4]             | OUTPUT    | LVCMOS25  |            |
+| nRWE                | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| Dout[3]             | OUTPUT    | LVCMOS25  |            |
+| RCKE                | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| Dout[2]             | OUTPUT    | LVCMOS25  |            |
+| RCLK                | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Dout[1]             | OUTPUT    | LVCMOS25  |            |
+| nRCS                | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| Dout[0]             | OUTPUT    | LVCMOS25  |            |
+| RD[7]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| LED                 | OUTPUT    | LVCMOS25  |            |
+| RD[6]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RBA[1]              | OUTPUT    | LVCMOS25  |            |
+| RD[5]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RBA[0]              | OUTPUT    | LVCMOS25  |            |
+| RD[4]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[11]              | OUTPUT    | LVCMOS25  |            |
+| RD[3]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[10]              | OUTPUT    | LVCMOS25  |            |
+| RD[2]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[9]               | OUTPUT    | LVCMOS25  |            |
+| RD[1]               | BIDIR     | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[8]               | OUTPUT    | LVCMOS25  |            |
+| RA[11]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[7]               | OUTPUT    | LVCMOS25  |            |
+| RA[10]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RA[6]               | OUTPUT    | LVCMOS25  |            |
+| RA[9]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RA[5]               | OUTPUT    | LVCMOS25  |            |
+| RA[8]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RA[4]               | OUTPUT    | LVCMOS25  |            |
+| RA[7]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RA[3]               | OUTPUT    | LVCMOS25  |            |
+| RA[6]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RA[2]               | OUTPUT    | LVCMOS25  |            |
+| RA[5]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RA[1]               | OUTPUT    | LVCMOS25  |            |
+| RA[4]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| RA[3]               | OUTPUT    | LVCMOS33  |            |
 
-| RA[0]               | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| nRCS                | OUTPUT    | LVCMOS25  |            |
+| RA[2]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RCKE                | OUTPUT    | LVCMOS25  |            |
+| RA[1]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nRWE                | OUTPUT    | LVCMOS25  |            |
+| RA[0]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nRRAS               | OUTPUT    | LVCMOS25  |            |
+| RBA[1]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| nRCAS               | OUTPUT    | LVCMOS25  |            |
+| RBA[0]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-| RDQMH               | OUTPUT    | LVCMOS25  |            |
+| LED                 | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RDQML               | OUTPUT    | LVCMOS25  |            |
+| nFWE                | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nUFMCS              | OUTPUT    | LVCMOS25  |            |
+| nCRAS               | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| UFMCLK              | OUTPUT    | LVCMOS25  |            |
+| nCCAS               | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| UFMSDI              | OUTPUT    | LVCMOS25  |            |
+| Dout[7]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| PHI2                | INPUT     | LVCMOS25  |            |
+| Dout[6]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[9]             | INPUT     | LVCMOS25  |            |
+| Dout[5]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[8]             | INPUT     | LVCMOS25  |            |
+| Dout[4]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[7]             | INPUT     | LVCMOS25  |            |
+| Dout[3]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[6]             | INPUT     | LVCMOS25  |            |
+| Dout[2]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[5]             | INPUT     | LVCMOS25  |            |
+| Dout[1]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| MAin[4]             | INPUT     | LVCMOS25  |            |
+| Din[7]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| MAin[3]             | INPUT     | LVCMOS25  |            |
+| Din[6]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| MAin[2]             | INPUT     | LVCMOS25  |            |
+| Din[5]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| MAin[1]             | INPUT     | LVCMOS25  |            |
+| Din[4]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| MAin[0]             | INPUT     | LVCMOS25  |            |
+| Din[3]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| CROW[1]             | INPUT     | LVCMOS25  |            |
+| Din[2]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| CROW[0]             | INPUT     | LVCMOS25  |            |
+| Din[1]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| Din[7]              | INPUT     | LVCMOS25  |            |
+| Din[0]              | INPUT     | LVCMOS33  | IN         |
 +---------------------+-----------+-----------+------------+
-| Din[6]              | INPUT     | LVCMOS25  |            |
+| CROW[1]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Din[5]              | INPUT     | LVCMOS25  |            |
+| CROW[0]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Din[4]              | INPUT     | LVCMOS25  |            |
+| MAin[9]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+| MAin[8]             | INPUT     | LVCMOS33  |            |
 
-| Din[3]              | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| Din[2]              | INPUT     | LVCMOS25  |            |
+| MAin[7]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Din[1]              | INPUT     | LVCMOS25  |            |
+| MAin[6]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| Din[0]              | INPUT     | LVCMOS25  |            |
+| MAin[5]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nCCAS               | INPUT     | LVCMOS25  |            |
+| MAin[4]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nCRAS               | INPUT     | LVCMOS25  |            |
+| MAin[3]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| nFWE                | INPUT     | LVCMOS25  |            |
+| MAin[2]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| RCLK                | INPUT     | LVCMOS25  |            |
+| MAin[1]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| UFMSDO              | INPUT     | LVCMOS25  |            |
+| MAin[0]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i2 undriven or does not drive anything - clipped.
 Block GSR_INST undriven or does not drive anything - clipped.
-Signal PHI2_N_120 was merged into signal PHI2_c
-Signal n1407 was merged into signal nRowColSel_N_34
-Signal n2380 was merged into signal Ready
-Signal n1408 was merged into signal nRowColSel_N_35
-Signal nRWE_N_176 was merged into signal nRWE_N_177
-Signal GND_net undriven or does not drive anything - clipped.
-Signal VCC_net undriven or does not drive anything - clipped.
-Signal FS_610_add_4_19/S1 undriven or does not drive anything - clipped.
-Signal FS_610_add_4_19/CO undriven or does not drive anything - clipped.
-Signal FS_610_add_4_1/S0 undriven or does not drive anything - clipped.
-Signal FS_610_add_4_1/CI undriven or does not drive anything - clipped.
-Block i2046 was optimized away.
-Block i1118_1_lut was optimized away.
-Block i637_1_lut_rep_31 was optimized away.
-Block i1119_1_lut was optimized away.
-Block nRWE_I_50_1_lut was optimized away.
-Block i1 was optimized away.
+Signal nCRAS_c_i was merged into signal nCRAS_c
+Signal RASr2_i was merged into signal RASr2
+Signal XOR8MEG.CN was merged into signal PHI2_c
+Signal GND undriven or does not drive anything - clipped.
+Signal FS_s_0_S1[17] undriven or does not drive anything - clipped.
+Signal FS_s_0_COUT[17] undriven or does not drive anything - clipped.
+Signal FS_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Block nCRAS_pad_RNIBPVB was optimized away.
+Block RASr2_RNIAFR1 was optimized away.
+Block XOR8MEG.CN was optimized away.
+Block GND was optimized away.
 
      
 
@@ -294,8 +287,15 @@ Block i1 was optimized away.
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 35 MB
+   Peak Memory Usage: 36 MB
         
+
+
+
+
+
+
+
 
 
 

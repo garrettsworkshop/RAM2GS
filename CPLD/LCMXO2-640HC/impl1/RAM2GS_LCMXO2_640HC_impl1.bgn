@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Aug 15 05:03:39 2023
+Tue Aug 15 23:30:11 2023
 
 
 Command: bitgen -g RamCfg:Reset -path D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC -w -jedec -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
@@ -83,4 +83,4 @@ Initialized UFM Pages:                     0 Page.
  
 Total CPU Time: 1 secs 
 Total REAL Time: 2 secs 
-Peak Memory Usage: 245 MB
+Peak Memory Usage: 246 MB

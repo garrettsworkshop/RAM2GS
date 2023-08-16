@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Tue Aug 15 05:03:25 2023
+Tue Aug 15 22:56:32 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -30,7 +30,6 @@ Device,speed:    LCMXO2-640HC,4
 Report level:    verbose report, limited to 1 item per preference
 --------------------------------------------------------------------------------
 
-Report Type:     based on TRACE automatically generated preferences
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
 --------------------------------------------------------------------------------
@@ -38,87 +37,131 @@ BLOCK RESETPATHS
 
 
 ================================================================================
-Preference: FREQUENCY NET "RCLK_c" 299.401000 MHz ;
-            459 items scored, 245 timing errors detected.
+Preference: FREQUENCY PORT "PHI2" 2.900000 MHz ;
+            170 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 3.815ns
+Passed: The following path meets requirements by 161.824ns (weighted slack = 323.648ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              FS_610__i13  (from RCLK_c +)
-   Destination:    FF         Data in        n8MEGEN_418  (to RCLK_c +)
+   Source:         FF         Q              Bank_0io[3]  (from PHI2_c +)
+   Destination:    FF         Data in        CmdEnable  (to PHI2_c -)
 
-   Delay:               6.873ns  (28.2% logic, 71.8% route), 4 logic levels.
+   Delay:              10.424ns  (36.2% logic, 63.8% route), 7 logic levels.
 
  Constraint Details:
 
-      6.873ns physical path delay SLICE_0 to SLICE_57 exceeds
-      3.340ns delay constraint less
-      0.282ns CE_SET requirement (totaling 3.058ns) by 3.815ns
+     10.424ns physical path delay Din[3]_MGIOL to SLICE_18 meets
+    172.414ns delay constraint less
+      0.166ns DIN_SET requirement (totaling 172.248ns) by 161.824ns
 
  Physical Path Details:
 
-      Data path SLICE_0 to SLICE_57:
+      Data path Din[3]_MGIOL to SLICE_18:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452    SLICE_0.CLK to     SLICE_0.Q0 SLICE_0 (from RCLK_c)
-ROUTE         3   e 1.234     SLICE_0.Q0 to    SLICE_85.B0 FS_13
-CTOF_DEL    ---     0.495    SLICE_85.B0 to    SLICE_85.F0 SLICE_85
-ROUTE         5   e 1.234    SLICE_85.F0 to    SLICE_57.A1 n10
-CTOF_DEL    ---     0.495    SLICE_57.A1 to    SLICE_57.F1 SLICE_57
-ROUTE         2   e 1.234    SLICE_57.F1 to    SLICE_84.A0 n2367
-CTOF_DEL    ---     0.495    SLICE_84.A0 to    SLICE_84.F0 SLICE_84
-ROUTE         1   e 1.234    SLICE_84.F0 to    SLICE_57.CE RCLK_c_enable_15 (to RCLK_c)
+C2INP_DEL   ---     0.577 *[3]_MGIOL.CLK to *n[3]_MGIOL.IN Din[3]_MGIOL (from PHI2_c)
+ROUTE         1   e 1.234 *n[3]_MGIOL.IN to    SLICE_43.C1 Bank[3]
+CTOF_DEL    ---     0.495    SLICE_43.C1 to    SLICE_43.F1 SLICE_43
+ROUTE         1   e 1.234    SLICE_43.F1 to    SLICE_69.D0 un1_Bank_1_4
+CTOF_DEL    ---     0.495    SLICE_69.D0 to    SLICE_69.F0 SLICE_69
+ROUTE         5   e 1.234    SLICE_69.F0 to    SLICE_60.D0 un1_Bank_1
+CTOF_DEL    ---     0.495    SLICE_60.D0 to    SLICE_60.F0 SLICE_60
+ROUTE         2   e 1.234    SLICE_60.F0 to    SLICE_46.A1 ADWR
+CTOF_DEL    ---     0.495    SLICE_46.A1 to    SLICE_46.F1 SLICE_46
+ROUTE         3   e 0.480    SLICE_46.F1 to    SLICE_46.D0 un1_ADWR
+CTOF_DEL    ---     0.495    SLICE_46.D0 to    SLICE_46.F0 SLICE_46
+ROUTE         1   e 1.234    SLICE_46.F0 to    SLICE_18.C0 un1_CMDWR
+CTOOFX_DEL  ---     0.721    SLICE_18.C0 to  SLICE_18.OFX0 SLICE_18
+ROUTE         1   e 0.001  SLICE_18.OFX0 to   SLICE_18.DI0 CmdEnable_s (to PHI2_c)
                   --------
-                    6.873   (28.2% logic, 71.8% route), 4 logic levels.
+                   10.424   (36.2% logic, 63.8% route), 7 logic levels.
 
-Warning: 139.762MHz is the maximum frequency for this preference.
+Report:   47.214MHz is the maximum frequency for this preference.
 
 
 ================================================================================
-Preference: FREQUENCY NET "PHI2_c" 99.079000 MHz ;
-            113 items scored, 104 timing errors detected.
+Preference: FREQUENCY PORT "nCCAS" 2.900000 MHz ;
+            0 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 4.837ns (weighted slack = -9.674ns)
+Passed:  The following path meets requirements by 338.168ns
+         The internal maximum frequency of the following component is 150.150 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            nCCAS
+
+   Delay:               6.660ns -- based on Minimum Pulse Width
+
+Report:  150.150MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "nCRAS" 2.900000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed:  The following path meets requirements by 338.168ns
+         The internal maximum frequency of the following component is 150.150 MHz
+
+ Logical Details:  Cell type  Pin name       Component name
+
+   Destination:    PIO        PAD            nCRAS
+
+   Delay:               6.660ns -- based on Minimum Pulse Width
+
+Report:  150.150MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY PORT "RCLK" 62.500000 MHz ;
+            590 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 4.412ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Bank_i7  (from PHI2_c +)
-   Destination:    FF         Data in        CmdEnable_405  (to PHI2_c -)
+   Source:         FF         Q              FS[17]  (from RCLK_c +)
+   Destination:    FF         Data in        LEDEN  (to RCLK_c +)
 
-   Delay:               9.577ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:              11.306ns  (30.3% logic, 69.7% route), 7 logic levels.
 
  Constraint Details:
 
-      9.577ns physical path delay SLICE_101 to SLICE_19 exceeds
-      5.047ns delay constraint less
-      0.307ns CE_SET requirement (totaling 4.740ns) by 4.837ns
+     11.306ns physical path delay SLICE_1 to SLICE_27 meets
+     16.000ns delay constraint less
+      0.282ns CE_SET requirement (totaling 15.718ns) by 4.412ns
 
  Physical Path Details:
 
-      Data path SLICE_101 to SLICE_19:
+      Data path SLICE_1 to SLICE_27:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452  SLICE_101.CLK to   SLICE_101.Q1 SLICE_101 (from PHI2_c)
-ROUTE         1   e 1.234   SLICE_101.Q1 to   SLICE_100.C1 Bank_7
-CTOF_DEL    ---     0.495   SLICE_100.C1 to   SLICE_100.F1 SLICE_100
-ROUTE         1   e 1.234   SLICE_100.F1 to    SLICE_74.B1 n2277
-CTOF_DEL    ---     0.495    SLICE_74.B1 to    SLICE_74.F1 SLICE_74
-ROUTE         8   e 1.234    SLICE_74.F1 to    SLICE_91.B1 n26
-CTOF_DEL    ---     0.495    SLICE_91.B1 to    SLICE_91.F1 SLICE_91
-ROUTE         1   e 1.234    SLICE_91.F1 to    SLICE_88.D0 n2362
-CTOF_DEL    ---     0.495    SLICE_88.D0 to    SLICE_88.F0 SLICE_88
-ROUTE         3   e 0.480    SLICE_88.F0 to    SLICE_88.C1 C1Submitted_N_237
-CTOF_DEL    ---     0.495    SLICE_88.C1 to    SLICE_88.F1 SLICE_88
-ROUTE         1   e 1.234    SLICE_88.F1 to    SLICE_19.CE PHI2_N_120_enable_1 (to PHI2_c)
+REG_DEL     ---     0.452    SLICE_1.CLK to     SLICE_1.Q0 SLICE_1 (from RCLK_c)
+ROUTE         3   e 1.234     SLICE_1.Q0 to    SLICE_72.D1 FS[17]
+CTOF_DEL    ---     0.495    SLICE_72.D1 to    SLICE_72.F1 SLICE_72
+ROUTE         1   e 1.234    SLICE_72.F1 to    SLICE_64.C1 UFMSDI_ens2_i_o2_0_3
+CTOF_DEL    ---     0.495    SLICE_64.C1 to    SLICE_64.F1 SLICE_64
+ROUTE         4   e 1.234    SLICE_64.F1 to    SLICE_59.C1 N_129
+CTOF_DEL    ---     0.495    SLICE_59.C1 to    SLICE_59.F1 SLICE_59
+ROUTE         2   e 0.480    SLICE_59.F1 to    SLICE_59.D0 N_145
+CTOF_DEL    ---     0.495    SLICE_59.D0 to    SLICE_59.F0 SLICE_59
+ROUTE         2   e 1.234    SLICE_59.F0 to    SLICE_56.B0 N_139_8
+CTOF_DEL    ---     0.495    SLICE_56.B0 to    SLICE_56.F0 SLICE_56
+ROUTE         1   e 1.234    SLICE_56.F0 to    SLICE_54.C0 N_140
+CTOF_DEL    ---     0.495    SLICE_54.C0 to    SLICE_54.F0 SLICE_54
+ROUTE         1   e 1.234    SLICE_54.F0 to    SLICE_27.CE N_28 (to RCLK_c)
                   --------
-                    9.577   (30.6% logic, 69.4% route), 6 logic levels.
+                   11.306   (30.3% logic, 69.7% route), 7 logic levels.
 
-Warning:  50.592MHz is the maximum frequency for this preference.
+Report:   86.296MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -126,21 +169,18 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "RCLK_c" 299.401000 MHz ; |  299.401 MHz|  139.762 MHz|   4 *
+FREQUENCY PORT "PHI2" 2.900000 MHz ;    |    2.900 MHz|   47.214 MHz|   7  
                                         |             |             |
-FREQUENCY NET "PHI2_c" 99.079000 MHz ;  |   99.079 MHz|   50.592 MHz|   6 *
+FREQUENCY PORT "nCCAS" 2.900000 MHz ;   |    2.900 MHz|  150.150 MHz|   0  
+                                        |             |             |
+FREQUENCY PORT "nCRAS" 2.900000 MHz ;   |    2.900 MHz|  150.150 MHz|   0  
+                                        |             |             |
+FREQUENCY PORT "RCLK" 62.500000 MHz ;   |   62.500 MHz|   86.296 MHz|   7  
                                         |             |             |
 ----------------------------------------------------------------------------
 
 
-2 preferences(marked by "*" above) not met.
-
-----------------------------------------------------------------------------
-Critical Nets                           |   Loads|  Errors| % of total
-----------------------------------------------------------------------------
-n26                                     |       8|      78|     22.35%
-                                        |        |        |
-----------------------------------------------------------------------------
+All preferences were met.
 
 
 Clock Domains Analysis
@@ -148,14 +188,20 @@ Clock Domains Analysis
 
 Found 4 clocks:
 
-Clock Domain: nCRAS_c   Source: nCRAS.PAD   Loads: 9
+Clock Domain: nCRAS_c   Source: nCRAS.PAD   Loads: 12
    No transfer within this clock domain is found
 
-Clock Domain: nCCAS_c   Source: nCCAS.PAD   Loads: 6
+   Data transfers from:
+   Clock Domain: RCLK_c   Source: RCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: nCCAS_c   Source: nCCAS.PAD   Loads: 10
    No transfer within this clock domain is found
 
-Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 40
-   Covered under: FREQUENCY NET "RCLK_c" 299.401000 MHz ;
+Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 39
+   Covered under: FREQUENCY PORT "RCLK" 62.500000 MHz ;
 
    Data transfers from:
    Clock Domain: nCRAS_c   Source: nCRAS.PAD
@@ -168,8 +214,8 @@ Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 40
       To report these transfers please refer to preference CLKSKEWDIFF to define
       external clock skew between clock ports.
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 14
-   Covered under: FREQUENCY NET "PHI2_c" 99.079000 MHz ;
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 19
+   Covered under: FREQUENCY PORT "PHI2" 2.900000 MHz ;
 
    Data transfers from:
    Clock Domain: RCLK_c   Source: RCLK.PAD
@@ -181,14 +227,14 @@ Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 14
 Timing summary (Setup):
 ---------------
 
-Timing errors: 349  Score: 848079
-Cumulative negative slack: 584487
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
 
-Constraints cover 572 paths, 2 nets, and 409 connections (60.68% coverage)
+Constraints cover 760 paths, 4 nets, and 422 connections (60.03% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Tue Aug 15 05:03:25 2023
+Tue Aug 15 22:56:32 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -212,40 +258,8 @@ BLOCK RESETPATHS
 
 
 ================================================================================
-Preference: FREQUENCY NET "RCLK_c" 299.401000 MHz ;
-            459 items scored, 0 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Passed: The following path meets requirements by 0.351ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              IS_FSM__i4  (from RCLK_c +)
-   Destination:    FF         Data in        IS_FSM__i5  (to RCLK_c +)
-
-   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
-
- Constraint Details:
-
-      0.332ns physical path delay SLICE_106 to SLICE_106 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
-
- Physical Path Details:
-
-      Data path SLICE_106 to SLICE_106:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133  SLICE_106.CLK to   SLICE_106.Q0 SLICE_106 (from RCLK_c)
-ROUTE         1   e 0.199   SLICE_106.Q0 to   SLICE_106.M1 n736 (to RCLK_c)
-                  --------
-                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
-
-
-================================================================================
-Preference: FREQUENCY NET "PHI2_c" 99.079000 MHz ;
-            113 items scored, 0 timing errors detected.
+Preference: FREQUENCY PORT "PHI2" 2.900000 MHz ;
+            170 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -253,28 +267,72 @@ Passed: The following path meets requirements by 0.447ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              C1Submitted_406  (from PHI2_c -)
-   Destination:    FF         Data in        C1Submitted_406  (to PHI2_c -)
+   Source:         FF         Q              ADSubmitted  (from PHI2_c -)
+   Destination:    FF         Data in        ADSubmitted  (to PHI2_c -)
 
    Delay:               0.434ns  (53.9% logic, 46.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.434ns physical path delay SLICE_15 to SLICE_15 meets
+      0.434ns physical path delay SLICE_10 to SLICE_10 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint requirement (totaling -0.013ns) by 0.447ns
 
  Physical Path Details:
 
-      Data path SLICE_15 to SLICE_15:
+      Data path SLICE_10 to SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133   SLICE_15.CLK to    SLICE_15.Q0 SLICE_15 (from PHI2_c)
-ROUTE         2   e 0.199    SLICE_15.Q0 to    SLICE_15.C0 C1Submitted
-CTOF_DEL    ---     0.101    SLICE_15.C0 to    SLICE_15.F0 SLICE_15
-ROUTE         1   e 0.001    SLICE_15.F0 to   SLICE_15.DI0 n1398 (to PHI2_c)
+REG_DEL     ---     0.133   SLICE_10.CLK to    SLICE_10.Q0 SLICE_10 (from PHI2_c)
+ROUTE         2   e 0.199    SLICE_10.Q0 to    SLICE_10.A0 ADSubmitted
+CTOF_DEL    ---     0.101    SLICE_10.A0 to    SLICE_10.F0 SLICE_10
+ROUTE         1   e 0.001    SLICE_10.F0 to   SLICE_10.DI0 ADSubmitted_r (to PHI2_c)
                   --------
                     0.434   (53.9% logic, 46.1% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY PORT "nCCAS" 2.900000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY PORT "nCRAS" 2.900000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+================================================================================
+Preference: FREQUENCY PORT "RCLK" 62.500000 MHz ;
+            590 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.351ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              CASr  (from RCLK_c +)
+   Destination:    FF         Data in        CASr2  (to RCLK_c +)
+
+   Delay:               0.332ns  (40.1% logic, 59.9% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.332ns physical path delay SLICE_14 to SLICE_14 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.019ns) by 0.351ns
+
+ Physical Path Details:
+
+      Data path SLICE_14 to SLICE_14:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133   SLICE_14.CLK to    SLICE_14.Q0 SLICE_14 (from RCLK_c)
+ROUTE         1   e 0.199    SLICE_14.Q0 to    SLICE_14.M1 CASr (to RCLK_c)
+                  --------
+                    0.332   (40.1% logic, 59.9% route), 1 logic levels.
 
 Report Summary
 --------------
@@ -282,9 +340,13 @@ Report Summary
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "RCLK_c" 299.401000 MHz ; |     0.000 ns|     0.351 ns|   1  
+FREQUENCY PORT "PHI2" 2.900000 MHz ;    |            -|            -|   2  
                                         |             |             |
-FREQUENCY NET "PHI2_c" 99.079000 MHz ;  |     0.000 ns|     0.447 ns|   2  
+FREQUENCY PORT "nCCAS" 2.900000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY PORT "nCRAS" 2.900000 MHz ;   |            -|            -|   0  
+                                        |             |             |
+FREQUENCY PORT "RCLK" 62.500000 MHz ;   |            -|            -|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -297,14 +359,20 @@ Clock Domains Analysis
 
 Found 4 clocks:
 
-Clock Domain: nCRAS_c   Source: nCRAS.PAD   Loads: 9
+Clock Domain: nCRAS_c   Source: nCRAS.PAD   Loads: 12
    No transfer within this clock domain is found
 
-Clock Domain: nCCAS_c   Source: nCCAS.PAD   Loads: 6
+   Data transfers from:
+   Clock Domain: RCLK_c   Source: RCLK.PAD
+      Not reported because source and destination domains are unrelated.
+      To report these transfers please refer to preference CLKSKEWDIFF to define
+      external clock skew between clock ports.
+
+Clock Domain: nCCAS_c   Source: nCCAS.PAD   Loads: 10
    No transfer within this clock domain is found
 
-Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 40
-   Covered under: FREQUENCY NET "RCLK_c" 299.401000 MHz ;
+Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 39
+   Covered under: FREQUENCY PORT "RCLK" 62.500000 MHz ;
 
    Data transfers from:
    Clock Domain: nCRAS_c   Source: nCRAS.PAD
@@ -317,8 +385,8 @@ Clock Domain: RCLK_c   Source: RCLK.PAD   Loads: 40
       To report these transfers please refer to preference CLKSKEWDIFF to define
       external clock skew between clock ports.
 
-Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 14
-   Covered under: FREQUENCY NET "PHI2_c" 99.079000 MHz ;
+Clock Domain: PHI2_c   Source: PHI2.PAD   Loads: 19
+   Covered under: FREQUENCY PORT "PHI2" 2.900000 MHz ;
 
    Data transfers from:
    Clock Domain: RCLK_c   Source: RCLK.PAD
@@ -333,16 +401,16 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 572 paths, 2 nets, and 409 connections (60.68% coverage)
+Constraints cover 760 paths, 4 nets, and 422 connections (60.03% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 349 (setup), 0 (hold)
-Score: 848079 (setup), 0 (hold)
-Cumulative negative slack: 584487 (584487+0)
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

@@ -57,7 +57,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
 	assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
 	reg [7:0] WRD;
-	inout [7:0] RD = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
+	inout [7:0] RD;
+	assign RD[7:0] = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
 	/* UFM Interface */
 	output reg nUFMCS = 1;
@@ -85,7 +86,6 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	reg [1:0] S = 0; // post-RAS State counter
 	reg [17:0] FS = 0; // Fast init state counter
 	reg [3:0] IS = 0; // Init state counter
-	reg WriteDone;
 	
 	/* Synchronize PHI2, RAS, CAS */
 	always @(posedge RCLK) begin
@@ -128,12 +128,12 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 	always @(posedge RCLK) begin
 		if (~RASr2) S <= 0;
 		else if (S==2'h3) S <= 2'h3;
-		else S <= S+1;
+		else S <= S+2'h1;
 	end
 	/* Init state counter */
 	always @(posedge RCLK) begin
 		// Wait ~4.178ms (at 62.5 MHz) before starting init sequence
-		FS <= FS+1;
+		FS <= FS+18'h1;
 		if (FS[17:10] == 8'hFF) InitReady <= 1'b1;
 	end
 
@@ -260,7 +260,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 					nRWE <= 1'b1;
 					RA10 <= 1'b1; // RA10 is don't care
 				end
-				IS <= IS+1;
+				IS <= IS+4'h1;
 			end else begin
 				// NOP
 				nRCS <= 1'b1;
@@ -320,11 +320,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				CmdSubmitted <= 1'b1;
 			end else if (Din[7:4]==4'h2) begin
 				// Reserved for MAX commands
-			end else if (Din[7:4]==4'h3 && ~Din[3]) begin
-				// Reserved for LCMXO2 commands
-				// Din[1] - Shift when high, execute when low
-				// Din[0] - Shift data
-			end else if (Din[7:4]==4'h3 && Din[3]) begin
+			end else if (Din[7:4]==4'h3 && !Din[3]) begin
 				// SPI (LCMXO, iCE40, AGM) commands
 				CmdLEDEN <= LEDEN;
 				Cmdn8MEGEN <= n8MEGEN;
@@ -332,6 +328,10 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 				CmdUFMCLK <= Din[1];
 				CmdUFMSDI <= Din[0];
 				CmdSubmitted <= 1'b1;
+			end else if (Din[7:4]==4'h3 &&  Din[3]) begin
+				// Reserved for LCMXO2 commands
+				// Din[1] - Shift when high, execute when low
+				// Din[0] - Shift data
 			end
 		end
 	end
@@ -389,8 +389,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 			UFMSDI <= 1'b0;
 			// Latch n8MEGEN and LEDEN
 			if (FS[9:5]==5'h00 && FS[4:0]==5'h10) n8MEGEN <= ~UFMSDO;
-			//if (FS[9:5]==5'h01 && FS[4:0]==5'h10) LEDEN <= 1;//~UFMSDO;
-			LEDEN <= 1;
+			if (FS[9:5]==5'h01 && FS[4:0]==5'h10) LEDEN <= ~UFMSDO;
 		end else if (~InitReady && FS[17:10]!=8'hFE && FS[17:10]!=8'hFF) begin
 			nUFMCS <= 1'b0;
 			UFMCLK <= FS[1];
@@ -402,6 +401,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 		end else if (~PHI2r2 & PHI2r3 & CmdSubmitted) begin
 			// Set user command signals after PHI2 falls
 			// Cmdn8MEGEN, CmdUFMCS, CmdUFMCLK, CmdUFMSDI
+			LEDEN <= CmdLEDEN;
 			n8MEGEN <= Cmdn8MEGEN;
 			nUFMCS <= ~CmdUFMCS;
 			UFMCLK <= CmdUFMCLK;

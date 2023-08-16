@@ -1,0 +1,18 @@
+#OPTIONS:"|-layerid|0|-orig_srs|D:\\OneDrive\\Documents\\GitHub\\RAM2GS\\CPLD\\LCMXO256C\\impl1\\synwork\\RAM2GS_LCMXO256C_impl1_comp.srs|-top|RAM2GS|-prodtype|synplify_pro|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-I|D:\\OneDrive\\Documents\\GitHub\\RAM2GS\\CPLD\\LCMXO256C|-I|D:\\OneDrive\\Documents\\GitHub\\RAM2GS\\CPLD\\LCMXO256C\\impl1\\|-I|C:\\lscc\\diamond\\3.12\\synpbase\\lib|-v2001|-devicelib|C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\machxo.v|-devicelib|C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\pmi_def.v|-encrypt|-pro|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-D_MULTIPLE_FILE_COMPILATION_UNIT_|-lib|work|-fv2001"
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\bin64\\c_ver.exe":1628601508
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\machxo.v":1628601068
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\lucent\\pmi_def.v":1628601068
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\hypermods.v":1628600822
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\umr_capim.v":1628600822
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\scemi_objects.v":1628600822
+#CUR:"C:\\lscc\\diamond\\3.12\\synpbase\\lib\\vlog\\scemi_pipes.svh":1628600822
+#CUR:"D:\\OneDrive\\Documents\\GitHub\\RAM2GS\\CPLD\\RAM2GS-SPI.v":1692174460
+#numinternalfiles:6
+#defaultlanguage:verilog
+0			"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v" verilog
+#Dependency Lists(Uses List)
+0 -1
+#Dependency Lists(Users Of)
+0 -1
+#Design Unit to File Association
+module work RAM2GS 0

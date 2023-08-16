@@ -1,0 +1,23 @@
+@P:  Worst Slack : -3.705
+@P:  PHI2 - Estimated Frequency : 0.6 MHz
+@P:  PHI2 - Requested Frequency : 2.9 MHz
+@P:  PHI2 - Estimated Period : 1646.750
+@P:  PHI2 - Requested Period : 350.000
+@P:  PHI2 - Slack : -3.705
+@P:  RCLK - Estimated Frequency : 13.3 MHz
+@P:  RCLK - Requested Frequency : 62.5 MHz
+@P:  RCLK - Estimated Period : 75.280
+@P:  RCLK - Requested Period : 16.000
+@P:  RCLK - Slack : -2.312
+@P:  nCCAS - Estimated Frequency : NA
+@P:  nCCAS - Requested Frequency : 2.9 MHz
+@P:  nCCAS - Estimated Period : NA
+@P:  nCCAS - Requested Period : 350.000
+@P:  nCCAS - Slack : NA
+@P:  nCRAS - Estimated Frequency : 0.6 MHz
+@P:  nCRAS - Requested Frequency : 2.9 MHz
+@P:  nCRAS - Estimated Period : 1613.150
+@P:  nCRAS - Requested Period : 350.000
+@P:  nCRAS - Slack : -3.609
+@P:  Total Area : 127.0
+@P:  CPU Time : 0h:00m:03s

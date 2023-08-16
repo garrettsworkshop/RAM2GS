@@ -18,579 +18,534 @@ comp 7: SLICE_7 (FSLICE)
 comp 8: SLICE_8 (FSLICE)
 
 comp 9: SLICE_9 (FSLICE)
-n1413 = (~n2263*(~ADSubmitted*n2242+ADSubmitted*(~n2459+n2242))+n2263*(ADSubmitted*~n2459))
-ADSubmitted.D = n1413
+ADSubmitted_r = (~CmdEnable16*((~C1WR_0_a2*ADSubmitted)+CmdEnable17))
+ADSubmitted.D = ADSubmitted_r
 ADSubmitted.CLK = ~PHI2_c
 ADSubmitted.SP = VCC
-ADSubmitted.LSR = C1Submitted_N_237
-n2263 = (~MAin_c_1+(~MAin_c_0+n1326))
+ADSubmitted.LSR = GND
+CmdEnable17 = (N_147*(MAin_c[0]*(CmdEnable17_0_a2_4*CmdEnable17_0_a2_3)))
 
 comp 10: SLICE_14 (FSLICE)
-n6_adj_3 = (~MAin_c_1*C1Submitted+MAin_c_1*(C1Submitted*(nFWE_c+n1326)))
-C1Submitted.D = n6_adj_3
+C1Submitted_RNO = (~MAin_c[1]*(CmdEnable16+C1Submitted)+MAin_c[1]*(~N_147*(CmdEnable16+C1Submitted)+N_147*CmdEnable16))
+C1Submitted.D = C1Submitted_RNO
 C1Submitted.CLK = ~PHI2_c
 C1Submitted.SP = VCC
-C1Submitted.LSR = C1Submitted_N_237
-n2284 = (C1Submitted+Din_c_6)
+C1Submitted.LSR = GND
+CmdEnable16 = (N_147*(CmdEnable16_0_a2_5*CmdEnable16_0_a2_4))
 
-comp 11: SLICE_18 (FSLICE)
-CmdEnable_N_248 = (n15*(~n1326*(n2463*MAin_c_1)))
-CmdEnable.D = CmdEnable_N_248
+comp 11: SLICE_19 (FSLICE)
+N_177_i = (~CO0+S[1])
+CO0.D = N_177_i
+CO0.CLK = RCLK_c
+CO0.SP = VCC
+CO0.LSR = ~RASr2
+Ready_0_sqmuxa_0_a3_2 = (S[1]*(~RASr2*(IS[3]*CO0)))
+
+comp 12: SLICE_20 (FSLICE)
+CmdEnable_s = ((CmdEnable+ADSubmitted)*CmdEnable16)+(((C1Submitted*un1_CMDWR*CmdEnable17)+(CmdEnable*CmdEnable17)+(~un1_CMDWR*CmdEnable))*~CmdEnable16)
+CmdEnable.D = CmdEnable_s
 CmdEnable.CLK = ~PHI2_c
-CmdEnable.SP = PHI2_N_120_enable_7
+CmdEnable.SP = VCC
 CmdEnable.LSR = GND
-n1326 = (~MAin_c_5+(~n2316+(~MAin_c_2+n26)))
 
-comp 12: SLICE_19 (FSLICE)
-n2568\001/BUF1 = VCC
-CmdSubmitted.D = n2568\001/BUF1
+comp 13: SLICE_21 (FSLICE)
+N_21_i = (~N_152*(~N_133*~N_132)+N_152*(~N_133*(~N_132*LEDEN)))
+CmdLEDEN.D = N_21_i
+CmdLEDEN.CLK = ~PHI2_c
+CmdLEDEN.SP = XOR8MEG18
+CmdLEDEN.LSR = GND
+N_152 = (~N_128*(Din_c[5]*~Din_c[3]))
+
+comp 14: SLICE_22 (FSLICE)
+N_460_0 = (CmdSubmitted_1_sqmuxa+CmdSubmitted)
+CmdSubmitted.D = N_460_0
 CmdSubmitted.CLK = ~PHI2_c
-CmdSubmitted.SP = PHI2_N_120_enable_5
+CmdSubmitted.SP = VCC
 CmdSubmitted.LSR = GND
-n2472 = (~PHI2r2*(CmdSubmitted*PHI2r3))
-
-comp 13: SLICE_23 (FSLICE)
-Cmdn8MEGEN_N_264 = (~n1314*(~Din_c_4*n8MEGEN+Din_c_4*~Din_c_0)+n1314*n8MEGEN)
-Cmdn8MEGEN.D = Cmdn8MEGEN_N_264
-Cmdn8MEGEN.CLK = ~PHI2_c
-Cmdn8MEGEN.SP = PHI2_N_120_enable_4
-Cmdn8MEGEN.LSR = GND
-n1314 = ((Din_c_6+Din_c_7)+Din_c_5)
-
-comp 14: SLICE_25 (FSLICE)
-n2568\000/BUF1 = VCC
-InitReady.D = n2568\000/BUF1
-InitReady.CLK = RCLK_c
-InitReady.SP = RCLK_c_enable_25
-InitReady.LSR = GND
-RCLK_c_enable_23 = (nRowColSel_N_35*(RASr2*(InitReady*~Ready)))
+N_136 = (PHI2r3*(~PHI2r2*(InitReady*CmdSubmitted)))
 
 comp 15: SLICE_26 (FSLICE)
-n2568 = VCC
-LEDEN.D = n2568
+N_19_i = (~n8MEGEN*(~N_152*~Cmdn8MEGEN_4_u_i_0)+n8MEGEN*~Cmdn8MEGEN_4_u_i_0)
+Cmdn8MEGEN.D = N_19_i
+Cmdn8MEGEN.CLK = ~PHI2_c
+Cmdn8MEGEN.SP = XOR8MEG18
+Cmdn8MEGEN.LSR = GND
+Cmdn8MEGEN_4_u_i_0 = (~N_128*(~N_43*(~Cmdn8MEGEN+CmdEnable16_4)+N_43*CmdEnable16_4)+N_128*~Cmdn8MEGEN)
+
+comp 16: SLICE_29 (FSLICE)
+N_64_i_i = (~N_155*(Ready@~IS[0])+N_155*IS[0])
+IS[0].D = N_64_i_i
+IS[0].CLK = RCLK_c
+IS[0].SP = VCC
+IS[0].LSR = GND
+N_24 = ((~N_160*(~N_155*IS[0])+N_160*~N_155)+nRRAS_5_u_i_0)
+
+comp 17: SLICE_30 (FSLICE)
+N_56_i = (IS[1]@IS[0])
+IS[1].D = N_56_i
+IS[1].CLK = RCLK_c
+IS[1].SP = N_159_i
+IS[1].LSR = GND
+N_60_i_i = (IS[2]@(IS[1]*IS[0]))
+IS[2].D = N_60_i_i
+IS[2].CLK = RCLK_c
+IS[2].SP = N_159_i
+IS[2].LSR = GND
+
+comp 18: SLICE_31 (FSLICE)
+N_61_i_i = (~IS[0]*IS[3]+IS[0]*(~IS[1]*IS[3]+IS[1]*(IS[2]@IS[3])))
+IS[3].D = N_61_i_i
+IS[3].CLK = RCLK_c
+IS[3].SP = N_159_i
+IS[3].LSR = GND
+RA10s_i = ((~IS[3]+(IS[1]+IS[2]))+N_159)
+
+comp 19: SLICE_32 (FSLICE)
+N_461_0 = (InitReady3+InitReady)
+InitReady.D = N_461_0
+InitReady.CLK = RCLK_c
+InitReady.SP = VCC
+InitReady.LSR = GND
+UFMSDI_ens2_i_a0 = (~UFMSDI_ens2_i_a2_4_2*~InitReady+UFMSDI_ens2_i_a2_4_2*(~N_126*~InitReady+N_126*(N_51*~InitReady)))
+
+comp 20: SLICE_33 (FSLICE)
+N_70 = (~UFMSDO_c*(~InitReady+CmdLEDEN)+UFMSDO_c*(InitReady*CmdLEDEN))
+LEDEN.D = N_70
 LEDEN.CLK = RCLK_c
-LEDEN.SP = RCLK_c_enable_12
+LEDEN.SP = N_33
 LEDEN.LSR = GND
-LED_N_84 = ((~LEDEN+CBR)+nCRAS_c)
+LED_c = ((~LEDEN+CBR)+nCRAS_c)
 
-comp 16: SLICE_31 (FSLICE)
-n2209 = ((n2208+Ready)+nRCAS_N_165)
-RA_0.D = n2209
-RA_0.CLK = RCLK_c
-RA_0.SP = VCC
-RA_0.LSR = ~nRWE_N_177
-n56 = (~Ready+nRowColSel_N_34)
+comp 21: SLICE_39 (FSLICE)
+RA11_2 = (~n8MEGEN*(XOR8MEG@Din_c[6])+n8MEGEN*XOR8MEG)
+RA_c[11].D = RA11_2
+RA_c[11].CLK = PHI2_c
+RA_c[11].SP = VCC
+RA_c[11].LSR = ~Ready_fast
+N_171 = (~un1_Din_4*XOR8MEG)
 
-comp 17: SLICE_32 (FSLICE)
-RA11_N_184 = (~n8MEGEN*(XOR8MEG@Din_c_6)+n8MEGEN*XOR8MEG)
-RA_c.D = RA11_N_184
-RA_c.CLK = PHI2_c
-RA_c.SP = VCC
-RA_c.LSR = ~Ready
-n2478 = (Din_c_6+Din_c_7)
-
-comp 18: SLICE_34 (FSLICE)
-RCKEEN_N_121 = (~Ready*InitReady+Ready*RCKEEN_N_122)
-RCKEEN.D = RCKEEN_N_121
+comp 22: SLICE_41 (FSLICE)
+RCKEEN_8 = (~Ready*RCKEEN_8_u_0_0+Ready*(~RCKEEN_8_u_1*RCKEEN_8_u_0_0+RCKEEN_8_u_1*(~CBR+RCKEEN_8_u_0_0)))
+RCKEEN.D = RCKEEN_8
 RCKEEN.CLK = RCLK_c
-RCKEEN.SP = RCLK_c_enable_4
+RCKEEN.SP = VCC
 RCKEEN.LSR = GND
-n2467 = ((InitReady*RASr2)+Ready)
-
-comp 19: SLICE_35 (FSLICE)
-RCKE_N_132 = (~RASr3*(~RASr2*(RCKEEN*RASr)+RASr2*RCKEEN)+RASr3*(~RASr2+RCKEEN))
-RCKE_c.D = RCKE_N_132
-RCKE_c.CLK = RCLK_c
-RCKE_c.SP = VCC
-RCKE_c.LSR = GND
-nRWE_N_182 = (~RCKE_c+RASr2)
-CASr2.D = CASr
-CASr2.CLK = RCLK_c
-CASr2.SP = VCC
-CASr2.LSR = GND
-
-comp 20: SLICE_36 (FSLICE)
-n2568\002/BUF1 = VCC
-Ready.D = n2568\002/BUF1
-Ready.CLK = RCLK_c
-Ready.SP = Ready_N_292
-Ready.LSR = GND
-n2469 = (~Ready+nRowColSel_N_35)
-
-comp 21: SLICE_43 (FSLICE)
-UFMCLK_N_224 = (~InitReady*n1160+InitReady*CmdUFMCLK)
-UFMCLK_c.D = UFMCLK_N_224
-UFMCLK_c.CLK = RCLK_c
-UFMCLK_c.SP = RCLK_c_enable_24
-UFMCLK_c.LSR = n1846
-n1160 = (~FS_1*(~n2462*FS_4)+FS_1*(~n2462*FS_4+n2462*~n62))
-
-comp 22: SLICE_44 (FSLICE)
-UFMSDI_N_231 = (~CmdUFMSDI*(~InitReady*(~n2462*n2461))+CmdUFMSDI*((~n2462*n2461)+InitReady))
-UFMSDI_c.D = UFMSDI_N_231
-UFMSDI_c.CLK = RCLK_c
-UFMSDI_c.SP = RCLK_c_enable_24
-UFMSDI_c.LSR = n1846
-n2462 = (~FS_11+((n2471+n2272)+n2470))
-
-comp 23: SLICE_49 (FSLICE)
-XOR8MEG_N_110 = (~n2324*(Din_c_2*(~Din_c_3*Din_c_0)))
-XOR8MEG.D = XOR8MEG_N_110
-XOR8MEG.CLK = ~PHI2_c
-XOR8MEG.SP = PHI2_N_120_enable_1
-XOR8MEG.LSR = GND
-n2324 = (~Din_c_1*(Din_c_4+n1314)+Din_c_1*((Din_c_4+LEDEN)+n1314))
-
-comp 24: SLICE_56 (FSLICE)
-n8MEGEN_N_91 = (~n1325*(~InitReady*~UFMSDO_c+InitReady*Cmdn8MEGEN)+n1325*Cmdn8MEGEN)
-n8MEGEN.D = n8MEGEN_N_91
-n8MEGEN.CLK = RCLK_c
-n8MEGEN.SP = RCLK_c_enable_11
-n8MEGEN.LSR = GND
-n1325 = (~FS_10+(~FS_11+n2464))
-
-comp 25: SLICE_58 (FSLICE)
-nRCAS_N_161 = (((~CBR*Ready)+(n2427*~Ready)+(n2427*~CBR)+~RASr2)*nRowColSel_N_35)+((nRowColSel_N_34+~n15_adj_1+~Ready)*~nRowColSel_N_35)
-nRCAS_c.D = nRCAS_N_161
-nRCAS_c.CLK = RCLK_c
-nRCAS_c.SP = RCLK_c_enable_4
-nRCAS_c.LSR = GND
-
-comp 26: SLICE_60 (FSLICE)
-nRCS_N_136 = (~nRowColSel_N_35*(~n2467+n2481)+nRowColSel_N_35*(~n13+n2481))
-nRCS_c.D = nRCS_N_136
-nRCS_c.CLK = RCLK_c
-nRCS_c.SP = RCLK_c_enable_4
-nRCS_c.LSR = GND
-n13 = (~Ready*(InitReady*RASr2)+Ready*(RASr2+RCKE_c))
-
-comp 27: SLICE_61 (FSLICE)
-n2138 = (((nRCS_N_139*~Ready)+~n13)*nRowColSel_N_35)+((n56+nRRAS_c+n6+nRowColSel_N_32)*~nRowColSel_N_35)
-nRRAS_c.D = n2138
-nRRAS_c.CLK = RCLK_c
-nRRAS_c.SP = VCC
-nRRAS_c.LSR = GND
-
-comp 28: SLICE_63 (FSLICE)
-nRWE_N_171 = (~n2208*(~Ready*~n33+Ready*nRWE_N_178)+n2208*(~Ready+nRWE_N_178))
-nRWE_c.D = nRWE_N_171
-nRWE_c.CLK = RCLK_c
-nRWE_c.SP = RCLK_c_enable_3
-nRWE_c.LSR = GND
-n2208 = ((~InitReady+(~RASr2+~nRowColSel_N_35))+nRCS_N_139)
-
-comp 29: SLICE_64 (FSLICE)
-n1410 = (~nRowColSel_N_32*(nRowColSel+n1502)+nRowColSel_N_32*(~nRowColSel_N_28+n1502))
-nRowColSel.D = n1410
-nRowColSel.CLK = RCLK_c
-nRowColSel.SP = VCC
-nRowColSel.LSR = n2469
-RA_1_9 = (~nRowColSel*RowA_9+nRowColSel*MAin_c_9)
-
-comp 30: SLICE_65 (FSLICE)
-n1503 = (nRowColSel_N_32+nRowColSel_N_33)
-nRowColSel_N_32.D = n1503
-nRowColSel_N_32.CLK = RCLK_c
-nRowColSel_N_32.SP = VCC
-nRowColSel_N_32.LSR = ~RASr2
-n2414 = (InitReady*(Ready_N_296*(~RASr2*nRowColSel_N_32)))
-
-comp 31: SLICE_66 (FSLICE)
-n1093 = (RASr2*~nRowColSel_N_32)
-nRowColSel_N_33.D = n1093
-nRowColSel_N_33.CLK = RCLK_c
-nRowColSel_N_33.SP = VCC
-nRowColSel_N_33.LSR = ~nRowColSel_N_34
-RCLK_c_enable_4 = (((nRowColSel_N_32+n2469)+nRowColSel_N_34)+nRowColSel_N_33)
-
-comp 32: SLICE_67 (FSLICE)
-n11 = (~CASr2+nRowColSel_N_33)
-nRowColSel_N_34.D = n1093
-nRowColSel_N_34.CLK = RCLK_c
-nRowColSel_N_34.SP = VCC
-nRowColSel_N_34.LSR = ~nRowColSel_N_35
-n1417 = (~n2472*nUFMCS_c+n2472*~CmdUFMCS)
-
-comp 33: SLICE_68 (FSLICE)
-n2322 = (((FS_0+FS_1)+FS_6)+FS_3)
-nRowColSel_N_35.D = ~RASr2
-nRowColSel_N_35.CLK = RCLK_c
-nRowColSel_N_35.SP = VCC
-nRowColSel_N_35.LSR = GND
-n2471 = (FS_17+FS_12)
-CASr3.D = CASr2
-CASr3.CLK = RCLK_c
-CASr3.SP = VCC
-CASr3.LSR = GND
-
-comp 34: SLICE_69 (FSLICE)
-n2164 = (~InitReady*n62+InitReady*n1417)
-nUFMCS_c.D = n2164
-nUFMCS_c.CLK = RCLK_c
-nUFMCS_c.SP = VCC
-nUFMCS_c.LSR = LEDEN_N_82
-n62 = (FS_14*(FS_12*(n12*FS_17)))
-
-comp 35: RCKEEN_I_0_445/SLICE_70 (FSLICE)
-RCKEEN_N_122 = (((~FWEr*~CBR)+~RASr2)*nRowColSel_N_35)+(((FWEr*n11*~CBR)+(nRowColSel_N_34*~CBR))*~nRowColSel_N_35)
-
-comp 36: i26/SLICE_71 (FSLICE)
-n13_adj_2 = ((~n2284*n2476*MAin_c_1*MAin_c_0)*Din_c_2)+((~ADSubmitted*~MAin_c_0*n2475*~Din_c_5)*~Din_c_2)
-
-comp 37: i2099/SLICE_72 (FSLICE)
-n2481 = (((nRowColSel_N_35*~Ready*nRCS_N_139)+(nRowColSel_N_34*~Ready*nRCS_N_139)+(~nRowColSel_N_35*~Ready)+(nRowColSel_N_34*~nRowColSel_N_35))*n15_adj_1)+(((~Ready*nRCS_N_139)+~nRowColSel_N_35)*~n15_adj_1)
-
-comp 38: i26_adj_28/SLICE_73 (FSLICE)
-n15 = ((MAin_c_0*Din_c_2*Din_c_3*~Din_c_6)*Din_c_5)+((~MAin_c_0*~Din_c_2*~Din_c_3*Din_c_6)*~Din_c_5)
-
-comp 39: SLICE_74 (FSLICE)
-n1 = (~CASr3*(CASr2*(FWEr*~CBR)))
-RASr2.D = RASr
-RASr2.CLK = RCLK_c
-RASr2.SP = VCC
-RASr2.LSR = GND
-n15_adj_1 = (~n1*(nRowColSel_N_33*(~CBR*~FWEr))+n1*(~nRowColSel_N_33+(~CBR*~FWEr)))
-RASr3.D = RASr2
-RASr3.CLK = RCLK_c
-RASr3.SP = VCC
-RASr3.LSR = GND
-
-comp 40: SLICE_75 (FSLICE)
-n2214 = (FS_11*(~n2272*(~n2328*FS_10)))
-RCLK_c_enable_12 = (~InitReady*(FS_11*n2214))
-
-comp 41: SLICE_76 (FSLICE)
-PHI2_N_120_enable_4 = (n2458*(~Din_c_4*~Din_c_5+Din_c_4*(~Din_c_5+Din_c_3)))
-n732.D = n733
-n732.CLK = RCLK_c
-n732.SP = RCLK_c_enable_23
-n732.LSR = GND
-n2458 = (MAin_c_0*(n10*(~n1326*~nFWE_c)))
-nRWE_N_177.D = n732
-nRWE_N_177.CLK = RCLK_c
-nRWE_N_177.SP = RCLK_c_enable_23
-nRWE_N_177.LSR = GND
-
-comp 42: SLICE_77 (FSLICE)
-n2290 = ((FS_2+FS_5)+FS_9)
-n728.D = n729
-n728.CLK = RCLK_c
-n728.SP = RCLK_c_enable_23
-n728.LSR = GND
-n8 = (~FS_7*(~n2322*(FS_4*~n2290)))
-n727.D = n728
-n727.CLK = RCLK_c
-n727.SP = RCLK_c_enable_23
-n727.LSR = GND
-
-comp 43: SLICE_78 (FSLICE)
-n1846 = (~InitReady*(~n2464*~FS_11))
-RowA_6.D = MAin_c_6
-RowA_6.CLK = ~nCRAS_c
-RowA_6.SP = VCC
-RowA_6.LSR = ~Ready
-n2464 = (((FS_16+FS_14)+n2272)+n2471)
-RowA_7.D = MAin_c_7
-RowA_7.CLK = ~nCRAS_c
-RowA_7.SP = VCC
-RowA_7.LSR = ~Ready
-
-comp 44: SLICE_79 (FSLICE)
-C1Submitted_N_237 = (n2468*(~n1280*(n2463*~Din_c_2)))
-CASr.D = ~nCCAS_c
-CASr.CLK = RCLK_c
-CASr.SP = VCC
-CASr.LSR = GND
-n2468 = (~Din_c_5*(~Din_c_3*Din_c_6))
+RCKEEN_8_u_1 = (~S[1]*(~FWEr_fast+CO0)+S[1]*(FWEr_fast*(~CO0+~CASr2)))
 PHI2r2.D = PHI2r
 PHI2r2.CLK = RCLK_c
 PHI2r2.SP = VCC
 PHI2r2.LSR = GND
 
-comp 45: SLICE_80 (FSLICE)
-RCLK_c_enable_3 = (((~Ready+nRowColSel_N_32)+n1502)+nRowColSel_N_35)
-n726.D = n727
-n726.CLK = RCLK_c
-n726.SP = RCLK_c_enable_23
-n726.LSR = GND
-n1502 = (nRowColSel_N_34+nRowColSel_N_33)
-Ready_N_296.D = n726
-Ready_N_296.CLK = RCLK_c
-Ready_N_296.SP = RCLK_c_enable_23
-Ready_N_296.LSR = GND
-
-comp 46: SLICE_81 (FSLICE)
-n26 = (~Bank_5+(~n2278+(~n2314+Bank_2)))
-CmdUFMCLK.D = Din_c_1
-CmdUFMCLK.CLK = ~PHI2_c
-CmdUFMCLK.SP = PHI2_N_120_enable_6
-CmdUFMCLK.LSR = GND
-n2278 = (Bank_3*Bank_6)
-CmdUFMCS.D = Din_c_2
-CmdUFMCS.CLK = ~PHI2_c
-CmdUFMCS.SP = PHI2_N_120_enable_6
-CmdUFMCS.LSR = GND
-
-comp 47: SLICE_82 (FSLICE)
-n2460 = (nFWE_c+n1326)
-n730.D = nRWE_N_177
-n730.CLK = RCLK_c
-n730.SP = RCLK_c_enable_23
-n730.LSR = GND
-PHI2_N_120_enable_7 = (~MAin_c_1*(~n14*(~n2460*MAin_c_0))+MAin_c_1*(~n14*~n2460))
-n729.D = n730
-n729.CLK = RCLK_c
-n729.SP = RCLK_c_enable_23
-n729.LSR = GND
-
-comp 48: SLICE_83 (FSLICE)
-n10 = (~MAin_c_1*(CmdEnable*(~n2478*Din_c_4)))
-RASr.D = ~nCRAS_c
-RASr.CLK = RCLK_c
-RASr.SP = VCC
-RASr.LSR = GND
-PHI2_N_120_enable_6 = (n2476*(~n2460*(n10*MAin_c_0)))
-
-comp 49: SLICE_84 (FSLICE)
-n2262 = ((~MAin_c_0+n1326)+MAin_c_1)
-n738.D = nRCAS_N_165
-n738.CLK = RCLK_c
-n738.SP = RCLK_c_enable_23
-n738.LSR = GND
-PHI2_N_120_enable_1 = (~n1314*(~n2262*(CmdEnable*~n2473)))
-n737.D = n738
-n737.CLK = RCLK_c
-n737.SP = RCLK_c_enable_23
-n737.LSR = GND
-
-comp 50: SLICE_85 (FSLICE)
-n2473 = (Din_c_4+nFWE_c)
-RBA_c_0.D = CROW_c_0
-RBA_c_0.CLK = ~nCRAS_c
-RBA_c_0.SP = VCC
-RBA_c_0.LSR = ~Ready
-n2242 = (n2474*(Din_c_5*(n2253*~n2473)))
-RBA_c_1.D = CROW_c_1
-RBA_c_1.CLK = ~nCRAS_c
-RBA_c_1.SP = VCC
-RBA_c_1.LSR = ~Ready
-
-comp 51: SLICE_86 (FSLICE)
-n2463 = (n2253*(~nFWE_c*~Din_c_4))
-n734.D = n735
-n734.CLK = RCLK_c
-n734.SP = RCLK_c_enable_23
-n734.LSR = GND
-n2253 = (~Din_c_1*(Din_c_0*Din_c_7))
-n733.D = n734
-n733.CLK = RCLK_c
-n733.SP = RCLK_c_enable_23
-n733.LSR = GND
-
-comp 52: SLICE_87 (FSLICE)
-RCLK_c_enable_11 = (~n8*(InitReady*n2472)+n8*(~InitReady*n7+InitReady*n2472))
-nRCS_N_139.D = Ready_N_296
-nRCS_N_139.CLK = RCLK_c
-nRCS_N_139.SP = RCLK_c_enable_23
-nRCS_N_139.LSR = GND
-n7 = (n2214*~FS_8)
-nRCAS_N_165.D = nRCS_N_139
-nRCAS_N_165.CLK = RCLK_c
-nRCAS_N_165.SP = RCLK_c_enable_23
-nRCAS_N_165.LSR = GND
-
-comp 53: SLICE_88 (FSLICE)
-n2451 = (~FS_8*(~FS_5*(~FS_9*FS_7)+FS_5*(FS_9@FS_7)))
-Bank_0.D = Din_c_0
-Bank_0.CLK = PHI2_c
-Bank_0.SP = VCC
-Bank_0.LSR = GND
-n2461 = (~FS_10*(FS_6*n2451))
-Bank_1.D = Din_c_1
-Bank_1.CLK = PHI2_c
-Bank_1.SP = VCC
-Bank_1.LSR = GND
-
-comp 54: SLICE_89 (FSLICE)
-n1280 = ((~MAin_c_1+n1326)+MAin_c_0)
-WRD_0.D = Din_c_0
-WRD_0.CLK = ~nCCAS_c
-WRD_0.SP = VCC
-WRD_0.LSR = GND
-n2459 = (MAin_c_1*(~n1326*~nFWE_c))
-WRD_1.D = Din_c_1
-WRD_1.CLK = ~nCCAS_c
-WRD_1.SP = VCC
-WRD_1.LSR = GND
-
-comp 55: SLICE_90 (FSLICE)
-n2470 = (FS_16+FS_14)
-RowA_8.D = MAin_c_8
-RowA_8.CLK = ~nCRAS_c
-RowA_8.SP = VCC
-RowA_8.LSR = ~Ready
-n2328 = (((FS_17+FS_12)+FS_14)+FS_16)
-RowA_9.D = MAin_c_9
-RowA_9.CLK = ~nCRAS_c
-RowA_9.SP = VCC
-RowA_9.LSR = ~Ready
-
-comp 56: SLICE_91 (FSLICE)
-PHI2_N_120_enable_5 = (n2458*(~Din_c_5*Din_c_4+Din_c_5*(Din_c_4*Din_c_3)))
-PHI2r3.D = PHI2r2
-PHI2r3.CLK = RCLK_c
-PHI2r3.SP = VCC
-PHI2r3.LSR = GND
-n2476 = (Din_c_5*Din_c_3)
+comp 23: SLICE_42 (FSLICE)
+RCKE_2 = (~RCKEEN*(RASr3*~RASr2)+RCKEEN*((RASr+RASr2)+RASr3))
+RCKE_c.D = RCKE_2
+RCKE_c.CLK = RCLK_c
+RCKE_c.SP = VCC
+RCKE_c.LSR = GND
+m18_0_a3_3 = (RASr2*(~IS[2]*(~IS[1]*IS[0])))
 PHI2r.D = PHI2_c
 PHI2r.CLK = RCLK_c
 PHI2r.SP = VCC
 PHI2r.LSR = GND
 
-comp 57: SLICE_92 (FSLICE)
-n2474 = (Din_c_3*(Din_c_2*~Din_c_6))
-WRD_6.D = Din_c_6
-WRD_6.CLK = ~nCCAS_c
-WRD_6.SP = VCC
-WRD_6.LSR = GND
-n2475 = (~Din_c_3*Din_c_6)
-WRD_7.D = Din_c_7
-WRD_7.CLK = ~nCCAS_c
-WRD_7.SP = VCC
-WRD_7.LSR = GND
+comp 24: SLICE_43 (FSLICE)
+N_462_0 = (~InitReady*Ready+InitReady*(~N_165*(Ready+Ready_0_sqmuxa_0_a3_2)+N_165*Ready))
+Ready.D = N_462_0
+Ready.CLK = RCLK_c
+Ready.SP = VCC
+Ready.LSR = GND
+RCKEEN_8_u_0_0 = (~S_0_i_o2[1]*(~InitReady*(~RASr2*Ready)+InitReady*(~RASr2+~Ready))+S_0_i_o2[1]*(InitReady*~Ready))
+PHI2r3.D = PHI2r2
+PHI2r3.CLK = RCLK_c
+PHI2r3.SP = VCC
+PHI2r3.LSR = GND
 
-comp 58: SLICE_93 (FSLICE)
-RDQMH_c = (~nRowColSel+MAin_c_9)
-CmdUFMSDI.D = Din_c_0
+comp 25: SLICE_44 (FSLICE)
+N_463_0 = (Ready_0_sqmuxa+Ready_fast)
+Ready_fast.D = N_463_0
+Ready_fast.CLK = RCLK_c
+Ready_fast.SP = VCC
+Ready_fast.LSR = GND
+Ready_0_sqmuxa = (Ready_0_sqmuxa_0_a3_2*(~Ready*(~N_165*InitReady)))
+RASr.D = ~nCRAS_c
+RASr.CLK = RCLK_c
+RASr.SP = VCC
+RASr.LSR = GND
+
+comp 26: SLICE_50 (FSLICE)
+S_0_i_o2[1] = (CO0+S[1])
+S[1].D = S_0_i_o2[1]
+S[1].CLK = RCLK_c
+S[1].SP = VCC
+S[1].LSR = ~RASr2
+nRRAS_0_sqmuxa = (~CO0*(~S[1]*Ready))
+
+comp 27: SLICE_51 (FSLICE)
+UFMCLK_RNO = (~UFMCLK_r_i_m4_xx_mm_1*(~UFMCLK_c*(~nUFMCS15*N_139_i)+UFMCLK_c*~nUFMCS15)+UFMCLK_r_i_m4_xx_mm_1*(UFMCLK_c*(~nUFMCS15*~N_139_i)))
+UFMCLK_c.D = UFMCLK_RNO
+UFMCLK_c.CLK = RCLK_c
+UFMCLK_c.SP = VCC
+UFMCLK_c.LSR = GND
+UFMCLK_r_i_m4_xx_mm_1 = (~N_129*((~CmdUFMCLK+~InitReady)+UFMCLK_r_i_a2_2_2)+N_129*((~CmdUFMCLK*InitReady)+UFMCLK_r_i_a2_2_2))
+RASr2.D = RASr
+RASr2.CLK = RCLK_c
+RASr2.SP = VCC
+RASr2.LSR = GND
+
+comp 28: SLICE_52 (FSLICE)
+UFMSDI_RNO = (~UFMSDI_r_xx_mm_1*(UFMSDI_c*(~nUFMCS15*~N_139_i))+UFMSDI_r_xx_mm_1*(~UFMSDI_c*(~nUFMCS15*N_139_i)+UFMSDI_c*~nUFMCS15))
+UFMSDI_c.D = UFMSDI_RNO
+UFMSDI_c.CLK = RCLK_c
+UFMSDI_c.SP = VCC
+UFMSDI_c.LSR = GND
+N_139_i = (~PHI2r3*~InitReady+PHI2r3*(~PHI2r2*(~InitReady+CmdSubmitted)+PHI2r2*~InitReady))
+RASr3.D = RASr2
+RASr3.CLK = RCLK_c
+RASr3.SP = VCC
+RASr3.LSR = GND
+
+comp 29: SLICE_55 (FSLICE)
+RA_c[4] = (~nRowColSel*RowA[4]+nRowColSel*MAin_c[4])
+WRD[4].D = Din_c[4]
+WRD[4].CLK = ~nCCAS_c
+WRD[4].SP = VCC
+WRD[4].LSR = GND
+WRD[5].D = Din_c[5]
+WRD[5].CLK = ~nCCAS_c
+WRD[5].SP = VCC
+WRD[5].LSR = GND
+
+comp 30: SLICE_56 (FSLICE)
+N_126 = (~FS[9]*FS[7]+FS[9]*(~FS[7]*FS[5]))
+WRD[6].D = Din_c[6]
+WRD[6].CLK = ~nCCAS_c
+WRD[6].SP = VCC
+WRD[6].LSR = GND
+C1WR_0_a2_0_11 = (Bank[7]*(Bank[6]*(Bank[5]*~Bank[2])))
+WRD[7].D = Din_c[7]
+WRD[7].CLK = ~nCCAS_c
+WRD[7].SP = VCC
+WRD[7].LSR = GND
+
+comp 31: SLICE_57 (FSLICE)
+XOR8MEG_3 = (~XOR8MEG_3_u_0_a3_2*N_171+XOR8MEG_3_u_0_a3_2*((~LEDEN+~Din_c[1])+N_171))
+XOR8MEG.D = XOR8MEG_3
+XOR8MEG.CLK = ~PHI2_c
+XOR8MEG.SP = XOR8MEG18
+XOR8MEG.LSR = GND
+XOR8MEG_3_u_0_a3_2 = (un1_Din_4*(~Din_c[3]*(Din_c[2]*Din_c[0])))
+
+comp 32: SLICE_58 (FSLICE)
+N_69 = (~UFMSDO_c*(~InitReady+Cmdn8MEGEN)+UFMSDO_c*(InitReady*Cmdn8MEGEN))
+n8MEGEN.D = N_69
+n8MEGEN.CLK = RCLK_c
+n8MEGEN.SP = N_31
+n8MEGEN.LSR = GND
+N_151 = (~N_51*(~InitReady*~FS[8]))
+
+comp 33: SLICE_59 (FSLICE)
+N_37_i = (~g0_1*(~S[1]*(~nRCAS_0_sqmuxa_1*N_41)+S[1]*~nRCAS_0_sqmuxa_1)+g0_1*(~nRCAS_0_sqmuxa_1*N_41))
+nRCAS_c.D = N_37_i
+nRCAS_c.CLK = RCLK_c
+nRCAS_c.SP = VCC
+nRCAS_c.LSR = GND
+N_41 = (~S[1]*((~N_160+N_155)+Ready)+S[1]*(~Ready*(~N_160+N_155)))
+
+comp 34: SLICE_60 (FSLICE)
+N_28_i = (~RCKEEN_8_u_0_a2_1_out*~N_24+RCKEEN_8_u_0_a2_1_out*(~N_28_i_1*(~N_24*CBR)+N_28_i_1*~N_24))
+nRCS_c.D = N_28_i
+nRCS_c.CLK = RCLK_c
+nRCS_c.SP = VCC
+nRCS_c.LSR = GND
+N_28_i_1 = (~CASr2*(FWEr_fast+CO0)+CASr2*(~CASr3*(CO0@FWEr_fast)+CASr3*(FWEr_fast+CO0)))
+
+comp 35: SLICE_61 (FSLICE)
+N_24_i = (~IS[0]*(~N_155*(~N_160*~nRRAS_5_u_i_0)+N_155*~nRRAS_5_u_i_0)+IS[0]*(N_155*~nRRAS_5_u_i_0))
+nRRAS_c.D = N_24_i
+nRRAS_c.CLK = RCLK_c
+nRRAS_c.SP = VCC
+nRRAS_c.LSR = GND
+nRRAS_5_u_i_0 = (Ready*(~RCKE_c*(RASr2*~S_0_i_o2[1])+RCKE_c*~S_0_i_o2[1]))
+
+comp 36: SLICE_62 (FSLICE)
+N_39_i = (~m18_0_a2_1*((~G_17_1+~FWEr)+nRCAS_0_sqmuxa_1)+m18_0_a2_1*((G_17_1*~FWEr)+nRCAS_0_sqmuxa_1))
+nRWE_c.D = N_39_i
+nRWE_c.CLK = RCLK_c
+nRWE_c.SP = VCC
+nRWE_c.LSR = GND
+nRCAS_0_sqmuxa_1 = (Ready*(RASr2*(~S_0_i_o2[1]*CBR_fast)))
+
+comp 37: SLICE_63 (FSLICE)
+nRowColSel_0_0 = (~S[1]*(~Ready*N_179+Ready*(CO0+N_179))+S[1]*(~Ready*N_179+Ready*(~CO0+N_179)))
+nRowColSel.D = nRowColSel_0_0
+nRowColSel.CLK = RCLK_c
+nRowColSel.SP = VCC
+nRowColSel.LSR = nRRAS_0_sqmuxa
+N_179 = (Ready*(FWEr*(~CBR*~CASr3)))
+
+comp 38: SLICE_64 (FSLICE)
+nUFMCS_s_0_N_5_i = (~nUFMCS_s_0_N_5_i_N_2L1*((N_139_i+nUFMCS15)+nUFMCS_c)+nUFMCS_s_0_N_5_i_N_2L1*(~nUFMCS_c*nUFMCS15+nUFMCS_c*(~N_139_i+nUFMCS15)))
+nUFMCS_c.D = nUFMCS_s_0_N_5_i
+nUFMCS_c.CLK = RCLK_c
+nUFMCS_c.SP = VCC
+nUFMCS_c.LSR = GND
+nUFMCS15 = (~N_51*(~InitReady*(~FS[11]*~FS[10])))
+
+comp 39: nRWE_RNO_1/SLICE_65 (FSLICE)
+m18_0_a2_1 = ((~RASr2*RCKE_c*~CO0*~S[1])*Ready)+((InitReady*m18_0_a3_3*~CO0*~S[1])*~Ready)
+
+comp 40: SLICE_66 (FSLICE)
+UFMCLK_r_i_a2_2_2 = (N_95_5*(N_95_3*(~InitReady*FS[16])))
+RowA[0].D = MAin_c[0]
+RowA[0].CLK = ~nCRAS_c
+RowA[0].SP = VCC
+RowA[0].LSR = ~Ready_fast
+nUFMCS_s_0_N_5_i_N_2L1 = (~UFMCLK_r_i_a2_2_2*(~InitReady+CmdUFMCS))
+RowA[1].D = MAin_c[1]
+RowA[1].CLK = ~nCRAS_c
+RowA[1].SP = VCC
+RowA[1].LSR = ~Ready_fast
+
+comp 41: SLICE_67 (FSLICE)
+XOR8MEG18 = (N_147*(~MAin_c[1]*(MAin_c[0]*CmdEnable)))
+RowA[4].D = MAin_c[4]
+RowA[4].CLK = ~nCRAS_c
+RowA[4].SP = VCC
+RowA[4].LSR = ~Ready_fast
+CmdUFMCLK_1_sqmuxa = (~Din_c[3]*(Din_c[5]*(~N_128*XOR8MEG18)))
+RowA[5].D = MAin_c[5]
+RowA[5].CLK = ~nCRAS_c
+RowA[5].SP = VCC
+RowA[5].LSR = ~Ready_fast
+
+comp 42: SLICE_68 (FSLICE)
+N_31 = (~un1_FS_14_i_a2_0_1*N_136+un1_FS_14_i_a2_0_1*(~N_137_8*N_136+N_137_8*(N_136+N_137_6)))
+un1_FS_14_i_a2_0_1 = (~FS[5]*(~FS[3]*(~FS[2]*~FS[0])))
+
+comp 43: SLICE_69 (FSLICE)
+N_33 = (~un1_FS_13_i_a2_1*N_136+un1_FS_13_i_a2_1*(~N_137_8*N_136+N_137_8*(N_136+N_137_6)))
+un1_FS_13_i_a2_1 = (FS[5]*(~FS[3]*(~FS[2]*~FS[0])))
+
+comp 44: SLICE_70 (FSLICE)
+C1WR_0_a2 = (N_147*MAin_c[1])
+Bank[0].D = Din_c[0]
+Bank[0].CLK = PHI2_c
+Bank[0].SP = VCC
+Bank[0].LSR = GND
+N_147 = (C1WR_0_a2_0_11*(C1WR_0_a2_0_10*(Bank[1]*Bank[0])))
+Bank[1].D = Din_c[1]
+Bank[1].CLK = PHI2_c
+Bank[1].SP = VCC
+Bank[1].LSR = GND
+
+comp 45: SLICE_71 (FSLICE)
+C1WR_0_a2_0_10 = (C1WR_0_a2_0_4*(C1WR_0_a2_0_3*(Bank[4]*Bank[3])))
+Bank[2].D = Din_c[2]
+Bank[2].CLK = PHI2_c
+Bank[2].SP = VCC
+Bank[2].LSR = GND
+C1WR_0_a2_0_4 = (MAin_c[7]*(MAin_c[6]*(MAin_c[5]*MAin_c[4])))
+Bank[3].D = Din_c[3]
+Bank[3].CLK = PHI2_c
+Bank[3].SP = VCC
+Bank[3].LSR = GND
+
+comp 46: SLICE_72 (FSLICE)
+N_129 = (~N_51*(FS[11]*FS[4])+N_51*FS[1])
+RowA[2].D = MAin_c[2]
+RowA[2].CLK = ~nCRAS_c
+RowA[2].SP = VCC
+RowA[2].LSR = ~Ready_fast
+N_51 = ((FS[12]+FS[16])+UFMSDI_ens2_i_o2_0_3)
+RowA[3].D = MAin_c[3]
+RowA[3].CLK = ~nCRAS_c
+RowA[3].SP = VCC
+RowA[3].LSR = ~Ready_fast
+
+comp 47: SLICE_73 (FSLICE)
+N_159 = (N_155+Ready)
+CmdUFMCLK.D = Din_c[1]
+CmdUFMCLK.CLK = ~PHI2_c
+CmdUFMCLK.SP = CmdUFMCLK_1_sqmuxa
+CmdUFMCLK.LSR = GND
+N_155 = (((~InitReady+~RASr2)+S[1])+CO0)
+CmdUFMCS.D = Din_c[2]
+CmdUFMCS.CLK = ~PHI2_c
+CmdUFMCS.SP = CmdUFMCLK_1_sqmuxa
+CmdUFMCS.LSR = GND
+
+comp 48: SLICE_74 (FSLICE)
+InitReady3 = (N_95_5*(N_95_3*(FS[16]*FS[10])))
+CmdUFMSDI.D = Din_c[0]
 CmdUFMSDI.CLK = ~PHI2_c
-CmdUFMSDI.SP = PHI2_N_120_enable_6
+CmdUFMSDI.SP = CmdUFMCLK_1_sqmuxa
 CmdUFMSDI.LSR = GND
-RDQML_c = (~nRowColSel+~MAin_c_9)
+N_95_3 = (FS[14]*FS[11])
 
-comp 59: SLICE_94 (FSLICE)
-n12 = (FS_11*(FS_16*(FS_13*FS_15)))
-n2272 = (FS_13+FS_15)
+comp 49: SLICE_75 (FSLICE)
+N_133 = (~N_128*(~Din_c[5]*~Din_c[1]))
+CASr.D = ~nCCAS_c
+CASr.CLK = RCLK_c
+CASr.SP = VCC
+CASr.LSR = GND
+N_128 = ((~Din_c[4]+Din_c[6])+Din_c[7])
+CASr2.D = CASr
+CASr2.CLK = RCLK_c
+CASr2.SP = VCC
+CASr2.LSR = GND
 
-comp 60: SLICE_95 (FSLICE)
-LEDEN_N_82 = (~InitReady*(~FS_10*(~n2464*~FS_11)))
-RowA_4.D = MAin_c_4
-RowA_4.CLK = ~nCRAS_c
-RowA_4.SP = VCC
-RowA_4.LSR = ~Ready
-RCLK_c_enable_25 = (FS_10*n62)
-RowA_5.D = MAin_c_5
-RowA_5.CLK = ~nCRAS_c
-RowA_5.SP = VCC
-RowA_5.LSR = ~Ready
+comp 50: SLICE_76 (FSLICE)
+CmdEnable16_0_a2_4 = (~MAin_c[0]*(~Din_c[3]*(~Din_c[1]*CmdEnable16_4)))
+Bank[4].D = Din_c[4]
+Bank[4].CLK = PHI2_c
+Bank[4].SP = VCC
+Bank[4].LSR = GND
+CmdEnable16_4 = (~Din_c[5]*Din_c[0])
+Bank[5].D = Din_c[5]
+Bank[5].CLK = PHI2_c
+Bank[5].SP = VCC
+Bank[5].LSR = GND
 
-comp 61: SLICE_96 (FSLICE)
-n2316 = (Bank_1*(Bank_4*(MAin_c_3*MAin_c_7)))
-RowA_2.D = MAin_c_2
-RowA_2.CLK = ~nCRAS_c
-RowA_2.SP = VCC
-RowA_2.LSR = ~Ready
-RA_1_3 = (~nRowColSel*RowA_3+nRowColSel*MAin_c_3)
-RowA_3.D = MAin_c_3
-RowA_3.CLK = ~nCRAS_c
-RowA_3.SP = VCC
-RowA_3.LSR = ~Ready
+comp 51: SLICE_77 (FSLICE)
+CmdEnable16_0_a2_5 = (MAin_c[1]*(Din_c[6]*(~Din_c[2]*CmdEnable16_1)))
+Bank[6].D = Din_c[6]
+Bank[6].CLK = PHI2_c
+Bank[6].SP = VCC
+Bank[6].LSR = GND
+CmdEnable16_1 = (Din_c[7]*~Din_c[4])
+Bank[7].D = Din_c[7]
+Bank[7].CLK = PHI2_c
+Bank[7].SP = VCC
+Bank[7].LSR = GND
 
-comp 62: SLICE_97 (FSLICE)
-n2314 = (Bank_0*(Bank_7*(MAin_c_4*MAin_c_6)))
-RowA_0.D = MAin_c_0
-RowA_0.CLK = ~nCRAS_c
-RowA_0.SP = VCC
-RowA_0.LSR = ~Ready
-RA_1_4 = (~nRowColSel*RowA_4+nRowColSel*MAin_c_4)
-RowA_1.D = MAin_c_1
-RowA_1.CLK = ~nCRAS_c
-RowA_1.SP = VCC
-RowA_1.LSR = ~Ready
-
-comp 63: SLICE_98 (FSLICE)
-RA_1_8 = (~nRowColSel*RowA_8+nRowColSel*MAin_c_8)
+comp 52: SLICE_78 (FSLICE)
+CmdEnable17_0_a2_4 = (~N_43*(MAin_c[1]*(~Din_c[6]*Din_c[2])))
 CBR.D = ~nCCAS_c
 CBR.CLK = ~nCRAS_c
 CBR.SP = VCC
 CBR.LSR = GND
-RA_1_0 = (~nRowColSel*RowA_0+nRowColSel*MAin_c_0)
+N_43 = (~Din_c[5]+~Din_c[3])
+CBR_fast.D = ~nCCAS_c
+CBR_fast.CLK = ~nCRAS_c
+CBR_fast.SP = VCC
+CBR_fast.LSR = GND
+
+comp 53: SLICE_79 (FSLICE)
+G_17_1 = (m6_0_a2_2*(S[1]*(CO0*~CBR)))
+WRD[0].D = Din_c[0]
+WRD[0].CLK = ~nCCAS_c
+WRD[0].SP = VCC
+WRD[0].LSR = GND
+m6_0_a2_2 = (Ready*(~CASr3*CASr2))
+WRD[1].D = Din_c[1]
+WRD[1].CLK = ~nCCAS_c
+WRD[1].SP = VCC
+WRD[1].LSR = GND
+
+comp 54: SLICE_80 (FSLICE)
+g0_1 = (~g4_0_0_0*(~FWEr*(~CO0*~CBR_fast))+g4_0_0_0*(~FWEr*(~CO0*~CBR_fast)+FWEr*(CO0*~CBR_fast)))
+RowA[8].D = MAin_c[8]
+RowA[8].CLK = ~nCRAS_c
+RowA[8].SP = VCC
+RowA[8].LSR = ~Ready_fast
+g4_0_0_0 = (~CASr3*CASr2)
+RowA[9].D = MAin_c[9]
+RowA[9].CLK = ~nCRAS_c
+RowA[9].SP = VCC
+RowA[9].LSR = ~Ready_fast
+
+comp 55: SLICE_81 (FSLICE)
+N_95_5 = (FS[17]*(FS[15]*(FS[13]*FS[12])))
 FWEr.D = ~nFWE_c
 FWEr.CLK = ~nCRAS_c
 FWEr.SP = VCC
 FWEr.LSR = GND
+UFMSDI_ens2_i_o2_0_3 = (((FS[13]+FS[14])+FS[15])+FS[17])
+FWEr_fast.D = ~nFWE_c
+FWEr_fast.CLK = ~nCRAS_c
+FWEr_fast.SP = VCC
+FWEr_fast.LSR = GND
 
-comp 64: SLICE_99 (FSLICE)
-RA_1_7 = (~nRowColSel*RowA_7+nRowColSel*MAin_c_7)
-Bank_6.D = Din_c_6
-Bank_6.CLK = PHI2_c
-Bank_6.SP = VCC
-Bank_6.LSR = GND
-RA_1_1 = (~nRowColSel*RowA_1+nRowColSel*MAin_c_1)
-Bank_7.D = Din_c_7
-Bank_7.CLK = PHI2_c
-Bank_7.SP = VCC
-Bank_7.LSR = GND
+comp 56: SLICE_82 (FSLICE)
+CmdSubmitted_1_sqmuxa = (~Din_c[3]*(~N_128*XOR8MEG18)+Din_c[3]*(~Din_c[5]*(~N_128*XOR8MEG18)))
+CASr3.D = CASr2
+CASr3.CLK = RCLK_c
+CASr3.SP = VCC
+CASr3.LSR = GND
+N_132 = (~Din_c[3]*(~CmdLEDEN*N_128)+Din_c[3]*(~Din_c[5]*(~CmdLEDEN*N_128)+Din_c[5]*~CmdLEDEN))
 
-comp 65: SLICE_100 (FSLICE)
-RCLK_c_enable_24 = (~InitReady+(~PHI2r2*(CmdSubmitted*PHI2r3)))
-n736.D = n737
-n736.CLK = RCLK_c
-n736.SP = RCLK_c_enable_23
-n736.LSR = GND
-n6 = (~Ready*((~InitReady+~RASr2)+nRowColSel_N_33)+Ready*nRowColSel_N_33)
-n735.D = n736
-n735.CLK = RCLK_c
-n735.SP = RCLK_c_enable_23
-n735.LSR = GND
+comp 57: SLICE_83 (FSLICE)
+N_165 = (~IS[2]+(~IS[1]+~IS[0]))
+RBA_c[0].D = CROW_c[0]
+RBA_c[0].CLK = ~nCRAS_c
+RBA_c[0].SP = VCC
+RBA_c[0].LSR = ~Ready_fast
+N_160 = ((IS[1]+IS[2])+IS[3])
+RBA_c[1].D = CROW_c[1]
+RBA_c[1].CLK = ~nCRAS_c
+RBA_c[1].SP = VCC
+RBA_c[1].LSR = ~Ready_fast
 
-comp 66: SLICE_101 (FSLICE)
-RA_1_6 = (~nRowColSel*RowA_6+nRowColSel*MAin_c_6)
-Bank_4.D = Din_c_4
-Bank_4.CLK = PHI2_c
-Bank_4.SP = VCC
-Bank_4.LSR = GND
-RA_1_2 = (~nRowColSel*RowA_2+nRowColSel*MAin_c_2)
-Bank_5.D = Din_c_5
-Bank_5.CLK = PHI2_c
-Bank_5.SP = VCC
-Bank_5.LSR = GND
+comp 58: SLICE_84 (FSLICE)
+N_137_6 = (FS[10]*(~FS[7]*(~FS[6]*~FS[1])))
+UFMSDI_ens2_i_a2_4_2 = (FS[11]*(~FS[10]*(~FS[8]*FS[6])))
 
-comp 67: SLICE_102 (FSLICE)
-n2427 = ((~InitReady+nRCS_N_139)+nRCAS_N_165)
-Bank_2.D = Din_c_2
-Bank_2.CLK = PHI2_c
-Bank_2.SP = VCC
-Bank_2.LSR = GND
-n33 = (nRCAS_N_165+nRWE_N_177)
-Bank_3.D = Din_c_3
-Bank_3.CLK = PHI2_c
-Bank_3.SP = VCC
-Bank_3.LSR = GND
+comp 59: SLICE_85 (FSLICE)
+un1_Din_4 = (~Din_c[7]*(~Din_c[6]*(~Din_c[5]*~Din_c[4])))
+WRD[2].D = Din_c[2]
+WRD[2].CLK = ~nCCAS_c
+WRD[2].SP = VCC
+WRD[2].LSR = GND
+CmdEnable17_0_a2_3 = (~Din_c[4]*(Din_c[7]*(Din_c[0]*~Din_c[1])))
+WRD[3].D = Din_c[3]
+WRD[3].CLK = ~nCCAS_c
+WRD[3].SP = VCC
+WRD[3].LSR = GND
 
-comp 68: SLICE_103 (FSLICE)
-nRowColSel_N_28 = ((~FWEr+CASr3)+CBR)
-WRD_2.D = Din_c_2
-WRD_2.CLK = ~nCCAS_c
-WRD_2.SP = VCC
-WRD_2.LSR = GND
-RA_1_5 = (~nRowColSel*RowA_5+nRowColSel*MAin_c_5)
-WRD_3.D = Din_c_3
-WRD_3.CLK = ~nCCAS_c
-WRD_3.SP = VCC
-WRD_3.LSR = GND
+comp 60: SLICE_86 (FSLICE)
+RA_c[9] = (~nRowColSel*RowA[9]+nRowColSel*MAin_c[9])
+RDQML_c = (~nRowColSel+~MAin_c[9])
 
-comp 69: SLICE_104 (FSLICE)
-nRWE_N_178 = (~nRowColSel_N_35*(~n1+n1502)+nRowColSel_N_35*nRWE_N_182)
-Ready_N_292 = (n2414+Ready)
+comp 61: SLICE_87 (FSLICE)
+N_137_8 = (N_151*(FS[11]*(~FS[9]*FS[4])))
+UFMSDI_r_xx_mm_1 = (~N_151*(~UFMSDI_ens2_i_a0*CmdUFMSDI)+N_151*~UFMSDI_ens2_i_a0)
 
-comp 70: SLICE_105 (FSLICE)
-n14 = (n13_adj_2*(~Din_c_4*n2253))
-WRD_4.D = Din_c_4
-WRD_4.CLK = ~nCCAS_c
-WRD_4.SP = VCC
-WRD_4.LSR = GND
-n984 = (nCCAS_c+nFWE_c)
-WRD_5.D = Din_c_5
-WRD_5.CLK = ~nCCAS_c
-WRD_5.SP = VCC
-WRD_5.LSR = GND
+comp 62: SLICE_88 (FSLICE)
+RD_1_i = (nCCAS_c+nFWE_c)
+RowA[6].D = MAin_c[6]
+RowA[6].CLK = ~nCRAS_c
+RowA[6].SP = VCC
+RowA[6].LSR = ~Ready_fast
+C1WR_0_a2_0_3 = (~nFWE_c*(MAin_c[3]*MAin_c[2]))
+RowA[7].D = MAin_c[7]
+RowA[7].CLK = ~nCRAS_c
+RowA[7].SP = VCC
+RowA[7].LSR = ~Ready_fast
+
+comp 63: SLICE_89 (FSLICE)
+RA_c[8] = (~nRowColSel*RowA[8]+nRowColSel*MAin_c[8])
+RDQMH_c = (~nRowColSel+MAin_c[9])
+
+comp 64: SLICE_90 (FSLICE)
+RA_c[0] = (~nRowColSel*RowA[0]+nRowColSel*MAin_c[0])
+un1_CMDWR = (~MAin_c[1]*(MAin_c[0]*N_147)+MAin_c[1]*N_147)
+
+comp 65: SLICE_91 (FSLICE)
+RA_c[1] = (~nRowColSel*RowA[1]+nRowColSel*MAin_c[1])
+RA_c[7] = (~nRowColSel*RowA[7]+nRowColSel*MAin_c[7])
+
+comp 66: SLICE_92 (FSLICE)
+RA_c[2] = (~nRowColSel*RowA[2]+nRowColSel*MAin_c[2])
+RA_c[6] = (~nRowColSel*RowA[6]+nRowColSel*MAin_c[6])
+
+comp 67: SLICE_93 (FSLICE)
+RA_c[3] = (~nRowColSel*RowA[3]+nRowColSel*MAin_c[3])
+RA_c[5] = (~nRowColSel*RowA[5]+nRowColSel*MAin_c[5])
+
+comp 68: SLICE_94 (FSLICE)
+RCKEEN_8_u_0_a2_1_out = (S[1]*Ready)
+RA_c[10].D = ~IS[0]
+RA_c[10].CLK = RCLK_c
+RA_c[10].SP = VCC
+RA_c[10].LSR = RA10s_i
+N_159_i = (~N_155*~Ready)

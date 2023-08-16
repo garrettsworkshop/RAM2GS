@@ -1,0 +1,7 @@
+C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe  -link  -top  RAM2GS  -multisrs  D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO640C\impl1\synwork\RAM2GS_LCMXO640C_impl1_comp.srs  -osyn  D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO640C\impl1\synwork\RAM2GS_LCMXO640C_impl1_mult.srs  -log  D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO640C\impl1\synlog\RAM2GS_LCMXO640C_impl1_multi_srs_gen.srr 
+relcom:C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe -link -top RAM2GS -multisrs ..\synwork\RAM2GS_LCMXO640C_impl1_comp.srs -osyn ..\synwork\RAM2GS_LCMXO640C_impl1_mult.srs -log ..\synlog\RAM2GS_LCMXO640C_impl1_multi_srs_gen.srr
+rc:0 success:1 runtime:0
+file:..\synwork\RAM2GS_LCMXO640C_impl1_comp.srs|io:i|time:1692175838|size:10551|exec:0|csum:3D60DEE8C5D91625A20313AD35E47D0F
+file:..\synwork\RAM2GS_LCMXO640C_impl1_mult.srs|io:o|time:1692175839|size:10295|exec:0|csum:
+file:..\synlog\RAM2GS_LCMXO640C_impl1_multi_srs_gen.srr|io:o|time:1692175839|size:1157|exec:0|csum:
+file:C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe|io:i|time:1628601758|size:8899584|exec:1|csum:163057E8B8449A642661642A20A2247D

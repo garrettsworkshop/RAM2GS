@@ -1,13 +1,17 @@
 [ActiveSupport TRCE]
 ; Setup Analysis
-Fmax_0 = 160.205 MHz (299.401 MHz);
-Fmax_1 = 65.729 MHz (99.079 MHz);
-Failed = 2 (Total 2);
+Fmax_0 = 55.475 MHz (2.900 MHz);
+Fmax_1 = 150.150 MHz (2.900 MHz);
+Fmax_2 = 150.150 MHz (2.900 MHz);
+Fmax_3 = 101.286 MHz (62.500 MHz);
+Failed = 0 (Total 4);
 Clock_ports = 4;
 Clock_nets = 4;
 ; Hold Analysis
-Fmax_0 = 0.304 ns (0.000 ns);
-Fmax_1 = 0.379 ns (0.000 ns);
-Failed = 0 (Total 2);
+Fmax_0 = - (-);
+Fmax_1 = - (-);
+Fmax_2 = - (-);
+Fmax_3 = - (-);
+Failed = 0 (Total 4);
 Clock_ports = 4;
 Clock_nets = 4;

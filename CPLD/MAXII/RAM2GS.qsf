@@ -51,27 +51,20 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 4
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STILL AIR"
-
-
-#set_global_assignment -name MIF_FILE "../RAM2GS.mif"
-
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS OUTPUT DRIVING GROUND"
 
 
 set_location_assignment PIN_12 -to RCLK
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RCLK
 
 set_location_assignment PIN_52 -to PHI2
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PHI2
 
 set_location_assignment PIN_67 -to nCRAS
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCRAS
 
 set_location_assignment PIN_53 -to nCCAS
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCCAS
 
 set_location_assignment PIN_48 -to nFWE
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nFWE
 
 set_location_assignment PIN_49 -to MAin[0]
 set_location_assignment PIN_51 -to MAin[1]
@@ -83,11 +76,9 @@ set_location_assignment PIN_72 -to MAin[6]
 set_location_assignment PIN_68 -to MAin[7]
 set_location_assignment PIN_73 -to MAin[8]
 set_location_assignment PIN_74 -to MAin[9]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MAin
 
 set_location_assignment PIN_54 -to CROW[0]
 set_location_assignment PIN_55 -to CROW[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CROW
 
 set_location_assignment PIN_35 -to Din[2]
 set_location_assignment PIN_36 -to Din[1]
@@ -97,7 +88,6 @@ set_location_assignment PIN_39 -to Din[4]
 set_location_assignment PIN_40 -to Din[7]
 set_location_assignment PIN_41 -to Din[6]
 set_location_assignment PIN_42 -to Din[0]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Din
 
 set_location_assignment PIN_33 -to Dout[0]
 set_location_assignment PIN_57 -to Dout[1]
@@ -107,26 +97,19 @@ set_location_assignment PIN_44 -to Dout[4]
 set_location_assignment PIN_28 -to Dout[5]
 set_location_assignment PIN_34 -to Dout[6]
 set_location_assignment PIN_43 -to Dout[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Dout
 
 set_location_assignment PIN_8 -to RCKE
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RCKE
 
 set_location_assignment PIN_3 -to nRCS
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRCS
 
 set_location_assignment PIN_100 -to nRWE
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRWE
 
 set_location_assignment PIN_6 -to nRRAS
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRRAS
 
 set_location_assignment PIN_4 -to nRCAS
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRCAS
 
 set_location_assignment PIN_5 -to RBA[0]
 set_location_assignment PIN_14 -to RBA[1]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RBA
 
 set_location_assignment PIN_18 -to RA[0]
 set_location_assignment PIN_20 -to RA[1]
@@ -140,13 +123,10 @@ set_location_assignment PIN_17 -to RA[8]
 set_location_assignment PIN_15 -to RA[9]
 set_location_assignment PIN_16 -to RA[10]
 set_location_assignment PIN_7 -to RA[11]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RA
 
 set_location_assignment PIN_2 -to RDQMH
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RDQMH
 
 set_location_assignment PIN_98 -to RDQML
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RDQML
 
 set_location_assignment PIN_96 -to RD[0]
 set_location_assignment PIN_90 -to RD[1]
@@ -156,45 +136,112 @@ set_location_assignment PIN_92 -to RD[4]
 set_location_assignment PIN_91 -to RD[5]
 set_location_assignment PIN_95 -to RD[6]
 set_location_assignment PIN_97 -to RD[7]
-set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
 
-set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCRAS
-set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCCAS
-set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to nFWE
-set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to MAin
+set_location_assignment PIN_88 -to LED
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RCLK
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PHI2
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to CROW
 set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to CROW
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCRAS
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCRAS
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nCCAS
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to nCCAS
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Din
 set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to Din
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to Dout
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to MAin
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to MAin
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nFWE
+set_instance_assignment -name PAD_TO_CORE_DELAY 1 -to nFWE
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to Dout
 set_instance_assignment -name SLOW_SLEW_RATE OFF -to Dout
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RCKE
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to RCKE
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to RCKE
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRCS
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to nRCS
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRCS
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRWE
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to nRWE
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRWE
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRRAS
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to nRRAS
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRRAS
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRCAS
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to nRCAS
-set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRCAS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to Dout
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to Dout
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to Dout
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED
+set_instance_assignment -name SLOW_SLEW_RATE ON -to LED
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to LED
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to LED
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RA
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RA
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to RA
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RA
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RBA
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RBA
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RBA
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to RBA
 set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RBA
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to RBA
 set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to RBA
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RA
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to RA
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RDQMH
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to RDQMH
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RDQML
-set_instance_assignment -name SLOW_SLEW_RATE OFF -to RDQML
-set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to RD
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRCS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRCS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRCS
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to nRCS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRCS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRCS
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RCKE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RCKE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RCKE
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to RCKE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RCKE
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to RCKE
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRRAS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRRAS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRRAS
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to nRRAS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRRAS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRRAS
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRCAS
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRCAS
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRCAS
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to nRCAS
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRCAS
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRCAS
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to nRWE
+set_instance_assignment -name SLOW_SLEW_RATE ON -to nRWE
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to nRWE
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to nRWE
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to nRWE
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to nRWE
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RDQMH
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RDQMH
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RDQMH
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to RDQMH
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RDQMH
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RDQML
+set_instance_assignment -name SLOW_SLEW_RATE ON -to RDQML
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RDQML
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY OFF -to RDQML
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RDQML
+
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to RD
 set_instance_assignment -name SLOW_SLEW_RATE ON -to RD
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to RD
+set_instance_assignment -name ENABLE_BUS_HOLD_CIRCUITRY ON -to RD
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to RD
 set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to RD
 
-set_global_assignment -name MIF_FILE ../RAM2GS.mif
+set_global_assignment -name SDC_FILE ../RAM2GS.sdc
 set_global_assignment -name VERILOG_FILE "../RAM2GS-MAX.v"
 set_global_assignment -name QIP_FILE UFM.qip
-set_location_assignment PIN_88 -to LED
+set_global_assignment -name MIF_FILE ../RAM2GS.mif
+set_global_assignment -name SDC_FILE "../RAM2GS-MAX.sdc"
