@@ -61,7 +61,6 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     assign RD[7:0] = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
 
     /* UFM Interface */
-    reg wb_clk;
     reg wb_rst;
     reg wb_cyc_stb;
     reg wb_we;
@@ -71,7 +70,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     wire [7:0] wb_dato;
 	wire ufm_irq;
     REFB ufmefb (
-        .wb_clk_i(wb_clk),
+        .wb_clk_i(RCLK),
         .wb_rst_i(wb_rst),
         .wb_cyc_i(wb_cyc_stb),
         .wb_stb_i(wb_cyc_stb),
@@ -85,7 +84,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg C1Submitted = 0;
     reg ADSubmitted = 0;
     reg CmdEnable = 0;
-    reg CmdSubmitted = 0;
+    reg CmdValid = 0;
     reg Cmdn8MEGEN = 0;
     reg CmdLEDEN = 0;
     reg CmdUFMData = 0;
@@ -326,75 +325,80 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
             // if (Din[7:4]==4'h0 && Din[3:2]==2'b01) begin // LCMXO / iCE40 / AGM
             if (Din[7:4]==4'h0 && Din[3:2]==2'b10) begin // LCMXO2
                 XOR8MEG <= Din[0] && !(LEDEN && Din[1]);
+                CmdValid <= 1'b0;
             end else if (Din[7:4]==4'h0) begin // Unsupported type 
                 XOR8MEG <= 0;
+                CmdValid <= 1'b0;
             end else if (Din[7:4]==4'h1) begin
                 CmdLEDEN <= Din[1];
                 Cmdn8MEGEN <= ~Din[0];
-                CmdSubmitted <= 1'b1;
+                CmdUFMShift <= 1'b0;
+                CmdUFMWrite <= 1'b0;
+                CmdValid <= 1'b1;
             end else if (Din[7:4]==4'h2) begin
                 // Reserved for MAX commands
+                CmdValid <= 1'b0;
             end else if (Din[7:4]==4'h3 && !Din[3]) begin
                 // Reserved for SPI (LCMXO, iCE40) commands
                 // Din[2] - CS
                 // Din[1] - SCK
                 // Din[0] - SDI
+                CmdValid <= 1'b0;
             end else if (Din[7:4]==4'h3 &&  Din[3]) begin
                 // LCMXO2 commands
                 // Din[1] - Shift when low, execute when high
                 // Din[0] - Shift data
-				CMDUFMWrite <= Din[1];
+                CmdUFMShift <= !Din[1];
+                CmdUFMWrite <= Din[1:0] == 2'b10;
 				CmdUFMData <= Din[0];
                 CmdLEDEN <= LEDEN;
                 Cmdn8MEGEN <= n8MEGEN;
-                CmdSubmitted <= 1'b1;
-            end
-        end
+                CmdValid <= 1'b1;
+            end else CmdValid <= 1'b0;
+        end else CmdValid <= 1'b0;
     end
 
     /* UFM Control */
     always @(posedge RCLK) begin
         if (~InitReady && FS[17:10]==8'h00) begin
-            wb_clk <= 1'b0;
             wb_rst <= ~FS[9];
             wb_cyc_stb <= 1'b0;
             wb_we <= 1'b0;
             wb_adr[7:0] <= 8'h00;
             wb_dati[7:0] <= 8'h00;
         end else if (~InitReady && FS[17:10]==8'h01) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h10;
                 end 5'h01: begin // Enable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h74;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h02: begin // Enable configuration interface - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h08;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h03: begin // Enable configuration interface - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h04: begin // Enable configuration interface - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -403,59 +407,58 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady && FS[17:10]==8'h02) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+
                 end 5'h01: begin // Poll status register - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h3C;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h02: begin // Poll status register - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+
                 end 5'h03: begin // Poll status register - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h04: begin // Poll status register - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+
                 end 5'h05: begin // Read status register 1/4
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h3C;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h06: begin // Read status register 2/4
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+
                 end 5'h07: begin // Read status register 3/4
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h08: begin // Read status register 4/4
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -464,59 +467,58 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady && FS[17:10]==8'h03) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h01: begin // Set UFM address - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hB4;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h02: begin // Set UFM address - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h03: begin // Set UFM address - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h04: begin // Set UFM address - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h05: begin // Set UFM address - data 1/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h40;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h06: begin // Set UFM address - data 2/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h07: begin // Set UFM address - data 3/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h08: begin // Set UFM address - data 4/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h01;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -525,41 +527,40 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady && FS[17:10]==8'h04) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h01: begin // Read UFM page - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hCA;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h02: begin // Read UFM page - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h10;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h03: begin // Read UFM page - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h04: begin // Read UFM page - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h01;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h05: begin // Read UFM page - data 1/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                     
-                    if (FS[4:0]==5'h0C) begin
+                    if (FS[4:0]==5'h1F) begin
                         LEDEN <= wb_dato[1];
                         n8MEGEN <= wb_dato[0];
                     end
@@ -567,82 +568,82 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h07: begin // Read UFM page - data 3/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h08: begin // Read UFM page - data 4/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h09: begin // Read UFM page - data 5/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0A: begin // Read UFM page - data 6/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0B: begin // Read UFM page - data 7/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0C: begin // Read UFM page - data 8/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0D: begin // Read UFM page - data 9/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0E: begin // Read UFM page - data 10/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h0F: begin // Read UFM page - data 11/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h10: begin // Read UFM page - data 12/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h11: begin // Read UFM page - data 13/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h12: begin // Read UFM page - data 14/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h13: begin // Read UFM page - data 15/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h14: begin // Read UFM page - data 16/16
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -651,34 +652,33 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady && FS[17:10]==8'h05) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h01: begin // Disable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h26;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h02: begin // Disable configuration interface - operand 1/2
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h03: begin // Disable configuration interface - operand 2/2
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -687,24 +687,23 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady && FS[17:10]==8'h06) begin
-            wb_clk <= FS[2];
             wb_rst <= 1'b0;
             case (FS[9:5])
                 5'h00: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h01: begin // Disable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hFF;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end 5'h1F: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= ~FS[4];
+                    wb_cyc_stb <= FS[4:0]==5'h00;
                 end default: begin
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h00;
@@ -713,23 +712,22 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 end
             endcase
         end else if (~InitReady) begin
-            wb_clk <= 1'b0;
             wb_rst <= 1'b0;
             wb_cyc_stb <= 1'b0;
             wb_we <= 1'b0;
             wb_adr[7:0] <= 8'h00;
             wb_dati[7:0] <= 8'h00;
-        end else if (~PHI2r2 & PHI2r3 & CmdSubmitted) begin
+        end else if (~PHI2r2 & PHI2r3 & CmdValid) begin
+            wb_rst <= 1'b0;
             // Set user command signals after PHI2 falls
             LEDEN <= CmdLEDEN;
             n8MEGEN <= Cmdn8MEGEN;
-            if (!CMDUFMWrite) begin
+            if (CmdUFMShift) begin
                 wb_adr[7:0] <= { wb_adr[6:0], wb_dati[7] };
                 wb_dati[7:0] <= { wb_dati[6:0], wb_we };
-                wb_we <= wb_cyc_stb;
-                wb_cyc_stb <= CmdUFMData;
-                wb_clk <= 1'b0;
-            end else wb_clk <= 1'b1;
-        end
+                wb_we <= CmdUFMData;
+            end
+            if (CmdUFMWrite) wb_cyc_stb <= 1;
+        end else wb_cyc_stb <= 0;
     end
 endmodule
