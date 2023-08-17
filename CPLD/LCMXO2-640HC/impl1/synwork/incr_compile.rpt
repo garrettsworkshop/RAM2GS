@@ -22,7 +22,7 @@ Modules that may have changed as a result of file changes: 0
 MID:  lib.cell.view
 
 *******************************************************************
-Unmodified files: 7
+Unmodified files: 8
 FID:  path (timestamp)
 0        C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v (2021-08-10 09:11:08)
 1        C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v (2021-08-10 09:11:08)
@@ -30,9 +30,11 @@ FID:  path (timestamp)
 3        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v (2021-08-10 09:07:02)
 4        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh (2021-08-10 09:07:02)
 5        C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v (2021-08-10 09:07:02)
-6        D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v (2023-08-15 23:09:54)
+7        D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\REFB.v (2023-08-16 20:52:02)
+6        D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v (2023-08-16 20:58:34)
 
 *******************************************************************
-Unchanged modules: 1
+Unchanged modules: 2
 MID:  lib.cell.view
 0        work.RAM2GS.verilog
+1        work.REFB.verilog

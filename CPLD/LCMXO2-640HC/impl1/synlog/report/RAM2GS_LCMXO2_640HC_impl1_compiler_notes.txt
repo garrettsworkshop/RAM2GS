@@ -1,5 +1,0 @@
-@N|Running in 64-bit mode
-@N|Running in 64-bit mode
-@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":1:7:1:12|Synthesizing module RAM2GS in library work.
-@N|Running in 64-bit mode
-
