@@ -1,0 +1,485 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+            Lattice Mapping Report File for Design Module 'RAM2GS'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO2 -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial
+     LCMXO2_640HC_impl1.ngd -o LCMXO2_640HC_impl1_map.ncd -pr
+     LCMXO2_640HC_impl1.prf -mp LCMXO2_640HC_impl1.mrp -lpf D:/OneDrive/Document
+     s/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1_synplify.lpf
+     -lpf D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf -c 0 -gui
+     -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-640HCTQFP100
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
+Mapped on:  08/16/23  20:59:36
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    109 out of   877 (12%)
+      PFU registers:           84 out of   640 (13%)
+      PIO registers:           25 out of   237 (11%)
+   Number of SLICEs:       117 out of   320 (37%)
+      SLICEs as Logic/ROM:    117 out of   320 (37%)
+      SLICEs as RAM:            0 out of   240 (0%)
+      SLICEs as Carry:         10 out of   320 (3%)
+   Number of LUT4s:        230 out of   640 (36%)
+      Number used as logic LUTs:        210
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       20
+      Number used as shift registers:     0
+   Number of PIO sites used: 63 + 4(JTAG) out of 79 (85%)
+   Number of block RAMs:  0 out of 2 (0%)
+   Number of GSRs:        0 out of 1 (0%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  5
+     Net PHI2_c: 19 loads, 9 rising, 10 falling (Driver: PIO PHI2 )
+     Net RCLK_c: 46 loads, 46 rising, 0 falling (Driver: PIO RCLK )
+     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: wb_clk )
+     Net nCRAS_c: 10 loads, 0 rising, 10 falling (Driver: PIO nCRAS )
+     Net nCCAS_c: 8 loads, 0 rising, 8 falling (Driver: PIO nCCAS )
+   Number of Clock Enables:  7
+     Net N_245_i: 1 loads, 1 LSLICEs
+     Net CMDUFMWrite_1_sqmuxa: 2 loads, 2 LSLICEs
+
+     Net InitReady: 1 loads, 1 LSLICEs
+     Net un1_wb_clk32_i: 10 loads, 10 LSLICEs
+     Net N_18: 2 loads, 2 LSLICEs
+     Net XOR8MEG18: 3 loads, 3 LSLICEs
+     Net N_193_i: 2 loads, 2 LSLICEs
+   Number of LSRs:  5
+     Net RA10s_i: 1 loads, 0 LSLICEs
+     Net wb_clk23: 3 loads, 3 LSLICEs
+     Net wb_rst: 1 loads, 0 LSLICEs
+     Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net RASr2: 2 loads, 2 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net InitReady: 42 loads
+     Net FS[12]: 27 loads
+     Net FS[10]: 25 loads
+     Net FS[11]: 22 loads
+     Net FS[7]: 17 loads
+     Net FS[6]: 16 loads
+     Net Ready: 15 loads
+     Net Ready_fast: 14 loads
+     Net nRowColSel: 12 loads
+     Net S[1]: 12 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
+     temporarily disable certain features of the device including Power
+     Controller, GSR, Hardened User SPI Port, Hardened Primary User I2C Port.
+     Functionality is restored after the Flash Memory (UFM/Configuration)
+     Interface is disabled using Disable Configuration Interface command 0x26
+     followed by Bypass command 0xFF. 
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| RD[0]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| Dout[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PHI2                | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| RDQML               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+| RDQMH               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nRCAS               | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| nRRAS               | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| nRWE                | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RCKE                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RCLK                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nRCS                | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[7]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[6]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[5]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[4]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[3]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[2]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[1]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RA[11]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RA[10]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RA[9]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[8]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[7]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[6]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[5]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[4]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[3]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[2]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[1]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[0]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RBA[1]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RBA[0]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+
+| LED                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nFWE                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nCRAS               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nCCAS               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Din[7]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[6]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[5]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[4]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[3]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[2]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[1]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[0]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| CROW[1]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| CROW[0]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[9]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[8]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[7]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[6]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[5]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[4]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[3]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+| MAin[2]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[1]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| MAin[0]             | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal nCRAS_c_i was merged into signal nCRAS_c
+Signal RASr2_i was merged into signal RASr2
+Signal InitReady_i was merged into signal InitReady
+Signal XOR8MEG.CN was merged into signal PHI2_c
+Signal GND undriven or does not drive anything - clipped.
+Signal ufmefb/VCC undriven or does not drive anything - clipped.
+Signal ufmefb/GND undriven or does not drive anything - clipped.
+Signal FS_s_0_S1[17] undriven or does not drive anything - clipped.
+Signal FS_s_0_COUT[17] undriven or does not drive anything - clipped.
+Signal ufmefb/CFGSTDBY undriven or does not drive anything - clipped.
+Signal ufmefb/CFGWAKE undriven or does not drive anything - clipped.
+Signal ufmefb/wbc_ufm_irq undriven or does not drive anything - clipped.
+Signal ufmefb/TCOC undriven or does not drive anything - clipped.
+Signal ufmefb/TCINT undriven or does not drive anything - clipped.
+Signal ufmefb/SPIIRQO undriven or does not drive anything - clipped.
+Signal ufmefb/SPICSNEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN7 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN6 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN5 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN4 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN3 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN2 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN1 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN0 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMOSIEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMOSIO undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMISOEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMISOO undriven or does not drive anything - clipped.
+Signal ufmefb/SPISCKEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPISCKO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2IRQO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1IRQO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SDAOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SDAO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SCLOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SCLO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SDAOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SDAO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SCLOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SCLO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO1 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO2 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO3 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO4 undriven or does not drive anything - clipped.
+
+Signal ufmefb/PLLDATO5 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO6 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO7 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO1 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO2 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO3 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO4 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLWEO undriven or does not drive anything - clipped.
+Signal ufmefb/PLL1STBO undriven or does not drive anything - clipped.
+Signal ufmefb/PLL0STBO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLRSTO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLCLKO undriven or does not drive anything - clipped.
+Signal ufmefb/wb_ack_o undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[2] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[3] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[4] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[5] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[6] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[7] undriven or does not drive anything - clipped.
+Signal FS_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Block nCRAS_pad_RNIBPVB was optimized away.
+Block RASr2_RNIAFR1 was optimized away.
+Block wb_rst_RNO_0 was optimized away.
+Block XOR8MEG.CN was optimized away.
+Block GND was optimized away.
+Block ufmefb/VCC was optimized away.
+Block ufmefb/GND was optimized away.
+
+     
+
+
+
+<A name="mrp_efb"></A><B><U><big>Embedded Functional Block Connection Summary</big></U></B>
+
+   Desired WISHBONE clock frequency: 62.5 MHz
+   Clock source:                     wb_clk
+   Reset source:                     wb_rst
+   Functions mode:
+      I2C #1 (Primary) Function:     DISABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                ENABLED
+      PLL0 Connection:               DISABLED
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      None
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Initialized UFM Pages:  1 Pages (1*128 Bits)
+      Available General
+      Purpose Flash Memory:   191 Pages (191*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: ufmefb/EFBInst_0
+         Type: EFB
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 37 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

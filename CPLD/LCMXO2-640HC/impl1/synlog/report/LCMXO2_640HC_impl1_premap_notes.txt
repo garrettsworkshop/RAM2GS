@@ -1,0 +1,23 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "0" on instance InitReady.
+@N: FX493 |Applying initial value "0" on instance Ready.
+@N: FX493 |Applying initial value "0" on instance RCKE.
+@N: FX493 |Applying initial value "1" on instance nRCAS.
+@N: FX493 |Applying initial value "0" on instance CmdLEDEN.
+@N: FX493 |Applying initial value "0" on instance Cmdn8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRCS.
+@N: FX493 |Applying initial value "0" on instance LEDEN.
+@N: FX493 |Applying initial value "0" on instance n8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRRAS.
+@N: FX493 |Applying initial value "0" on instance CMDUFMWrite.
+@N: FX493 |Applying initial value "0" on instance CmdUFMData.
+@N: FX493 |Applying initial value "0" on instance C1Submitted.
+@N: FX493 |Applying initial value "0" on instance CmdSubmitted.
+@N: FX493 |Applying initial value "0" on instance ADSubmitted.
+@N: FX493 |Applying initial value "0" on instance XOR8MEG.
+@N: FX493 |Applying initial value "0" on instance CmdEnable.
+@N: FX493 |Applying initial value "1" on instance nRWE.
+@N: FX1184 |Applying syn_allowed_resources blockrams=2 on top level netlist RAM2GS 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.

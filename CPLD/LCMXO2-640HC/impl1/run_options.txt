@@ -1,12 +1,13 @@
 #--  Synopsys, Inc.
 #--  Version R-2021.03L-SP1
 #--  Project file D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\run_options.txt
-#--  Written on Tue Aug 15 23:12:41 2023
+#--  Written on Wed Aug 16 20:59:29 2023
 
 
 #project files
 add_file -constraint "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS.sdc"
-add_file -verilog -vlog_std v2001 "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-SPI.v"
+add_file -verilog -vlog_std v2001 "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.v"
+add_file -verilog -vlog_std v2001 "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/REFB.v"
 
 
 #implementation: "impl1"
@@ -16,7 +17,6 @@ impl -add impl1 -type fpga
 #implementation attributes
 
 set_option -vlog_std v2001
-set_option -num_critical_paths 3
 set_option -project_relative_includes 1
 set_option -include_path {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC}
 
@@ -35,7 +35,7 @@ set_option -distributed_compile 0
 set_option -hdl_strict_syntax 0
 
 # mapper_without_write_options
-set_option -frequency 70
+set_option -frequency 100
 set_option -srs_instrumentation 1
 
 # mapper_options
@@ -47,8 +47,8 @@ set_option -write_vhdl 0
 set_option -maxfan 1000
 set_option -disable_io_insertion 0
 set_option -retiming 0
-set_option -pipe 0
-set_option -forcegsr auto
+set_option -pipe 1
+set_option -forcegsr false
 set_option -fix_gated_and_generated_clocks 1
 set_option -rw_check_on_ram 1
 set_option -update_models_cp 0
@@ -74,8 +74,8 @@ set_option -auto_infer_blackbox 0
 set_option -write_apr_constraint 1
 
 #set result format/file last
-project -result_file "./RAM2GS_LCMXO2_640HC_impl1.edi"
+project -result_file "./LCMXO2_640HC_impl1.edi"
 
 #set log file 
-set_option log_file "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/RAM2GS_LCMXO2_640HC_impl1.srf" 
+set_option log_file "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1.srf" 
 impl -active "impl1"

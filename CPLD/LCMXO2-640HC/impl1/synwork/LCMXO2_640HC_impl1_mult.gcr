@@ -1,0 +1,26 @@
+i RCLK
+m 0 0
+u 30 65
+p {p:RCLK}{t:nRWE.C}
+e ckid0_0 {t:nRWE.C} dffs
+c ckid0_0 {p:RCLK} port Unsupported/too complex instance on clock path
+i PHI2
+m 0 0
+u 11 18
+p {p:PHI2}{t:RA11.C}
+e ckid0_1 {t:RA11.C} sdffr
+c ckid0_1 {p:PHI2} port Unsupported/too complex instance on clock path
+i nCCAS
+m 0 0
+u 1 8
+p {p:nCCAS}{t:CASr_2.I[0]}{t:CASr_2.OUT[0]}{t:WRD[7:0].C}
+e ckid0_2 {t:WRD[7:0].C} dff
+c ckid0_2 {p:nCCAS} port Unsupported/too complex instance on clock path
+i nCRAS
+m 0 0
+u 4 14
+p {p:nCRAS}{t:RASr_2.I[0]}{t:RASr_2.OUT[0]}{t:RowA[9:0].C}
+e ckid0_3 {t:RowA[9:0].C} sdffpatr
+c ckid0_3 {p:nCRAS} port Unsupported/too complex instance on clock path
+l 0 0 0 0 0 0
+r 0 0 0 0 0 0 0 0

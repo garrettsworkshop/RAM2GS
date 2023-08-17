@@ -1,0 +1,832 @@
+#Build: Synplify Pro (R) R-2021.03L-SP1, Build 093R, Aug 10 2021
+#install: C:\lscc\diamond\3.12\synpbase
+#OS: Windows 8 6.2
+#Hostname: ZANEPC
+
+# Wed Aug 16 20:35:19 2023
+
+#Implementation: impl1
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys HDL Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v" (library work)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\hypermods.v" (library __hyper__lib__)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
+@I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
+@I::"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v" (library work)
+Verilog syntax check successful!
+Selecting top level module RAM2GS
+@N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
+Running optimization stage 1 on EFB .......
+Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 92MB)
+@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":1:7:1:12|Synthesizing module RAM2GS in library work.
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI7 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI6 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI5 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI4 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI3 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI2 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI1 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0DATI0 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL0ACKI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI7 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI6 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI5 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI4 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI3 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI2 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI1 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1DATI0 on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input PLL1ACKI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input I2C1SCLI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input I2C1SDAI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input I2C2SCLI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input I2C2SDAI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input SPISCKI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input SPIMISOI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input SPIMOSII on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input SPISCSN on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input TCCLKI on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input TCRSTN on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input TCIC on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":71:8:71:13|Input UFMSN on instance ufmefb is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on RAM2GS .......
+Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+Running optimization stage 2 on RAM2GS .......
+Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Running optimization stage 2 on EFB .......
+Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+
+For a summary of runtime and memory usage per design unit, please see file:
+==========================================================
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\layer0.rt.csv
+
+
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 94MB peak: 96MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug 16 20:35:19 2023
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug 16 20:35:20 2023
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\LCMXO2_640HC_impl1_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 23MB peak: 23MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug 16 20:35:20 2023
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 91MB peak: 91MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Wed Aug 16 20:35:21 2023
+
+###########################################################]
+Premap Report
+
+# Wed Aug 16 20:35:21 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 118MB peak: 118MB)
+
+
+Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 121MB peak: 130MB)
+
+@A: MF827 |No constraint file specified.
+@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\LCMXO2_640HC_impl1_scck.rpt 
+See clock summary report "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\LCMXO2_640HC_impl1_scck.rpt"
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 125MB peak: 130MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 138MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 138MB peak: 140MB)
+
+@N: FX493 |Applying initial value "0" on instance InitReady.
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance Ready.
+@N: FX493 |Applying initial value "0" on instance RCKE.
+@N: FX493 |Applying initial value "1" on instance nRCAS.
+@N: FX493 |Applying initial value "0" on instance CmdLEDEN.
+@N: FX493 |Applying initial value "0" on instance Cmdn8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRCS.
+@N: FX493 |Applying initial value "0" on instance LEDEN.
+@N: FX493 |Applying initial value "0" on instance n8MEGEN.
+@N: FX493 |Applying initial value "1" on instance nRRAS.
+@N: FX493 |Applying initial value "0" on instance CMDUFMWrite.
+@N: FX493 |Applying initial value "0" on instance CmdUFMData.
+@N: FX493 |Applying initial value "0" on instance C1Submitted.
+@N: FX493 |Applying initial value "0" on instance CmdSubmitted.
+@N: FX493 |Applying initial value "0" on instance ADSubmitted.
+@N: FX493 |Applying initial value "0" on instance XOR8MEG.
+@N: FX493 |Applying initial value "0" on instance CmdEnable.
+@N: FX493 |Applying initial value "1" on instance nRWE.
+
+Starting clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 170MB peak: 170MB)
+
+
+Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+
+Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+@N: FX1184 |Applying syn_allowed_resources blockrams=2 on top level netlist RAM2GS 
+
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+
+
+Clock Summary
+******************
+
+          Start            Requested     Requested     Clock        Clock                   Clock
+Level     Clock            Frequency     Period        Type         Group                   Load 
+-------------------------------------------------------------------------------------------------
+0 -       System           100.0 MHz     10.000        system       system_clkgroup         0    
+                                                                                                 
+0 -       RAM2GS|RCLK      100.0 MHz     10.000        inferred     Inferred_clkgroup_0     65   
+                                                                                                 
+0 -       RAM2GS|PHI2      100.0 MHz     10.000        inferred     Inferred_clkgroup_1     18   
+                                                                                                 
+0 -       RAM2GS|nCRAS     100.0 MHz     10.000        inferred     Inferred_clkgroup_2     14   
+                                                                                                 
+0 -       RAM2GS|nCCAS     100.0 MHz     10.000        inferred     Inferred_clkgroup_3     8    
+=================================================================================================
+
+
+
+Clock Load Summary
+***********************
+
+                 Clock     Source          Clock Pin       Non-clock Pin     Non-clock Pin     
+Clock            Load      Pin             Seq Example     Seq Example       Comb Example      
+-----------------------------------------------------------------------------------------------
+System           0         -               -               -                 -                 
+                                                                                               
+RAM2GS|RCLK      65        RCLK(port)      CASr2.C         -                 -                 
+                                                                                               
+RAM2GS|PHI2      18        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
+                                                                                               
+RAM2GS|nCRAS     14        nCRAS(port)     CBR.C           RASr.D[0]         RASr_2.I[0](inv)  
+                                                                                               
+RAM2GS|nCCAS     8         nCCAS(port)     WRD[7:0].C      CASr.D[0]         CASr_2.I[0](inv)  
+===============================================================================================
+
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":178:4:178:9|Found inferred clock RAM2GS|RCLK which controls 65 sequential elements including nRWE. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":319:4:319:9|Found inferred clock RAM2GS|PHI2 which controls 18 sequential elements including CmdEnable. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":136:4:136:9|Found inferred clock RAM2GS|nCRAS which controls 14 sequential elements including RowA[9:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+@W: MT529 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":154:4:154:9|Found inferred clock RAM2GS|nCCAS which controls 8 sequential elements including WRD[7:0]. This clock has no specified timing constraint which may prevent conversion of gated or generated clocks and may adversely impact design performance. 
+
+ICG Latch Removal Summary:
+Number of ICG latches removed: 0
+Number of ICG latches not removed:	0
+For details review file gcc_ICG_report.rpt
+
+
+@S |Clock Optimization Summary
+
+
+
+#### START OF PREMAP CLOCK OPTIMIZATION REPORT #####[
+
+4 non-gated/non-generated clock tree(s) driving 105 clock pin(s) of sequential element(s)
+0 gated/generated clock tree(s) driving 0 clock pin(s) of sequential element(s)
+0 instances converted, 0 sequential instances remain driven by gated/generated clocks
+
+=========================== Non-Gated/Non-Generated Clocks ============================
+Clock Tree ID     Driving Element     Drive Element Type     Fanout     Sample Instance
+---------------------------------------------------------------------------------------
+@KP:ckid0_0       RCLK                port                   65         nRWE           
+@KP:ckid0_1       PHI2                port                   18         RA11           
+@KP:ckid0_2       nCCAS               port                   8          WRD[7:0]       
+@KP:ckid0_3       nCRAS               port                   14         RowA[9:0]      
+=======================================================================================
+
+
+##### END OF CLOCK OPTIMIZATION REPORT ######
+
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
+Finished Pre Mapping Phase.
+
+Starting constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 171MB)
+
+
+Finished constraint checker preprocessing (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 171MB peak: 172MB)
+
+
+Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 173MB peak: 173MB)
+
+Pre-mapping successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 88MB peak: 174MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Aug 16 20:35:23 2023
+
+###########################################################]
+Map & Optimize Report
+
+# Wed Aug 16 20:35:23 2023
+
+
+Copyright (C) 1994-2021 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: R-2021.03L-SP1
+Install: C:\lscc\diamond\3.12\synpbase
+OS: Windows 6.2
+
+Hostname: ZANEPC
+
+Implementation : impl1
+Synopsys Lattice Technology Mapper, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 117MB peak: 117MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 129MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 119MB peak: 129MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 133MB peak: 133MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 134MB peak: 136MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 168MB peak: 168MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 171MB peak: 171MB)
+
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":178:4:178:9|Found counter in view:work.RAM2GS(verilog) instance IS[3:0] 
+@N: MO231 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":165:4:165:9|Found counter in view:work.RAM2GS(verilog) instance FS[17:0] 
+@N: FX493 |Applying initial value "0" on instance IS[0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance IS[1].
+@N: FX493 |Applying initial value "0" on instance IS[2].
+@N: FX493 |Applying initial value "0" on instance IS[3].
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 174MB peak: 174MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 175MB peak: 175MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 177MB peak: 177MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 177MB peak: 177MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 178MB peak: 178MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 185MB peak: 185MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		     0.15ns		 204 /       105
+   2		0h:00m:01s		     0.15ns		 208 /       105
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 187MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@A: BN291 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":373:4:373:9|Boundary register wb_clk.fb (in view: work.RAM2GS(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":373:4:373:9|Boundary register wb_cyc_stb.fb (in view: work.RAM2GS(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":373:4:373:9|Boundary register wb_we.fb (in view: work.RAM2GS(verilog)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 186MB peak: 187MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 149MB peak: 187MB)
+
+Writing Analyst data base D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\LCMXO2_640HC_impl1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 187MB peak: 187MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\LCMXO2_640HC_impl1.edi
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 192MB peak: 192MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 192MB peak: 193MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 190MB peak: 193MB)
+
+@W: MT246 :"d:\onedrive\documents\github\ram2gs\cpld\ram2gs-lcmxo2.v":71:8:71:13|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock RAM2GS|RCLK with period 10.00ns. Please declare a user-defined clock on port RCLK.
+@W: MT420 |Found inferred clock RAM2GS|PHI2 with period 10.00ns. Please declare a user-defined clock on port PHI2.
+@W: MT420 |Found inferred clock RAM2GS|nCRAS with period 10.00ns. Please declare a user-defined clock on port nCRAS.
+@W: MT420 |Found inferred clock RAM2GS|nCCAS with period 10.00ns. Please declare a user-defined clock on port nCCAS.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Wed Aug 16 20:35:26 2023
+#
+
+
+Top view:               RAM2GS
+Requested Frequency:    100.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: 0.094
+
+                   Requested     Estimated      Requested     Estimated               Clock        Clock              
+Starting Clock     Frequency     Frequency      Period        Period        Slack     Type         Group              
+----------------------------------------------------------------------------------------------------------------------
+RAM2GS|PHI2        100.0 MHz     101.9 MHz      10.000        9.812         0.094     inferred     Inferred_clkgroup_1
+RAM2GS|RCLK        100.0 MHz     118.6 MHz      10.000        8.433         1.567     inferred     Inferred_clkgroup_0
+RAM2GS|nCCAS       100.0 MHz     NA             10.000        NA            NA        inferred     Inferred_clkgroup_3
+RAM2GS|nCRAS       100.0 MHz     NA             10.000        NA            NA        inferred     Inferred_clkgroup_2
+System             100.0 MHz     1893.9 MHz     10.000        0.528         9.472     system       system_clkgroup    
+======================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                     |    rise  to  rise   |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------
+Starting      Ending       |  constraint  slack  |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------
+System        RAM2GS|RCLK  |  10.000      9.472  |  No paths    -      |  No paths    -      |  No paths    -    
+RAM2GS|RCLK   System       |  10.000      8.892  |  No paths    -      |  No paths    -      |  No paths    -    
+RAM2GS|RCLK   RAM2GS|RCLK  |  10.000      1.567  |  No paths    -      |  No paths    -      |  No paths    -    
+RAM2GS|RCLK   RAM2GS|PHI2  |  Diff grp    -      |  No paths    -      |  Diff grp    -      |  No paths    -    
+RAM2GS|PHI2   RAM2GS|RCLK  |  No paths    -      |  No paths    -      |  No paths    -      |  Diff grp    -    
+RAM2GS|PHI2   RAM2GS|PHI2  |  No paths    -      |  10.000      6.099  |  5.000       0.094  |  5.000       3.428
+RAM2GS|nCRAS  RAM2GS|RCLK  |  No paths    -      |  No paths    -      |  No paths    -      |  Diff grp    -    
+=================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: RAM2GS|PHI2
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                Starting                                           Arrival          
+Instance        Reference       Type         Pin     Net           Time        Slack
+                Clock                                                               
+------------------------------------------------------------------------------------
+Bank_0io[7]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[7]       0.972       0.094
+Bank_0io[0]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[0]       0.972       1.111
+Bank_0io[1]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[1]       0.972       1.111
+Bank_0io[2]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[2]       0.972       1.111
+Bank_0io[3]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[3]       0.972       1.111
+Bank_0io[4]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[4]       0.972       1.111
+Bank_0io[5]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[5]       0.972       1.111
+Bank_0io[6]     RAM2GS|PHI2     IFS1P3DX     Q       Bank[6]       0.972       1.111
+XOR8MEG         RAM2GS|PHI2     FD1S3AX      Q       XOR8MEG       1.044       3.428
+CmdEnable       RAM2GS|PHI2     FD1S3AX      Q       CmdEnable     1.204       6.099
+====================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                 Starting                                                 Required          
+Instance         Reference       Type         Pin     Net                 Time         Slack
+                 Clock                                                                      
+--------------------------------------------------------------------------------------------
+ADSubmitted      RAM2GS|PHI2     FD1S3AX      D       ADSubmitted_r_0     5.089        0.094
+C1Submitted      RAM2GS|PHI2     FD1S3AX      D       C1Submitted_s_0     5.089        0.094
+CMDUFMWrite      RAM2GS|PHI2     FD1S3AX      D       CMDUFMWritee_0      5.089        0.166
+CmdEnable        RAM2GS|PHI2     FD1S3AX      D       CmdEnable_s         5.089        0.166
+CmdLEDEN         RAM2GS|PHI2     FD1S3AX      D       CmdLEDENe_0         5.089        0.166
+Cmdn8MEGEN       RAM2GS|PHI2     FD1S3AX      D       Cmdn8MEGENe_0       5.089        0.166
+CmdSubmitted     RAM2GS|PHI2     FD1S3AX      D       N_537_0             5.089        1.183
+CmdUFMData       RAM2GS|PHI2     FD1S3AX      D       CmdUFMDatae_0       5.089        1.183
+XOR8MEG          RAM2GS|PHI2     FD1S3AX      D       XOR8MEGe_0          5.089        1.183
+RA11_0io         RAM2GS|PHI2     OFS1P3IX     D       N_142_i_i           5.089        3.428
+============================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         5.089
+
+    - Propagation time:                      4.995
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     0.094
+
+    Number of logic level(s):                4
+    Starting point:                          Bank_0io[7] / Q
+    Ending point:                            ADSubmitted / D
+    The start point is clocked by            RAM2GS|PHI2 [rising] (rise=0.000 fall=5.000 period=10.000) on pin SCLK
+    The end   point is clocked by            RAM2GS|PHI2 [falling] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                        Pin      Pin               Arrival     No. of    
+Name                     Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------
+Bank_0io[7]              IFS1P3DX     Q        Out     0.972     0.972 r     -         
+Bank[7]                  Net          -        -       -         -           1         
+Bank_0io_RNINMO63[7]     ORCALUT4     A        In      0.000     0.972 r     -         
+Bank_0io_RNINMO63[7]     ORCALUT4     Z        Out     1.017     1.989 r     -         
+m9_e_6                   Net          -        -       -         -           1         
+Bank_0io_RNI5G0O3[2]     ORCALUT4     D        In      0.000     1.989 r     -         
+Bank_0io_RNI5G0O3[2]     ORCALUT4     Z        Out     1.301     3.289 f     -         
+un1_ADWR_i_o4_12         Net          -        -       -         -           14        
+MAin_pad_RNIJ1KC4[1]     ORCALUT4     C        In      0.000     3.289 f     -         
+MAin_pad_RNIJ1KC4[1]     ORCALUT4     Z        Out     1.089     4.378 r     -         
+N_209_i                  Net          -        -       -         -           2         
+ADSubmitted_r_0          ORCALUT4     B        In      0.000     4.378 r     -         
+ADSubmitted_r_0          ORCALUT4     Z        Out     0.617     4.995 f     -         
+ADSubmitted_r_0          Net          -        -       -         -           1         
+ADSubmitted              FD1S3AX      D        In      0.000     4.995 f     -         
+=======================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: RAM2GS|RCLK
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+              Starting                                          Arrival          
+Instance      Reference       Type        Pin     Net           Time        Slack
+              Clock                                                              
+---------------------------------------------------------------------------------
+FS[14]        RAM2GS|RCLK     FD1S3AX     Q       FS[14]        1.108       1.567
+FS[16]        RAM2GS|RCLK     FD1S3AX     Q       FS[16]        1.108       1.567
+FS[13]        RAM2GS|RCLK     FD1S3AX     Q       FS[13]        1.108       2.584
+FS[15]        RAM2GS|RCLK     FD1S3AX     Q       FS[15]        1.108       2.584
+FS[17]        RAM2GS|RCLK     FD1S3AX     Q       FS[17]        1.108       2.584
+FS[7]         RAM2GS|RCLK     FD1S3AX     Q       FS[7]         1.280       2.860
+FS[8]         RAM2GS|RCLK     FD1S3AX     Q       FS[8]         1.244       2.896
+FS[9]         RAM2GS|RCLK     FD1S3AX     Q       FS[9]         1.204       2.936
+InitReady     RAM2GS|RCLK     FD1S3AX     Q       InitReady     1.326       3.647
+FS[12]        RAM2GS|RCLK     FD1S3AX     Q       FS[12]        1.309       3.672
+=================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+               Starting                                              Required          
+Instance       Reference       Type        Pin     Net               Time         Slack
+               Clock                                                                   
+---------------------------------------------------------------------------------------
+wb_adr[0]      RAM2GS|RCLK     FD1P3AX     D       wb_adr_10[0]      10.089       1.567
+wb_dati[4]     RAM2GS|RCLK     FD1P3AX     D       wb_dati_10[4]     10.089       1.567
+wb_adr[4]      RAM2GS|RCLK     FD1P3AX     D       N_237             10.089       1.823
+wb_adr[5]      RAM2GS|RCLK     FD1P3AX     D       N_238             10.089       1.823
+wb_adr[6]      RAM2GS|RCLK     FD1P3AX     D       N_239             10.089       1.823
+wb_cyc_stb     RAM2GS|RCLK     FD1P3IX     D       wb_cyc_stb_65     10.089       1.823
+LEDEN          RAM2GS|RCLK     FD1P3AX     SP      N_18              9.528        2.481
+n8MEGEN        RAM2GS|RCLK     FD1P3AX     SP      N_18              9.528        2.481
+wb_dati[0]     RAM2GS|RCLK     FD1P3AX     D       wb_dati_10[0]     10.089       2.496
+wb_dati[3]     RAM2GS|RCLK     FD1P3AX     D       wb_dati_10[3]     10.089       2.496
+=======================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      8.521
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 1.567
+
+    Number of logic level(s):                7
+    Starting point:                          FS[14] / Q
+    Ending point:                            wb_adr[0] / D
+    The start point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+    The end   point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                       Pin      Pin               Arrival     No. of    
+Name                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+FS[14]                  FD1S3AX      Q        Out     1.108     1.108 r     -         
+FS[14]                  Net          -        -       -         -           3         
+wb_clk_9_iv_i_o2_1      ORCALUT4     A        In      0.000     1.108 r     -         
+wb_clk_9_iv_i_o2_1      ORCALUT4     Z        Out     1.017     2.125 r     -         
+wb_clk_9_iv_i_o2_1      Net          -        -       -         -           1         
+wb_clk_9_iv_i_o2        ORCALUT4     D        In      0.000     2.125 r     -         
+wb_clk_9_iv_i_o2        ORCALUT4     Z        Out     1.281     3.405 r     -         
+wb_clk_9_iv_i_o2        Net          -        -       -         -           11        
+wb_adr_10_0_a2[0]       ORCALUT4     C        In      0.000     3.405 r     -         
+wb_adr_10_0_a2[0]       ORCALUT4     Z        Out     1.273     4.678 f     -         
+wb_adr_10_0_a2[0]       Net          -        -       -         -           9         
+wb_adr_10_0_a2_7[0]     ORCALUT4     C        In      0.000     4.678 f     -         
+wb_adr_10_0_a2_7[0]     ORCALUT4     Z        Out     1.193     5.871 f     -         
+wb_adr_10_0_a2_7[0]     Net          -        -       -         -           4         
+wb_adr_10_0_4_1[0]      ORCALUT4     D        In      0.000     5.871 f     -         
+wb_adr_10_0_4_1[0]      ORCALUT4     Z        Out     1.017     6.888 f     -         
+wb_adr_10_0_4_1[0]      Net          -        -       -         -           1         
+wb_adr_10_0_4[0]        ORCALUT4     D        In      0.000     6.888 f     -         
+wb_adr_10_0_4[0]        ORCALUT4     Z        Out     1.017     7.905 f     -         
+wb_adr_10_0_4[0]        Net          -        -       -         -           1         
+wb_adr_10_0[0]          ORCALUT4     C        In      0.000     7.905 f     -         
+wb_adr_10_0[0]          ORCALUT4     Z        Out     0.617     8.521 f     -         
+wb_adr_10[0]            Net          -        -       -         -           1         
+wb_adr[0]               FD1P3AX      D        In      0.000     8.521 f     -         
+======================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+             Starting                                          Arrival          
+Instance     Reference     Type     Pin         Net            Time        Slack
+             Clock                                                              
+--------------------------------------------------------------------------------
+ufmefb       System        EFB      WBDATO0     wb_dato[0]     0.000       9.472
+ufmefb       System        EFB      WBDATO1     wb_dato[1]     0.000       9.472
+================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+             Starting                                             Required          
+Instance     Reference     Type        Pin     Net                Time         Slack
+             Clock                                                                  
+------------------------------------------------------------------------------------
+LEDEN        System        FD1P3AX     D       LEDEN_6_i_m2       10.089       9.472
+n8MEGEN      System        FD1P3AX     D       n8MEGEN_6_i_m2     10.089       9.472
+====================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      10.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         10.089
+
+    - Propagation time:                      0.617
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 9.472
+
+    Number of logic level(s):                1
+    Starting point:                          ufmefb / WBDATO0
+    Ending point:                            n8MEGEN / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            RAM2GS|RCLK [rising] (rise=0.000 fall=5.000 period=10.000) on pin CK
+
+Instance / Net                  Pin         Pin               Arrival     No. of    
+Name               Type         Name        Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+ufmefb             EFB          WBDATO0     Out     0.000     0.000 r     -         
+wb_dato[0]         Net          -           -       -         -           1         
+n8MEGEN_6_i_m2     ORCALUT4     C           In      0.000     0.000 r     -         
+n8MEGEN_6_i_m2     ORCALUT4     Z           Out     0.617     0.617 r     -         
+n8MEGEN_6_i_m2     Net          -           -       -         -           1         
+n8MEGEN            FD1P3AX      D           In      0.000     0.617 r     -         
+====================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 191MB peak: 193MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 191MB peak: 193MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lcmxo2_640hc-4
+
+Register bits: 105 of 640 (16%)
+PIC Latch:       0
+I/O cells:       63
+
+
+Details:
+BB:             8
+CCU2D:          10
+EFB:            1
+FD1P3AX:        22
+FD1P3IX:        3
+FD1S3AX:        42
+FD1S3IX:        3
+GSR:            1
+IB:             25
+IFS1P3DX:       9
+IFS1P3IX:       10
+IFS1P3JX:       2
+INV:            8
+OB:             30
+OFS1P3BX:       4
+OFS1P3DX:       8
+OFS1P3IX:       1
+OFS1P3JX:       1
+ORCALUT4:       215
+PUR:            1
+VHI:            1
+VLO:            1
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 66MB peak: 193MB)
+
+Process took 0h:00m:03s realtime, 0h:00m:03s cputime
+# Wed Aug 16 20:35:26 2023
+
+###########################################################]

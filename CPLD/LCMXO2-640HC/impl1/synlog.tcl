@@ -1,1 +1,1 @@
-run_tcl -fg RAM2GS_LCMXO2_640HC_impl1_synplify.tcl
+run_tcl -fg LCMXO2_640HC_impl1_synplify.tcl

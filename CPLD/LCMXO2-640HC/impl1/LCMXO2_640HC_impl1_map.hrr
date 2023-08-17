@@ -1,0 +1,20 @@
+---------------------------------------------------
+Report for cell RAM2GS
+   Instance path: RAM2GS
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     117.00        100.0
+                                 IOLGC	      25.00        100.0
+                                  LUT4	     210.00        100.0
+                                 IOREG	         25        100.0
+                                 IOBUF	         63        100.0
+                                PFUREG	         84        100.0
+                                RIPPLE	         10        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                  REFB	          1         0.0
+---------------------------------------------------
+Report for cell REFB
+   Instance path: RAM2GS/ufmefb
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
