@@ -1,7 +1,7 @@
 ----------------------------------------------------------------------
 Report for cell RAM2GS.verilog
 
-Register bits: 109 of 640 (17%)
+Register bits: 111 of 640 (17%)
 PIC Latch:       0
 I/O cells:       63
                                           Cell usage:
@@ -9,34 +9,35 @@ I/O cells:       63
                                  BB        8       100.0
                               CCU2D       10       100.0
                                 EFB        1       100.0
-                            FD1P3AX       27       100.0
-                            FD1P3IX        3       100.0
-                            FD1S3AX       51       100.0
-                            FD1S3IX        3       100.0
+                            FD1P3AX       28       100.0
+                            FD1P3IX        2       100.0
+                            FD1S3AX       52       100.0
+                            FD1S3IX        4       100.0
                                 GSR        1       100.0
                                  IB       25       100.0
                            IFS1P3DX        9       100.0
-                                INV        8       100.0
+                                INV        6       100.0
                                  OB       30       100.0
                            OFS1P3BX        4       100.0
                            OFS1P3DX       11       100.0
                            OFS1P3JX        1       100.0
-                           ORCALUT4      206       100.0
-                              PFUMX        1       100.0
+                           ORCALUT4      199       100.0
+                              PFUMX        3       100.0
                                 PUR        1       100.0
                                 VHI        2       100.0
                                 VLO        2       100.0
 SUB MODULES 
                                REFB        1       100.0
                             
-                         TOTAL           405           
+                         TOTAL           400           
 ----------------------------------------------------------------------
 Report for cell REFB.netlist
      Instance path:  ufmefb
                                           Cell usage:
                                cell       count    Res Usage(%)
                                 EFB        1       100.0
+                           ORCALUT4        1         0.5
                                 VHI        1        50.0
                                 VLO        1        50.0
                             
-                         TOTAL             3           
+                         TOTAL             4           

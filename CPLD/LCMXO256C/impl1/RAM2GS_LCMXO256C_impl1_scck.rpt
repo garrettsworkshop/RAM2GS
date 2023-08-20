@@ -9,14 +9,14 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Wed Aug 16 04:50:33 2023
+# Written on Sat Aug 19 20:53:13 2023
 
 ##### FILES SYNTAX CHECKED ##############################################
-Constraint File(s):      "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS.sdc"
+Constraint File(s):      "Y:\Repos\RAM2GS\CPLD\RAM2GS.sdc"
 
 #Run constraint checker to find more issues with constraints.
 #########################################################################

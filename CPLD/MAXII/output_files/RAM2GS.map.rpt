@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RAM2GS
-Wed Aug 16 03:23:14 2023
+Sat Aug 19 21:59:40 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Aug 16 03:23:14 2023       ;
+; Analysis & Synthesis Status ; Successful - Sat Aug 19 21:59:40 2023       ;
 ; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name               ; RAM2GS                                      ;
 ; Top-level Entity Name       ; RAM2GS                                      ;
@@ -146,15 +146,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------+---------+
-; ../RAM2GS-MAX.v                  ; yes             ; User Verilog HDL File            ; D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v     ;         ;
-; UFM.v                            ; yes             ; User Wizard-Generated File       ; D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/UFM.v      ;         ;
-; ../RAM2GS.mif                    ; yes             ; User Memory Initialization File  ; D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/RAM2GS.mif ;         ;
-+----------------------------------+-----------------+----------------------------------+-----------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++------------------------------------------+-----------------+----------------------------------------+----------------------------------------------+---------+
+; File Name with User-Entered Path         ; Used in Netlist ; File Type                              ; File Name with Absolute Path                 ; Library ;
++------------------------------------------+-----------------+----------------------------------------+----------------------------------------------+---------+
+; //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v ; yes             ; User Verilog HDL File                  ; //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v     ;         ;
+; //ZaneMac/Repos/RAM2GS/CPLD/MAXII/UFM.v  ; yes             ; User Wizard-Generated File             ; //ZaneMac/Repos/RAM2GS/CPLD/MAXII/UFM.v      ;         ;
+; RAM2GS.mif                               ; yes             ; Auto-Found Memory Initialization File  ; //ZaneMac/Repos/RAM2GS/CPLD/MAXII/RAM2GS.mif ;         ;
++------------------------------------------+-----------------+----------------------------------------+----------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -271,42 +271,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Wed Aug 16 03:23:04 2023
+    Info: Processing started: Sat Aug 19 21:59:20 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2GS-MAXII -c RAM2GS
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
-Info (12021): Found 1 design units, including 1 entities, in source file /onedrive/documents/github/ram2gs/cpld/ram2gs-max.v
-    Info (12023): Found entity 1: RAM2GS File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file //zanemac/repos/ram2gs/cpld/ram2gs-max.v
+    Info (12023): Found entity 1: RAM2GS File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
-    Info (12023): Found entity 1: UFM_altufm_none_unv File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/UFM.v Line: 47
-    Info (12023): Found entity 2: UFM File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/UFM.v Line: 150
+    Info (12023): Found entity 1: UFM_altufm_none_unv File: //ZaneMac/Repos/RAM2GS/CPLD/MAXII/UFM.v Line: 47
+    Info (12023): Found entity 2: UFM File: //ZaneMac/Repos/RAM2GS/CPLD/MAXII/UFM.v Line: 150
 Info (12127): Elaborating entity "RAM2GS" for the top level hierarchy
-Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst" File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 91
-Info (12128): Elaborating entity "UFM_altufm_none_unv" for hierarchy "UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component" File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/UFM.v Line: 201
-Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[2]" driven by bidirectional pin "RD[2]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[3]" driven by bidirectional pin "RD[3]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
-Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 26
+Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst" File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 92
+Info (12128): Elaborating entity "UFM_altufm_none_unv" for hierarchy "UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component" File: //ZaneMac/Repos/RAM2GS/CPLD/MAXII/UFM.v Line: 201
+Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[2]" driven by bidirectional pin "RD[2]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[3]" driven by bidirectional pin "RD[3]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
 Info (21057): Implemented 248 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 8 bidirectional pins
     Info (21061): Implemented 184 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
-Info (144001): Generated suppressed messages file D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/output_files/RAM2GS.map.smsg
+Info (144001): Generated suppressed messages file //ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Wed Aug 16 03:23:14 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 4703 megabytes
+    Info: Processing ended: Sat Aug 19 21:59:42 2023
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/output_files/RAM2GS.map.smsg.
+The suppressed messages can be found in //ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.map.smsg.
 
 

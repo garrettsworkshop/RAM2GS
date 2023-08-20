@@ -6,7 +6,7 @@ NOTE Readback:       Off*
 NOTE Security:      Off*
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Wed Aug 16 04:29:49 2023 *
+NOTE DATE CREATED: Sat Aug 19 20:53:35 2023 *
 NOTE DESIGN NAME: RAM2GS *
 NOTE DEVICE NAME: LCMXO256C-3TQFP100 *
 NOTE PIN ASSIGNMENTS *
@@ -974,4 +974,4 @@ L00000
 CDA53*
 N User Electronic Signature Data*
 U00000000000000000000000000000000*
-2381
+2382

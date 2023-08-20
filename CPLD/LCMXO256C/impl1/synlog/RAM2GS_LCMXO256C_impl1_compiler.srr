@@ -9,7 +9,7 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 Synopsys HDL Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
@@ -27,7 +27,7 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
@@ -39,29 +39,27 @@ Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 202
 @I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v" (library snps_haps)
 @I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v" (library snps_haps)
 @I::"C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh" (library snps_haps)
-@I::"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v" (library work)
+@I::"Y:\Repos\RAM2GS\CPLD\RAM2GS-SPI.v" (library work)
 Verilog syntax check successful!
-
-Compiler output is up to date.  No re-compile necessary
-
+Options changed - recompiling
 Selecting top level module RAM2GS
-@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":1:7:1:12|Synthesizing module RAM2GS in library work.
+@N: CG364 :"Y:\Repos\RAM2GS\CPLD\RAM2GS-SPI.v":1:7:1:12|Synthesizing module RAM2GS in library work.
 Running optimization stage 1 on RAM2GS .......
-Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 93MB)
+Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 100MB)
 Running optimization stage 2 on RAM2GS .......
-Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 93MB peak: 93MB)
+Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 100MB peak: 101MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
-@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO256C\impl1\synwork\layer0.rt.csv
+@L: Y:\Repos\RAM2GS\CPLD\LCMXO256C\impl1\synwork\layer0.rt.csv
 
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 89MB peak: 90MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 100MB peak: 101MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Aug 16 04:50:31 2023
+# Sat Aug 19 20:53:11 2023
 
 ###########################################################]
 ###########################################################[
@@ -76,33 +74,33 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
 
 @N|Running in 64-bit mode
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 98MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Aug 16 04:50:31 2023
+# Sat Aug 19 20:53:11 2023
 
 ###########################################################]
 
 For a summary of runtime and memory usage for all design units, please see file:
 ==========================================================
-@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO256C\impl1\synwork\RAM2GS_LCMXO256C_impl1_comp.rt.csv
+@L: Y:\Repos\RAM2GS\CPLD\LCMXO256C\impl1\synwork\RAM2GS_LCMXO256C_impl1_comp.rt.csv
 
 @END
 
-At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 23MB peak: 23MB)
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 30MB peak: 31MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Aug 16 04:50:31 2023
+# Sat Aug 19 20:53:11 2023
 
 ###########################################################]

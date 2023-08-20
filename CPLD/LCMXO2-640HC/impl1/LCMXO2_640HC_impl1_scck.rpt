@@ -9,14 +9,14 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Wed Aug 16 20:59:30 2023
+# Written on Sat Aug 19 21:54:50 2023
 
 ##### FILES SYNTAX CHECKED ##############################################
-Constraint File(s):      "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS.sdc"
+Constraint File(s):      "Y:\Repos\RAM2GS\CPLD\RAM2GS.sdc"
 
 #Run constraint checker to find more issues with constraints.
 #########################################################################
@@ -35,7 +35,7 @@ Level     Clock      Frequency     Period        Type         Group             
 ----------------------------------------------------------------------------------------
 0 -       RCLK       62.5 MHz      16.000        declared     default_clkgroup     65   
                                                                                         
-0 -       PHI2       2.9 MHz       350.000       declared     default_clkgroup     18   
+0 -       PHI2       2.9 MHz       350.000       declared     default_clkgroup     19   
                                                                                         
 0 -       nCRAS      2.9 MHz       350.000       declared     default_clkgroup     14   
                                                                                         
@@ -53,7 +53,7 @@ Clock      Load      Pin             Seq Example     Seq Example       Comb Exam
 -----------------------------------------------------------------------------------------
 RCLK       65        RCLK(port)      CASr2.C         -                 -                 
                                                                                          
-PHI2       18        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
+PHI2       19        PHI2(port)      Bank[7:0].C     PHI2r.D[0]        un1_PHI2.I[0](inv)
                                                                                          
 nCRAS      14        nCRAS(port)     CBR.C           RASr.D[0]         RASr_2.I[0](inv)  
                                                                                          

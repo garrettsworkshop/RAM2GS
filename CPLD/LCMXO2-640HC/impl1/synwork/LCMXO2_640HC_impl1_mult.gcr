@@ -6,7 +6,7 @@ e ckid0_0 {t:nRWE.C} dffs
 c ckid0_0 {p:RCLK} port Unsupported/too complex instance on clock path
 i PHI2
 m 0 0
-u 11 18
+u 12 19
 p {p:PHI2}{t:RA11.C}
 e ckid0_1 {t:RA11.C} sdffr
 c ckid0_1 {p:PHI2} port Unsupported/too complex instance on clock path

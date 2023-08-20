@@ -9,20 +9,24 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 Synopsys HDL compiler and linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
 
-Modified Files: 0
+Modified Files: 2
 FID:  path (prevtimestamp, timestamp)
+6        D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v (2023-08-16 04:27:40, N/A)
+7        Y:\Repos\RAM2GS\CPLD\RAM2GS-SPI.v (N/A, 2023-08-16 21:05:55)
 
 *******************************************************************
-Modules that may have changed as a result of file changes: 0
+Modules that may have changed as a result of file changes: 1
 MID:  lib.cell.view
+0        work.RAM2GS.verilog may have changed because the following files changed:
+                        Y:\Repos\RAM2GS\CPLD\RAM2GS-SPI.v (N/A, 2023-08-16 21:05:55) <-- (module definition)
 
 *******************************************************************
-Unmodified files: 7
+Unmodified files: 6
 FID:  path (timestamp)
 0        C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo.v (2021-08-10 09:11:08)
 1        C:\lscc\diamond\3.12\synpbase\lib\lucent\pmi_def.v (2021-08-10 09:11:08)
@@ -30,9 +34,7 @@ FID:  path (timestamp)
 3        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_objects.v (2021-08-10 09:07:02)
 4        C:\lscc\diamond\3.12\synpbase\lib\vlog\scemi_pipes.svh (2021-08-10 09:07:02)
 5        C:\lscc\diamond\3.12\synpbase\lib\vlog\umr_capim.v (2021-08-10 09:07:02)
-6        D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v (2023-08-16 04:27:40)
 
 *******************************************************************
-Unchanged modules: 1
+Unchanged modules: 0
 MID:  lib.cell.view
-0        work.RAM2GS.verilog

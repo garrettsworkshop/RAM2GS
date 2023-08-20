@@ -63,6 +63,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     /* UFM Interface */
     reg wb_rst;
     reg wb_cyc_stb;
+	reg wb_req;
     reg wb_we;
     reg [7:0] wb_adr;
     reg [7:0] wb_dati;
@@ -87,8 +88,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg CmdValid = 0;
     reg Cmdn8MEGEN = 0;
     reg CmdLEDEN = 0;
+    reg CmdUFMWrite = 0;
+    reg CmdUFMShift = 0;
     reg CmdUFMData = 0;
-    reg CMDUFMWrite = 0;
     wire ADWR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFF & ~nFWE;
     wire C1WR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFE & ~nFWE;
     wire CMDWR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFD & ~nFWE;
@@ -360,365 +362,244 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
     /* UFM Control */
     always @(posedge RCLK) begin
-        if (~InitReady && FS[17:10]==8'h00) begin
-            wb_rst <= ~FS[9];
-            wb_cyc_stb <= 1'b0;
+        if (~InitReady && FS[17:15]==3'h0) begin
+            wb_rst <= ~FS[14];
             wb_we <= 1'b0;
+			wb_cyc_stb <= 1'b0;
+			wb_req <= 1'b0;
             wb_adr[7:0] <= 8'h00;
             wb_dati[7:0] <= 8'h00;
-        end else if (~InitReady && FS[17:10]==8'h01) begin
+        end else if (~InitReady && FS[17:15]==3'h1) begin
             wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+			
+			if (FS[8:0]==0) wb_cyc_stb <= 0;
+			else if (FS[8:0]==1 && wb_req) wb_cyc_stb <= 1;
+			else if (wb_ack) wb_cyc_stb <= 0;
+            case (FS[14:9])
+                0: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= FS[4:0]==5'h10;
-                end 5'h01: begin // Enable configuration interface - command
+					wb_req <= 1;
+                end 1: begin // Enable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h74;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h02: begin // Enable configuration interface - operand 1/3
+					wb_req <= 1;
+                end 2: begin // Enable configuration interface - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h08;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h03: begin // Enable configuration interface - operand 2/3
+					wb_req <= 1;
+                end 3: begin // Enable configuration interface - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h04: begin // Enable configuration interface - operand 3/3
+					wb_req <= 1;
+                end 4: begin // Enable configuration interface - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h1F: begin // Close frame
+					wb_req <= 1;
+                end 5: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end default: begin
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
-                end
-            endcase
-        end else if (~InitReady && FS[17:10]==8'h02) begin
-            wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+					wb_req <= 1;
+
+                end 6: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-
-                end 5'h01: begin // Poll status register - command
+					wb_req <= 1;
+                end 7: begin // Poll status register - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h3C;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h02: begin // Poll status register - operand 1/3
+					wb_req <= 1;
+                end 8: begin // Poll status register - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-
-                end 5'h03: begin // Poll status register - operand 2/3
+					wb_req <= 1;
+                end 9: begin // Poll status register - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h04: begin // Poll status register - operand 3/3
+					wb_req <= 1;
+                end 10: begin // Poll status register - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-
-                end 5'h05: begin // Read status register 1/4
+					wb_req <= 1;
+                end 11, 12, 13, 14: begin // Read status register 1-4
                     wb_we <= 1'b0;
                     wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h3C;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h06: begin // Read status register 2/4
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h73;
-                    wb_dati[7:0] <= 8'h00;
-
-                end 5'h07: begin // Read status register 3/4
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h73;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h08: begin // Read status register 4/4
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h73;
-                    wb_dati[7:0] <= 8'h00;
-
-                end 5'h1F: begin // Close frame
+					wb_req <= 1;
+                end 15: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end default: begin
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
-                end
-            endcase
-        end else if (~InitReady && FS[17:10]==8'h03) begin
-            wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+					wb_req <= 1;
+
+                end 16: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h01: begin // Set UFM address - command
+					wb_req <= 1;
+                end 17: begin // Set UFM address - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hB4;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h02: begin // Set UFM address - operand 1/3
+					wb_req <= 1;
+                end 18: begin // Set UFM address - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h03: begin // Set UFM address - operand 2/3
+					wb_req <= 1;
+                end 19: begin // Set UFM address - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h04: begin // Set UFM address - operand 3/3
+					wb_req <= 1;
+                end 20: begin // Set UFM address - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h05: begin // Set UFM address - data 1/4
+					wb_req <= 1;
+                end 21: begin // Set UFM address - data 1/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h40;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h06: begin // Set UFM address - data 2/4
+					wb_req <= 1;
+                end 22: begin // Set UFM address - data 2/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h07: begin // Set UFM address - data 3/4
+					wb_req <= 1;
+                end 23: begin // Set UFM address - data 3/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h08: begin // Set UFM address - data 4/4
+					wb_req <= 1;
+                end 24: begin // Set UFM address - data 4/4
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h01;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h1F: begin // Close frame
+                    wb_dati[7:0] <= 190;
+					wb_req <= 1;
+                end 25: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end default: begin
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
-                end
-            endcase
-        end else if (~InitReady && FS[17:10]==8'h04) begin
-            wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+					wb_req <= 1;
+
+                end 26: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h01: begin // Read UFM page - command
+					wb_req <= 1;
+                end 27: begin // Read UFM page - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hCA;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h02: begin // Read UFM page - operand 1/3
+					wb_req <= 1;
+                end 28: begin // Read UFM page - operand 1/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h10;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h03: begin // Read UFM page - operand 2/3
+					wb_req <= 1;
+                end 29: begin // Read UFM page - operand 2/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h04: begin // Read UFM page - operand 3/3
+					wb_req <= 1;
+                end 30: begin // Read UFM page - operand 3/3
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h01;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h05: begin // Read UFM page - data 1/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
+					wb_req <= 1;
+                end 31: begin // Read UFM page - data 1/16
+                    wb_we <= 1'b0;
+                    wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                    
-                    if (FS[4:0]==5'h1F) begin
+					wb_req <= 1;
+                    if (wb_ack) begin
                         LEDEN <= wb_dato[1];
                         n8MEGEN <= wb_dato[0];
                     end
-                end 5'h06: begin // Read UFM page - data 2/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
+                end     32, 33, 34,
+                    35, 36, 37, 38,
+                    39, 40, 41, 42,
+                    43, 44, 45, 46: begin // Read UFM page - data 2/16
+                    wb_we <= 1'b0;
+                    wb_adr[7:0] <= 8'h73;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h07: begin // Read UFM page - data 3/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h08: begin // Read UFM page - data 4/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h09: begin // Read UFM page - data 5/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0A: begin // Read UFM page - data 6/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0B: begin // Read UFM page - data 7/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0C: begin // Read UFM page - data 8/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0D: begin // Read UFM page - data 9/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0E: begin // Read UFM page - data 10/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h0F: begin // Read UFM page - data 11/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h10: begin // Read UFM page - data 12/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h11: begin // Read UFM page - data 13/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h12: begin // Read UFM page - data 14/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h13: begin // Read UFM page - data 15/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h14: begin // Read UFM page - data 16/16
-                    wb_we <= 1'b1;
-                    wb_adr[7:0] <= 8'h71;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h1F: begin // Close frame
+					wb_req <= 1;
+                end 47: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end default: begin
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
-                end
-            endcase
-        end else if (~InitReady && FS[17:10]==8'h05) begin
-            wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+					wb_req <= 1;
+
+                end 48: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h01: begin // Disable configuration interface - command
+					wb_req <= 1;
+                end 49: begin // Disable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h26;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h02: begin // Disable configuration interface - operand 1/2
+					wb_req <= 1;
+                end 50: begin // Disable configuration interface - operand 1/2
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h03: begin // Disable configuration interface - operand 2/2
+					wb_req <= 1;
+                end 51: begin // Disable configuration interface - operand 2/2
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h1F: begin // Close frame
+					wb_req <= 1;
+                end 52: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end default: begin
-                    wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
-                    wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
-                end
-            endcase
-        end else if (~InitReady && FS[17:10]==8'h06) begin
-            wb_rst <= 1'b0;
-            case (FS[9:5])
-                5'h00: begin // Open frame
+					wb_req <= 1;
+
+                end 53: begin // Open frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h80;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h01: begin // Disable configuration interface - command
+					wb_req <= 1;
+                end 54: begin // Disable configuration interface - command
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h71;
                     wb_dati[7:0] <= 8'hFF;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
-                end 5'h1F: begin // Close frame
+					wb_req <= 1;
+                end 55: begin // Close frame
                     wb_we <= 1'b1;
                     wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= FS[4:0]==5'h00;
+					wb_req <= 1;
                 end default: begin
                     wb_we <= 1'b0;
-                    wb_adr[7:0] <= 8'h00;
+                    wb_adr[7:0] <= 8'h70;
                     wb_dati[7:0] <= 8'h00;
-                    wb_cyc_stb <= 1'b0;
+					wb_req <= 0;
                 end
             endcase
         end else if (~InitReady) begin
             wb_rst <= 1'b0;
             wb_cyc_stb <= 1'b0;
+			wb_req <= 1'b0;
             wb_we <= 1'b0;
             wb_adr[7:0] <= 8'h00;
             wb_dati[7:0] <= 8'h00;
         end else if (~PHI2r2 & PHI2r3 & CmdValid) begin
             wb_rst <= 1'b0;
+			wb_req <= 1'b0;
             // Set user command signals after PHI2 falls
             LEDEN <= CmdLEDEN;
             n8MEGEN <= Cmdn8MEGEN;
@@ -726,8 +607,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 wb_adr[7:0] <= { wb_adr[6:0], wb_dati[7] };
                 wb_dati[7:0] <= { wb_dati[6:0], wb_we };
                 wb_we <= CmdUFMData;
-            end
-            if (CmdUFMWrite) wb_cyc_stb <= 1;
+				wb_cyc_stb <= 1'b0;
+            end else if (CmdUFMWrite) wb_cyc_stb <= 1;
         end else wb_cyc_stb <= 0;
     end
 endmodule

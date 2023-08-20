@@ -1,9 +1,9 @@
 
 -- VHDL netlist produced by program ldbanno, Version Diamond (64-bit) 3.12.1.454
 
--- ldbanno -n VHDL -o RAM2GS_LCMXO256C_impl1_mapvho.vho -w -neg -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd 
--- Netlist created on Wed Aug 16 04:50:39 2023
--- Netlist written on Wed Aug 16 04:50:41 2023
+-- ldbanno -n VHDL -o RAM2GS_LCMXO256C_impl1_mapvho.vho -w -neg -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd 
+-- Netlist created on Sat Aug 19 20:53:19 2023
+-- Netlist written on Sat Aug 19 20:53:21 2023
 -- Design is for device LCMXO256C
 -- Design is for package TQFP100
 -- Design is for performance grade 3

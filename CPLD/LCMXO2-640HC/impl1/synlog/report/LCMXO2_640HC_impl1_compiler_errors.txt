@@ -1,2 +1,2 @@
-@E: CS168 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":72:15:72:15|Port WBCLKI does not exist
+@E:Internal Error in c_hdl.exe
 

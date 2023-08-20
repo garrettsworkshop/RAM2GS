@@ -24,7 +24,7 @@ FS_cry[0]
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Wed Aug 16 04:50:46 2023
+# map:  version Diamond (64-bit) 3.12.1.454 -- WARNING: Map write only section -- Sat Aug 19 20:57:14 2023
 
 SYSCONFIG INBUF=ON CONFIG_SECURE=OFF ;
 LOCATE COMP "RD[0]" SITE "64" ;

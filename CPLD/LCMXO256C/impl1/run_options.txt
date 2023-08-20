@@ -1,12 +1,12 @@
 #--  Synopsys, Inc.
 #--  Version R-2021.03L-SP1
-#--  Project file D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO256C\impl1\run_options.txt
-#--  Written on Wed Aug 16 04:50:30 2023
+#--  Project file Y:\Repos\RAM2GS\CPLD\LCMXO256C\impl1\run_options.txt
+#--  Written on Sat Aug 19 20:53:10 2023
 
 
 #project files
-add_file -constraint "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS.sdc"
-add_file -verilog -vlog_std v2001 "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-SPI.v"
+add_file -constraint "Y:/Repos/RAM2GS/CPLD/RAM2GS.sdc"
+add_file -verilog -vlog_std v2001 "Y:/Repos/RAM2GS/CPLD/RAM2GS-SPI.v"
 
 
 #implementation: "impl1"
@@ -18,7 +18,7 @@ impl -add impl1 -type fpga
 set_option -vlog_std v2001
 set_option -num_critical_paths 3
 set_option -project_relative_includes 1
-set_option -include_path {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C}
+set_option -include_path {Y:/Repos/RAM2GS/CPLD/LCMXO256C}
 
 #device options
 set_option -technology MACHXO
@@ -77,5 +77,5 @@ set_option -write_apr_constraint 1
 project -result_file "./RAM2GS_LCMXO256C_impl1.edi"
 
 #set log file 
-set_option log_file "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1.srf" 
+set_option log_file "Y:/Repos/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1.srf" 
 impl -active "impl1"

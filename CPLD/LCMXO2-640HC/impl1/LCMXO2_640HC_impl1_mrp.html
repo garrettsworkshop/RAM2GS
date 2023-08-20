@@ -15,27 +15,27 @@
 
 Command line:   map -a MachXO2 -p LCMXO2-640HC -t TQFP100 -s 4 -oc Commercial
      LCMXO2_640HC_impl1.ngd -o LCMXO2_640HC_impl1_map.ncd -pr
-     LCMXO2_640HC_impl1.prf -mp LCMXO2_640HC_impl1.mrp -lpf D:/OneDrive/Document
-     s/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1_synplify.lpf
-     -lpf D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf -c 0 -gui
-     -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/promote.xml 
+     LCMXO2_640HC_impl1.prf -mp LCMXO2_640HC_impl1.mrp -lpf
+     Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1_synplify.lpf
+     -lpf Y:/Repos/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf -c 0 -gui -msgset
+     Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO2-640HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/16/23  20:59:36
+Mapped on:  08/19/23  21:54:57
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    109 out of   877 (12%)
-      PFU registers:           84 out of   640 (13%)
+   Number of registers:    111 out of   877 (13%)
+      PFU registers:           86 out of   640 (13%)
       PIO registers:           25 out of   237 (11%)
-   Number of SLICEs:       117 out of   320 (37%)
-      SLICEs as Logic/ROM:    117 out of   320 (37%)
+   Number of SLICEs:       113 out of   320 (35%)
+      SLICEs as Logic/ROM:    113 out of   320 (35%)
       SLICEs as RAM:            0 out of   240 (0%)
       SLICEs as Carry:         10 out of   320 (3%)
-   Number of LUT4s:        230 out of   640 (36%)
-      Number used as logic LUTs:        210
+   Number of LUT4s:        222 out of   640 (35%)
+      Number used as logic LUTs:        202
       Number used as distributed RAM:     0
       Number used as ripple logic:       20
       Number used as shift registers:     0
@@ -58,39 +58,37 @@ Mapped on:  08/16/23  20:59:36
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  5
-     Net PHI2_c: 19 loads, 9 rising, 10 falling (Driver: PIO PHI2 )
-     Net RCLK_c: 46 loads, 46 rising, 0 falling (Driver: PIO RCLK )
-     Net wb_clk: 1 loads, 1 rising, 0 falling (Driver: wb_clk )
+   Number of clocks:  4
+     Net PHI2_c: 21 loads, 9 rising, 12 falling (Driver: PIO PHI2 )
+     Net RCLK_c: 47 loads, 47 rising, 0 falling (Driver: PIO RCLK )
      Net nCRAS_c: 10 loads, 0 rising, 10 falling (Driver: PIO nCRAS )
      Net nCCAS_c: 8 loads, 0 rising, 8 falling (Driver: PIO nCCAS )
-   Number of Clock Enables:  7
-     Net N_245_i: 1 loads, 1 LSLICEs
-     Net CMDUFMWrite_1_sqmuxa: 2 loads, 2 LSLICEs
+   Number of Clock Enables:  6
+     Net un1_wb_cyc_stb_2_sqmuxa_i_0_N_4_i: 1 loads, 1 LSLICEs
+     Net XOR8MEG18: 6 loads, 6 LSLICEs
+     Net CmdUFMData_1_sqmuxa: 1 loads, 1 LSLICEs
 
-     Net InitReady: 1 loads, 1 LSLICEs
-     Net un1_wb_clk32_i: 10 loads, 10 LSLICEs
-     Net N_18: 2 loads, 2 LSLICEs
-     Net XOR8MEG18: 3 loads, 3 LSLICEs
-     Net N_193_i: 2 loads, 2 LSLICEs
+     Net un1_wb_rst14_i: 9 loads, 9 LSLICEs
+     Net un1_FS_38_i: 2 loads, 2 LSLICEs
+     Net N_253_i: 2 loads, 2 LSLICEs
    Number of LSRs:  5
      Net RA10s_i: 1 loads, 0 LSLICEs
-     Net wb_clk23: 3 loads, 3 LSLICEs
+     Net wb_rst10: 3 loads, 3 LSLICEs
      Net wb_rst: 1 loads, 0 LSLICEs
      Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
      Net RASr2: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net InitReady: 42 loads
-     Net FS[12]: 27 loads
-     Net FS[10]: 25 loads
-     Net FS[11]: 22 loads
-     Net FS[7]: 17 loads
-     Net FS[6]: 16 loads
-     Net Ready: 15 loads
+     Net InitReady: 33 loads
+     Net FS[13]: 22 loads
+     Net FS[12]: 21 loads
+     Net FS[14]: 20 loads
+     Net wb_rst11: 18 loads
+     Net FS[10]: 16 loads
+     Net Ready: 16 loads
+     Net FS[11]: 15 loads
+     Net FS[9]: 15 loads
      Net Ready_fast: 14 loads
-     Net nRowColSel: 12 loads
-     Net S[1]: 12 loads
 
 
 
@@ -127,9 +125,9 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
 +---------------------+-----------+-----------+------------+
 | RDQML               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 | RDQMH               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+
 | nRCAS               | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | nRRAS               | OUTPUT    | LVCMOS33  | OUT        |
@@ -184,9 +182,9 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
 +---------------------+-----------+-----------+------------+
 | RBA[0]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
-
 | LED                 | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+
 | nFWE                | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | nCRAS               | INPUT     | LVCMOS33  |            |
@@ -241,9 +239,9 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
 +---------------------+-----------+-----------+------------+
 | MAin[3]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
 | MAin[2]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
+
 | MAin[1]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | MAin[0]             | INPUT     | LVCMOS33  |            |
@@ -256,8 +254,8 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
 Block GSR_INST undriven or does not drive anything - clipped.
 Signal nCRAS_c_i was merged into signal nCRAS_c
 Signal RASr2_i was merged into signal RASr2
-Signal InitReady_i was merged into signal InitReady
 Signal XOR8MEG.CN was merged into signal PHI2_c
+Signal XOR8MEG_3_u_0_am was merged into signal XOR8MEG
 Signal GND undriven or does not drive anything - clipped.
 Signal ufmefb/VCC undriven or does not drive anything - clipped.
 Signal ufmefb/GND undriven or does not drive anything - clipped.
@@ -299,9 +297,9 @@ Signal ufmefb/PLLDATO1 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO2 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO3 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO4 undriven or does not drive anything - clipped.
-
 Signal ufmefb/PLLDATO5 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO6 undriven or does not drive anything - clipped.
+
 Signal ufmefb/PLLDATO7 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLADRO0 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLADRO1 undriven or does not drive anything - clipped.
@@ -313,7 +311,6 @@ Signal ufmefb/PLL1STBO undriven or does not drive anything - clipped.
 Signal ufmefb/PLL0STBO undriven or does not drive anything - clipped.
 Signal ufmefb/PLLRSTO undriven or does not drive anything - clipped.
 Signal ufmefb/PLLCLKO undriven or does not drive anything - clipped.
-Signal ufmefb/wb_ack_o undriven or does not drive anything - clipped.
 Signal ufmefb/wb_dat_o_1[2] undriven or does not drive anything - clipped.
 Signal ufmefb/wb_dat_o_1[3] undriven or does not drive anything - clipped.
 Signal ufmefb/wb_dat_o_1[4] undriven or does not drive anything - clipped.
@@ -324,8 +321,8 @@ Signal FS_cry_0_S0[0] undriven or does not drive anything - clipped.
 Signal N_1 undriven or does not drive anything - clipped.
 Block nCRAS_pad_RNIBPVB was optimized away.
 Block RASr2_RNIAFR1 was optimized away.
-Block wb_rst_RNO_0 was optimized away.
 Block XOR8MEG.CN was optimized away.
+Block XOR8MEG_3_u_0_am was optimized away.
 Block GND was optimized away.
 Block ufmefb/VCC was optimized away.
 Block ufmefb/GND was optimized away.
@@ -336,8 +333,8 @@ Block ufmefb/GND was optimized away.
 
 <A name="mrp_efb"></A><B><U><big>Embedded Functional Block Connection Summary</big></U></B>
 
-   Desired WISHBONE clock frequency: 62.5 MHz
-   Clock source:                     wb_clk
+   Desired WISHBONE clock frequency: 66.7 MHz
+   Clock source:                     RCLK_c
    Reset source:                     wb_rst
    Functions mode:
       I2C #1 (Primary) Function:     DISABLED
@@ -357,10 +354,10 @@ Block ufmefb/GND was optimized away.
    Timer/Counter Function Summary:
    ------------------------------
       None
-
    UFM Function Summary:
    --------------------
       UFM Utilization:        General Purpose Flash Memory
+
       Initialized UFM Pages:  1 Pages (1*128 Bits)
       Available General
       Purpose Flash Memory:   191 Pages (191*128 Bits)
@@ -387,8 +384,11 @@ Instance Name: ufmefb/EFBInst_0
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 37 MB
+   Peak Memory Usage: 57 MB
         
+
+
+
 
 
 
