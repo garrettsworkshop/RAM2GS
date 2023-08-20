@@ -1,0 +1,7 @@
+#Start recording tcl command: 8/20/2023 05:55:38
+#Project Location: Y:/Repos/RAM2GS/CPLD/LCMXO256C; Project name: RAM2GS_LCMXO256C
+prj_project open "Y:/Repos/RAM2GS/CPLD/LCMXO256C/RAM2GS_LCMXO256C.ldf"
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task IBIS
+prj_project close
+#Stop recording: 8/20/2023 05:55:50

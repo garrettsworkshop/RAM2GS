@@ -9,16 +9,16 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Wed Aug 16 04:50:41 2023
+# Written on Sat Aug 19 20:57:08 2023
 
 ##### DESIGN INFO #######################################################
 
 Top View:                "RAM2GS"
-Constraint File(s):      "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS.sdc"
+Constraint File(s):      "Y:\Repos\RAM2GS\CPLD\RAM2GS.sdc"
 
 
 
@@ -48,11 +48,11 @@ nCRAS        RCLK       |     No paths         |     No paths         |     No p
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
 
 
-@W:"d:/onedrive/documents/github/ram2gs/cpld/ram2gs.sdc":2:0:2:0|Paths from clock (PHI2:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small. 
-@W:"d:/onedrive/documents/github/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (PHI2:f) are overconstrained because the required time of 1.00 ns is too small. 
-@W:"d:/onedrive/documents/github/ram2gs/cpld/ram2gs.sdc":3:0:3:0|Paths from clock (nCRAS:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small. 
-@W:"d:/onedrive/documents/github/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (PHI2:r) are overconstrained because the required time of 2.00 ns is too small. 
-@W:"d:/onedrive/documents/github/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (nCRAS:f) are overconstrained because the required time of 1.00 ns is too small. 
+@W:"y:/repos/ram2gs/cpld/ram2gs.sdc":2:0:2:0|Paths from clock (PHI2:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small. 
+@W:"y:/repos/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (PHI2:f) are overconstrained because the required time of 1.00 ns is too small. 
+@W:"y:/repos/ram2gs/cpld/ram2gs.sdc":3:0:3:0|Paths from clock (nCRAS:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small. 
+@W:"y:/repos/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (PHI2:r) are overconstrained because the required time of 2.00 ns is too small. 
+@W:"y:/repos/ram2gs/cpld/ram2gs.sdc":1:0:1:0|Paths from clock (RCLK:r) to clock (nCRAS:f) are overconstrained because the required time of 1.00 ns is too small. 
 
 
 Unconstrained Start/End Points

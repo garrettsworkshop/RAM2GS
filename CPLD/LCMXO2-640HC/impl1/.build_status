@@ -2,41 +2,54 @@
 <BuildStatus>
     <Strategy name="Strategy1">
         <Milestone name="Export" build_result="0" build_time="0">
-            <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
-            <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
-            <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1692233986"/>
+            <Task name="IBIS" build_result="2" update_result="0" update_time="1692496517"/>
+            <Task name="TimingSimFileVlg" build_result="2" update_result="0" update_time="1692496519"/>
+            <Task name="TimingSimFileVHD" build_result="2" update_result="0" update_time="1692496520"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1692496523"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1692496527"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1692233977">
-            <Task name="Map" build_result="2" update_result="0" update_time="1692233977"/>
-            <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
-            <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="Map" build_result="2" build_time="1692496497">
+            <Task name="Map" build_result="2" update_result="0" update_time="1692496497"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1692496498"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1692496499"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1692496501"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1692233984">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1692233984"/>
-            <Task name="PARTrace" build_result="0" update_result="3" update_time="0"/>
-            <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
+        <Milestone name="PAR" build_result="2" build_time="1692496511">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1692496511"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1692496511"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1692496513"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1692233976">
-            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1692233976"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1692496496">
+            <Task name="Synplify_Synthesis" build_result="2" update_result="0" update_time="1692496496"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1692233963"/>
-            <Task name="BKM" build_result="0" update_result="2" update_time="1692233963"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1692444754"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="1692444754"/>
             <Task name="SSO" build_result="0" update_result="3" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="3" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Translate" build_result="2" build_time="1692233976">
-            <Task name="Translate" build_result="2" update_result="0" update_time="1692233976"/>
+        <Milestone name="Translate" build_result="2" build_time="1692496497">
+            <Task name="Translate" build_result="2" update_result="0" update_time="1692496497"/>
         </Milestone>
-        <Report name="LCMXO2_640HC_impl1.bgn" last_build_time="1692233986" last_build_size="4399"/>
-        <Report name="LCMXO2_640HC_impl1.edi" last_build_time="1692233975" last_build_size="204145"/>
-        <Report name="LCMXO2_640HC_impl1.jed" last_build_time="1692233986" last_build_size="177085"/>
-        <Report name="LCMXO2_640HC_impl1.ncd" last_build_time="1692233984" last_build_size="278109"/>
-        <Report name="LCMXO2_640HC_impl1.ngd" last_build_time="1692233976" last_build_size="207794"/>
-        <Report name="LCMXO2_640HC_impl1_map.ncd" last_build_time="1692233977" last_build_size="197654"/>
+        <Report name="IBIS/LCMXO2_640HC_impl1.ibs" last_build_time="1692496517" last_build_size="184928"/>
+        <Report name="LCMXO2_640HC_impl1.bgn" last_build_time="1692496527" last_build_size="4359"/>
+        <Report name="LCMXO2_640HC_impl1.bit" last_build_time="1692496523" last_build_size="6185"/>
+        <Report name="LCMXO2_640HC_impl1.edi" last_build_time="1692496494" last_build_size="198884"/>
+        <Report name="LCMXO2_640HC_impl1.ior" last_build_time="1692496513" last_build_size="6573"/>
+        <Report name="LCMXO2_640HC_impl1.jed" last_build_time="1692496527" last_build_size="177085"/>
+        <Report name="LCMXO2_640HC_impl1.ncd" last_build_time="1692496511" last_build_size="268674"/>
+        <Report name="LCMXO2_640HC_impl1.ngd" last_build_time="1692496497" last_build_size="204730"/>
+        <Report name="LCMXO2_640HC_impl1.tw1" last_build_time="1692496498" last_build_size="17550"/>
+        <Report name="LCMXO2_640HC_impl1.twr" last_build_time="1692496511" last_build_size="90277"/>
+        <Report name="LCMXO2_640HC_impl1_map.ncd" last_build_time="1692496497" last_build_size="193033"/>
+        <Report name="LCMXO2_640HC_impl1_mapvho.sdf" last_build_time="1692496501" last_build_size="164487"/>
+        <Report name="LCMXO2_640HC_impl1_mapvho.vho" last_build_time="1692496501" last_build_size="1365291"/>
+        <Report name="LCMXO2_640HC_impl1_mapvo.sdf" last_build_time="1692496499" last_build_size="163556"/>
+        <Report name="LCMXO2_640HC_impl1_mapvo.vo" last_build_time="1692496499" last_build_size="201461"/>
+        <Report name="LCMXO2_640HC_impl1_vho.sdf" last_build_time="1692496520" last_build_size="181438"/>
+        <Report name="LCMXO2_640HC_impl1_vho.vho" last_build_time="1692496520" last_build_size="1408234"/>
+        <Report name="LCMXO2_640HC_impl1_vo.sdf" last_build_time="1692496519" last_build_size="180465"/>
+        <Report name="LCMXO2_640HC_impl1_vo.vo" last_build_time="1692496519" last_build_size="212142"/>
     </Strategy>
 </BuildStatus>

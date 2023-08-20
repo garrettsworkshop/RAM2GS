@@ -10,7 +10,7 @@ Build: R-2021.03L-SP1
 Install: C:\lscc\diamond\3.12\synpbase
 OS: Windows 6.2
 
-Hostname: ZANEPC
+Hostname: ZANEMACWIN11
 
 Implementation : impl1
 Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug 10 2021 09:15:36, @
@@ -18,11 +18,11 @@ Synopsys Synopsys Netlist Linker, Version comp202103synp2, Build 093R, Built Aug
 @N|Running in 64-bit mode
 File D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO256C\impl1\synwork\RAM2GS_LCMXO256C_impl1_comp.srs changed - recompiling
 
-At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 90MB peak: 91MB)
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 98MB peak: 98MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Wed Aug 16 04:50:32 2023
+# Sat Aug 19 20:53:12 2023
 
 ###########################################################]

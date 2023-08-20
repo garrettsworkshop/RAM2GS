@@ -7,17 +7,15 @@ Design Information
 
 Command line:   map -a MachXO -p LCMXO640C -t TQFP100 -s 3 -oc Commercial -ioreg
      b RAM2GS_LCMXO640C_impl1.ngd -o RAM2GS_LCMXO640C_impl1_map.ncd -pr
-     RAM2GS_LCMXO640C_impl1.prf -mp RAM2GS_LCMXO640C_impl1.mrp -lpf D:/OneDrive/
-     Documents/GitHub/RAM2GS/CPLD/LCMXO640C/impl1/RAM2GS_LCMXO640C_impl1_synplif
-     y.lpf -lpf
-     D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C/RAM2GS_LCMXO640C.lpf -c
-     0 -gui -msgset
-     D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C/promote.xml 
+     RAM2GS_LCMXO640C_impl1.prf -mp RAM2GS_LCMXO640C_impl1.mrp -lpf
+     Y:/Repos/RAM2GS/CPLD/LCMXO640C/impl1/RAM2GS_LCMXO640C_impl1_synplify.lpf
+     -lpf Y:/Repos/RAM2GS/CPLD/RAM2GS-LCMXO.lpf -c 0 -gui -msgset
+     Y:/Repos/RAM2GS/CPLD/LCMXO640C/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO640CTQFP100
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/16/23  04:50:46
+Mapped on:  08/19/23  20:57:13
 
 Design Summary
 --------------
@@ -60,18 +58,18 @@ Design Summary
      Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
      Net RASr2: 2 loads, 2 LSLICEs
      Net Ready_fast: 7 loads, 7 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
 
                                     Page 1
 
 
 
 
-Design:  RAM2GS                                        Date:  08/16/23  04:50:46
+Design:  RAM2GS                                        Date:  08/19/23  20:57:13
 
 Design Summary (cont)
 ---------------------
-   Number of nets driven by tri-state buffers:  0
-   Top 10 highest fanout non-clock nets:
      Net InitReady: 16 loads
      Net Ready: 16 loads
      Net S[1]: 13 loads
@@ -126,18 +124,18 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+------------+------------+
 | nRWE                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
+| RCKE                | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
 
                                     Page 2
 
 
 
 
-Design:  RAM2GS                                        Date:  08/16/23  04:50:46
+Design:  RAM2GS                                        Date:  08/19/23  20:57:13
 
 IO (PIO) Attributes (cont)
 --------------------------
-| RCKE                | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 | RCLK                | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | nRCS                | OUTPUT    | LVCMOS33  |            |            |
@@ -192,18 +190,18 @@ IO (PIO) Attributes (cont)
 +---------------------+-----------+-----------+------------+------------+
 | nCCAS               | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
+| Dout[7]             | OUTPUT    | LVCMOS33  |            |            |
++---------------------+-----------+-----------+------------+------------+
 
                                     Page 3
 
 
 
 
-Design:  RAM2GS                                        Date:  08/16/23  04:50:46
+Design:  RAM2GS                                        Date:  08/19/23  20:57:13
 
 IO (PIO) Attributes (cont)
 --------------------------
-| Dout[7]             | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 | Dout[6]             | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | Dout[5]             | OUTPUT    | LVCMOS33  |            |            |
@@ -259,12 +257,14 @@ IO (PIO) Attributes (cont)
 
 
 
+
+
                                     Page 4
 
 
 
 
-Design:  RAM2GS                                        Date:  08/16/23  04:50:46
+Design:  RAM2GS                                        Date:  08/19/23  20:57:13
 
 Removed logic
 -------------
@@ -306,7 +306,7 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 30 MB
+   Peak Memory Usage: 51 MB
         
 
 

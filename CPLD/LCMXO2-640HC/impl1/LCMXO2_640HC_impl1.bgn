@@ -4,10 +4,10 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Aug 16 20:59:44 2023
+Sat Aug 19 21:55:24 2023
 
 
-Command: bitgen -g RamCfg:Reset -path D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC -w -jedec -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/promote.xml LCMXO2_640HC_impl1.ncd LCMXO2_640HC_impl1.prf 
+Command: bitgen -g RamCfg:Reset -path Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC -w -jedec -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/promote.xml LCMXO2_640HC_impl1.ncd LCMXO2_640HC_impl1.prf 
 
 Loading design for application Bitgen from file LCMXO2_640HC_impl1.ncd.
 Design name: RAM2GS
@@ -81,6 +81,6 @@ UFM Utilization: General Purpose Flash Memory.
 Available General Purpose Flash Memory:  191 Pages (Page 0 to Page 190).
 Initialized UFM Pages:                     1 Page (Page 190).
  
-Total CPU Time: 1 secs 
-Total REAL Time: 2 secs 
-Peak Memory Usage: 245 MB
+Total CPU Time: 3 secs 
+Total REAL Time: 3 secs 
+Peak Memory Usage: 266 MB

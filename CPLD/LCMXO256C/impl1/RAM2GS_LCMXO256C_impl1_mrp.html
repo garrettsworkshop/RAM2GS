@@ -15,17 +15,15 @@
 
 Command line:   map -a MachXO -p LCMXO256C -t TQFP100 -s 3 -oc Commercial -ioreg
      b RAM2GS_LCMXO256C_impl1.ngd -o RAM2GS_LCMXO256C_impl1_map.ncd -pr
-     RAM2GS_LCMXO256C_impl1.prf -mp RAM2GS_LCMXO256C_impl1.mrp -lpf D:/OneDrive/
-     Documents/GitHub/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1_synplif
-     y.lpf -lpf
-     D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/RAM2GS_LCMXO256C.lpf -c
-     0 -gui -msgset
-     D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/promote.xml 
+     RAM2GS_LCMXO256C_impl1.prf -mp RAM2GS_LCMXO256C_impl1.mrp -lpf
+     Y:/Repos/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1_synplify.lpf
+     -lpf Y:/Repos/RAM2GS/CPLD/RAM2GS-LCMXO.lpf -c 0 -gui -msgset
+     Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO256CTQFP100
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/16/23  04:50:39
+Mapped on:  08/19/23  20:53:19
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
@@ -67,9 +65,9 @@ Mapped on:  08/16/23  04:50:39
      Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
      Net RASr2: 2 loads, 2 LSLICEs
      Net Ready_fast: 7 loads, 7 LSLICEs
-
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
+
      Net InitReady: 16 loads
      Net Ready: 16 loads
      Net S[1]: 13 loads
@@ -127,9 +125,9 @@ Mapped on:  08/16/23  04:50:39
 +---------------------+-----------+-----------+------------+------------+
 | nRWE                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-
 | RCKE                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
+
 | RCLK                | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | nRCS                | OUTPUT    | LVCMOS33  |            |            |
@@ -184,9 +182,9 @@ Mapped on:  08/16/23  04:50:39
 +---------------------+-----------+-----------+------------+------------+
 | nCCAS               | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
-
 | Dout[7]             | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
+
 | Dout[6]             | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | Dout[5]             | OUTPUT    | LVCMOS33  |            |            |
@@ -244,6 +242,8 @@ Mapped on:  08/16/23  04:50:39
 
 
 
+
+
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
 Block GSR_INST undriven or does not drive anything - clipped.
@@ -285,7 +285,7 @@ Block VCC was optimized away.
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 29 MB
+   Peak Memory Usage: 50 MB
         
 
 

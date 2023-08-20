@@ -4,9 +4,9 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2023 8 16 20 52 2)
+      (timestamp 2023 8 19 7 25 4)
       (program "SCUBA" (version "Diamond (64-bit) 3.12.1.454"))))
-      (comment "C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 62.5 -ufm -ufm_ebr 190 -mem_size 1 -ufm_0 -wb -dev 640 ")
+      (comment "C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 66.7 -ufm -ufm_ebr 190 -mem_size 1 -memfile ../RAM2GS-LCMXO2.mem -memformat hex -wb -dev 640 ")
   (library ORCLIB
     (edifLevel 0)
     (technology
@@ -287,9 +287,9 @@
             (property UFM_INIT_FILE_FORMAT
               (string "HEX"))
             (property UFM_INIT_FILE_NAME
-              (string "NONE"))
+              (string "../RAM2GS-LCMXO2.mem"))
             (property UFM_INIT_ALL_ZEROS
-              (string "ENABLED"))
+              (string "DISABLED"))
             (property UFM_INIT_START_PAGE
               (string "190"))
             (property UFM_INIT_PAGES
@@ -383,7 +383,7 @@
             (property EFB_I2C1
               (string "DISABLED"))
             (property EFB_WB_CLK_FREQ
-              (string "62.5")))
+              (string "66.7")))
           (net scuba_vhi
             (joined
               (portRef Z (instanceRef scuba_vhi_inst))

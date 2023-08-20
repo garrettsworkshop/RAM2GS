@@ -1,31 +1,31 @@
 Selecting top level module RAM2GS
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
 Running optimization stage 1 on VHI .......
-Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 92MB)
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1124:7:1124:9|Synthesizing module VLO in library work.
 Running optimization stage 1 on VLO .......
-Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 92MB)
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
 Running optimization stage 1 on EFB .......
-Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 92MB)
-@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\REFB.v":8:7:8:10|Synthesizing module REFB in library work.
+Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+@N: CG364 :"Y:\Repos\RAM2GS\CPLD\LCMXO2-640HC\REFB.v":8:7:8:10|Synthesizing module REFB in library work.
 Running optimization stage 1 on REFB .......
-Finished optimization stage 1 on REFB (CPU Time 0h:00m:00s, Memory Used current: 92MB peak: 92MB)
-@N: CG364 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":1:7:1:12|Synthesizing module RAM2GS in library work.
+Finished optimization stage 1 on REFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
+@N: CG364 :"Y:\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v":1:7:1:12|Synthesizing module RAM2GS in library work.
 Running optimization stage 1 on RAM2GS .......
-Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 94MB peak: 94MB)
+Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 101MB)
 Running optimization stage 2 on RAM2GS .......
-Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Finished optimization stage 2 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on REFB .......
-Finished optimization stage 2 on REFB (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Finished optimization stage 2 on REFB (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on EFB .......
-Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Finished optimization stage 2 on EFB (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on VLO .......
-Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Finished optimization stage 2 on VLO (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 Running optimization stage 2 on VHI .......
-Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 95MB peak: 96MB)
+Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 
 For a summary of runtime and memory usage per design unit, please see file:
 ==========================================================
-@L: D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\layer0.rt.csv
+@L: Y:\Repos\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\layer0.rt.csv
 

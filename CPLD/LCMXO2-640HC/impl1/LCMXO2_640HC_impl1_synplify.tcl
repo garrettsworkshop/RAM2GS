@@ -24,7 +24,7 @@ set_option -force_gsr false
 set_option -compiler_compatible 0
 set_option -dup false
 
-add_file -constraint {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS.sdc}
+add_file -constraint {Y:/Repos/RAM2GS/CPLD/RAM2GS.sdc}
 set_option -default_enum_encoding default
 
 #simulation options
@@ -46,15 +46,15 @@ set_option -resolve_multiple_driver 0
 set_option -seqshift_no_replicate 0
 
 #-- add_file options
-set_option -include_path {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC}
-add_file -verilog -vlog_std v2001 {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.v}
-add_file -verilog -vlog_std v2001 {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/REFB.v}
+set_option -include_path {Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC}
+add_file -verilog -vlog_std v2001 {Y:/Repos/RAM2GS/CPLD/RAM2GS-LCMXO2.v}
+add_file -verilog -vlog_std v2001 {Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/REFB.v}
 
 #-- top module name
 set_option -top_module RAM2GS
 
 #-- set result format/file last
-project -result_file {D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1.edi}
+project -result_file {Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/impl1/LCMXO2_640HC_impl1.edi}
 
 #-- error message log file
 project -log_file {LCMXO2_640HC_impl1.srf}
@@ -63,4 +63,4 @@ project -log_file {LCMXO2_640HC_impl1.srf}
 
 
 #-- run Synplify with 'arrange HDL file'
-project -run
+project -run -clean

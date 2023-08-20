@@ -9,7 +9,7 @@
         <Source name="impl1/impl1.xcf" type="Programming Project File" type_short="Programming">
             <Options/>
         </Source>
-        <Source name="RAM2GS_LCMXO640C.lpf" type="Logic Preference" type_short="LPF">
+        <Source name="../RAM2GS-LCMXO.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
         <Source name="../RAM2GS.sdc" type="Synplify Design Constraints File" type_short="SDC">

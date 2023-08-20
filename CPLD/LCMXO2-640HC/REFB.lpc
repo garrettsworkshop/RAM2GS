@@ -16,8 +16,8 @@ CoreRevision=1.2
 ModuleName=REFB
 SourceFormat=Verilog HDL
 ParameterFileVersion=1.0
-Date=08/16/2023
-Time=20:52:02
+Date=08/19/2023
+Time=07:25:04
 
 [Parameters]
 Verilog=1
@@ -81,14 +81,14 @@ ufm2=0
 ufm3=0
 ufm_cfg0=0
 ufm_cfg1=0
-wb_clk_freq=62.5
+wb_clk_freq=66.7
 ufm_usage=SHARED_EBR_TAG
 ufm_ebr=190
 ufm_remain=
 mem_size=1
 ufm_start=
-ufm_init=0
-memfile=
+ufm_init=mem
+memfile=../RAM2GS-LCMXO2.mem
 ufm_dt=hex
 ufm0_ebr=
 mem_size0=1
@@ -138,4 +138,4 @@ t_wbport=0
 t_portlock=0
 
 [Command]
-cmd_line= -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 62.5 -ufm -ufm_ebr 190 -mem_size 1 -ufm_0 -wb -dev 640
+cmd_line= -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 66.7 -ufm -ufm_ebr 190 -mem_size 1 -memfile ../RAM2GS-LCMXO2.mem -memformat hex -wb -dev 640

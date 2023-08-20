@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Wed Aug 16 04:50:40 2023
+Sat Aug 19 20:53:20 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,7 +23,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO256C_impl1.tw1 -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd RAM2GS_LCMXO256C_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO256C_impl1.tw1 -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd RAM2GS_LCMXO256C_impl1.prf 
 Design file:     ram2gs_lcmxo256c_impl1_map.ncd
 Preference file: ram2gs_lcmxo256c_impl1.prf
 Device,speed:    LCMXO256C,3
@@ -230,7 +230,7 @@ Constraints cover 517 paths, 4 nets, and 395 connections (62.40% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Wed Aug 16 04:50:40 2023
+Sat Aug 19 20:53:20 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -240,7 +240,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO256C_impl1.tw1 -gui -msgset D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd RAM2GS_LCMXO256C_impl1.prf 
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o RAM2GS_LCMXO256C_impl1.tw1 -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1_map.ncd RAM2GS_LCMXO256C_impl1.prf 
 Design file:     ram2gs_lcmxo256c_impl1_map.ncd
 Preference file: ram2gs_lcmxo256c_impl1.prf
 Device,speed:    LCMXO256C,M
