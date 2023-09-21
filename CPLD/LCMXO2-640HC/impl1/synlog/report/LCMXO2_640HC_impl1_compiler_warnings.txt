@@ -1,2 +1,0 @@
-@W: CG360 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-LCMXO2.v":72:6:72:12|Removing wire ufm_irq, as there is no assignment to it.
-

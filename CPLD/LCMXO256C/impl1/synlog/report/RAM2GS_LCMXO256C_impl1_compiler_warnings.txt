@@ -1,2 +1,0 @@
-@W: CL169 :"D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\RAM2GS-SPI.v":288:1:288:6|Pruning unused register CmdLEDEN. Make sure that there are no unused intermediate registers.
-

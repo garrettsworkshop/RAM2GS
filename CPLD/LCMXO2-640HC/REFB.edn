@@ -4,7 +4,7 @@
   (keywordMap (keywordLevel 0))
   (status
     (written
-      (timestamp 2023 8 19 7 25 4)
+      (timestamp 2023 8 23 4 27 49)
       (program "SCUBA" (version "Diamond (64-bit) 3.12.1.454"))))
       (comment "C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 66.7 -ufm -ufm_ebr 190 -mem_size 1 -memfile ../RAM2GS-LCMXO2.mem -memformat hex -wb -dev 640 ")
   (library ORCLIB

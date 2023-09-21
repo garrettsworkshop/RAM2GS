@@ -1,0 +1,29 @@
+SCUBA, Version Diamond (64-bit) 3.12.1.454
+Thu Sep 21 04:34:49 2023
+  
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+  
+BEGIN SCUBA Module Synthesis
+  
+    Issued command   : C:\lscc\diamond\3.12\ispfpga\bin\nt64\scuba.exe -w -n REFB -lang verilog -synth synplify -bus_exp 7 -bb -type efb -arch xo2c00 -freq 66.7 -ufm -ufm_ebr 190 -mem_size 321 -memfile ../RAM2GS-LCMXO2.mem -memformat hex -wb -dev 1200 
+    Circuit name     : REFB
+    Module type      : efb
+    Module Version   : 1.2
+    Ports            : 
+    Inputs       : wb_clk_i, wb_rst_i, wb_cyc_i, wb_stb_i, wb_we_i, wb_adr_i[7:0], wb_dat_i[7:0]
+    Outputs      : wb_dat_o[7:0], wb_ack_o, wbc_ufm_irq
+    I/O buffer       : not inserted
+    EDIF output      : REFB.edn
+    Verilog output   : REFB.v
+    Verilog template : REFB_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : REFB.srp
+    Estimated Resource Usage:
+  
+END   SCUBA Module Synthesis
+

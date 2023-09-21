@@ -1,5 +1,5 @@
 Assembler report for RAM2GS
-Sat Aug 19 22:00:16 2023
+Thu Sep 21 05:38:25 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: //ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof
+  5. Assembler Device Options: /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Aug 19 22:00:16 2023 ;
+; Assembler Status      ; Successful - Thu Sep 21 05:38:25 2023 ;
 ; Revision Name         ; RAM2GS                                ;
 ; Top-level Entity Name ; RAM2GS                                ;
 ; Family                ; MAX II                                ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+-----------------------------------------------------------+
-; Assembler Generated Files                                 ;
-+-----------------------------------------------------------+
-; File Name                                                 ;
-+-----------------------------------------------------------+
-; //ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof ;
-+-----------------------------------------------------------+
++--------------------------------------------------+
+; Assembler Generated Files                        ;
++--------------------------------------------------+
+; File Name                                        ;
++--------------------------------------------------+
+; /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof ;
++--------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------+
-; Assembler Device Options: //ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof ;
-+----------------+--------------------------------------------------------------------+
-; Option         ; Setting                                                            ;
-+----------------+--------------------------------------------------------------------+
-; JTAG usercode  ; 0x00172E3B                                                         ;
-; Checksum       ; 0x0017312B                                                         ;
-+----------------+--------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Assembler Device Options: /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pof ;
++----------------+-----------------------------------------------------------+
+; Option         ; Setting                                                   ;
++----------------+-----------------------------------------------------------+
+; JTAG usercode  ; 0x00172E3B                                                ;
+; Checksum       ; 0x0017312B                                                ;
++----------------+-----------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Aug 19 22:00:13 2023
+    Info: Processing started: Thu Sep 21 05:38:24 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off RAM2GS-MAXII -c RAM2GS
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4665 megabytes
-    Info: Processing ended: Sat Aug 19 22:00:17 2023
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 13095 megabytes
+    Info: Processing ended: Thu Sep 21 05:38:25 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

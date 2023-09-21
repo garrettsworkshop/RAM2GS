@@ -52,13 +52,13 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     output [11:0] RA;
     assign RA[11] = RA11;
     assign RA[10] = RA10;
-    assign RA[9:0] = ~nRowColSel ? RowA[9:0] : MAin[9:0];
+    assign RA[9:0] = !nRowColSel ? RowA[9:0] : MAin[9:0];
     output RDQML, RDQMH;
-    assign RDQML = ~nRowColSel ? 1'b1 : ~MAin[9];
-    assign RDQMH = ~nRowColSel ? 1'b1 :  MAin[9];
+    assign RDQML = !nRowColSel ? 1'b1 : !MAin[9];
+    assign RDQMH = !nRowColSel ? 1'b1 :  MAin[9];
     reg [7:0] WRD;
     inout [7:0] RD;
-    assign RD[7:0] = (~nCCAS & ~nFWE) ? WRD[7:0] : 8'bZ;
+    assign RD[7:0] = (!nCCAS && !nFWE) ? WRD[7:0] : 8'bZ;
 
     /* UFM Interface */
     output reg nUFMCS = 1;
@@ -76,9 +76,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg CmdUFMCLK = 0;
     reg CmdUFMSDI = 0;
     reg CmdUFMCS = 0;
-    wire ADWR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFF & ~nFWE;
-    wire C1WR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFE & ~nFWE;
-    wire CMDWR = Bank[7:0]==8'hFB & MAin[7:0]==8'hFD & ~nFWE;
+    wire ADWR = Bank[7:0]==8'hFB && MAin[7:0]==8'hFF && !nFWE;
+    wire C1WR = Bank[7:0]==8'hFB && MAin[7:0]==8'hFE && !nFWE;
+    wire CMDWR = Bank[7:0]==8'hFB && MAin[7:0]==8'hFD && !nFWE;
     
     /* State Counters */
     reg InitReady = 0; // 1 if ready for init sequence
@@ -90,13 +90,13 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     /* Synchronize PHI2, RAS, CAS */
     always @(posedge RCLK) begin
         PHI2r <= PHI2; PHI2r2 <= PHI2r; PHI2r3 <= PHI2r2;
-        RASr <= ~nCRAS; RASr2 <= RASr; RASr3 <= RASr2;
-        CASr <= ~nCCAS; CASr2 <= CASr; CASr3 <= CASr2;
+        RASr <= !nCRAS; RASr2 <= RASr; RASr3 <= RASr2;
+        CASr <= !nCCAS; CASr2 <= CASr; CASr3 <= CASr2;
     end
     
     /* Latch 65816 bank when PHI2 rises */
     always @(posedge PHI2) begin
-        if (Ready) RA11 <= (Din[6] & ~n8MEGEN) ^ XOR8MEG; // Set RA11
+        if (Ready) RA11 <= (Din[6] && !n8MEGEN) ^ XOR8MEG; // Set RA11
         else RA11 <= 1'b0; // Reserved in mode register
         Bank[7:0] <= Din[7:0]; // Latch bank
     end
@@ -115,8 +115,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
             RowA[3] <= 1'b0;        // "0" for sequential burst (not used)
             RowA[2:0] <= 3'b000;    // "0" for burst length 1 (no burst)
         end
-        FWEr <= ~nFWE;
-        CBR <= ~nCCAS;
+        FWEr <= !nFWE;
+        CBR <= !nCCAS;
     end
 
     /* Latch write data when CAS falls */
@@ -126,7 +126,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
     /* State counter from RAS */
     always @(posedge RCLK) begin
-        if (~RASr2) S <= 0;
+        if (!RASr2) S <= 0;
         else if (S==2'h3) S <= 2'h3;
         else S <= S+2'h1;
     end
@@ -140,7 +140,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     /* SDRAM CKE */
     always @(posedge RCLK) begin
         // Only 1 LUT4 allowed for this function!
-        RCKE <= ((RASr | RASr2) & RCKEEN) | (~RASr2 & RASr3);
+        RCKE <= ((RASr || RASr2) && RCKEEN) || (!RASr2 && RASr3);
     end
 
     /* SDRAM command */
@@ -164,7 +164,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                         RA10 <= 1'b1; // Bank RA10 consistently "1"
                     end
                     // Enable clock only for reads
-                    RCKEEN <= ~CBR & ~FWEr;
+                    RCKEEN <= !CBR && !FWEr;
                 end else if (RCKE) begin
                     // PCall
                     nRCS <= 1'b0;
@@ -191,9 +191,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 nRWE <= 1'b1;
                 RA10 <= 1'b1; // RA10 is don't care
                 nRowColSel <= 1'b1; // Select asynchronous column address
-                RCKEEN <= ~CBR; // Disable clock if refresh cycle
+                RCKEEN <= !CBR; // Disable clock if refresh cycle
             end else if (S==2) begin
-                if (~FWEr & ~CBR) begin
+                if (!FWEr && !CBR) begin
                     // RD
                     nRCS <= 1'b0;
                     nRRAS <= 1'b1;
@@ -209,9 +209,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                     RA10 <= 1'b1; // RA10 is don't care
                 end
                 nRowColSel <= 1'b1; // Select asynchronous column address
-                RCKEEN <= ~CBR & FWEr; // Enable clock only for writes
+                RCKEEN <= !CBR && FWEr; // Enable clock only for writes
             end else if (S==3) begin
-                if (CASr2 & ~CASr3 & ~CBR & FWEr) begin
+                if (CASr2 && !CASr3 && !CBR && FWEr) begin
                     // WR
                     nRCS <= 1'b0;
                     nRRAS <= 1'b1;
@@ -226,11 +226,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                     nRWE <= 1'b1;
                     RA10 <= 1'b1; // RA10 is don't care
                 end
-                nRowColSel <= ~(~FWEr | CASr3 | CBR);
-                RCKEEN <= ~(~FWEr | CASr2 | CBR);
+                nRowColSel <= !(!FWEr || CASr3 || CBR);
+                RCKEEN <= !(!FWEr || CASr2 || CBR);
             end
         end else if (InitReady) begin
-            if (S==0 & RASr2) begin
+            if (S==0 && RASr2) begin
                 if (IS==0) begin
                     // NOP
                     nRCS <= 1'b1;
@@ -269,7 +269,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 nRWE <= 1'b1;
                 RA10 <= 1'b1; // RA10 is don't care
             end
-            if (S==3 & ~RASr2 & IS==15) Ready <= 1'b1;
+            if (S==3 && !RASr2 && IS==15) Ready <= 1'b1;
             nRowColSel <= 1'b0; // Select registered row address
             RCKEEN <= 1'b1;
         end else begin
@@ -287,26 +287,26 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     /* Submit command when PHI2 falls */
     always @(negedge PHI2) begin
         // Magic number check
-        if (C1WR & Din[7:0]==8'hC1) begin // "C1" magic number
+        if (C1WR && Din[7:0]==8'hC1) begin // "C1" magic number
             if (ADSubmitted) begin
                 CmdEnable <= 1'b1;
             end
             C1Submitted <= 1'b1;
             ADSubmitted <= 1'b0;
-        end else if (ADWR & Din[7:0]==8'hAD) begin // "AD" magic number
+        end else if (ADWR && Din[7:0]==8'hAD) begin // "AD" magic number
             if (C1Submitted) begin
                 CmdEnable <= 1'b1;
             end
             ADSubmitted <= 1'b1;
             C1Submitted <= 1'b0;
-        end else if (C1WR | ADWR) begin // wrong magic number submitted
+        end else if (C1WR || ADWR) begin // wrong magic number submitted
             CmdEnable <= 1'b0;
             C1Submitted <= 1'b0;
             ADSubmitted <= 1'b0;
         end else if (CMDWR) CmdEnable <= 1'b0;
 
         // Submit command
-        if (CMDWR & CmdEnable) begin
+        if (CMDWR && CmdEnable) begin
             // if (Din[7:4]==4'h0 && Din[3:2]==2'b00) begin // MAX w/LED 
             // if (Din[7:4]==4'h0) begin // MAX w/o LED
             if (Din[7:4]==4'h0 && Din[3:2]==2'b01) begin // LCMXO / iCE40 / AGM
@@ -316,7 +316,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 XOR8MEG <= 0;
             end else if (Din[7:4]==4'h1) begin
                 CmdLEDEN <= Din[1];
-                Cmdn8MEGEN <= ~Din[0];
+                Cmdn8MEGEN <= !Din[0];
                 CmdSubmitted <= 1'b1;
             end else if (Din[7:4]==4'h2) begin
                 // Reserved for MAX commands
@@ -338,15 +338,15 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
 
     /* UFM Control */
     always @(posedge RCLK) begin
-        if (~InitReady && FS[17:10]==8'h00) begin
+        if (!InitReady && FS[17:10]==8'h00) begin
             nUFMCS <= 1'b1;
             UFMCLK <= 1'b0;
             UFMSDI <= 1'b0;
-        end else if (~InitReady && FS[17:10]==8'h01) begin
+        end else if (!InitReady && FS[17:10]==8'h01) begin
             nUFMCS <= 1'b0;
             UFMCLK <= 1'b0;
             UFMSDI <= 1'b0;
-        end else if (~InitReady && FS[17:10]==8'h02) begin
+        end else if (!InitReady && FS[17:10]==8'h02) begin
             nUFMCS <= 1'b0;
             UFMCLK <= FS[4];
             case (FS[9:5]) // Shift out read data command (0x03)
@@ -383,26 +383,26 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 5'h1E: UFMSDI <= 1'b0; // address bit 01 (0)
                 5'h1F: UFMSDI <= 1'b0; // address bit 00 (0)
             endcase
-        end else if (~InitReady && FS[17:10]==8'h03) begin
+        end else if (!InitReady && FS[17:10]==8'h03) begin
             nUFMCS <= 1'b0;
             UFMCLK <= FS[4];
             UFMSDI <= 1'b0;
             // Latch n8MEGEN and LEDEN
-            if (FS[9:5]==5'h00 && FS[4:0]==5'h10) n8MEGEN <= ~UFMSDO;
-            if (FS[9:5]==5'h01 && FS[4:0]==5'h10) LEDEN <= ~UFMSDO;
-        end else if (~InitReady && FS[17:10]!=8'hFE && FS[17:10]!=8'hFF) begin
+            if (FS[9:5]==5'h00 && FS[4:0]==5'h10) n8MEGEN <= !UFMSDO;
+            if (FS[9:5]==5'h01 && FS[4:0]==5'h10) LEDEN <= !UFMSDO;
+        end else if (!InitReady && FS[17:10]!=8'hFE && FS[17:10]!=8'hFF) begin
             nUFMCS <= 1'b0;
             UFMCLK <= FS[1];
             UFMSDI <= 1'b0;
-        end else if (~InitReady) begin
+        end else if (!InitReady) begin
             nUFMCS <= 1'b1;
             UFMCLK <= 1'b0;
             UFMSDI <= 1'b0;
-        end else if (~PHI2r2 & PHI2r3 & CmdSubmitted) begin
+        end else if (!PHI2r2 && PHI2r3 && CmdSubmitted) begin
             // Set user command signals after PHI2 falls
             LEDEN <= CmdLEDEN;
             n8MEGEN <= Cmdn8MEGEN;
-            nUFMCS <= ~CmdUFMCS;
+            nUFMCS <= !CmdUFMCS;
             UFMCLK <= CmdUFMCLK;
             UFMSDI <= CmdUFMSDI;
         end

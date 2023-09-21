@@ -1,9 +1,0 @@
-#Start recording tcl command: 8/15/2023 04:36:06
-#Project Location: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C; Project name: RAM2GS_LCMXO256C
-D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C
-RAM2GS_LCMXO640C
-#Start recording tcl command: 8/15/2023 04:36:17
-#Project Location: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C; Project name: RAM2GS_LCMXO640C
-prj_project open "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO256C/RAM2GS_LCMXO256C.ldf"
-prj_project saveas -name "RAM2GS_LCMXO640C" -dir "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO640C"
-#Stop recording: 8/15/2023 04:36:17

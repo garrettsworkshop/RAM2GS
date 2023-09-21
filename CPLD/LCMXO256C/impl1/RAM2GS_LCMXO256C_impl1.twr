@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Sat Aug 19 20:53:31 2023
+Thu Sep 21 05:38:43 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -23,7 +23,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o RAM2GS_LCMXO256C_impl1.twr -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1.ncd RAM2GS_LCMXO256C_impl1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o RAM2GS_LCMXO256C_impl1.twr -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1.ncd RAM2GS_LCMXO256C_impl1.prf 
 Design file:     ram2gs_lcmxo256c_impl1.ncd
 Preference file: ram2gs_lcmxo256c_impl1.prf
 Device,speed:    LCMXO256C,3
@@ -1200,7 +1200,7 @@ Constraints cover 517 paths, 4 nets, and 420 connections (66.35% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Sat Aug 19 20:53:31 2023
+Thu Sep 21 05:38:43 2023
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1210,7 +1210,7 @@ Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
 
 Report Information
 ------------------
-Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o RAM2GS_LCMXO256C_impl1.twr -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1.ncd RAM2GS_LCMXO256C_impl1.prf 
+Command line:    trce -v 10 -gt -sethld -sp 3 -sphld m -o RAM2GS_LCMXO256C_impl1.twr -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml RAM2GS_LCMXO256C_impl1.ncd RAM2GS_LCMXO256C_impl1.prf 
 Design file:     ram2gs_lcmxo256c_impl1.ncd
 Preference file: ram2gs_lcmxo256c_impl1.prf
 Device,speed:    LCMXO256C,m

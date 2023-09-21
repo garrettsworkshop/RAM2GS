@@ -1,9 +1,9 @@
 
 // Verilog netlist produced by program ldbanno, Version Diamond (64-bit) 3.12.1.454
 
-// ldbanno -n Verilog -o RAM2GS_LCMXO640C_impl1_mapvo.vo -w -neg -gui -msgset Y:/Repos/RAM2GS/CPLD/LCMXO640C/promote.xml RAM2GS_LCMXO640C_impl1_map.ncd 
-// Netlist created on Sat Aug 19 20:57:13 2023
-// Netlist written on Sat Aug 19 20:57:15 2023
+// ldbanno -n Verilog -o RAM2GS_LCMXO640C_impl1_mapvo.vo -w -neg -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO640C/promote.xml RAM2GS_LCMXO640C_impl1_map.ncd 
+// Netlist created on Thu Sep 21 05:38:31 2023
+// Netlist written on Thu Sep 21 05:38:32 2023
 // Design is for device LCMXO640C
 // Design is for package TQFP100
 // Design is for performance grade 3
@@ -2798,12 +2798,12 @@ endmodule
 
 module mjiobuf0083 ( output Z, input PAD );
 
-  IBPD INST1( .I(PAD), .O(Z));
+  IB INST1( .I(PAD), .O(Z));
 endmodule
 
 module UFMSDO ( output PADDI, input UFMSDO );
 
-  mjiobuf0084 UFMSDO_pad( .Z(PADDI), .PAD(UFMSDO));
+  mjiobuf0083 UFMSDO_pad( .Z(PADDI), .PAD(UFMSDO));
 
   specify
     (UFMSDO => PADDI) = (0:0:0,0:0:0);
@@ -2813,14 +2813,9 @@ module UFMSDO ( output PADDI, input UFMSDO );
 
 endmodule
 
-module mjiobuf0084 ( output Z, input PAD );
-
-  IB INST1( .I(PAD), .O(Z));
-endmodule
-
 module UFMSDI ( input PADDO, output UFMSDI );
 
-  mjiobuf0085 UFMSDI_pad( .I(PADDO), .PAD(UFMSDI));
+  mjiobuf0084 UFMSDI_pad( .I(PADDO), .PAD(UFMSDI));
 
   specify
     (PADDO => UFMSDI) = (0:0:0,0:0:0);
@@ -2828,14 +2823,14 @@ module UFMSDI ( input PADDO, output UFMSDI );
 
 endmodule
 
-module mjiobuf0085 ( input I, output PAD );
+module mjiobuf0084 ( input I, output PAD );
 
   OB INST5( .I(I), .O(PAD));
 endmodule
 
 module UFMCLK ( input PADDO, output UFMCLK );
 
-  mjiobuf0085 UFMCLK_pad( .I(PADDO), .PAD(UFMCLK));
+  mjiobuf0084 UFMCLK_pad( .I(PADDO), .PAD(UFMCLK));
 
   specify
     (PADDO => UFMCLK) = (0:0:0,0:0:0);
@@ -2845,7 +2840,7 @@ endmodule
 
 module nUFMCS ( input PADDO, output nUFMCS );
 
-  mjiobuf0085 nUFMCS_pad( .I(PADDO), .PAD(nUFMCS));
+  mjiobuf0084 nUFMCS_pad( .I(PADDO), .PAD(nUFMCS));
 
   specify
     (PADDO => nUFMCS) = (0:0:0,0:0:0);
@@ -2855,7 +2850,7 @@ endmodule
 
 module RDQML ( input PADDO, output RDQML );
 
-  mjiobuf0085 RDQML_pad( .I(PADDO), .PAD(RDQML));
+  mjiobuf0084 RDQML_pad( .I(PADDO), .PAD(RDQML));
 
   specify
     (PADDO => RDQML) = (0:0:0,0:0:0);
@@ -2865,7 +2860,7 @@ endmodule
 
 module RDQMH ( input PADDO, output RDQMH );
 
-  mjiobuf0085 RDQMH_pad( .I(PADDO), .PAD(RDQMH));
+  mjiobuf0084 RDQMH_pad( .I(PADDO), .PAD(RDQMH));
 
   specify
     (PADDO => RDQMH) = (0:0:0,0:0:0);
@@ -2875,7 +2870,7 @@ endmodule
 
 module nRCAS ( input PADDO, output nRCAS );
 
-  mjiobuf0085 nRCAS_pad( .I(PADDO), .PAD(nRCAS));
+  mjiobuf0084 nRCAS_pad( .I(PADDO), .PAD(nRCAS));
 
   specify
     (PADDO => nRCAS) = (0:0:0,0:0:0);
@@ -2885,7 +2880,7 @@ endmodule
 
 module nRRAS ( input PADDO, output nRRAS );
 
-  mjiobuf0085 nRRAS_pad( .I(PADDO), .PAD(nRRAS));
+  mjiobuf0084 nRRAS_pad( .I(PADDO), .PAD(nRRAS));
 
   specify
     (PADDO => nRRAS) = (0:0:0,0:0:0);
@@ -2895,7 +2890,7 @@ endmodule
 
 module nRWE ( input PADDO, output nRWE );
 
-  mjiobuf0085 nRWE_pad( .I(PADDO), .PAD(nRWE));
+  mjiobuf0084 nRWE_pad( .I(PADDO), .PAD(nRWE));
 
   specify
     (PADDO => nRWE) = (0:0:0,0:0:0);
@@ -2905,7 +2900,7 @@ endmodule
 
 module RCKE ( input PADDO, output RCKE );
 
-  mjiobuf0085 RCKE_pad( .I(PADDO), .PAD(RCKE));
+  mjiobuf0084 RCKE_pad( .I(PADDO), .PAD(RCKE));
 
   specify
     (PADDO => RCKE) = (0:0:0,0:0:0);
@@ -2915,7 +2910,7 @@ endmodule
 
 module RCLK ( output PADDI, input RCLK );
 
-  mjiobuf0084 RCLK_pad( .Z(PADDI), .PAD(RCLK));
+  mjiobuf0083 RCLK_pad( .Z(PADDI), .PAD(RCLK));
 
   specify
     (RCLK => PADDI) = (0:0:0,0:0:0);
@@ -2927,7 +2922,7 @@ endmodule
 
 module nRCS ( input PADDO, output nRCS );
 
-  mjiobuf0085 nRCS_pad( .I(PADDO), .PAD(nRCS));
+  mjiobuf0084 nRCS_pad( .I(PADDO), .PAD(nRCS));
 
   specify
     (PADDO => nRCS) = (0:0:0,0:0:0);
@@ -3035,7 +3030,7 @@ endmodule
 
 module RA_11_ ( input PADDO, output RA11 );
 
-  mjiobuf0085 \RA_pad[11] ( .I(PADDO), .PAD(RA11));
+  mjiobuf0084 \RA_pad[11] ( .I(PADDO), .PAD(RA11));
 
   specify
     (PADDO => RA11) = (0:0:0,0:0:0);
@@ -3045,7 +3040,7 @@ endmodule
 
 module RA_10_ ( input PADDO, output RA10 );
 
-  mjiobuf0085 \RA_pad[10] ( .I(PADDO), .PAD(RA10));
+  mjiobuf0084 \RA_pad[10] ( .I(PADDO), .PAD(RA10));
 
   specify
     (PADDO => RA10) = (0:0:0,0:0:0);
@@ -3055,7 +3050,7 @@ endmodule
 
 module RA_9_ ( input PADDO, output RA9 );
 
-  mjiobuf0085 \RA_pad[9] ( .I(PADDO), .PAD(RA9));
+  mjiobuf0084 \RA_pad[9] ( .I(PADDO), .PAD(RA9));
 
   specify
     (PADDO => RA9) = (0:0:0,0:0:0);
@@ -3065,7 +3060,7 @@ endmodule
 
 module RA_8_ ( input PADDO, output RA8 );
 
-  mjiobuf0085 \RA_pad[8] ( .I(PADDO), .PAD(RA8));
+  mjiobuf0084 \RA_pad[8] ( .I(PADDO), .PAD(RA8));
 
   specify
     (PADDO => RA8) = (0:0:0,0:0:0);
@@ -3075,7 +3070,7 @@ endmodule
 
 module RA_7_ ( input PADDO, output RA7 );
 
-  mjiobuf0085 \RA_pad[7] ( .I(PADDO), .PAD(RA7));
+  mjiobuf0084 \RA_pad[7] ( .I(PADDO), .PAD(RA7));
 
   specify
     (PADDO => RA7) = (0:0:0,0:0:0);
@@ -3085,7 +3080,7 @@ endmodule
 
 module RA_6_ ( input PADDO, output RA6 );
 
-  mjiobuf0085 \RA_pad[6] ( .I(PADDO), .PAD(RA6));
+  mjiobuf0084 \RA_pad[6] ( .I(PADDO), .PAD(RA6));
 
   specify
     (PADDO => RA6) = (0:0:0,0:0:0);
@@ -3095,7 +3090,7 @@ endmodule
 
 module RA_5_ ( input PADDO, output RA5 );
 
-  mjiobuf0085 \RA_pad[5] ( .I(PADDO), .PAD(RA5));
+  mjiobuf0084 \RA_pad[5] ( .I(PADDO), .PAD(RA5));
 
   specify
     (PADDO => RA5) = (0:0:0,0:0:0);
@@ -3105,7 +3100,7 @@ endmodule
 
 module RA_4_ ( input PADDO, output RA4 );
 
-  mjiobuf0085 \RA_pad[4] ( .I(PADDO), .PAD(RA4));
+  mjiobuf0084 \RA_pad[4] ( .I(PADDO), .PAD(RA4));
 
   specify
     (PADDO => RA4) = (0:0:0,0:0:0);
@@ -3115,7 +3110,7 @@ endmodule
 
 module RA_3_ ( input PADDO, output RA3 );
 
-  mjiobuf0085 \RA_pad[3] ( .I(PADDO), .PAD(RA3));
+  mjiobuf0084 \RA_pad[3] ( .I(PADDO), .PAD(RA3));
 
   specify
     (PADDO => RA3) = (0:0:0,0:0:0);
@@ -3125,7 +3120,7 @@ endmodule
 
 module RA_2_ ( input PADDO, output RA2 );
 
-  mjiobuf0085 \RA_pad[2] ( .I(PADDO), .PAD(RA2));
+  mjiobuf0084 \RA_pad[2] ( .I(PADDO), .PAD(RA2));
 
   specify
     (PADDO => RA2) = (0:0:0,0:0:0);
@@ -3135,7 +3130,7 @@ endmodule
 
 module RA_1_ ( input PADDO, output RA1 );
 
-  mjiobuf0085 \RA_pad[1] ( .I(PADDO), .PAD(RA1));
+  mjiobuf0084 \RA_pad[1] ( .I(PADDO), .PAD(RA1));
 
   specify
     (PADDO => RA1) = (0:0:0,0:0:0);
@@ -3145,7 +3140,7 @@ endmodule
 
 module RA_0_ ( input PADDO, output RA0 );
 
-  mjiobuf0085 \RA_pad[0] ( .I(PADDO), .PAD(RA0));
+  mjiobuf0084 \RA_pad[0] ( .I(PADDO), .PAD(RA0));
 
   specify
     (PADDO => RA0) = (0:0:0,0:0:0);
@@ -3155,7 +3150,7 @@ endmodule
 
 module RBA_1_ ( input PADDO, output RBA1 );
 
-  mjiobuf0085 \RBA_pad[1] ( .I(PADDO), .PAD(RBA1));
+  mjiobuf0084 \RBA_pad[1] ( .I(PADDO), .PAD(RBA1));
 
   specify
     (PADDO => RBA1) = (0:0:0,0:0:0);
@@ -3165,7 +3160,7 @@ endmodule
 
 module RBA_0_ ( input PADDO, output RBA0 );
 
-  mjiobuf0085 \RBA_pad[0] ( .I(PADDO), .PAD(RBA0));
+  mjiobuf0084 \RBA_pad[0] ( .I(PADDO), .PAD(RBA0));
 
   specify
     (PADDO => RBA0) = (0:0:0,0:0:0);
@@ -3175,7 +3170,7 @@ endmodule
 
 module LED ( input PADDO, output LED );
 
-  mjiobuf0086 LED_pad( .I(PADDO), .PAD(LED));
+  mjiobuf0085 LED_pad( .I(PADDO), .PAD(LED));
 
   specify
     (PADDO => LED) = (0:0:0,0:0:0);
@@ -3183,14 +3178,14 @@ module LED ( input PADDO, output LED );
 
 endmodule
 
-module mjiobuf0086 ( input I, output PAD );
+module mjiobuf0085 ( input I, output PAD );
 
   OB INST5( .I(I), .O(PAD));
 endmodule
 
 module nFWE ( output PADDI, input nFWE );
 
-  mjiobuf0084 nFWE_pad( .Z(PADDI), .PAD(nFWE));
+  mjiobuf0083 nFWE_pad( .Z(PADDI), .PAD(nFWE));
 
   specify
     (nFWE => PADDI) = (0:0:0,0:0:0);
@@ -3202,7 +3197,7 @@ endmodule
 
 module nCRAS ( output PADDI, input nCRAS );
 
-  mjiobuf0087 nCRAS_pad( .Z(PADDI), .PAD(nCRAS));
+  mjiobuf0083 nCRAS_pad( .Z(PADDI), .PAD(nCRAS));
 
   specify
     (nCRAS => PADDI) = (0:0:0,0:0:0);
@@ -3212,14 +3207,9 @@ module nCRAS ( output PADDI, input nCRAS );
 
 endmodule
 
-module mjiobuf0087 ( output Z, input PAD );
-
-  IBPU INST1( .I(PAD), .O(Z));
-endmodule
-
 module nCCAS ( output PADDI, input nCCAS );
 
-  mjiobuf0087 nCCAS_pad( .Z(PADDI), .PAD(nCCAS));
+  mjiobuf0083 nCCAS_pad( .Z(PADDI), .PAD(nCCAS));
 
   specify
     (nCCAS => PADDI) = (0:0:0,0:0:0);
@@ -3301,7 +3291,7 @@ endmodule
 
 module Din_7_ ( output PADDI, input Din7 );
 
-  mjiobuf0084 \Din_pad[7] ( .Z(PADDI), .PAD(Din7));
+  mjiobuf0083 \Din_pad[7] ( .Z(PADDI), .PAD(Din7));
 
   specify
     (Din7 => PADDI) = (0:0:0,0:0:0);
@@ -3313,7 +3303,7 @@ endmodule
 
 module Din_6_ ( output PADDI, input Din6 );
 
-  mjiobuf0084 \Din_pad[6] ( .Z(PADDI), .PAD(Din6));
+  mjiobuf0083 \Din_pad[6] ( .Z(PADDI), .PAD(Din6));
 
   specify
     (Din6 => PADDI) = (0:0:0,0:0:0);
@@ -3325,7 +3315,7 @@ endmodule
 
 module Din_5_ ( output PADDI, input Din5 );
 
-  mjiobuf0084 \Din_pad[5] ( .Z(PADDI), .PAD(Din5));
+  mjiobuf0083 \Din_pad[5] ( .Z(PADDI), .PAD(Din5));
 
   specify
     (Din5 => PADDI) = (0:0:0,0:0:0);
@@ -3337,7 +3327,7 @@ endmodule
 
 module Din_4_ ( output PADDI, input Din4 );
 
-  mjiobuf0084 \Din_pad[4] ( .Z(PADDI), .PAD(Din4));
+  mjiobuf0083 \Din_pad[4] ( .Z(PADDI), .PAD(Din4));
 
   specify
     (Din4 => PADDI) = (0:0:0,0:0:0);
@@ -3349,7 +3339,7 @@ endmodule
 
 module Din_3_ ( output PADDI, input Din3 );
 
-  mjiobuf0084 \Din_pad[3] ( .Z(PADDI), .PAD(Din3));
+  mjiobuf0083 \Din_pad[3] ( .Z(PADDI), .PAD(Din3));
 
   specify
     (Din3 => PADDI) = (0:0:0,0:0:0);
@@ -3361,7 +3351,7 @@ endmodule
 
 module Din_2_ ( output PADDI, input Din2 );
 
-  mjiobuf0084 \Din_pad[2] ( .Z(PADDI), .PAD(Din2));
+  mjiobuf0083 \Din_pad[2] ( .Z(PADDI), .PAD(Din2));
 
   specify
     (Din2 => PADDI) = (0:0:0,0:0:0);
@@ -3373,7 +3363,7 @@ endmodule
 
 module Din_1_ ( output PADDI, input Din1 );
 
-  mjiobuf0084 \Din_pad[1] ( .Z(PADDI), .PAD(Din1));
+  mjiobuf0083 \Din_pad[1] ( .Z(PADDI), .PAD(Din1));
 
   specify
     (Din1 => PADDI) = (0:0:0,0:0:0);
@@ -3385,7 +3375,7 @@ endmodule
 
 module Din_0_ ( output PADDI, input Din0 );
 
-  mjiobuf0084 \Din_pad[0] ( .Z(PADDI), .PAD(Din0));
+  mjiobuf0083 \Din_pad[0] ( .Z(PADDI), .PAD(Din0));
 
   specify
     (Din0 => PADDI) = (0:0:0,0:0:0);
@@ -3397,7 +3387,7 @@ endmodule
 
 module CROW_1_ ( output PADDI, input CROW1 );
 
-  mjiobuf0084 \CROW_pad[1] ( .Z(PADDI), .PAD(CROW1));
+  mjiobuf0083 \CROW_pad[1] ( .Z(PADDI), .PAD(CROW1));
 
   specify
     (CROW1 => PADDI) = (0:0:0,0:0:0);
@@ -3409,7 +3399,7 @@ endmodule
 
 module CROW_0_ ( output PADDI, input CROW0 );
 
-  mjiobuf0084 \CROW_pad[0] ( .Z(PADDI), .PAD(CROW0));
+  mjiobuf0083 \CROW_pad[0] ( .Z(PADDI), .PAD(CROW0));
 
   specify
     (CROW0 => PADDI) = (0:0:0,0:0:0);
@@ -3421,7 +3411,7 @@ endmodule
 
 module MAin_9_ ( output PADDI, input MAin9 );
 
-  mjiobuf0084 \MAin_pad[9] ( .Z(PADDI), .PAD(MAin9));
+  mjiobuf0083 \MAin_pad[9] ( .Z(PADDI), .PAD(MAin9));
 
   specify
     (MAin9 => PADDI) = (0:0:0,0:0:0);
@@ -3433,7 +3423,7 @@ endmodule
 
 module MAin_8_ ( output PADDI, input MAin8 );
 
-  mjiobuf0084 \MAin_pad[8] ( .Z(PADDI), .PAD(MAin8));
+  mjiobuf0083 \MAin_pad[8] ( .Z(PADDI), .PAD(MAin8));
 
   specify
     (MAin8 => PADDI) = (0:0:0,0:0:0);
@@ -3445,7 +3435,7 @@ endmodule
 
 module MAin_7_ ( output PADDI, input MAin7 );
 
-  mjiobuf0084 \MAin_pad[7] ( .Z(PADDI), .PAD(MAin7));
+  mjiobuf0083 \MAin_pad[7] ( .Z(PADDI), .PAD(MAin7));
 
   specify
     (MAin7 => PADDI) = (0:0:0,0:0:0);
@@ -3457,7 +3447,7 @@ endmodule
 
 module MAin_6_ ( output PADDI, input MAin6 );
 
-  mjiobuf0084 \MAin_pad[6] ( .Z(PADDI), .PAD(MAin6));
+  mjiobuf0083 \MAin_pad[6] ( .Z(PADDI), .PAD(MAin6));
 
   specify
     (MAin6 => PADDI) = (0:0:0,0:0:0);
@@ -3469,7 +3459,7 @@ endmodule
 
 module MAin_5_ ( output PADDI, input MAin5 );
 
-  mjiobuf0084 \MAin_pad[5] ( .Z(PADDI), .PAD(MAin5));
+  mjiobuf0083 \MAin_pad[5] ( .Z(PADDI), .PAD(MAin5));
 
   specify
     (MAin5 => PADDI) = (0:0:0,0:0:0);
@@ -3481,7 +3471,7 @@ endmodule
 
 module MAin_4_ ( output PADDI, input MAin4 );
 
-  mjiobuf0084 \MAin_pad[4] ( .Z(PADDI), .PAD(MAin4));
+  mjiobuf0083 \MAin_pad[4] ( .Z(PADDI), .PAD(MAin4));
 
   specify
     (MAin4 => PADDI) = (0:0:0,0:0:0);
@@ -3493,7 +3483,7 @@ endmodule
 
 module MAin_3_ ( output PADDI, input MAin3 );
 
-  mjiobuf0084 \MAin_pad[3] ( .Z(PADDI), .PAD(MAin3));
+  mjiobuf0083 \MAin_pad[3] ( .Z(PADDI), .PAD(MAin3));
 
   specify
     (MAin3 => PADDI) = (0:0:0,0:0:0);
@@ -3505,7 +3495,7 @@ endmodule
 
 module MAin_2_ ( output PADDI, input MAin2 );
 
-  mjiobuf0084 \MAin_pad[2] ( .Z(PADDI), .PAD(MAin2));
+  mjiobuf0083 \MAin_pad[2] ( .Z(PADDI), .PAD(MAin2));
 
   specify
     (MAin2 => PADDI) = (0:0:0,0:0:0);
@@ -3517,7 +3507,7 @@ endmodule
 
 module MAin_1_ ( output PADDI, input MAin1 );
 
-  mjiobuf0084 \MAin_pad[1] ( .Z(PADDI), .PAD(MAin1));
+  mjiobuf0083 \MAin_pad[1] ( .Z(PADDI), .PAD(MAin1));
 
   specify
     (MAin1 => PADDI) = (0:0:0,0:0:0);
@@ -3529,7 +3519,7 @@ endmodule
 
 module MAin_0_ ( output PADDI, input MAin0 );
 
-  mjiobuf0084 \MAin_pad[0] ( .Z(PADDI), .PAD(MAin0));
+  mjiobuf0083 \MAin_pad[0] ( .Z(PADDI), .PAD(MAin0));
 
   specify
     (MAin0 => PADDI) = (0:0:0,0:0:0);

@@ -1,0 +1,43 @@
+----------------------------------------------------------------------
+Report for cell RAM2GS.verilog
+
+Register bits: 109 of 1280 (9%)
+PIC Latch:       0
+I/O cells:       63
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        8       100.0
+                              CCU2D       10       100.0
+                                EFB        1       100.0
+                            FD1P3AX       25       100.0
+                            FD1P3IX        2       100.0
+                            FD1S3AX       53       100.0
+                            FD1S3IX        4       100.0
+                                GSR        1       100.0
+                                 IB       25       100.0
+                           IFS1P3DX        9       100.0
+                                INV        7       100.0
+                                 OB       30       100.0
+                           OFS1P3BX        4       100.0
+                           OFS1P3DX       11       100.0
+                           OFS1P3JX        1       100.0
+                           ORCALUT4      213       100.0
+                              PFUMX        1       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        2       100.0
+SUB MODULES 
+                               REFB        1       100.0
+                            
+                         TOTAL           411           
+----------------------------------------------------------------------
+Report for cell REFB.netlist
+     Instance path:  ufmefb
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                EFB        1       100.0
+                           ORCALUT4        2         0.9
+                                VHI        1        50.0
+                                VLO        1        50.0
+                            
+                         TOTAL             5           

@@ -1,6 +1,0 @@
-#Start recording tcl command: 8/19/2023 20:52:34
-#Project Location: Y:/Repos/RAM2GS/CPLD/LCMXO256C; Project name: RAM2GS_LCMXO256C
-prj_project open "Y:/Repos/RAM2GS/CPLD/LCMXO256C/RAM2GS_LCMXO256C.ldf"
-prj_run Export -impl impl1 -forceAll
-prj_project close
-#Stop recording: 8/19/2023 20:57:00

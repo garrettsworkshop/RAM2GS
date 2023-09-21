@@ -1,2 +1,0 @@
-@E:Internal Error in c_hdl.exe
-

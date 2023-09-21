@@ -6,22 +6,22 @@ Performance Grade:      3
 PACKAGE:          TQFP100
 Package Status:                     Final          Version 1.19
 
-Sat Aug 19 20:53:29 2023
+Thu Sep 21 05:38:42 2023
 
 Pinout by Port Name:
 +-----------+----------+---------------+------+----------------------------------+
 | Port Name | Pin/Bank | Buffer Type   | Site | Properties                       |
 +-----------+----------+---------------+------+----------------------------------+
-| CROW[0]   | 32/1     | LVCMOS33_IN   | PB2C | SLEW:FAST PULL:KEEPER            |
-| CROW[1]   | 34/1     | LVCMOS33_IN   | PB2D | SLEW:FAST PULL:KEEPER            |
-| Din[0]    | 21/1     | LVCMOS33_IN   | PL8A | SLEW:FAST PULL:KEEPER            |
-| Din[1]    | 15/1     | LVCMOS33_IN   | PL6A | SLEW:FAST PULL:KEEPER            |
-| Din[2]    | 14/1     | LVCMOS33_IN   | PL5D | SLEW:FAST PULL:KEEPER            |
-| Din[3]    | 16/1     | LVCMOS33_IN   | PL6B | SLEW:FAST PULL:KEEPER            |
-| Din[4]    | 18/1     | LVCMOS33_IN   | PL7B | SLEW:FAST PULL:KEEPER            |
-| Din[5]    | 17/1     | LVCMOS33_IN   | PL7A | SLEW:FAST PULL:KEEPER            |
-| Din[6]    | 20/1     | LVCMOS33_IN   | PL7D | SLEW:FAST PULL:KEEPER            |
-| Din[7]    | 19/1     | LVCMOS33_IN   | PL7C | SLEW:FAST PULL:KEEPER            |
+| CROW[0]   | 32/1     | LVCMOS33_IN   | PB2C | SLEW:FAST                        |
+| CROW[1]   | 34/1     | LVCMOS33_IN   | PB2D | SLEW:FAST                        |
+| Din[0]    | 21/1     | LVCMOS33_IN   | PL8A | SLEW:FAST                        |
+| Din[1]    | 15/1     | LVCMOS33_IN   | PL6A | SLEW:FAST                        |
+| Din[2]    | 14/1     | LVCMOS33_IN   | PL5D | SLEW:FAST                        |
+| Din[3]    | 16/1     | LVCMOS33_IN   | PL6B | SLEW:FAST                        |
+| Din[4]    | 18/1     | LVCMOS33_IN   | PL7B | SLEW:FAST                        |
+| Din[5]    | 17/1     | LVCMOS33_IN   | PL7A | SLEW:FAST                        |
+| Din[6]    | 20/1     | LVCMOS33_IN   | PL7D | SLEW:FAST                        |
+| Din[7]    | 19/1     | LVCMOS33_IN   | PL7C | SLEW:FAST                        |
 | Dout[0]   | 1/1      | LVCMOS33_OUT  | PL2A | DRIVE:4mA SLEW:FAST              |
 | Dout[1]   | 7/1      | LVCMOS33_OUT  | PL4A | DRIVE:4mA SLEW:FAST              |
 | Dout[2]   | 8/1      | LVCMOS33_OUT  | PL4B | DRIVE:4mA SLEW:FAST              |
@@ -31,17 +31,17 @@ Pinout by Port Name:
 | Dout[6]   | 2/1      | LVCMOS33_OUT  | PL2B | DRIVE:4mA SLEW:FAST              |
 | Dout[7]   | 3/1      | LVCMOS33_OUT  | PL3A | DRIVE:4mA SLEW:FAST              |
 | LED       | 57/0     | LVCMOS33_OUT  | PR7B | DRIVE:14mA SLEW:SLOW             |
-| MAin[0]   | 23/1     | LVCMOS33_IN   | PL9A | SLEW:FAST PULL:KEEPER            |
-| MAin[1]   | 38/1     | LVCMOS33_IN   | PB3C | SLEW:FAST PULL:KEEPER            |
-| MAin[2]   | 37/1     | LVCMOS33_IN   | PB3B | SLEW:FAST PULL:KEEPER            |
-| MAin[3]   | 47/1     | LVCMOS33_IN   | PB5A | SLEW:FAST PULL:KEEPER            |
-| MAin[4]   | 46/1     | LVCMOS33_IN   | PB4D | SLEW:FAST PULL:KEEPER            |
-| MAin[5]   | 45/1     | LVCMOS33_IN   | PB4C | SLEW:FAST PULL:KEEPER            |
-| MAin[6]   | 49/1     | LVCMOS33_IN   | PB5C | SLEW:FAST PULL:KEEPER            |
-| MAin[7]   | 44/1     | LVCMOS33_IN   | PB4B | SLEW:FAST PULL:KEEPER            |
-| MAin[8]   | 50/1     | LVCMOS33_IN   | PB5D | SLEW:FAST PULL:KEEPER            |
-| MAin[9]   | 51/0     | LVCMOS33_IN   | PR9B | SLEW:FAST PULL:KEEPER            |
-| PHI2      | 39/1     | LVCMOS33_IN   | PB3D | SLEW:FAST PULL:DOWN              |
+| MAin[0]   | 23/1     | LVCMOS33_IN   | PL9A | SLEW:FAST                        |
+| MAin[1]   | 38/1     | LVCMOS33_IN   | PB3C | SLEW:FAST                        |
+| MAin[2]   | 37/1     | LVCMOS33_IN   | PB3B | SLEW:FAST                        |
+| MAin[3]   | 47/1     | LVCMOS33_IN   | PB5A | SLEW:FAST                        |
+| MAin[4]   | 46/1     | LVCMOS33_IN   | PB4D | SLEW:FAST                        |
+| MAin[5]   | 45/1     | LVCMOS33_IN   | PB4C | SLEW:FAST                        |
+| MAin[6]   | 49/1     | LVCMOS33_IN   | PB5C | SLEW:FAST                        |
+| MAin[7]   | 44/1     | LVCMOS33_IN   | PB4B | SLEW:FAST                        |
+| MAin[8]   | 50/1     | LVCMOS33_IN   | PB5D | SLEW:FAST                        |
+| MAin[9]   | 51/0     | LVCMOS33_IN   | PR9B | SLEW:FAST                        |
+| PHI2      | 39/1     | LVCMOS33_IN   | PB3D | SLEW:FAST                        |
 | RA[0]     | 98/0     | LVCMOS33_OUT  | PT2C | DRIVE:4mA SLEW:SLOW              |
 | RA[10]    | 87/0     | LVCMOS33_OUT  | PT3D | DRIVE:4mA SLEW:SLOW              |
 | RA[11]    | 79/0     | LVCMOS33_OUT  | PT5A | DRIVE:4mA SLEW:SLOW              |
@@ -57,7 +57,7 @@ Pinout by Port Name:
 | RBA[0]    | 63/0     | LVCMOS33_OUT  | PR5D | DRIVE:4mA SLEW:SLOW              |
 | RBA[1]    | 83/0     | LVCMOS33_OUT  | PT4C | DRIVE:4mA SLEW:SLOW              |
 | RCKE      | 82/0     | LVCMOS33_OUT  | PT4D | DRIVE:4mA SLEW:SLOW              |
-| RCLK      | 86/0     | LVCMOS33_IN   | PT4A | SLEW:FAST PULL:KEEPER            |
+| RCLK      | 86/0     | LVCMOS33_IN   | PT4A | SLEW:FAST                        |
 | RDQMH     | 76/0     | LVCMOS33_OUT  | PR2A | DRIVE:4mA SLEW:SLOW              |
 | RDQML     | 61/0     | LVCMOS33_OUT  | PR6A | DRIVE:4mA SLEW:SLOW              |
 | RD[0]     | 64/0     | LVCMOS33_BIDI | PR5C | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
@@ -70,10 +70,10 @@ Pinout by Port Name:
 | RD[7]     | 71/0     | LVCMOS33_BIDI | PR3B | DRIVE:4mA SLEW:SLOW PULL:KEEPER  |
 | UFMCLK    | 58/0     | LVCMOS33_OUT  | PR7A | DRIVE:4mA SLEW:SLOW              |
 | UFMSDI    | 56/0     | LVCMOS33_OUT  | PR7C | DRIVE:4mA SLEW:SLOW              |
-| UFMSDO    | 55/0     | LVCMOS33_IN   | PR7D | SLEW:FAST PULL:KEEPER            |
-| nCCAS     | 27/1     | LVCMOS33_IN   | PL9B | SLEW:FAST PULL:UP                |
-| nCRAS     | 43/1     | LVCMOS33_IN   | PB4A | SLEW:FAST PULL:UP                |
-| nFWE      | 22/1     | LVCMOS33_IN   | PL8B | SLEW:FAST PULL:KEEPER            |
+| UFMSDO    | 55/0     | LVCMOS33_IN   | PR7D | SLEW:FAST                        |
+| nCCAS     | 27/1     | LVCMOS33_IN   | PL9B | SLEW:FAST                        |
+| nCRAS     | 43/1     | LVCMOS33_IN   | PB4A | SLEW:FAST                        |
+| nFWE      | 22/1     | LVCMOS33_IN   | PL8B | SLEW:FAST                        |
 | nRCAS     | 78/0     | LVCMOS33_OUT  | PT5B | DRIVE:4mA SLEW:SLOW              |
 | nRCS      | 77/0     | LVCMOS33_OUT  | PT5C | DRIVE:4mA SLEW:SLOW              |
 | nRRAS     | 73/0     | LVCMOS33_OUT  | PR2B | DRIVE:4mA SLEW:SLOW              |
@@ -267,5 +267,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Sat Aug 19 20:53:29 2023
+Thu Sep 21 05:38:42 2023
 
