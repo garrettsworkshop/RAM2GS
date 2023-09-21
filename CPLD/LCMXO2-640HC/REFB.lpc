@@ -16,8 +16,8 @@ CoreRevision=1.2
 ModuleName=REFB
 SourceFormat=Verilog HDL
 ParameterFileVersion=1.0
-Date=08/19/2023
-Time=07:25:04
+Date=08/23/2023
+Time=04:27:49
 
 [Parameters]
 Verilog=1

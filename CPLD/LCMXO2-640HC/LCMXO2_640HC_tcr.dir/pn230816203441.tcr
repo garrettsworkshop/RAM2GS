@@ -1,7 +1,0 @@
-#Start recording tcl command: 8/16/2023 20:34:10
-#Project Location: D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/LCMXO2-640HC; Project name: LCMXO2_640HC
-prj_project new -name "LCMXO2_640HC" -impl "impl1" -dev LCMXO2-640HC-4TG100C -synthesis "synplify"
-prj_src add "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.v"
-prj_project save
-prj_src add -exclude "D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf"
-#Stop recording: 8/16/2023 20:34:41

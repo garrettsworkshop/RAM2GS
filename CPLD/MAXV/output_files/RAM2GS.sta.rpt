@@ -1,5 +1,5 @@
 Timing Analyzer report for RAM2GS
-Sat Aug 19 22:00:58 2023
+Thu Sep 21 05:38:31 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -80,26 +80,25 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------+
-; SDC File List                                                                  ;
-+--------------------------------------------+--------+--------------------------+
-; SDC File Path                              ; Status ; Read at                  ;
-+--------------------------------------------+--------+--------------------------+
-; //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS.sdc     ; OK     ; Sat Aug 19 22:00:50 2023 ;
-; //ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.sdc ; OK     ; Sat Aug 19 22:00:51 2023 ;
-+--------------------------------------------+--------+--------------------------+
++-------------------------------------------------------+
+; SDC File List                                         ;
++-------------------+--------+--------------------------+
+; SDC File Path     ; Status ; Read at                  ;
++-------------------+--------+--------------------------+
+; ../RAM2GS.sdc     ; OK     ; Thu Sep 21 05:38:30 2023 ;
+; ../RAM2GS-MAX.sdc ; OK     ; Thu Sep 21 05:38:30 2023 ;
++-------------------+--------+--------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -959,7 +958,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Aug 19 22:00:47 2023
+    Info: Processing started: Thu Sep 21 05:38:28 2023
 Info: Command: quartus_sta RAM2GS-MAXV -c RAM2GS
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -967,8 +966,8 @@ Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332104): Reading SDC File: '//ZaneMac/Repos/RAM2GS/CPLD/RAM2GS.sdc'
-Info (332104): Reading SDC File: '//ZaneMac/Repos/RAM2GS/CPLD/RAM2GS-MAX.sdc'
+Info (332104): Reading SDC File: '../RAM2GS.sdc'
+Info (332104): Reading SDC File: '../RAM2GS-MAX.sdc'
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
@@ -1003,9 +1002,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4677 megabytes
-    Info: Processing ended: Sat Aug 19 22:00:58 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Peak virtual memory: 13090 megabytes
+    Info: Processing ended: Thu Sep 21 05:38:31 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 

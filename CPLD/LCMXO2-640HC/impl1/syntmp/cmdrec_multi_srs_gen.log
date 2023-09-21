@@ -1,7 +1,0 @@
-C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe  -link  -top  RAM2GS  -multisrs  Y:\Repos\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\LCMXO2_640HC_impl1_comp.srs  -osyn  Y:\Repos\RAM2GS\CPLD\LCMXO2-640HC\impl1\synwork\LCMXO2_640HC_impl1_mult.srs  -log  Y:\Repos\RAM2GS\CPLD\LCMXO2-640HC\impl1\synlog\LCMXO2_640HC_impl1_multi_srs_gen.srr 
-relcom:C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe -link -top RAM2GS -multisrs ..\synwork\LCMXO2_640HC_impl1_comp.srs -osyn ..\synwork\LCMXO2_640HC_impl1_mult.srs -log ..\synlog\LCMXO2_640HC_impl1_multi_srs_gen.srr
-rc:0 success:1 runtime:1
-file:..\synwork\LCMXO2_640HC_impl1_comp.srs|io:i|time:1692496488|size:21082|exec:0|csum:836A652852FF4B083104CDAE3FE041B6
-file:..\synwork\LCMXO2_640HC_impl1_mult.srs|io:o|time:1692496490|size:13087|exec:0|csum:
-file:..\synlog\LCMXO2_640HC_impl1_multi_srs_gen.srr|io:o|time:1692496490|size:1142|exec:0|csum:
-file:C:\lscc\diamond\3.12\synpbase\bin64\syn_nfilter.exe|io:i|time:1628601758|size:8899584|exec:1|csum:163057E8B8449A642661642A20A2247D

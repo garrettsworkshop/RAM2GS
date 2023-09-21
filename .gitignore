@@ -14,20 +14,41 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 fp-info-cache
+Hardware/*/*-backups
 
-# Netlist files (exported from Eeschema)
-*.net
 
-# Autorouter files (exported from Pcbnew)
-*.dsn
-*.ses
-
-# Exported BOM files
-*.xml
-
+# Mac
 *.DS_Store
-Documentation/~$4201DManual.docx
-cpld/db/RAM4GS.db_info
-cpld/db/RAM4GS.tmw_info
-cpld/RAM4GS.qws
-Documentation/Thumbs.db
+
+
+# Altera MAX II/V
+CPLD/MAX*/db
+CPLD/MAX*/incremental_db
+CPLD/MAX*/greybox_tmp
+
+
+# Lattice Diamond
+CPLD/LCMXO*/*.dir
+CPLD/LCMXO*/.build_status
+CPLD/LCMXO*/.run_manager.ini
+CPLD/LCMXO*/.recovery
+CPLD/LCMXO*/.spread_sheet.ini
+CPLD/LCMXO*/.spreadsheet_view.ini
+CPLD/LCMXO*/impl1/*
+!CPLD/LCMXO*/impl1/*.jed
+!CPLD/LCMXO*/impl1/*.bit
+!CPLD/LCMXO*/impl1/*.html
+!CPLD/LCMXO*/impl1/*.rpt
+!CPLD/LCMXO*/impl1/*.sdf
+!CPLD/LCMXO*/impl1/*.vo
+!CPLD/LCMXO*/impl1/*.alt
+!CPLD/LCMXO*/impl1/*.areasrr
+!CPLD/LCMXO*/impl1/*.bgn
+!CPLD/LCMXO*/impl1/*.edi
+!CPLD/LCMXO*/impl1/*.ior
+!CPLD/LCMXO*/impl1/*.mrp
+!CPLD/LCMXO*/impl1/*.pad
+!CPLD/LCMXO*/impl1/*.prf
+!CPLD/LCMXO*/impl1/*.srr
+!CPLD/LCMXO*/impl1/*.twr
+!CPLD/LCMXO*/impl1/*.tw1

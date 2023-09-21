@@ -1,6 +1,0 @@
-#Start recording tcl command: 8/20/2023 05:55:51
-#Project Location: Y:/Repos/RAM2GS/CPLD/LCMXO640C; Project name: RAM2GS_LCMXO640C
-prj_project open "Y:/Repos/RAM2GS/CPLD/LCMXO640C/RAM2GS_LCMXO640C.ldf"
-prj_run Export -impl impl1 -task IBIS
-prj_project close
-#Stop recording: 8/20/2023 05:55:58

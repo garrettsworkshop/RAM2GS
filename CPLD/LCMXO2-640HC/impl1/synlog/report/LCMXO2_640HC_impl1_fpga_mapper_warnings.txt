@@ -1,7 +1,0 @@
-@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
-@W: MT246 :"y:\repos\ram2gs\cpld\lcmxo2-640hc\refb.v":78:8:78:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
-@W: MT117 |Paths from clock (RCLK:r) to clock (PHI2:f) are overconstrained because the required time of 1.00 ns is too small.  
-@W: MT118 |Paths from clock (nCRAS:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small.  
-@W: MT118 |Paths from clock (PHI2:f) to clock (RCLK:r) are overconstrained because the required time of 1.00 ns is too small.  
-@W: MT116 |Paths from clock (RCLK:r) to clock (PHI2:r) are overconstrained because the required time of 2.00 ns is too small.  
-@W: MT117 |Paths from clock (RCLK:r) to clock (nCRAS:f) are overconstrained because the required time of 1.00 ns is too small.  

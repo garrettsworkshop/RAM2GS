@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="2e59fe31935404e6f28c"/>
+    <hash md5_digest_80b="5a47e54f307a3a9998ad"/>
   </project>
   <file_info>
-    <file device="EPM240T100C5" path="//ZaneMac/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.sof" usercode="0xFFFFFFFF"/>
+    <file device="EPM240T100C5" path="RAM2GS.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

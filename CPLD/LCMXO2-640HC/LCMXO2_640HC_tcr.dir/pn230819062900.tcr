@@ -1,5 +1,0 @@
-#Start recording tcl command: 8/19/2023 06:28:53
-#Project Location: //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-640HC; Project name: LCMXO2_640HC
-prj_project open "//Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-640HC/LCMXO2_640HC.ldf"
-prj_project close
-#Stop recording: 8/19/2023 06:29:00

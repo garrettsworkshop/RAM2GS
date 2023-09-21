@@ -7,15 +7,15 @@ Design Information
 
 Command line:   map -a MachXO -p LCMXO256C -t TQFP100 -s 3 -oc Commercial -ioreg
      b RAM2GS_LCMXO256C_impl1.ngd -o RAM2GS_LCMXO256C_impl1_map.ncd -pr
-     RAM2GS_LCMXO256C_impl1.prf -mp RAM2GS_LCMXO256C_impl1.mrp -lpf
-     Y:/Repos/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1_synplify.lpf
-     -lpf Y:/Repos/RAM2GS/CPLD/RAM2GS-LCMXO.lpf -c 0 -gui -msgset
-     Y:/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml 
+     RAM2GS_LCMXO256C_impl1.prf -mp RAM2GS_LCMXO256C_impl1.mrp -lpf //Mac/iCloud
+     /Repos/RAM2GS/CPLD/LCMXO256C/impl1/RAM2GS_LCMXO256C_impl1_synplify.lpf -lpf
+     //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-LCMXO.lpf -c 0 -gui -msgset
+     //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO256C/promote.xml 
 Target Vendor:  LATTICE
 Target Device:  LCMXO256CTQFP100
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  08/19/23  20:53:19
+Mapped on:  09/21/23  05:38:29
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  RAM2GS                                        Date:  08/19/23  20:53:19
+Design:  RAM2GS                                        Date:  09/21/23  05:38:29
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ IO (PIO) Attributes
 
 
 
-Design:  RAM2GS                                        Date:  08/19/23  20:53:19
+Design:  RAM2GS                                        Date:  09/21/23  05:38:29
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -198,7 +198,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2GS                                        Date:  08/19/23  20:53:19
+Design:  RAM2GS                                        Date:  09/21/23  05:38:29
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -264,7 +264,7 @@ IO (PIO) Attributes (cont)
 
 
 
-Design:  RAM2GS                                        Date:  08/19/23  20:53:19
+Design:  RAM2GS                                        Date:  09/21/23  05:38:29
 
 Removed logic
 -------------
