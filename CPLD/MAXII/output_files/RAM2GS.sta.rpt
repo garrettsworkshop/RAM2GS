@@ -1,6 +1,6 @@
 Timing Analyzer report for RAM2GS
-Fri Sep 29 09:33:27 2023
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Sep 29 15:18:02 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
 ---------------------
@@ -61,18 +61,18 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                     ;
-+-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                              ;
-; Revision Name         ; RAM2GS                                              ;
-; Device Family         ; MAX II                                              ;
-; Device Name           ; EPM240T100C5                                        ;
-; Timing Models         ; Final                                               ;
-; Delay Model           ; Slow Model                                          ;
-; Rise/Fall Delays      ; Unavailable                                         ;
-+-----------------------+-----------------------------------------------------+
++---------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                     ;
++-----------------------+---------------------------------------------------------------------+
+; Quartus Prime Version ; Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                              ;
+; Revision Name         ; RAM2GS                                                              ;
+; Device Family         ; MAX II                                                              ;
+; Device Name           ; EPM240T100C5                                                        ;
+; Timing Models         ; Final                                                               ;
+; Delay Model           ; Slow Model                                                          ;
+; Rise/Fall Delays      ; Unavailable                                                         ;
++-----------------------+---------------------------------------------------------------------+
 
 
 +------------------------------------------+
@@ -80,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -97,8 +97,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; ../RAM2GS.sdc     ; OK     ; Fri Sep 29 09:33:27 2023 ;
-; ../RAM2GS-MAX.sdc ; OK     ; Fri Sep 29 09:33:27 2023 ;
+; ../RAM2GS.sdc     ; OK     ; Fri Sep 29 15:18:02 2023 ;
+; ../RAM2GS-MAX.sdc ; OK     ; Fri Sep 29 15:18:02 2023 ;
 +-------------------+--------+--------------------------+
 
 
@@ -123,8 +123,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------+-----------------+------------+------+
 ; 10.0 MHz  ; 10.0 MHz        ; ARCLK      ;      ;
 ; 10.0 MHz  ; 10.0 MHz        ; DRCLK      ;      ;
-; 32.24 MHz ; 32.24 MHz       ; PHI2       ;      ;
-; 90.74 MHz ; 90.74 MHz       ; RCLK       ;      ;
+; 36.2 MHz  ; 36.2 MHz        ; PHI2       ;      ;
+; 81.78 MHz ; 81.78 MHz       ; RCLK       ;      ;
 +-----------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -134,11 +134,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+---------------+
 ; Clock ; Slack   ; End Point TNS ;
 +-------+---------+---------------+
-; ARCLK ; -15.724 ; -15.724       ;
-; DRCLK ; -15.649 ; -15.649       ;
-; RCLK  ; -7.823  ; -68.940       ;
-; nCRAS ; 0.324   ; 0.000         ;
-; PHI2  ; 0.552   ; 0.000         ;
+; ARCLK ; -15.739 ; -15.739       ;
+; DRCLK ; -15.716 ; -15.716       ;
+; RCLK  ; -7.070  ; -66.746       ;
+; nCRAS ; 0.330   ; 0.000         ;
+; PHI2  ; 0.519   ; 0.000         ;
 +-------+---------+---------------+
 
 
@@ -147,11 +147,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+---------+---------------+
 ; Clock ; Slack   ; End Point TNS ;
 +-------+---------+---------------+
-; DRCLK ; -16.401 ; -16.401       ;
-; ARCLK ; -16.276 ; -16.276       ;
-; PHI2  ; -0.482  ; -1.385        ;
-; nCRAS ; 0.180   ; 0.000         ;
-; RCLK  ; 1.108   ; 0.000         ;
+; DRCLK ; -16.296 ; -16.296       ;
+; ARCLK ; -16.261 ; -16.261       ;
+; PHI2  ; -0.480  ; -1.135        ;
+; nCRAS ; 0.160   ; 0.000         ;
+; RCLK  ; 1.109   ; 0.000         ;
 +-------+---------+---------------+
 
 
@@ -186,7 +186,7 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -15.724 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; RCLK         ; ARCLK       ; 8.000        ; -2.195     ; 1.529      ;
+; -15.739 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; RCLK         ; ARCLK       ; 8.000        ; -1.682     ; 2.057      ;
 ; 100.000 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 200.000      ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -196,8 +196,8 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -15.649 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 8.000        ; -1.607     ; 2.042      ;
-; -15.599 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 8.000        ; -1.607     ; 1.992      ;
+; -15.716 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 8.000        ; -2.175     ; 1.541      ;
+; -15.704 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 8.000        ; -2.175     ; 1.529      ;
 ; 100.000 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 200.000      ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -207,106 +207,106 @@ No paths to report.
 +--------+---------------------------------------------------------------------------------------------+-----------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                   ; To Node         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------------------------------------------------------------+-----------------+--------------+-------------+--------------+------------+------------+
-; -7.823 ; FWEr                                                                                        ; nRowColSel      ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 5.918      ;
-; -7.324 ; CBR                                                                                         ; nRowColSel      ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 5.419      ;
-; -7.096 ; FWEr                                                                                        ; nRCAS~reg0      ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 5.191      ;
-; -6.701 ; FWEr                                                                                        ; nRCS~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.796      ;
-; -6.597 ; CBR                                                                                         ; nRCAS~reg0      ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.692      ;
-; -6.494 ; FWEr                                                                                        ; nRWE~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.589      ;
-; -6.373 ; FWEr                                                                                        ; RCKEEN          ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.468      ;
-; -6.323 ; CmdSubmitted                                                                                ; DRCLK           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 3.832      ;
-; -6.319 ; CmdSubmitted                                                                                ; DRDIn           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 3.828      ;
-; -6.202 ; CBR                                                                                         ; nRCS~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.297      ;
-; -5.995 ; CBR                                                                                         ; nRWE~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.090      ;
-; -5.909 ; CBR                                                                                         ; RCKEEN          ; nCRAS        ; RCLK        ; 1.000        ; -2.572     ; 4.004      ;
-; -5.602 ; CmdSubmitted                                                                                ; n8MEGEN         ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 3.111      ;
-; -5.601 ; CmdSubmitted                                                                                ; LEDEN           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 3.110      ;
-; -5.410 ; CmdLEDEN                                                                                    ; LEDEN           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 2.919      ;
-; -5.272 ; CmdDRDIn                                                                                    ; DRDIn           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 2.781      ;
-; -5.241 ; Cmdn8MEGEN                                                                                  ; n8MEGEN         ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 2.750      ;
-; -5.137 ; CmdDRCLK                                                                                    ; DRCLK           ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 2.646      ;
-; -4.113 ; CmdUFMErase                                                                                 ; CmdUFMEraseSync ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 1.622      ;
-; -4.110 ; CmdUFMPrgm                                                                                  ; CmdUFMPrgmSync  ; PHI2         ; RCLK        ; 1.000        ; -3.158     ; 1.619      ;
-; -0.922 ; PHI2                                                                                        ; PHI2r           ; PHI2         ; RCLK        ; 1.000        ; 3.348      ; 4.937      ;
-; -0.801 ; nCRAS                                                                                       ; RASr            ; nCRAS        ; RCLK        ; 1.000        ; 3.348      ; 4.816      ;
-; -0.662 ; nCCAS                                                                                       ; CASr            ; nCCAS        ; RCLK        ; 1.000        ; 3.348      ; 4.677      ;
-; 0.078  ; PHI2                                                                                        ; PHI2r           ; PHI2         ; RCLK        ; 2.000        ; 3.348      ; 4.937      ;
-; 0.199  ; nCRAS                                                                                       ; RASr            ; nCRAS        ; RCLK        ; 2.000        ; 3.348      ; 4.816      ;
-; 0.338  ; nCCAS                                                                                       ; CASr            ; nCCAS        ; RCLK        ; 2.000        ; 3.348      ; 4.677      ;
-; 1.303  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; LEDEN           ; DRCLK        ; RCLK        ; 8.000        ; 1.607      ; 7.971      ;
-; 1.308  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; n8MEGEN         ; DRCLK        ; RCLK        ; 8.000        ; 1.607      ; 7.966      ;
-; 2.552  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; UFMD            ; DRCLK        ; RCLK        ; 8.000        ; 1.607      ; 6.722      ;
-; 4.980  ; FS[7]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.687     ;
-; 5.190  ; S[0]                                                                                        ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.477     ;
-; 5.565  ; FS[17]                                                                                      ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.102     ;
-; 5.680  ; InitReady                                                                                   ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.987      ;
-; 5.755  ; S[1]                                                                                        ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.912      ;
-; 5.884  ; FS[16]                                                                                      ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.783      ;
-; 6.065  ; FS[7]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.602      ;
-; 6.121  ; UFMInitDone                                                                                 ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.546      ;
-; 6.495  ; S[0]                                                                                        ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.172      ;
-; 6.650  ; FS[17]                                                                                      ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.017      ;
-; 6.716  ; FS[7]                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.951      ;
-; 6.782  ; S[1]                                                                                        ; nRCAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.885      ;
-; 6.833  ; FS[6]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.834      ;
-; 6.837  ; Ready                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.830      ;
-; 6.870  ; FS[7]                                                                                       ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.797      ;
-; 6.969  ; FS[16]                                                                                      ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.698      ;
-; 6.985  ; InitReady                                                                                   ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.682      ;
-; 6.986  ; FS[5]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.681      ;
-; 7.011  ; FS[4]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.656      ;
-; 7.060  ; S[1]                                                                                        ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.607      ;
-; 7.137  ; FS[7]                                                                                       ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.530      ;
-; 7.196  ; S[0]                                                                                        ; nRRAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.471      ;
-; 7.206  ; UFMInitDone                                                                                 ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.461      ;
-; 7.272  ; FS[7]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.395      ;
-; 7.301  ; FS[17]                                                                                      ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.366      ;
-; 7.374  ; FS[16]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.293      ;
-; 7.399  ; FS[7]                                                                                       ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.268      ;
-; 7.450  ; S[1]                                                                                        ; RCKEEN          ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.217      ;
-; 7.455  ; FS[17]                                                                                      ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.212      ;
-; 7.480  ; FS[12]                                                                                      ; InitReady       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.187      ;
-; 7.488  ; Ready                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.179      ;
-; 7.537  ; FS[7]                                                                                       ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.130      ;
-; 7.588  ; UFMInitDone                                                                                 ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.079      ;
-; 7.620  ; FS[16]                                                                                      ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.047      ;
-; 7.628  ; FS[11]                                                                                      ; InitReady       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.039      ;
-; 7.686  ; InitReady                                                                                   ; nRRAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.981      ;
-; 7.716  ; FS[17]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.951      ;
-; 7.722  ; FS[17]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.945      ;
-; 7.756  ; S[0]                                                                                        ; nRCAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.911      ;
-; 7.761  ; S[1]                                                                                        ; nRRAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.906      ;
-; 7.774  ; FS[16]                                                                                      ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.893      ;
-; 7.797  ; FS[0]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.870      ;
-; 7.808  ; FS[13]                                                                                      ; InitReady       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.859      ;
-; 7.857  ; UFMInitDone                                                                                 ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.810      ;
-; 7.857  ; FS[17]                                                                                      ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.810      ;
-; 7.932  ; Ready                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.735      ;
-; 7.950  ; FS[6]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.717      ;
-; 7.969  ; FS[16]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.698      ;
-; 7.984  ; FS[17]                                                                                      ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.683      ;
-; 7.998  ; FS[12]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.669      ;
-; 8.000  ; FS[12]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.667      ;
-; 8.011  ; UFMInitDone                                                                                 ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.656      ;
-; 8.071  ; FS[5]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.596      ;
-; 8.094  ; RASr2                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.573      ;
-; 8.097  ; FS[1]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.570      ;
-; 8.102  ; FS[5]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.565      ;
-; 8.128  ; FS[4]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.539      ;
-; 8.134  ; FS[6]                                                                                       ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.533      ;
-; 8.146  ; FS[11]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.521      ;
-; 8.148  ; FS[11]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.519      ;
-; 8.165  ; FS[10]                                                                                      ; InitReady       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.502      ;
-; 8.171  ; S[0]                                                                                        ; RA10            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.496      ;
-; 8.176  ; FS[16]                                                                                      ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.491      ;
-; 8.183  ; UFMInitDone                                                                                 ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.484      ;
-; 8.246  ; InitReady                                                                                   ; nRCAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.421      ;
-; 8.286  ; FS[5]                                                                                       ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.381      ;
-; 8.301  ; IS[2]                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.366      ;
-; 8.303  ; FS[16]                                                                                      ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.364      ;
-; 8.310  ; Ready                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.357      ;
-; 8.312  ; FS[4]                                                                                       ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.355      ;
-; 8.326  ; FS[13]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.341      ;
+; -7.070 ; FWEr                                                                                        ; nRowColSel      ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 5.145      ;
+; -6.828 ; FWEr                                                                                        ; nRCAS~reg0      ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.903      ;
+; -6.593 ; CBR                                                                                         ; nRCAS~reg0      ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.668      ;
+; -6.530 ; CBR                                                                                         ; nRowColSel      ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.605      ;
+; -6.339 ; CmdSubmitted                                                                                ; DRDIn           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 3.841      ;
+; -6.339 ; CmdSubmitted                                                                                ; DRCLK           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 3.841      ;
+; -6.298 ; CBR                                                                                         ; nRCS~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.373      ;
+; -6.286 ; FWEr                                                                                        ; nRCS~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.361      ;
+; -6.275 ; CBR                                                                                         ; RCKEEN          ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 4.350      ;
+; -5.875 ; FWEr                                                                                        ; RCKEEN          ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 3.950      ;
+; -5.792 ; FWEr                                                                                        ; nRWE~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 3.867      ;
+; -5.647 ; CmdDRDIn                                                                                    ; DRDIn           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 3.149      ;
+; -5.608 ; CmdSubmitted                                                                                ; n8MEGEN         ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 3.110      ;
+; -5.603 ; CmdSubmitted                                                                                ; LEDEN           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 3.105      ;
+; -5.252 ; CmdLEDEN                                                                                    ; LEDEN           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 2.754      ;
+; -5.252 ; CBR                                                                                         ; nRWE~reg0       ; nCRAS        ; RCLK        ; 1.000        ; -2.592     ; 3.327      ;
+; -5.222 ; Cmdn8MEGEN                                                                                  ; n8MEGEN         ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 2.724      ;
+; -5.069 ; CmdDRCLK                                                                                    ; DRCLK           ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 2.571      ;
+; -4.108 ; CmdUFMErase                                                                                 ; CmdUFMEraseSync ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 1.610      ;
+; -4.095 ; CmdUFMPrgm                                                                                  ; CmdUFMPrgmSync  ; PHI2         ; RCLK        ; 1.000        ; -3.165     ; 1.597      ;
+; -0.888 ; PHI2                                                                                        ; PHI2r           ; PHI2         ; RCLK        ; 1.000        ; 3.348      ; 4.903      ;
+; -0.840 ; nCRAS                                                                                       ; RASr            ; nCRAS        ; RCLK        ; 1.000        ; 3.348      ; 4.855      ;
+; -0.663 ; nCCAS                                                                                       ; CASr            ; nCCAS        ; RCLK        ; 1.000        ; 3.348      ; 4.678      ;
+; 0.112  ; PHI2                                                                                        ; PHI2r           ; PHI2         ; RCLK        ; 2.000        ; 3.348      ; 4.903      ;
+; 0.160  ; nCRAS                                                                                       ; RASr            ; nCRAS        ; RCLK        ; 2.000        ; 3.348      ; 4.855      ;
+; 0.337  ; nCCAS                                                                                       ; CASr            ; nCCAS        ; RCLK        ; 2.000        ; 3.348      ; 4.678      ;
+; 1.970  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; LEDEN           ; DRCLK        ; RCLK        ; 8.000        ; 2.175      ; 7.872      ;
+; 1.971  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; n8MEGEN         ; DRCLK        ; RCLK        ; 8.000        ; 2.175      ; 7.871      ;
+; 3.118  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; UFMD            ; DRCLK        ; RCLK        ; 8.000        ; 2.175      ; 6.724      ;
+; 3.772  ; FS[17]                                                                                      ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 11.895     ;
+; 4.362  ; Ready                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 11.305     ;
+; 4.738  ; FS[7]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.929     ;
+; 4.984  ; FS[16]                                                                                      ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.683     ;
+; 5.295  ; FS[2]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.372     ;
+; 5.404  ; UFMInitDone                                                                                 ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.263     ;
+; 5.547  ; FS[17]                                                                                      ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.120     ;
+; 5.557  ; FS[17]                                                                                      ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.110     ;
+; 5.664  ; IS[2]                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 10.003     ;
+; 5.721  ; FS[1]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.946      ;
+; 6.066  ; FS[17]                                                                                      ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.601      ;
+; 6.122  ; FS[0]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.545      ;
+; 6.137  ; Ready                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.530      ;
+; 6.389  ; S[1]                                                                                        ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.278      ;
+; 6.485  ; InitReady                                                                                   ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.182      ;
+; 6.500  ; S[1]                                                                                        ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.167      ;
+; 6.513  ; FS[7]                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.154      ;
+; 6.523  ; FS[7]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.144      ;
+; 6.542  ; FS[17]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.125      ;
+; 6.542  ; S[0]                                                                                        ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.125      ;
+; 6.590  ; FS[17]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.077      ;
+; 6.596  ; InitReady                                                                                   ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.071      ;
+; 6.653  ; S[0]                                                                                        ; nRWE~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 9.014      ;
+; 6.759  ; FS[16]                                                                                      ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.908      ;
+; 6.769  ; FS[16]                                                                                      ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.898      ;
+; 6.807  ; FS[5]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.860      ;
+; 6.933  ; IS[1]                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.734      ;
+; 7.032  ; FS[7]                                                                                       ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.635      ;
+; 7.058  ; FS[17]                                                                                      ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.609      ;
+; 7.070  ; FS[2]                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.597      ;
+; 7.179  ; UFMInitDone                                                                                 ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.488      ;
+; 7.189  ; UFMInitDone                                                                                 ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.478      ;
+; 7.251  ; FS[0]                                                                                       ; UFMProgram      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.416      ;
+; 7.278  ; FS[16]                                                                                      ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.389      ;
+; 7.312  ; IS[3]                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.355      ;
+; 7.449  ; FS[7]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.218      ;
+; 7.456  ; FS[17]                                                                                      ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.211      ;
+; 7.496  ; FS[1]                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.171      ;
+; 7.508  ; FS[7]                                                                                       ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.159      ;
+; 7.510  ; FS[6]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.157      ;
+; 7.556  ; FS[7]                                                                                       ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 8.111      ;
+; 7.698  ; UFMInitDone                                                                                 ; ARCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.969      ;
+; 7.754  ; FS[16]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.913      ;
+; 7.802  ; FS[16]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.865      ;
+; 7.852  ; FS[0]                                                                                       ; UFMProgStart    ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.815      ;
+; 7.860  ; FS[0]                                                                                       ; UFMErase        ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.807      ;
+; 7.881  ; RASr2                                                                                       ; Ready           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.786      ;
+; 7.897  ; FS[0]                                                                                       ; UFMD            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.770      ;
+; 7.945  ; FS[6]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.722      ;
+; 7.971  ; IS[0]                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.696      ;
+; 7.976  ; S[1]                                                                                        ; RA10            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.691      ;
+; 7.980  ; FS[12]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.687      ;
+; 8.024  ; FS[7]                                                                                       ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.643      ;
+; 8.029  ; IS[1]                                                                                       ; Ready           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.638      ;
+; 8.072  ; InitReady                                                                                   ; RA10            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.595      ;
+; 8.103  ; FS[3]                                                                                       ; n8MEGEN         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.564      ;
+; 8.128  ; FS[11]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.539      ;
+; 8.129  ; S[0]                                                                                        ; RA10            ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.538      ;
+; 8.168  ; S[1]                                                                                        ; IS[2]           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.499      ;
+; 8.174  ; UFMInitDone                                                                                 ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.493      ;
+; 8.177  ; FS[4]                                                                                       ; DRShift         ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.490      ;
+; 8.222  ; UFMInitDone                                                                                 ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.445      ;
+; 8.254  ; FS[5]                                                                                       ; LEDEN           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.413      ;
+; 8.264  ; InitReady                                                                                   ; IS[2]           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.403      ;
+; 8.270  ; FS[16]                                                                                      ; DRCLK           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.397      ;
+; 8.308  ; FS[13]                                                                                      ; UFMReqErase     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.359      ;
+; 8.321  ; S[0]                                                                                        ; IS[2]           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.346      ;
+; 8.362  ; Ready                                                                                       ; nRCS~reg0       ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.305      ;
+; 8.386  ; IS[0]                                                                                       ; Ready           ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.281      ;
+; 8.440  ; FS[12]                                                                                      ; UFMInitDone     ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.227      ;
+; 8.445  ; IS[2]                                                                                       ; nRRAS~reg0      ; RCLK         ; RCLK        ; 16.000       ; 0.000      ; 7.222      ;
 +--------+---------------------------------------------------------------------------------------------+-----------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -315,20 +315,20 @@ No paths to report.
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.324   ; Ready     ; RBA[0]~reg0 ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.915      ;
-; 0.588   ; Ready     ; RowA[2]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.651      ;
-; 0.589   ; Ready     ; RowA[0]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.650      ;
-; 0.594   ; Ready     ; RowA[3]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.645      ;
-; 0.595   ; Ready     ; RowA[1]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.644      ;
-; 0.930   ; Ready     ; RBA[1]~reg0 ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.309      ;
-; 0.934   ; Ready     ; RowA[9]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 2.305      ;
-; 1.258   ; Ready     ; RowA[7]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 1.981      ;
-; 1.258   ; Ready     ; RowA[8]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 1.981      ;
-; 1.259   ; Ready     ; RowA[4]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 1.980      ;
-; 1.265   ; Ready     ; RowA[5]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 1.974      ;
-; 1.266   ; Ready     ; RowA[6]     ; RCLK         ; nCRAS       ; 1.000        ; 2.572      ; 1.973      ;
-; 173.109 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 175.000      ; 5.920      ; 7.478      ;
-; 348.109 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 350.000      ; 5.920      ; 7.478      ;
+; 0.330   ; Ready     ; RBA[0]~reg0 ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.929      ;
+; 0.611   ; Ready     ; RowA[2]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.648      ;
+; 0.823   ; Ready     ; RBA[1]~reg0 ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.436      ;
+; 0.823   ; Ready     ; RowA[9]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.436      ;
+; 0.826   ; Ready     ; RowA[5]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.433      ;
+; 0.831   ; Ready     ; RowA[7]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.428      ;
+; 0.832   ; Ready     ; RowA[6]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 2.427      ;
+; 1.278   ; Ready     ; RowA[0]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 1.981      ;
+; 1.278   ; Ready     ; RowA[3]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 1.981      ;
+; 1.280   ; Ready     ; RowA[8]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 1.979      ;
+; 1.285   ; Ready     ; RowA[4]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 1.974      ;
+; 1.286   ; Ready     ; RowA[1]     ; RCLK         ; nCRAS       ; 1.000        ; 2.592      ; 1.973      ;
+; 173.209 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 175.000      ; 5.940      ; 7.398      ;
+; 348.209 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 350.000      ; 5.940      ; 7.398      ;
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -337,106 +337,106 @@ No paths to report.
 +---------+-----------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+-----------+--------------+--------------+-------------+--------------+------------+------------+
-; 0.552   ; LEDEN     ; XOR8MEG      ; RCLK         ; PHI2        ; 1.000        ; 3.158      ; 3.273      ;
-; 1.304   ; Ready     ; RA11         ; RCLK         ; PHI2        ; 2.000        ; 3.158      ; 3.521      ;
-; 1.895   ; n8MEGEN   ; RA11         ; RCLK         ; PHI2        ; 2.000        ; 3.158      ; 2.930      ;
-; 1.900   ; LEDEN     ; CmdLEDEN     ; RCLK         ; PHI2        ; 1.000        ; 3.158      ; 1.925      ;
-; 1.928   ; n8MEGEN   ; Cmdn8MEGEN   ; RCLK         ; PHI2        ; 1.000        ; 3.158      ; 1.897      ;
-; 159.491 ; Bank[1]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 15.176     ;
-; 159.491 ; Bank[1]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 15.176     ;
-; 159.491 ; Bank[1]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 15.176     ;
-; 160.274 ; Bank[2]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 14.393     ;
-; 160.274 ; Bank[2]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 14.393     ;
-; 160.274 ; Bank[2]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 14.393     ;
-; 160.907 ; Bank[6]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.760     ;
-; 160.907 ; Bank[6]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.760     ;
-; 160.907 ; Bank[6]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.760     ;
-; 160.955 ; Bank[3]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.712     ;
-; 160.955 ; Bank[3]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.712     ;
-; 160.955 ; Bank[3]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.712     ;
-; 161.067 ; Bank[5]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.600     ;
-; 161.067 ; Bank[5]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.600     ;
-; 161.067 ; Bank[5]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.600     ;
-; 161.235 ; Bank[1]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.432     ;
-; 161.235 ; Bank[1]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.432     ;
-; 161.469 ; Bank[0]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.198     ;
-; 161.469 ; Bank[0]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.198     ;
-; 161.469 ; Bank[0]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.198     ;
-; 161.604 ; Bank[7]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.063     ;
-; 161.604 ; Bank[7]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.063     ;
-; 161.604 ; Bank[7]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.063     ;
-; 162.018 ; Bank[2]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.649     ;
-; 162.018 ; Bank[2]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.649     ;
-; 162.098 ; Bank[1]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.569     ;
-; 162.098 ; Bank[1]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.569     ;
-; 162.105 ; Bank[4]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.562     ;
-; 162.105 ; Bank[4]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.562     ;
-; 162.105 ; Bank[4]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.562     ;
-; 162.558 ; Bank[1]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.109     ;
-; 162.651 ; Bank[6]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.016     ;
-; 162.651 ; Bank[6]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.016     ;
-; 162.699 ; Bank[3]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.968     ;
-; 162.699 ; Bank[3]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.968     ;
-; 162.811 ; Bank[5]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.856     ;
-; 162.811 ; Bank[5]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.856     ;
-; 162.881 ; Bank[2]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.786     ;
-; 162.881 ; Bank[2]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.786     ;
-; 163.213 ; Bank[0]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.454     ;
-; 163.213 ; Bank[0]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.454     ;
-; 163.266 ; Bank[1]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.401     ;
-; 163.269 ; Bank[1]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.398     ;
-; 163.341 ; Bank[2]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.326     ;
-; 163.348 ; Bank[7]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.319     ;
-; 163.348 ; Bank[7]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.319     ;
-; 163.514 ; Bank[6]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.153     ;
-; 163.514 ; Bank[6]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.153     ;
-; 163.562 ; Bank[3]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.105     ;
-; 163.562 ; Bank[3]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.105     ;
-; 163.674 ; Bank[5]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.993     ;
-; 163.674 ; Bank[5]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.993     ;
-; 163.849 ; Bank[4]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.818     ;
-; 163.849 ; Bank[4]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.818     ;
-; 163.974 ; Bank[6]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.693     ;
-; 164.022 ; Bank[3]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.645     ;
-; 164.049 ; Bank[2]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.618     ;
-; 164.052 ; Bank[2]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.615     ;
-; 164.076 ; Bank[0]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.591     ;
-; 164.076 ; Bank[0]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.591     ;
-; 164.134 ; Bank[5]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.533     ;
-; 164.211 ; Bank[7]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.456     ;
-; 164.211 ; Bank[7]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.456     ;
-; 164.536 ; Bank[0]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.131     ;
-; 164.671 ; Bank[7]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.996      ;
-; 164.677 ; Bank[6]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.990      ;
-; 164.680 ; Bank[6]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.987      ;
-; 164.712 ; Bank[4]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.955      ;
-; 164.712 ; Bank[4]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.955      ;
-; 164.730 ; Bank[3]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.937      ;
-; 164.733 ; Bank[3]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.934      ;
-; 164.837 ; Bank[5]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.830      ;
-; 164.840 ; Bank[5]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.827      ;
-; 165.172 ; Bank[4]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.495      ;
-; 165.244 ; Bank[0]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.423      ;
-; 165.247 ; Bank[0]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.420      ;
-; 165.374 ; Bank[7]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.293      ;
-; 165.377 ; Bank[7]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.290      ;
-; 165.421 ; Bank[1]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.246      ;
-; 165.421 ; Bank[1]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.246      ;
-; 165.875 ; Bank[4]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.792      ;
-; 165.878 ; Bank[4]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.789      ;
-; 166.204 ; Bank[2]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.463      ;
-; 166.204 ; Bank[2]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.463      ;
-; 166.837 ; Bank[6]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.830      ;
-; 166.837 ; Bank[6]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.830      ;
-; 166.885 ; Bank[3]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.782      ;
-; 166.885 ; Bank[3]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.782      ;
-; 166.997 ; Bank[5]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.670      ;
-; 166.997 ; Bank[5]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.670      ;
-; 167.399 ; Bank[0]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.268      ;
-; 167.399 ; Bank[0]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.268      ;
-; 167.534 ; Bank[7]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.133      ;
-; 167.534 ; Bank[7]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.133      ;
-; 168.035 ; Bank[4]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 6.632      ;
+; 0.519   ; LEDEN     ; XOR8MEG      ; RCLK         ; PHI2        ; 1.000        ; 3.165      ; 3.313      ;
+; 1.315   ; Ready     ; RA11         ; RCLK         ; PHI2        ; 2.000        ; 3.165      ; 3.517      ;
+; 1.634   ; n8MEGEN   ; RA11         ; RCLK         ; PHI2        ; 2.000        ; 3.165      ; 3.198      ;
+; 1.913   ; LEDEN     ; CmdLEDEN     ; RCLK         ; PHI2        ; 1.000        ; 3.165      ; 1.919      ;
+; 1.926   ; n8MEGEN   ; Cmdn8MEGEN   ; RCLK         ; PHI2        ; 1.000        ; 3.165      ; 1.906      ;
+; 161.189 ; Bank[6]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.478     ;
+; 161.189 ; Bank[6]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.478     ;
+; 161.189 ; Bank[6]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.478     ;
+; 161.552 ; Bank[6]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.115     ;
+; 161.552 ; Bank[6]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 13.115     ;
+; 161.836 ; Bank[2]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.831     ;
+; 161.836 ; Bank[2]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.831     ;
+; 161.836 ; Bank[2]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.831     ;
+; 162.067 ; Bank[3]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.600     ;
+; 162.067 ; Bank[3]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.600     ;
+; 162.067 ; Bank[3]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.600     ;
+; 162.199 ; Bank[2]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.468     ;
+; 162.199 ; Bank[2]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.468     ;
+; 162.241 ; Bank[5]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.426     ;
+; 162.241 ; Bank[5]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.426     ;
+; 162.241 ; Bank[5]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.426     ;
+; 162.430 ; Bank[3]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.237     ;
+; 162.430 ; Bank[3]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.237     ;
+; 162.444 ; Bank[6]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.223     ;
+; 162.604 ; Bank[5]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.063     ;
+; 162.604 ; Bank[5]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 12.063     ;
+; 162.760 ; Bank[1]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.907     ;
+; 162.760 ; Bank[1]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.907     ;
+; 162.760 ; Bank[1]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.907     ;
+; 162.877 ; Bank[6]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.790     ;
+; 162.936 ; Bank[7]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.731     ;
+; 162.936 ; Bank[7]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.731     ;
+; 162.936 ; Bank[7]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.731     ;
+; 163.032 ; Bank[6]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.635     ;
+; 163.032 ; Bank[6]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.635     ;
+; 163.091 ; Bank[2]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.576     ;
+; 163.123 ; Bank[1]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.544     ;
+; 163.123 ; Bank[1]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.544     ;
+; 163.186 ; Bank[6]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.481     ;
+; 163.273 ; Bank[0]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.394     ;
+; 163.273 ; Bank[0]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.394     ;
+; 163.273 ; Bank[0]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.394     ;
+; 163.299 ; Bank[7]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.368     ;
+; 163.299 ; Bank[7]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.368     ;
+; 163.322 ; Bank[3]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.345     ;
+; 163.447 ; Bank[4]   ; CmdLEDEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.220     ;
+; 163.447 ; Bank[4]   ; CmdSubmitted ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.220     ;
+; 163.447 ; Bank[4]   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.220     ;
+; 163.496 ; Bank[5]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.171     ;
+; 163.524 ; Bank[2]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.143     ;
+; 163.636 ; Bank[0]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.031     ;
+; 163.636 ; Bank[0]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 11.031     ;
+; 163.679 ; Bank[2]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.988     ;
+; 163.679 ; Bank[2]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.988     ;
+; 163.755 ; Bank[3]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.912     ;
+; 163.810 ; Bank[4]   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.857     ;
+; 163.810 ; Bank[4]   ; CmdUFMErase  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.857     ;
+; 163.833 ; Bank[2]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.834     ;
+; 163.910 ; Bank[3]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.757     ;
+; 163.910 ; Bank[3]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.757     ;
+; 163.929 ; Bank[5]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.738     ;
+; 164.015 ; Bank[1]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.652     ;
+; 164.064 ; Bank[3]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.603     ;
+; 164.084 ; Bank[5]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.583     ;
+; 164.084 ; Bank[5]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.583     ;
+; 164.191 ; Bank[7]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.476     ;
+; 164.238 ; Bank[5]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.429     ;
+; 164.448 ; Bank[1]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.219     ;
+; 164.528 ; Bank[0]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.139     ;
+; 164.603 ; Bank[1]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.064     ;
+; 164.603 ; Bank[1]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.064     ;
+; 164.624 ; Bank[7]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 10.043     ;
+; 164.702 ; Bank[4]   ; CmdEnable    ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.965      ;
+; 164.757 ; Bank[1]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.910      ;
+; 164.779 ; Bank[7]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.888      ;
+; 164.779 ; Bank[7]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.888      ;
+; 164.933 ; Bank[7]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.734      ;
+; 164.961 ; Bank[0]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.706      ;
+; 165.116 ; Bank[0]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.551      ;
+; 165.116 ; Bank[0]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.551      ;
+; 165.135 ; Bank[4]   ; UFMOscEN     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.532      ;
+; 165.220 ; Bank[6]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.447      ;
+; 165.270 ; Bank[0]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.397      ;
+; 165.290 ; Bank[4]   ; CmdDRDIn     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.377      ;
+; 165.290 ; Bank[4]   ; CmdDRCLK     ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.377      ;
+; 165.340 ; Bank[6]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.327      ;
+; 165.444 ; Bank[4]   ; XOR8MEG      ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 9.223      ;
+; 165.867 ; Bank[2]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.800      ;
+; 165.987 ; Bank[2]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.680      ;
+; 166.098 ; Bank[3]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.569      ;
+; 166.218 ; Bank[3]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.449      ;
+; 166.272 ; Bank[5]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.395      ;
+; 166.392 ; Bank[5]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 8.275      ;
+; 166.791 ; Bank[1]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.876      ;
+; 166.911 ; Bank[1]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.756      ;
+; 166.967 ; Bank[7]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.700      ;
+; 167.087 ; Bank[7]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.580      ;
+; 167.304 ; Bank[0]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.363      ;
+; 167.424 ; Bank[0]   ; ADSubmitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.243      ;
+; 167.478 ; Bank[4]   ; C1Submitted  ; PHI2         ; PHI2        ; 175.000      ; 0.000      ; 7.189      ;
 +---------+-----------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -445,8 +445,8 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                   ; To Node                                                                                     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -16.401 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 0.000        ; -1.607     ; 1.992      ;
-; -16.351 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 0.000        ; -1.607     ; 2.042      ;
+; -16.296 ; DRDIn                                                                                       ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 0.000        ; -2.175     ; 1.529      ;
+; -16.284 ; DRShift                                                                                     ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; RCLK         ; DRCLK       ; 0.000        ; -2.175     ; 1.541      ;
 ; 60.000  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|wire_maxii_ufm_block1_drdout ; DRCLK        ; DRCLK       ; 0.000        ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -456,7 +456,7 @@ No paths to report.
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                                                                                               ; To Node                                                                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; -16.276 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; RCLK         ; ARCLK       ; 0.000        ; -2.195     ; 1.529      ;
+; -16.261 ; ARShift                                                                                                 ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; RCLK         ; ARCLK       ; 0.000        ; -1.682     ; 2.057      ;
 ; 60.000  ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; UFM:UFM_inst|UFM_altufm_none_unv:UFM_altufm_none_unv_component|maxii_ufm_block1~OBSERVABLEADDRESSREGOUT ; ARCLK        ; ARCLK       ; 0.000        ; 0.000      ; 80.000     ;
 +---------+---------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 
@@ -466,106 +466,106 @@ No paths to report.
 +---------+-------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node   ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+-------------+--------------+--------------+-------------+--------------+------------+------------+
-; -0.482  ; n8MEGEN     ; Cmdn8MEGEN   ; RCLK         ; PHI2        ; -1.000       ; 3.158      ; 1.897      ;
-; -0.454  ; LEDEN       ; CmdLEDEN     ; RCLK         ; PHI2        ; -1.000       ; 3.158      ; 1.925      ;
-; -0.449  ; n8MEGEN     ; RA11         ; RCLK         ; PHI2        ; 0.000        ; 3.158      ; 2.930      ;
-; 0.142   ; Ready       ; RA11         ; RCLK         ; PHI2        ; 0.000        ; 3.158      ; 3.521      ;
-; 0.894   ; LEDEN       ; XOR8MEG      ; RCLK         ; PHI2        ; -1.000       ; 3.158      ; 3.273      ;
-; 1.661   ; UFMOscEN    ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 1.882      ;
-; 1.875   ; C1Submitted ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.096      ;
-; 2.220   ; XOR8MEG     ; XOR8MEG      ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.441      ;
-; 2.321   ; C1Submitted ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.542      ;
-; 2.428   ; ADSubmitted ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.649      ;
-; 2.686   ; CmdEnable   ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.907      ;
-; 2.874   ; ADSubmitted ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 3.095      ;
-; 3.077   ; CmdUFMErase ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 3.298      ;
-; 3.077   ; CmdUFMErase ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 3.298      ;
-; 4.952   ; CmdEnable   ; XOR8MEG      ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.173      ;
-; 5.124   ; CmdUFMPrgm  ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.345      ;
-; 5.124   ; CmdUFMPrgm  ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.345      ;
-; 5.409   ; CmdEnable   ; CmdDRDIn     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.630      ;
-; 5.409   ; CmdEnable   ; CmdDRCLK     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.630      ;
-; 6.275   ; CmdEnable   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.496      ;
-; 6.275   ; CmdEnable   ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.496      ;
-; 8.019   ; CmdEnable   ; CmdLEDEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 8.240      ;
-; 8.019   ; CmdEnable   ; CmdSubmitted ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 8.240      ;
-; 8.019   ; CmdEnable   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 8.240      ;
-; 178.944 ; XOR8MEG     ; RA11         ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 4.165      ;
-; 179.758 ; Bank[4]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 4.979      ;
-; 180.249 ; Bank[4]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 5.470      ;
-; 180.259 ; Bank[7]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 5.480      ;
-; 180.389 ; Bank[0]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 5.610      ;
-; 180.750 ; Bank[7]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 5.971      ;
-; 180.796 ; Bank[5]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.017      ;
-; 180.880 ; Bank[0]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.101      ;
-; 180.903 ; Bank[3]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.124      ;
-; 180.956 ; Bank[6]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.177      ;
-; 181.287 ; Bank[5]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.508      ;
-; 181.394 ; Bank[3]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.615      ;
-; 181.447 ; Bank[6]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.668      ;
-; 181.584 ; Bank[2]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.805      ;
-; 181.939 ; Bank[4]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.160      ;
-; 182.075 ; Bank[2]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.296      ;
-; 182.367 ; Bank[1]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.588      ;
-; 182.385 ; Bank[4]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.606      ;
-; 182.440 ; Bank[7]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.661      ;
-; 182.570 ; Bank[0]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.791      ;
-; 182.858 ; Bank[1]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.079      ;
-; 182.886 ; Bank[7]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.107      ;
-; 182.977 ; Bank[5]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.198      ;
-; 183.016 ; Bank[0]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.237      ;
-; 183.084 ; Bank[3]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.305      ;
-; 183.137 ; Bank[6]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.358      ;
-; 183.423 ; Bank[5]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.644      ;
-; 183.530 ; Bank[3]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.751      ;
-; 183.583 ; Bank[6]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.804      ;
-; 183.765 ; Bank[2]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.986      ;
-; 184.211 ; Bank[2]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.432      ;
-; 184.274 ; Bank[4]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.495      ;
-; 184.548 ; Bank[1]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.769      ;
-; 184.734 ; Bank[4]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.955      ;
-; 184.734 ; Bank[4]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.955      ;
-; 184.775 ; Bank[7]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.996      ;
-; 184.910 ; Bank[0]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.131     ;
-; 184.994 ; Bank[1]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.215     ;
-; 185.235 ; Bank[7]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.456     ;
-; 185.235 ; Bank[7]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.456     ;
-; 185.312 ; Bank[5]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.533     ;
-; 185.370 ; Bank[0]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.591     ;
-; 185.370 ; Bank[0]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.591     ;
-; 185.424 ; Bank[3]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.645     ;
-; 185.472 ; Bank[6]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.693     ;
-; 185.597 ; Bank[4]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.818     ;
-; 185.597 ; Bank[4]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.818     ;
-; 185.772 ; Bank[5]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.993     ;
-; 185.772 ; Bank[5]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.993     ;
-; 185.884 ; Bank[3]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.105     ;
-; 185.884 ; Bank[3]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.105     ;
-; 185.932 ; Bank[6]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.153     ;
-; 185.932 ; Bank[6]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.153     ;
-; 186.098 ; Bank[7]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.319     ;
-; 186.098 ; Bank[7]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.319     ;
-; 186.105 ; Bank[2]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.326     ;
-; 186.233 ; Bank[0]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.454     ;
-; 186.233 ; Bank[0]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.454     ;
-; 186.565 ; Bank[2]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.786     ;
-; 186.565 ; Bank[2]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.786     ;
-; 186.635 ; Bank[5]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.856     ;
-; 186.635 ; Bank[5]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.856     ;
-; 186.747 ; Bank[3]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.968     ;
-; 186.747 ; Bank[3]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.968     ;
-; 186.795 ; Bank[6]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.016     ;
-; 186.795 ; Bank[6]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.016     ;
-; 186.888 ; Bank[1]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.109     ;
-; 187.341 ; Bank[4]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.562     ;
-; 187.341 ; Bank[4]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.562     ;
-; 187.341 ; Bank[4]     ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.562     ;
-; 187.348 ; Bank[1]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.569     ;
-; 187.348 ; Bank[1]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.569     ;
-; 187.428 ; Bank[2]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.649     ;
-; 187.428 ; Bank[2]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 12.649     ;
-; 187.842 ; Bank[7]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 13.063     ;
-; 187.842 ; Bank[7]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 13.063     ;
+; -0.480  ; n8MEGEN     ; Cmdn8MEGEN   ; RCLK         ; PHI2        ; -1.000       ; 3.165      ; 1.906      ;
+; -0.467  ; LEDEN       ; CmdLEDEN     ; RCLK         ; PHI2        ; -1.000       ; 3.165      ; 1.919      ;
+; -0.188  ; n8MEGEN     ; RA11         ; RCLK         ; PHI2        ; 0.000        ; 3.165      ; 3.198      ;
+; 0.131   ; Ready       ; RA11         ; RCLK         ; PHI2        ; 0.000        ; 3.165      ; 3.517      ;
+; 0.927   ; LEDEN       ; XOR8MEG      ; RCLK         ; PHI2        ; -1.000       ; 3.165      ; 3.313      ;
+; 1.938   ; CmdEnable   ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.159      ;
+; 2.129   ; UFMOscEN    ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.350      ;
+; 2.222   ; XOR8MEG     ; XOR8MEG      ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.443      ;
+; 2.525   ; C1Submitted ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.746      ;
+; 2.528   ; C1Submitted ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 2.749      ;
+; 3.076   ; CmdUFMErase ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 3.297      ;
+; 3.076   ; CmdUFMErase ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 3.297      ;
+; 4.109   ; ADSubmitted ; UFMOscEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 4.330      ;
+; 4.112   ; ADSubmitted ; CmdEnable    ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 4.333      ;
+; 4.365   ; CmdEnable   ; XOR8MEG      ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 4.586      ;
+; 4.511   ; CmdEnable   ; CmdDRDIn     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 4.732      ;
+; 4.511   ; CmdEnable   ; CmdDRCLK     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 4.732      ;
+; 5.071   ; CmdUFMPrgm  ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.292      ;
+; 5.071   ; CmdUFMPrgm  ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 5.292      ;
+; 5.999   ; CmdEnable   ; CmdUFMPrgm   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.220      ;
+; 5.999   ; CmdEnable   ; CmdUFMErase  ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.220      ;
+; 6.362   ; CmdEnable   ; CmdLEDEN     ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.583      ;
+; 6.362   ; CmdEnable   ; CmdSubmitted ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.583      ;
+; 6.362   ; CmdEnable   ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; 0.000        ; 0.000      ; 6.583      ;
+; 178.221 ; XOR8MEG     ; RA11         ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 3.442      ;
+; 181.172 ; Bank[4]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.393      ;
+; 181.346 ; Bank[0]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.567      ;
+; 181.683 ; Bank[7]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 6.904      ;
+; 181.848 ; Bank[4]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.069      ;
+; 181.859 ; Bank[1]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.080      ;
+; 182.022 ; Bank[0]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.243      ;
+; 182.359 ; Bank[7]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.580      ;
+; 182.378 ; Bank[5]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.599      ;
+; 182.535 ; Bank[1]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.756      ;
+; 182.552 ; Bank[3]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 7.773      ;
+; 182.783 ; Bank[2]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.004      ;
+; 183.054 ; Bank[5]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.275      ;
+; 183.064 ; Bank[4]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.285      ;
+; 183.228 ; Bank[3]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.449      ;
+; 183.238 ; Bank[0]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.459      ;
+; 183.430 ; Bank[6]     ; ADSubmitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.651      ;
+; 183.459 ; Bank[2]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.680      ;
+; 183.575 ; Bank[7]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.796      ;
+; 183.751 ; Bank[1]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 8.972      ;
+; 184.002 ; Bank[4]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.223      ;
+; 184.106 ; Bank[6]     ; C1Submitted  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.327      ;
+; 184.141 ; Bank[4]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.362      ;
+; 184.156 ; Bank[4]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.377      ;
+; 184.156 ; Bank[4]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.377      ;
+; 184.176 ; Bank[0]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.397      ;
+; 184.270 ; Bank[5]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.491      ;
+; 184.315 ; Bank[0]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.536      ;
+; 184.330 ; Bank[0]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.551      ;
+; 184.330 ; Bank[0]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.551      ;
+; 184.444 ; Bank[3]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.665      ;
+; 184.513 ; Bank[7]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.734      ;
+; 184.652 ; Bank[7]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.873      ;
+; 184.667 ; Bank[7]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.888      ;
+; 184.667 ; Bank[7]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.888      ;
+; 184.675 ; Bank[2]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.896      ;
+; 184.689 ; Bank[1]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 9.910      ;
+; 184.828 ; Bank[1]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.049     ;
+; 184.843 ; Bank[1]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.064     ;
+; 184.843 ; Bank[1]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.064     ;
+; 185.208 ; Bank[5]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.429     ;
+; 185.322 ; Bank[6]     ; CmdEnable    ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.543     ;
+; 185.347 ; Bank[5]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.568     ;
+; 185.362 ; Bank[5]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.583     ;
+; 185.362 ; Bank[5]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.583     ;
+; 185.382 ; Bank[3]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.603     ;
+; 185.521 ; Bank[3]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.742     ;
+; 185.536 ; Bank[3]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.757     ;
+; 185.536 ; Bank[3]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.757     ;
+; 185.613 ; Bank[2]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.834     ;
+; 185.636 ; Bank[4]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.857     ;
+; 185.636 ; Bank[4]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.857     ;
+; 185.752 ; Bank[2]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.973     ;
+; 185.767 ; Bank[2]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.988     ;
+; 185.767 ; Bank[2]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 10.988     ;
+; 185.810 ; Bank[0]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.031     ;
+; 185.810 ; Bank[0]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.031     ;
+; 185.999 ; Bank[4]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.220     ;
+; 185.999 ; Bank[4]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.220     ;
+; 185.999 ; Bank[4]     ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.220     ;
+; 186.147 ; Bank[7]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.368     ;
+; 186.147 ; Bank[7]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.368     ;
+; 186.173 ; Bank[0]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.394     ;
+; 186.173 ; Bank[0]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.394     ;
+; 186.173 ; Bank[0]     ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.394     ;
+; 186.260 ; Bank[6]     ; XOR8MEG      ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.481     ;
+; 186.323 ; Bank[1]     ; CmdUFMPrgm   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.544     ;
+; 186.323 ; Bank[1]     ; CmdUFMErase  ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.544     ;
+; 186.399 ; Bank[6]     ; UFMOscEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.620     ;
+; 186.414 ; Bank[6]     ; CmdDRDIn     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.635     ;
+; 186.414 ; Bank[6]     ; CmdDRCLK     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.635     ;
+; 186.510 ; Bank[7]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.731     ;
+; 186.510 ; Bank[7]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.731     ;
+; 186.510 ; Bank[7]     ; Cmdn8MEGEN   ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.731     ;
+; 186.686 ; Bank[1]     ; CmdLEDEN     ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.907     ;
+; 186.686 ; Bank[1]     ; CmdSubmitted ; PHI2         ; PHI2        ; -175.000     ; 0.000      ; 11.907     ;
 +---------+-------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -574,20 +574,20 @@ No paths to report.
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
-; 0.180   ; Ready     ; RowA[6]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 1.973      ;
-; 0.181   ; Ready     ; RowA[5]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 1.974      ;
-; 0.187   ; Ready     ; RowA[4]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 1.980      ;
-; 0.188   ; Ready     ; RowA[7]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 1.981      ;
-; 0.188   ; Ready     ; RowA[8]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 1.981      ;
-; 0.512   ; Ready     ; RowA[9]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.305      ;
-; 0.516   ; Ready     ; RBA[1]~reg0 ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.309      ;
-; 0.851   ; Ready     ; RowA[1]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.644      ;
-; 0.852   ; Ready     ; RowA[3]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.645      ;
-; 0.857   ; Ready     ; RowA[0]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.650      ;
-; 0.858   ; Ready     ; RowA[2]     ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.651      ;
-; 1.122   ; Ready     ; RBA[0]~reg0 ; RCLK         ; nCRAS       ; -1.000       ; 2.572      ; 2.915      ;
-; 1.337   ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 0.000        ; 5.920      ; 7.478      ;
-; 176.337 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; -175.000     ; 5.920      ; 7.478      ;
+; 0.160   ; Ready     ; RowA[1]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 1.973      ;
+; 0.161   ; Ready     ; RowA[4]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 1.974      ;
+; 0.166   ; Ready     ; RowA[8]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 1.979      ;
+; 0.168   ; Ready     ; RowA[0]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 1.981      ;
+; 0.168   ; Ready     ; RowA[3]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 1.981      ;
+; 0.614   ; Ready     ; RowA[6]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.427      ;
+; 0.615   ; Ready     ; RowA[7]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.428      ;
+; 0.620   ; Ready     ; RowA[5]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.433      ;
+; 0.623   ; Ready     ; RBA[1]~reg0 ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.436      ;
+; 0.623   ; Ready     ; RowA[9]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.436      ;
+; 0.835   ; Ready     ; RowA[2]     ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.648      ;
+; 1.116   ; Ready     ; RBA[0]~reg0 ; RCLK         ; nCRAS       ; -1.000       ; 2.592      ; 2.929      ;
+; 1.237   ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; 0.000        ; 5.940      ; 7.398      ;
+; 176.237 ; nCCAS     ; CBR         ; nCCAS        ; nCRAS       ; -175.000     ; 5.940      ; 7.398      ;
 +---------+-----------+-------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -596,106 +596,106 @@ No paths to report.
 +-------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node       ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
-; 1.108 ; nCCAS           ; CASr         ; nCCAS        ; RCLK        ; 0.000        ; 3.348      ; 4.677      ;
-; 1.247 ; nCRAS           ; RASr         ; nCRAS        ; RCLK        ; 0.000        ; 3.348      ; 4.816      ;
-; 1.368 ; PHI2            ; PHI2r        ; PHI2         ; RCLK        ; 0.000        ; 3.348      ; 4.937      ;
-; 1.374 ; CASr2           ; CASr3        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.595      ;
+; 1.109 ; nCCAS           ; CASr         ; nCCAS        ; RCLK        ; 0.000        ; 3.348      ; 4.678      ;
+; 1.286 ; nCRAS           ; RASr         ; nCRAS        ; RCLK        ; 0.000        ; 3.348      ; 4.855      ;
+; 1.334 ; PHI2            ; PHI2r        ; PHI2         ; RCLK        ; 0.000        ; 3.348      ; 4.903      ;
+; 1.640 ; FS[0]           ; FS[0]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.861      ;
 ; 1.659 ; FS[17]          ; FS[17]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.880      ;
-; 1.687 ; UFMBusyReg0     ; UFMRTPBusy   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.908      ;
-; 1.703 ; IS[0]           ; IS[0]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.924      ;
-; 1.708 ; IS[3]           ; IS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.929      ;
-; 1.898 ; UFMInitDone     ; UFMInitDone  ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.119      ;
-; 1.898 ; FS[0]           ; FS[0]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.119      ;
-; 1.908 ; InitReady       ; InitReady    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.129      ;
-; 1.927 ; RTPBusyReg0     ; UFMRTPBusy   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.148      ;
-; 1.929 ; UFMProgStart    ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.150      ;
-; 2.108 ; nCCAS           ; CASr         ; nCCAS        ; RCLK        ; -1.000       ; 3.348      ; 4.677      ;
-; 2.109 ; RASr3           ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.330      ;
+; 1.663 ; UFMBusyReg0     ; UFMRTPBusy   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.884      ;
+; 1.685 ; IS[3]           ; RA10         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.906      ;
+; 1.738 ; S[0]            ; S[0]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.959      ;
+; 1.745 ; S[0]            ; S[1]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 1.966      ;
+; 1.783 ; InitReady       ; RCKEEN       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.004      ;
+; 1.915 ; RTPBusyReg0     ; UFMRTPBusy   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.136      ;
+; 1.935 ; IS[2]           ; IS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.156      ;
+; 1.950 ; IS[1]           ; IS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.171      ;
+; 2.035 ; CmdUFMPrgmSync  ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.256      ;
+; 2.087 ; CASr2           ; nRWE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.308      ;
+; 2.109 ; nCCAS           ; CASr         ; nCCAS        ; RCLK        ; -1.000       ; 3.348      ; 4.678      ;
+; 2.110 ; RASr3           ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.331      ;
 ; 2.116 ; FS[9]           ; FS[9]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.337      ;
 ; 2.117 ; FS[16]          ; FS[16]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.338      ;
-; 2.126 ; FS[8]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.347      ;
-; 2.127 ; FS[6]           ; FS[6]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.348      ;
-; 2.135 ; n8MEGEN         ; n8MEGEN      ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.356      ;
-; 2.136 ; FS[1]           ; FS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.357      ;
-; 2.142 ; S[1]            ; S[1]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.363      ;
+; 2.117 ; FS[1]           ; FS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; FS[8]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.338      ;
+; 2.133 ; UFMD            ; UFMD         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.354      ;
+; 2.134 ; UFMInitDone     ; UFMInitDone  ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.355      ;
+; 2.134 ; FS[6]           ; FS[6]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.355      ;
+; 2.135 ; InitReady       ; InitReady    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.356      ;
 ; 2.144 ; FS[10]          ; FS[10]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.365      ;
 ; 2.144 ; FS[11]          ; FS[11]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.365      ;
-; 2.162 ; UFMProgram      ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.383      ;
-; 2.168 ; UFMErase        ; UFMErase     ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.389      ;
-; 2.186 ; IS[2]           ; IS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.407      ;
-; 2.203 ; RASr2           ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.424      ;
-; 2.204 ; RASr2           ; RASr3        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.425      ;
-; 2.239 ; UFMD            ; UFMD         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.460      ;
+; 2.153 ; n8MEGEN         ; n8MEGEN      ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.374      ;
+; 2.164 ; LEDEN           ; LEDEN        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.385      ;
+; 2.171 ; IS[0]           ; IS[0]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.392      ;
+; 2.174 ; IS[0]           ; IS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.395      ;
+; 2.205 ; RASr2           ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.426      ;
+; 2.211 ; RASr2           ; RASr3        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.432      ;
+; 2.230 ; FS[7]           ; FS[7]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.451      ;
+; 2.232 ; UFMProgram      ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.453      ;
+; 2.233 ; UFMProgStart    ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.454      ;
 ; 2.239 ; FS[15]          ; FS[15]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.460      ;
 ; 2.239 ; FS[14]          ; FS[14]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.460      ;
+; 2.241 ; FS[2]           ; FS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.462      ;
 ; 2.241 ; FS[12]          ; FS[12]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.462      ;
-; 2.243 ; UFMRTPBusy      ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.464      ;
-; 2.247 ; nCRAS           ; RASr         ; nCRAS        ; RCLK        ; -1.000       ; 3.348      ; 4.816      ;
-; 2.248 ; FS[7]           ; FS[7]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.469      ;
-; 2.250 ; FS[3]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.471      ;
-; 2.250 ; FS[4]           ; FS[4]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.471      ;
+; 2.249 ; FS[5]           ; FS[5]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.470      ;
 ; 2.250 ; FS[13]          ; FS[13]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.471      ;
-; 2.262 ; FS[2]           ; FS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.483      ;
-; 2.271 ; LEDEN           ; LEDEN        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.492      ;
-; 2.310 ; IS[1]           ; IS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.531      ;
-; 2.316 ; IS[1]           ; IS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.537      ;
+; 2.251 ; IS[3]           ; IS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.472      ;
+; 2.261 ; FS[4]           ; FS[4]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.482      ;
+; 2.263 ; FS[3]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.484      ;
+; 2.271 ; UFMReqErase     ; UFMReqErase  ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.492      ;
+; 2.286 ; nCRAS           ; RASr         ; nCRAS        ; RCLK        ; -1.000       ; 3.348      ; 4.855      ;
+; 2.294 ; S[1]            ; S[1]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.515      ;
+; 2.310 ; S[1]            ; S[0]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.531      ;
 ; 2.329 ; Ready           ; Ready        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.550      ;
-; 2.340 ; PHI2r2          ; LEDEN        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.561      ;
-; 2.341 ; PHI2r2          ; n8MEGEN      ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.562      ;
-; 2.368 ; PHI2            ; PHI2r        ; PHI2         ; RCLK        ; -1.000       ; 3.348      ; 4.937      ;
-; 2.391 ; RASr            ; RASr2        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.612      ;
-; 2.392 ; PHI2r           ; PHI2r2       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.613      ;
-; 2.420 ; IS[0]           ; IS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.641      ;
-; 2.420 ; IS[0]           ; IS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.641      ;
-; 2.510 ; PHI2r2          ; PHI2r3       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.731      ;
-; 2.525 ; CmdUFMPrgmSync  ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.746      ;
-; 2.545 ; FS[5]           ; FS[5]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.766      ;
-; 2.550 ; RASr2           ; IS[1]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.771      ;
-; 2.569 ; UFMReqErase     ; UFMReqErase  ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.790      ;
-; 2.631 ; S[1]            ; S[0]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.852      ;
-; 2.672 ; RASr2           ; IS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.893      ;
-; 2.720 ; CmdUFMEraseSync ; UFMErase     ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.941      ;
-; 2.756 ; nRowColSel      ; nRowColSel   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.977      ;
-; 2.788 ; CASr2           ; nRWE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.009      ;
-; 2.794 ; S[0]            ; S[0]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.015      ;
-; 2.794 ; InitReady       ; RCKEEN       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.015      ;
-; 2.896 ; RASr2           ; S[1]         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.117      ;
-; 2.914 ; IS[2]           ; IS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.135      ;
+; 2.334 ; PHI2            ; PHI2r        ; PHI2         ; RCLK        ; -1.000       ; 3.348      ; 4.903      ;
+; 2.350 ; PHI2r2          ; LEDEN        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.571      ;
+; 2.352 ; S[1]            ; nRowColSel   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.573      ;
+; 2.355 ; PHI2r2          ; n8MEGEN      ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.576      ;
+; 2.388 ; PHI2r           ; PHI2r2       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.609      ;
+; 2.405 ; RASr            ; RASr2        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.626      ;
+; 2.475 ; CASr2           ; CASr3        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.696      ;
+; 2.539 ; UFMRTPBusy      ; UFMProgStart ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.760      ;
+; 2.565 ; UFMErase        ; UFMErase     ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.786      ;
+; 2.581 ; CASr2           ; nRCS~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.802      ;
+; 2.592 ; CASr3           ; nRWE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.813      ;
+; 2.605 ; UFMErase        ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.826      ;
+; 2.763 ; FS[16]          ; InitReady    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 2.984      ;
+; 2.863 ; UFMProgStart    ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.084      ;
+; 2.912 ; RCKEEN          ; RCKEEN       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.133      ;
+; 2.938 ; S[1]            ; RCKEEN       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.159      ;
 ; 2.948 ; FS[9]           ; FS[10]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.169      ;
 ; 2.949 ; FS[16]          ; FS[17]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.170      ;
-; 2.959 ; FS[6]           ; FS[7]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.180      ;
-; 2.968 ; FS[1]           ; FS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.189      ;
+; 2.949 ; FS[1]           ; FS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.170      ;
+; 2.966 ; FS[6]           ; FS[7]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.187      ;
 ; 2.976 ; FS[10]          ; FS[11]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.197      ;
 ; 2.976 ; FS[11]          ; FS[12]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.197      ;
-; 2.995 ; CASr2           ; nRCS~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.216      ;
-; 3.053 ; RASr2           ; IS[2]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.274      ;
+; 3.030 ; PHI2r2          ; PHI2r3       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.251      ;
 ; 3.059 ; FS[9]           ; FS[11]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.280      ;
-; 3.061 ; PHI2r3          ; DRDIn        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.282      ;
-; 3.065 ; PHI2r3          ; DRCLK        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.286      ;
-; 3.070 ; FS[6]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.291      ;
-; 3.079 ; FS[1]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.300      ;
+; 3.060 ; FS[1]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.281      ;
+; 3.077 ; FS[6]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.298      ;
+; 3.084 ; CmdUFMEraseSync ; UFMErase     ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.305      ;
+; 3.086 ; CASr3           ; nRCS~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.307      ;
 ; 3.087 ; FS[11]          ; FS[13]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.308      ;
 ; 3.087 ; FS[10]          ; FS[12]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.308      ;
-; 3.147 ; RCKEEN          ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.368      ;
-; 3.149 ; RCKE~reg0       ; nRRAS~reg0   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.370      ;
+; 3.091 ; PHI2r3          ; DRDIn        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.312      ;
+; 3.091 ; PHI2r3          ; DRCLK        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.312      ;
+; 3.113 ; UFMRTPBusy      ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.334      ;
+; 3.122 ; S[0]            ; RCKEEN       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.343      ;
+; 3.123 ; CASr2           ; nRCAS~reg0   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.344      ;
+; 3.125 ; IS[0]           ; RA10         ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.346      ;
+; 3.147 ; CASr            ; CASr2        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.368      ;
+; 3.164 ; RASr2           ; nRRAS~reg0   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.385      ;
+; 3.170 ; FS[7]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.391      ;
 ; 3.170 ; FS[9]           ; FS[12]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.391      ;
-; 3.170 ; RASr2           ; nRRAS~reg0   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.391      ;
 ; 3.179 ; FS[15]          ; FS[16]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.400      ;
 ; 3.179 ; FS[14]          ; FS[15]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.400      ;
+; 3.181 ; FS[2]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.402      ;
 ; 3.181 ; FS[12]          ; FS[13]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.402      ;
-; 3.188 ; FS[7]           ; FS[8]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.409      ;
-; 3.190 ; FS[4]           ; FS[5]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.411      ;
+; 3.189 ; FS[5]           ; FS[6]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.410      ;
 ; 3.198 ; FS[10]          ; FS[13]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.419      ;
-; 3.202 ; FS[2]           ; FS[3]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.423      ;
-; 3.223 ; UFMProgStart    ; UFMProgram   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.444      ;
-; 3.245 ; RASr            ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.466      ;
-; 3.265 ; S[1]            ; nRowColSel   ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.486      ;
-; 3.281 ; FS[9]           ; FS[13]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.502      ;
-; 3.290 ; FS[15]          ; FS[17]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.511      ;
-; 3.290 ; FS[14]          ; FS[16]       ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.511      ;
-; 3.293 ; CASr3           ; nRWE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.514      ;
-; 3.301 ; FS[4]           ; FS[6]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.522      ;
-; 3.357 ; FS[3]           ; ARCLK        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.578      ;
+; 3.201 ; FS[4]           ; FS[5]        ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.422      ;
+; 3.238 ; RASr            ; RCKE~reg0    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.459      ;
+; 3.252 ; FS[17]          ; InitReady    ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.473      ;
+; 3.266 ; UFMReqErase     ; ARShift      ; RCLK         ; RCLK        ; 0.000        ; 0.000      ; 3.487      ;
 +-------+-----------------+--------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -765,7 +765,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 31    ; 31   ;
 ; Unconstrained Input Port Paths  ; 249   ; 249  ;
 ; Unconstrained Output Ports      ; 38    ; 38   ;
-; Unconstrained Output Port Paths ; 78    ; 78   ;
+; Unconstrained Output Port Paths ; 79    ; 79   ;
 +---------------------------------+-------+------+
 
 
@@ -958,8 +958,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Fri Sep 29 09:33:26 2023
+    Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+    Info: Processing started: Fri Sep 29 15:18:01 2023
 Info: Command: quartus_sta RAM2GS-MAXII -c RAM2GS
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -972,22 +972,22 @@ Info (332104): Reading SDC File: '../RAM2GS-MAX.sdc'
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -15.724
+Info (332146): Worst-case setup slack is -15.739
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -15.724             -15.724 ARCLK 
-    Info (332119):   -15.649             -15.649 DRCLK 
-    Info (332119):    -7.823             -68.940 RCLK 
-    Info (332119):     0.324               0.000 nCRAS 
-    Info (332119):     0.552               0.000 PHI2 
-Info (332146): Worst-case hold slack is -16.401
+    Info (332119):   -15.739             -15.739 ARCLK 
+    Info (332119):   -15.716             -15.716 DRCLK 
+    Info (332119):    -7.070             -66.746 RCLK 
+    Info (332119):     0.330               0.000 nCRAS 
+    Info (332119):     0.519               0.000 PHI2 
+Info (332146): Worst-case hold slack is -16.296
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -16.401             -16.401 DRCLK 
-    Info (332119):   -16.276             -16.276 ARCLK 
-    Info (332119):    -0.482              -1.385 PHI2 
-    Info (332119):     0.180               0.000 nCRAS 
-    Info (332119):     1.108               0.000 RCLK 
+    Info (332119):   -16.296             -16.296 DRCLK 
+    Info (332119):   -16.261             -16.261 ARCLK 
+    Info (332119):    -0.480              -1.135 PHI2 
+    Info (332119):     0.160               0.000 nCRAS 
+    Info (332119):     1.109               0.000 RCLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is 7.734
@@ -1003,8 +1003,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13090 megabytes
-    Info: Processing ended: Fri Sep 29 09:33:27 2023
+    Info: Peak virtual memory: 533 megabytes
+    Info: Processing ended: Fri Sep 29 15:18:02 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

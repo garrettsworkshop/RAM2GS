@@ -1,6 +1,6 @@
 Analysis & Synthesis report for RAM2GS
-Thu Sep 21 05:38:18 2023
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Sep 29 15:17:50 2023
+Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
 ---------------------
@@ -43,19 +43,19 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Sep 21 05:38:18 2023       ;
-; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name               ; RAM2GS                                      ;
-; Top-level Entity Name       ; RAM2GS                                      ;
-; Family                      ; MAX V                                       ;
-; Total logic elements        ; 184                                         ;
-; Total pins                  ; 63                                          ;
-; Total virtual pins          ; 0                                           ;
-; UFM blocks                  ; 1 / 1 ( 100 % )                             ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                              ;
++-----------------------------+-------------------------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Fri Sep 29 15:17:50 2023                       ;
+; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
+; Revision Name               ; RAM2GS                                                      ;
+; Top-level Entity Name       ; RAM2GS                                                      ;
+; Family                      ; MAX V                                                       ;
+; Total logic elements        ; 196                                                         ;
+; Total pins                  ; 63                                                          ;
+; Total virtual pins          ; 0                                                           ;
+; UFM blocks                  ; 1 / 1 ( 100 % )                                             ;
++-----------------------------+-------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
@@ -135,7 +135,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -146,15 +146,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                   ; Library ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------+---------+
-; ../RAM2GS-MAX.v                  ; yes             ; User Verilog HDL File            ; //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v    ;         ;
-; UFM.v                            ; yes             ; User Wizard-Generated File       ; //Mac/iCloud/Repos/RAM2GS/CPLD/MAXV/UFM.v      ;         ;
-; ../RAM2GS.mif                    ; yes             ; User Memory Initialization File  ; //Mac/iCloud/Repos/RAM2GS/CPLD/MAXV/RAM2GS.mif ;         ;
-+----------------------------------+-----------------+----------------------------------+------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                ; Library ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------+---------+
+; ../RAM2GS-MAX.v                  ; yes             ; User Verilog HDL File            ; C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v    ;         ;
+; UFM.v                            ; yes             ; User Wizard-Generated File       ; C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v      ;         ;
+; ../RAM2GS.mif                    ; yes             ; User Memory Initialization File  ; C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/RAM2GS.mif ;         ;
++----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -162,34 +162,34 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 184   ;
-;     -- Combinational with no register       ; 86    ;
-;     -- Register only                        ; 30    ;
-;     -- Combinational with a register        ; 68    ;
+; Total logic elements                        ; 196   ;
+;     -- Combinational with no register       ; 92    ;
+;     -- Register only                        ; 34    ;
+;     -- Combinational with a register        ; 70    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 57    ;
+;     -- 4 input functions                    ; 64    ;
 ;     -- 3 input functions                    ; 46    ;
-;     -- 2 input functions                    ; 42    ;
+;     -- 2 input functions                    ; 43    ;
 ;     -- 1 input functions                    ; 8     ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 168   ;
+;     -- normal mode                          ; 180   ;
 ;     -- arithmetic mode                      ; 16    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 10    ;
+;     -- synchronous clear/load mode          ; 11    ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 98    ;
+; Total registers                             ; 104   ;
 ; Total logic cells in carry chains           ; 17    ;
 ; I/O pins                                    ; 63    ;
 ; UFM blocks                                  ; 1     ;
 ; Maximum fan-out node                        ; RCLK  ;
-; Maximum fan-out                             ; 55    ;
-; Total fan-out                               ; 662   ;
-; Average fan-out                             ; 2.67  ;
+; Maximum fan-out                             ; 61    ;
+; Total fan-out                               ; 703   ;
+; Average fan-out                             ; 2.70  ;
 +---------------------------------------------+-------+
 
 
@@ -198,7 +198,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                                ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                    ; Entity Name         ; Library Name ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
-; |RAM2GS                                                   ; 184 (184)   ; 98           ; 1          ; 63   ; 0            ; 86 (86)      ; 30 (30)           ; 68 (68)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
+; |RAM2GS                                                   ; 196 (196)   ; 104          ; 1          ; 63   ; 0            ; 92 (92)      ; 34 (34)           ; 70 (70)          ; 17 (17)         ; 0 (0)      ; |RAM2GS                                                                ; RAM2GS              ; work         ;
 ;    |UFM:UFM_inst|                                         ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst                                                   ; UFM                 ; work         ;
 ;       |UFM_altufm_none_38r:UFM_altufm_none_38r_component| ; 0 (0)       ; 0            ; 1          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |RAM2GS|UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component ; UFM_altufm_none_38r ; work         ;
 +-----------------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------+---------------------+--------------+
@@ -219,8 +219,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 98    ;
-; Number of registers using Synchronous Clear  ; 6     ;
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 7     ;
 ; Number of registers using Synchronous Load   ; 4     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -253,16 +253,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "UFM:UFM_inst"                                                                          ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; ardin   ; Input  ; Info     ; Stuck at GND                                                                        ;
-; busy    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; osc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; rtpbusy ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "UFM:UFM_inst"                                                                        ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; ardin ; Input  ; Info     ; Stuck at GND                                                                        ;
+; osc   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -270,43 +268,43 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Sep 21 05:37:47 2023
+    Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
+    Info: Processing started: Fri Sep 29 15:17:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RAM2GS-MAXV -c RAM2GS
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
-Info (12021): Found 1 design units, including 1 entities, in source file //mac/icloud/repos/ram2gs/cpld/ram2gs-max.v
-    Info (12023): Found entity 1: RAM2GS File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/gwolf/documents/github/ram2gs/cpld/ram2gs-max.v
+    Info (12023): Found entity 1: RAM2GS File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 1
 Info (12021): Found 2 design units, including 2 entities, in source file ufm.v
-    Info (12023): Found entity 1: UFM_altufm_none_38r File: //Mac/iCloud/Repos/RAM2GS/CPLD/MAXV/UFM.v Line: 47
-    Info (12023): Found entity 2: UFM File: //Mac/iCloud/Repos/RAM2GS/CPLD/MAXV/UFM.v Line: 150
+    Info (12023): Found entity 1: UFM_altufm_none_38r File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 47
+    Info (12023): Found entity 2: UFM File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 150
 Info (12127): Elaborating entity "RAM2GS" for the top level hierarchy
-Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst" File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 92
-Info (12128): Elaborating entity "UFM_altufm_none_38r" for hierarchy "UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component" File: //Mac/iCloud/Repos/RAM2GS/CPLD/MAXV/UFM.v Line: 201
-Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[2]" driven by bidirectional pin "RD[2]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[3]" driven by bidirectional pin "RD[3]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
-Info (21057): Implemented 248 device resources after synthesis - the final resource count might be different
+Info (12128): Elaborating entity "UFM" for hierarchy "UFM:UFM_inst" File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 92
+Info (12128): Elaborating entity "UFM_altufm_none_38r" for hierarchy "UFM:UFM_inst|UFM_altufm_none_38r:UFM_altufm_none_38r_component" File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/UFM.v Line: 201
+Warning (14632): Output pin "Dout[0]" driven by bidirectional pin "RD[0]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[1]" driven by bidirectional pin "RD[1]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[2]" driven by bidirectional pin "RD[2]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[3]" driven by bidirectional pin "RD[3]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[4]" driven by bidirectional pin "RD[4]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[5]" driven by bidirectional pin "RD[5]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[6]" driven by bidirectional pin "RD[6]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Warning (14632): Output pin "Dout[7]" driven by bidirectional pin "RD[7]" cannot be tri-stated File: C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/RAM2GS-MAX.v Line: 27
+Info (21057): Implemented 260 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 25 input pins
     Info (21059): Implemented 30 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 184 logic cells
+    Info (21061): Implemented 196 logic cells
     Info (21070): Implemented 1 User Flash Memory blocks
-Info (144001): Generated suppressed messages file /Repos/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 13149 megabytes
-    Info: Processing ended: Thu Sep 21 05:38:18 2023
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Peak virtual memory: 560 megabytes
+    Info: Processing ended: Fri Sep 29 15:17:50 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in /Repos/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg.
+The suppressed messages can be found in C:/Users/GWolf/Documents/GitHub/RAM2GS/CPLD/MAXV/output_files/RAM2GS.map.smsg.
 
 

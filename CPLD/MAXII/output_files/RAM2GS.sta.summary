@@ -3,43 +3,43 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'ARCLK'
-Slack : -15.724
-TNS   : -15.724
+Slack : -15.739
+TNS   : -15.739
 
 Type  : Setup 'DRCLK'
-Slack : -15.649
-TNS   : -15.649
+Slack : -15.716
+TNS   : -15.716
 
 Type  : Setup 'RCLK'
-Slack : -7.823
-TNS   : -68.940
+Slack : -7.070
+TNS   : -66.746
 
 Type  : Setup 'nCRAS'
-Slack : 0.324
+Slack : 0.330
 TNS   : 0.000
 
 Type  : Setup 'PHI2'
-Slack : 0.552
+Slack : 0.519
 TNS   : 0.000
 
 Type  : Hold 'DRCLK'
-Slack : -16.401
-TNS   : -16.401
+Slack : -16.296
+TNS   : -16.296
 
 Type  : Hold 'ARCLK'
-Slack : -16.276
-TNS   : -16.276
+Slack : -16.261
+TNS   : -16.261
 
 Type  : Hold 'PHI2'
-Slack : -0.482
-TNS   : -1.385
+Slack : -0.480
+TNS   : -1.135
 
 Type  : Hold 'nCRAS'
-Slack : 0.180
+Slack : 0.160
 TNS   : 0.000
 
 Type  : Hold 'RCLK'
-Slack : 1.108
+Slack : 1.109
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'RCLK'
