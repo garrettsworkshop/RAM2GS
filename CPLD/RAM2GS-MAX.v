@@ -71,8 +71,8 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg UFMErase = 0; // Rising edge starts erase. UFM+RTP must not be busy
     reg UFMProgram = 0; // Rising edge starts program. UFM+RTP must not be busy
     reg UFMOscEN = 0; // UFM oscillator enable
-    wire UFMBusy; // 1 if UFM is doing user operation. Asynchronous
-    wire RTPBusy; // 1 if real-time programming in progress. Asynchronous
+    wire UFMBusyAsync; // 1 if UFM is doing user operation. Asynchronous
+    wire RTPBusyAsync; // 1 if real-time programming in progress. Asynchronous
     wire DRDOut; // UFM data output
     // UFM oscillator always enabled
     wire UFMOsc; // UFM oscillator output (3.3-5.5 MHz)
@@ -86,12 +86,16 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
         .erase (UFMErase),
         .oscena (UFMOscEN),
         .program (UFMProgram),
-        .busy (UFMBusy),
+        .busy (UFMBusyAsync),
         .drdout (DRDOut),
         .osc (UFMOsc),
-        .rtpbusy (RTPBusy));
-    reg UFMBusyReg = 0; // UFMBusy registered to sync with RCLK
-    reg RTPBusyReg = 0; // RTPBusy registered to sync with RCLK
+        .rtpbusy (RTPBusyAsync));
+    // UFMBusy registered to sync with RCLK
+    reg UFMBusyReg0; always @(posedge RCLK) UFMBusyReg0 <= UFMBusyAsync;
+    // RTPBusy registered to sync with RCLK
+    reg RTPBusyReg0; always @(posedge RCLK) RTPBusyReg0 <= RTPBusyAsync;
+    // UFMRTPBusy ORs both
+    reg UFMRTPBusy;  always @(posedge RCLK) UFMRTPBusy <= UFMBusyReg0 || RTPBusyReg0;
 
     /* UFM State */
     reg UFMInitDone = 0; // 1 if UFM initialization finished
@@ -356,8 +360,10 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
                 // MAX commands
                 CmdLEDEN <= LEDEN;
                 Cmdn8MEGEN <= n8MEGEN;
-                CmdUFMErase <= Din[3];
-                CmdUFMPrgm <= Din[2];
+                if (!CmdUFMPrgm && !CmdUFMErase) begin
+                    CmdUFMErase <= Din[3];
+                    CmdUFMPrgm <= Din[2];
+                end
                 CmdDRCLK <= Din[1];
                 CmdDRDIn <= Din[0];
                 CmdSubmitted <= 1'b1;
@@ -374,7 +380,12 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
         end
     end
 
+    /* UFM command synchronization */
+    reg CmdUFMPrgmSync; always @(posedge RCLK) CmdUFMPrgmSync <= CmdUFMPrgm;
+    reg CmdUFMEraseSync; always @(posedge RCLK) CmdUFMEraseSync <= CmdUFMErase;
+
     /* UFM Control */
+    reg UFMProgStart;
     always @(posedge RCLK) begin
         if (!Ready) begin
             if (!UFMInitDone && FS[17:16]==2'b00) begin
@@ -445,6 +456,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
             // Don't erase or program UFM during initialization 
             UFMErase <= 1'b0;
             UFMProgram <= 1'b0;
+            UFMProgStart <= 1'b0;
         end else begin
             // Can only shift UFM data register now
             ARCLK <= 1'b0;
@@ -460,11 +472,16 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
             end
 
             // UFM programming sequence
-            if (CmdUFMPrgm || CmdUFMErase) begin
-                if (!UFMBusyReg && !RTPBusyReg) begin
-                    if (UFMReqErase || CmdUFMErase) UFMErase <= 1'b1;
-                    else if (CmdUFMPrgm) UFMProgram <= 1'b1;
-                end else if (UFMBusyReg) UFMReqErase <= 1'b0;
+            if (FS[6:0]==0) begin
+                if (!UFMProgStart && !UFMRTPBusy) begin
+                    if (CmdUFMPrgmSync) begin
+                        UFMErase <= UFMReqErase || CmdUFMEraseSync;
+                        UFMProgStart <= 1'b1;
+                    end else if (CmdUFMEraseSync) UFMErase <= 1'b1;
+                end else if (UFMProgStart && !UFMRTPBusy) begin
+                    UFMErase <= 1'b0;
+                    if (!UFMErase) UFMProgram <= 1'b1;
+                end
             end
         end
     end
