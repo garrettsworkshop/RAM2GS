@@ -18,7 +18,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg CBR;
 
     /* Activity LED */
-    reg LEDEN = 0;
+    reg LEDEN;
     output LED;
     assign LED = !(!nCRAS && !CBR && LEDEN && Ready);
 
@@ -91,11 +91,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
         .osc (UFMOsc),
         .rtpbusy (RTPBusyAsync));
     // UFMBusy registered to sync with RCLK
-    reg UFMBusyReg0; always @(posedge RCLK) UFMBusyReg0 <= UFMBusyAsync;
+    reg UFMBusyReg; always @(posedge RCLK) UFMBusyReg <= UFMBusyAsync;
     // RTPBusy registered to sync with RCLK
-    reg RTPBusyReg0; always @(posedge RCLK) RTPBusyReg0 <= RTPBusyAsync;
+    reg RTPBusyReg; always @(posedge RCLK) RTPBusyReg <= RTPBusyAsync;
     // UFMRTPBusy ORs both
-    reg UFMRTPBusy;  always @(posedge RCLK) UFMRTPBusy <= UFMBusyReg0 || RTPBusyReg0;
+    reg UFMRTPBusy; always @(posedge RCLK) UFMRTPBusy <= UFMBusyReg || RTPBusyReg;
 
     /* UFM State */
     reg UFMInitDone = 0; // 1 if UFM initialization finished
