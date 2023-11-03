@@ -1,6 +1,6 @@
 module RAM2GS(PHI2, MAin, CROW, Din, Dout,
               nCCAS, nCRAS, nFWE, LED,
-              RBA, RA, RD, nRCS, RCLK, RCKE,
+              RBA, RA, RD, nRCS, RCLK, RCLKout, RCKE, 
               nRWE, nRRAS, nRCAS, RDQMH, RDQML);
 
 
@@ -37,8 +37,14 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg n8MEGEN = 0;
     reg XOR8MEG = 0;
     
-    /* SDRAM Clock */
+    /* SDRAM Clock in/out */
     input RCLK;
+	output RCLKout;
+	ODDRXE rck(
+		.SCLK(RCLK),
+		.Q(RCLKout),
+		.D0(0), .D1(1),
+		.RST(0));
     
     /* SDRAM */
     reg RCKEEN;
