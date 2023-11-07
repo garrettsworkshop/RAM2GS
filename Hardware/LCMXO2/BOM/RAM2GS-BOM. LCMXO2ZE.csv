@@ -9,7 +9,7 @@ H3 ,1, ,stdpads:PasteHole_1.1mm_PTH,,DNP - mounting hole,,
 J1 ,1,Memory Expansion,stdpads:AppleIIgsMemoryExpansion_Edge,,DNP - edge connector,,
 J2 ,1,JTAG,Connector:Tag-Connect_TC2050-IDC-FP_2x05_P1.27mm_Vertical,,DNP - test pad connector,,
 R1 R7 R8 R9 R10 ,5,10k,stdpads:R_0603,,Any manufacturer's part is acceptable.,C25804,Uniroyal 0603WAF1002T5E
-R2 R3 R5 R11 ,4,47,stdpads:R_0603,,Any manufacturer's part is acceptable.,C23182,Uniroyal 0603WAF470JT5E
+R2 R3 R5 R11 R12 R13 ,4,47,stdpads:R_0603,,Any manufacturer's part is acceptable.,C23182,Uniroyal 0603WAF470JT5E
 R4 ,1,DNP,stdpads:R_0805,,,,
 R6 ,1,180,stdpads:R_0805,,Any manufacturer's part is acceptable.,C25270,Uniroyal 0805W8F1800T5E
 U1 ,1,LCMXO2ZE-TG100,stdpads:TQFP-100_14x14mm_P0.5mm,,,C1519051,"Lattice LCMXO2-640ZE-4TG100C, Lattice LCMXO2-640ZE-5TG100C, Lattice LCMXO2-640ZE-6TG100C, Lattice LCMXO2-640ZE-4TG100I, Lattice LCMXO2-640ZE-5TG100I, Lattice LCMXO2-640ZE-6TG100I, Lattice LCMXO2-1200ZE-4TG100C, Lattice LCMXO2-1200ZE-5TG100C, Lattice LCMXO2-1200ZE-6TG100C, Lattice LCMXO2-1200ZE-4TG100I, Lattice LCMXO2-1200ZE-5TG100I, Lattice LCMXO2-1200ZE-6TG100I"
