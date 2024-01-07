@@ -34,7 +34,7 @@
 //https://fpgasoftware.intel.com/eula.
 
 
-//altufm_none CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="MAX II" ERASE_TIME=500000000 LPM_FILE="D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/RAM2GS.mif" OSC_FREQUENCY=180000 PORT_ARCLKENA="PORT_UNUSED" PORT_DRCLKENA="PORT_UNUSED" PROGRAM_TIME=1600000 WIDTH_UFM_ADDRESS=9 arclk ardin arshft busy drclk drdin drdout drshft erase osc oscena program rtpbusy
+//altufm_none CBX_AUTO_BLACKBOX="ALL" DEVICE_FAMILY="MAX II" ERASE_TIME=500000000 LPM_FILE="D:/OneDrive/Documents/GitHub/RAM2GS/CPLD/MAXII/RAM2GS-MAX.mif" OSC_FREQUENCY=180000 PORT_ARCLKENA="PORT_UNUSED" PORT_DRCLKENA="PORT_UNUSED" PROGRAM_TIME=1600000 WIDTH_UFM_ADDRESS=9 arclk ardin arshft busy drclk drdin drdout drshft erase osc oscena program rtpbusy
 //VERSION_BEGIN 19.1 cbx_a_gray2bin 2019:09:22:11:00:27:SJ cbx_a_graycounter 2019:09:22:11:00:27:SJ cbx_altufm_none 2019:09:22:11:00:28:SJ cbx_cycloneii 2019:09:22:11:00:28:SJ cbx_lpm_add_sub 2019:09:22:11:00:28:SJ cbx_lpm_compare 2019:09:22:11:00:28:SJ cbx_lpm_counter 2019:09:22:11:00:28:SJ cbx_lpm_decode 2019:09:22:11:00:28:SJ cbx_lpm_mux 2019:09:22:11:00:28:SJ cbx_maxii 2019:09:22:11:00:28:SJ cbx_mgl 2019:09:22:11:02:15:SJ cbx_nadder 2019:09:22:11:00:28:SJ cbx_stratix 2019:09:22:11:00:28:SJ cbx_stratixii 2019:09:22:11:00:28:SJ cbx_util_mgl 2019:09:22:11:00:28:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -118,7 +118,7 @@ module  UFM_altufm_none_unv
 	defparam
 		maxii_ufm_block1.address_width = 9,
 		maxii_ufm_block1.erase_time = 500000000,
-		maxii_ufm_block1.init_file = "RAM2GS.mif",
+		maxii_ufm_block1.init_file = "../RAM2GS-MAX.mif",
 		maxii_ufm_block1.osc_sim_setting = 180000,
 		maxii_ufm_block1.program_time = 1600000,
 		maxii_ufm_block1.lpm_type = "maxii_ufm";
@@ -209,7 +209,7 @@ endmodule
 // Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX II"
 // Retrieval info: CONSTANT: ERASE_TIME NUMERIC "500000000"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "MAX II"
-// Retrieval info: CONSTANT: LPM_FILE STRING "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\MAXII\RAM2GS.mif"
+// Retrieval info: CONSTANT: LPM_FILE STRING "D:\OneDrive\Documents\GitHub\RAM2GS\CPLD\MAXII\RAM2GS-MAX.mif"
 // Retrieval info: CONSTANT: LPM_HINT STRING "UNUSED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altufm_none"
 // Retrieval info: CONSTANT: OSC_FREQUENCY NUMERIC "180000"

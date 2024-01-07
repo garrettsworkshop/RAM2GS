@@ -13,7 +13,7 @@ Hostname: ZANEMACWIN11
 
 Implementation : impl1
 
-# Written on Thu Sep 21 05:39:36 2023
+# Written on Sat Nov 18 02:05:43 2023
 
 ##### DESIGN INFO #######################################################
 
@@ -103,6 +103,7 @@ p:RA[11]
 p:RBA[0]
 p:RBA[1]
 p:RCKE
+p:RCLKout
 p:RDQMH
 p:RDQML
 p:RD[0] (bidir end point)

@@ -3,7 +3,7 @@ Report for cell RAM2GS.verilog
 
 Register bits: 109 of 640 (17%)
 PIC Latch:       0
-I/O cells:       63
+I/O cells:       64
                                           Cell usage:
                                cell       count    Res Usage(%)
                                  BB        8       100.0
@@ -17,19 +17,20 @@ I/O cells:       63
                                  IB       25       100.0
                            IFS1P3DX        9       100.0
                                 INV        7       100.0
-                                 OB       30       100.0
+                                 OB       31       100.0
+                             ODDRXE        1       100.0
                            OFS1P3BX        4       100.0
                            OFS1P3DX       11       100.0
                            OFS1P3JX        1       100.0
-                           ORCALUT4      213       100.0
-                              PFUMX        1       100.0
+                           ORCALUT4      212       100.0
+                              PFUMX        2       100.0
                                 PUR        1       100.0
                                 VHI        2       100.0
                                 VLO        2       100.0
 SUB MODULES 
                                REFB        1       100.0
                             
-                         TOTAL           411           
+                         TOTAL           413           
 ----------------------------------------------------------------------
 Report for cell REFB.netlist
      Instance path:  ufmefb

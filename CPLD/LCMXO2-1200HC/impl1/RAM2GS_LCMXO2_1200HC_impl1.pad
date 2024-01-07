@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          TQFP100
 Package Status:                     Final          Version 1.44
 
-Thu Oct 19 23:51:05 2023
+Sat Nov 18 02:06:05 2023
 
 Pinout by Port Name:
 +-----------+----------+---------------+-------+-----------+-----------+------------------------------------------------------------+
@@ -53,12 +53,12 @@ Pinout by Port Name:
 | RA[6]     | 68/1     | LVCMOS33_OUT  | PR4B  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RA[7]     | 75/1     | LVCMOS33_OUT  | PR2A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RA[8]     | 65/1     | LVCMOS33_OUT  | PR5A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
-| RA[9]     | 47/2     | LVCMOS33_OUT  | PB18D |           |           | DRIVE:4mA SLEW:SLOW                                        |
+| RA[9]     | 62/1     | LVCMOS33_OUT  | PR5D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RBA[0]    | 58/1     | LVCMOS33_OUT  | PR9A  |           |           | DRIVE:4mA SLEW:SLOW                                        |
-| RBA[1]    | 60/1     | LVCMOS33_OUT  | PR8C  |           |           | DRIVE:4mA SLEW:SLOW                                        |
+| RBA[1]    | 47/2     | LVCMOS33_OUT  | PB18D |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RCKE      | 53/1     | LVCMOS33_OUT  | PR9D  |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RCLK      | 63/1     | LVCMOS33_IN   | PR5C  |           |           | CLAMP:ON HYSTERESIS:SMALL                                  |
-| RCLKout   | 62/1     | LVCMOS33_OUT  | PR5D  |           |           | DRIVE:4mA SLEW:FAST                                        |
+| RCLKout   | 60/1     | LVCMOS33_OUT  | PR8C  |           |           | DRIVE:24mA SLEW:FAST                                       |
 | RDQMH     | 51/1     | LVCMOS33_OUT  | PR10D |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RDQML     | 48/2     | LVCMOS33_OUT  | PB20C |           |           | DRIVE:4mA SLEW:SLOW                                        |
 | RD[0]     | 36/2     | LVCMOS33_BIDI | PB11C |           |           | DRIVE:4mA PULL:KEEPER CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
@@ -135,7 +135,7 @@ Pinout by Pin Number:
 | 42/2     | RD[6]                 | LOCATED    | LVCMOS33_BIDI | PB18A |               |           |           |
 | 43/2     | RD[7]                 | LOCATED    | LVCMOS33_BIDI | PB18B |               |           |           |
 | 45/2     |     unused, PULL:DOWN |            |               | PB18C |               |           |           |
-| 47/2     | RA[9]                 | LOCATED    | LVCMOS33_OUT  | PB18D |               |           |           |
+| 47/2     | RBA[1]                | LOCATED    | LVCMOS33_OUT  | PB18D |               |           |           |
 | 48/2     | RDQML                 | LOCATED    | LVCMOS33_OUT  | PB20C | SN            |           |           |
 | 49/2     | nRWE                  | LOCATED    | LVCMOS33_OUT  | PB20D | SI/SISPI      |           |           |
 | 51/1     | RDQMH                 | LOCATED    | LVCMOS33_OUT  | PR10D | DQ1           |           |           |
@@ -145,9 +145,9 @@ Pinout by Pin Number:
 | 57/1     | nRCS                  | LOCATED    | LVCMOS33_OUT  | PR9B  | DQ1           |           |           |
 | 58/1     | RBA[0]                | LOCATED    | LVCMOS33_OUT  | PR9A  | DQ1           |           |           |
 | 59/1     | RA[11]                | LOCATED    | LVCMOS33_OUT  | PR8D  | DQ1           |           |           |
-| 60/1     | RBA[1]                | LOCATED    | LVCMOS33_OUT  | PR8C  | DQ1           |           |           |
+| 60/1     | RCLKout               | LOCATED    | LVCMOS33_OUT  | PR8C  | DQ1           |           |           |
 | 61/1     |     unused, PULL:DOWN |            |               | PR8A  | DQS1          |           |           |
-| 62/1     | RCLKout               | LOCATED    | LVCMOS33_OUT  | PR5D  | PCLKC1_0/DQ0  |           |           |
+| 62/1     | RA[9]                 | LOCATED    | LVCMOS33_OUT  | PR5D  | PCLKC1_0/DQ0  |           |           |
 | 63/1     | RCLK                  | LOCATED    | LVCMOS33_IN   | PR5C  | PCLKT1_0/DQ0  |           |           |
 | 64/1     | RA[10]                | LOCATED    | LVCMOS33_OUT  | PR5B  | DQS0N         |           |           |
 | 65/1     | RA[8]                 | LOCATED    | LVCMOS33_OUT  | PR5A  | DQS0          |           |           |
@@ -265,12 +265,12 @@ LOCATE  COMP  "RA[5]"  SITE  "70";
 LOCATE  COMP  "RA[6]"  SITE  "68";
 LOCATE  COMP  "RA[7]"  SITE  "75";
 LOCATE  COMP  "RA[8]"  SITE  "65";
-LOCATE  COMP  "RA[9]"  SITE  "47";
+LOCATE  COMP  "RA[9]"  SITE  "62";
 LOCATE  COMP  "RBA[0]"  SITE  "58";
-LOCATE  COMP  "RBA[1]"  SITE  "60";
+LOCATE  COMP  "RBA[1]"  SITE  "47";
 LOCATE  COMP  "RCKE"  SITE  "53";
 LOCATE  COMP  "RCLK"  SITE  "63";
-LOCATE  COMP  "RCLKout"  SITE  "62";
+LOCATE  COMP  "RCLKout"  SITE  "60";
 LOCATE  COMP  "RDQMH"  SITE  "51";
 LOCATE  COMP  "RDQML"  SITE  "48";
 LOCATE  COMP  "RD[0]"  SITE  "36";
@@ -299,5 +299,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Oct 19 23:51:08 2023
+Sat Nov 18 02:06:09 2023
 

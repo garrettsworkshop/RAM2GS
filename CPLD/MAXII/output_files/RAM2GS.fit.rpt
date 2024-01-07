@@ -1,5 +1,5 @@
 Fitter report for RAM2GS
-Sat Sep 30 04:44:02 2023
+Sat Nov 11 04:34:44 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
@@ -59,7 +59,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +-----------------------+-------------------------------------------------------------+
-; Fitter Status         ; Successful - Sat Sep 30 04:44:02 2023                       ;
+; Fitter Status         ; Successful - Sat Nov 11 04:34:44 2023                       ;
 ; Quartus Prime Version ; 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition ;
 ; Revision Name         ; RAM2GS                                                      ;
 ; Top-level Entity Name ; RAM2GS                                                      ;
@@ -131,20 +131,20 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.04        ;
+; Average used               ; 1.02        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.5%      ;
-;     Processors 3-4         ;   1.2%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processors 3-4         ;   0.7%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pin.
+The pin-out file can be found in Y:/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.pin.
 
 
 +---------------------------------------------------------------------+
@@ -710,19 +710,19 @@ Info (332111): Found 6 clocks
     Info (332111):  350.000         PHI2
     Info (332111):   16.000         RCLK
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "RCLK" to use Global clock in PIN 12 File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 41
-Info (186216): Automatically promoted some destinations of signal "PHI2" to use Global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 8
-    Info (186217): Destination "PHI2r" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 14
-Info (186228): Pin "PHI2" drives global clock, but is not placed in a dedicated clock pin position File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 8
-Info (186216): Automatically promoted some destinations of signal "nCRAS" to use Global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
-    Info (186217): Destination "LED~0" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 22
-    Info (186217): Destination "RASr" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 15
-Info (186228): Pin "nCRAS" drives global clock, but is not placed in a dedicated clock pin position File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
-Info (186216): Automatically promoted some destinations of signal "nCCAS" to use Global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
-    Info (186217): Destination "CBR" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 18
-    Info (186217): Destination "RD~16" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 60
-    Info (186217): Destination "CASr" may be non-global or may not use global clock File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 16
-Info (186228): Pin "nCCAS" drives global clock, but is not placed in a dedicated clock pin position File: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
+Info (186215): Automatically promoted signal "RCLK" to use Global clock in PIN 12 File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 41
+Info (186216): Automatically promoted some destinations of signal "PHI2" to use Global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 8
+    Info (186217): Destination "PHI2r" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 14
+Info (186228): Pin "PHI2" drives global clock, but is not placed in a dedicated clock pin position File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 8
+Info (186216): Automatically promoted some destinations of signal "nCRAS" to use Global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
+    Info (186217): Destination "LED~0" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 22
+    Info (186217): Destination "RASr" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 15
+Info (186228): Pin "nCRAS" drives global clock, but is not placed in a dedicated clock pin position File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
+Info (186216): Automatically promoted some destinations of signal "nCCAS" to use Global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
+    Info (186217): Destination "CBR" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 18
+    Info (186217): Destination "RD~16" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 60
+    Info (186217): Destination "CASr" may be non-global or may not use global clock File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 16
+Info (186228): Pin "nCCAS" drives global clock, but is not placed in a dedicated clock pin position File: Y:/Repos/RAM2GS/CPLD/RAM2GS-MAX.v Line: 11
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
@@ -734,26 +734,26 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 20% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 20% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.54 seconds.
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
+Info (11888): Total time spent on timing analysis during the Fitter is 1.63 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
-Info (144001): Generated suppressed messages file /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.fit.smsg
+Info (144001): Generated suppressed messages file Y:/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13771 megabytes
-    Info: Processing ended: Sat Sep 30 04:44:02 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 13745 megabytes
+    Info: Processing ended: Sat Nov 11 04:34:45 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in /Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.fit.smsg.
+The suppressed messages can be found in Y:/Repos/RAM2GS/CPLD/MAXII/output_files/RAM2GS.fit.smsg.
 
 

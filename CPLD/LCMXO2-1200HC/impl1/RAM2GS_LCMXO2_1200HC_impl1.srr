@@ -3,7 +3,7 @@
 #OS: Windows 8 6.2
 #Hostname: ZANEMACWIN11
 
-# Thu Oct 19 23:50:47 2023
+# Sat Nov 18 02:05:40 2023
 
 #Implementation: impl1
 
@@ -51,19 +51,17 @@ Synopsys Verilog Compiler, Version comp202103synp2, Build 093R, Built Aug 10 202
 @I::"\\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v" (library work)
 @I::"\\Mac\iCloud\Repos\RAM2GS\CPLD\LCMXO2-1200HC\REFB.v" (library work)
 Verilog syntax check successful!
-
-Compiler output is up to date.  No re-compile necessary
-
+File \\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v changed - recompiling
 Selecting top level module RAM2GS
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1601:7:1601:12|Synthesizing module ODDRXE in library work.
 Running optimization stage 1 on ODDRXE .......
-Finished optimization stage 1 on ODDRXE (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on ODDRXE (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1120:7:1120:9|Synthesizing module VHI in library work.
 Running optimization stage 1 on VHI .......
-Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on VHI (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1124:7:1124:9|Synthesizing module VLO in library work.
 Running optimization stage 1 on VLO .......
-Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 98MB peak: 99MB)
+Finished optimization stage 1 on VLO (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"C:\lscc\diamond\3.12\synpbase\lib\lucent\machxo2.v":1800:7:1800:9|Synthesizing module EFB in library work.
 Running optimization stage 1 on EFB .......
 Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
@@ -71,9 +69,6 @@ Finished optimization stage 1 on EFB (CPU Time 0h:00m:00s, Memory Used current: 
 Running optimization stage 1 on REFB .......
 Finished optimization stage 1 on REFB (CPU Time 0h:00m:00s, Memory Used current: 99MB peak: 99MB)
 @N: CG364 :"\\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v":1:7:1:12|Synthesizing module RAM2GS in library work.
-@W: CS263 :"\\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v":46:6:46:6|Port-width mismatch for port D0. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"\\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v":46:14:46:14|Port-width mismatch for port D1. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
-@W: CS263 :"\\Mac\iCloud\Repos\RAM2GS\CPLD\RAM2GS-LCMXO2.v":47:7:47:7|Port-width mismatch for port RST. The port definition is 1 bits, but the actual port connection bit width is 32. Adjust either the definition or the instantiation of this port.
 Running optimization stage 1 on RAM2GS .......
 Finished optimization stage 1 on RAM2GS (CPU Time 0h:00m:00s, Memory Used current: 101MB peak: 101MB)
 Running optimization stage 2 on RAM2GS .......
@@ -89,12 +84,12 @@ Finished optimization stage 2 on VHI (CPU Time 0h:00m:00s, Memory Used current: 
 Running optimization stage 2 on ODDRXE .......
 Finished optimization stage 2 on ODDRXE (CPU Time 0h:00m:00s, Memory Used current: 102MB peak: 102MB)
 
-At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 96MB peak: 97MB)
+At c_ver Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 102MB peak: 102MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Oct 19 23:50:47 2023
+# Sat Nov 18 02:05:41 2023
 
 ###########################################################]
 ###########################################################[
@@ -121,7 +116,7 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Oct 19 23:50:48 2023
+# Sat Nov 18 02:05:41 2023
 
 ###########################################################]
 
@@ -136,7 +131,7 @@ At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Oct 19 23:50:48 2023
+# Sat Nov 18 02:05:41 2023
 
 ###########################################################]
 ###########################################################[
@@ -164,10 +159,10 @@ At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
 
 Process completed successfully.
-# Thu Oct 19 23:50:49 2023
+# Sat Nov 18 02:05:43 2023
 
 ###########################################################]
-# Thu Oct 19 23:50:49 2023
+# Sat Nov 18 02:05:43 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -186,7 +181,7 @@ Implementation : impl1
 Synopsys Lattice Technology Pre-mapping, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
 
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 128MB)
 
 
 Done reading skeleton netlist (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 131MB peak: 140MB)
@@ -213,7 +208,6 @@ Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
 @N: FX493 |Applying initial value "0" on instance Ready.
 @N: FX493 |Applying initial value "0" on instance RCKE.
-@N: FX493 |Applying initial value "0" on instance LEDEN.
 @N: FX493 |Applying initial value "0" on instance n8MEGEN.
 @N: FX493 |Applying initial value "1" on instance nRCAS.
 @N: FX493 |Applying initial value "0" on instance CmdLEDEN.
@@ -239,11 +233,11 @@ Finished clock optimization phase (Real Time elapsed 0h:00m:00s; CPU Time elapse
 Starting clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 182MB)
 
 
-Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished clock optimization report phase (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 182MB)
 
 @N: FX1184 |Applying syn_allowed_resources blockrams=7 on top level netlist RAM2GS 
 
-Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished netlist restructuring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 181MB peak: 182MB)
 
 
 
@@ -324,13 +318,13 @@ Finished constraint checker (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:0
 
 Pre-mapping successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 103MB peak: 185MB)
+At Mapper Exit (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 99MB peak: 185MB)
 
 Process took 0h:00m:01s realtime, 0h:00m:01s cputime
-# Thu Oct 19 23:50:50 2023
+# Sat Nov 18 02:05:44 2023
 
 ###########################################################]
-# Thu Oct 19 23:50:50 2023
+# Sat Nov 18 02:05:44 2023
 
 
 Copyright (C) 1994-2021 Synopsys, Inc.
@@ -349,42 +343,42 @@ Implementation : impl1
 Synopsys Lattice Technology Mapper, Version map202103lat, Build 070R, Built Oct  6 2021 11:12:38, @
 
 
-Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 128MB)
 
 @N: MF916 |Option synthesis_strategy=base is enabled. 
 @N: MF248 |Running in 64-bit mode.
 @N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
 
-Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 128MB peak: 139MB)
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 140MB)
 
 
-Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 139MB)
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 129MB peak: 140MB)
 
 
 Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 143MB peak: 143MB)
 
 
-Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 146MB)
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 145MB peak: 147MB)
 
 
 
-Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 178MB peak: 178MB)
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 179MB peak: 179MB)
 
 
-Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 182MB peak: 182MB)
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:00s; Memory used current: 183MB peak: 183MB)
 
-@N: MO231 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":169:4:169:9|Found counter in view:work.RAM2GS(verilog) instance IS[3:0] 
-@N: MO231 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":156:4:156:9|Found counter in view:work.RAM2GS(verilog) instance FS[17:0] 
+@N: MO231 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":166:4:166:9|Found counter in view:work.RAM2GS(verilog) instance IS[3:0] 
+@N: MO231 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":153:4:153:9|Found counter in view:work.RAM2GS(verilog) instance FS[17:0] 
 @N: FX493 |Applying initial value "0" on instance IS[0].
 @W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
 @N: FX493 |Applying initial value "0" on instance IS[1].
 @N: FX493 |Applying initial value "0" on instance IS[2].
 @N: FX493 |Applying initial value "0" on instance IS[3].
 
-Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 185MB peak: 185MB)
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 185MB peak: 185MB)
 
 
-Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 186MB)
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 186MB peak: 186MB)
 
 
 Available hyper_sources - for debug and ip models
@@ -406,63 +400,51 @@ Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:01s; CP
 Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 188MB peak: 188MB)
 
 
-Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 195MB peak: 195MB)
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:01s; Memory used current: 197MB peak: 197MB)
 
 Pass		 CPU time		Worst Slack		Luts / Registers
 ------------------------------------------------------------
-   1		0h:00m:01s		    -2.76ns		 193 /       106
-   2		0h:00m:01s		    -2.76ns		 209 /       106
-   3		0h:00m:01s		    -2.76ns		 208 /       106
-   4		0h:00m:01s		    -2.76ns		 206 /       106
-   5		0h:00m:01s		    -2.76ns		 206 /       106
-   6		0h:00m:01s		    -2.76ns		 205 /       106
-   7		0h:00m:01s		    -2.76ns		 205 /       106
-@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":310:4:310:9|Replicating instance CmdValid (in view: work.RAM2GS(verilog)) with 4 loads 1 time to improve timing.
-@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":169:4:169:9|Replicating instance Ready (in view: work.RAM2GS(verilog)) with 12 loads 1 time to improve timing.
-@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":127:4:127:9|Replicating instance CBR (in view: work.RAM2GS(verilog)) with 6 loads 1 time to improve timing.
-@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":127:4:127:9|Replicating instance FWEr (in view: work.RAM2GS(verilog)) with 5 loads 1 time to improve timing.
+   1		0h:00m:02s		    -2.98ns		 202 /       106
+   2		0h:00m:02s		    -2.98ns		 215 /       106
+   3		0h:00m:02s		    -2.76ns		 215 /       106
+@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":124:4:124:9|Replicating instance CBR (in view: work.RAM2GS(verilog)) with 6 loads 1 time to improve timing.
+@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":307:4:307:9|Replicating instance CmdValid (in view: work.RAM2GS(verilog)) with 4 loads 1 time to improve timing.
+@N: FX271 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":166:4:166:9|Replicating instance Ready (in view: work.RAM2GS(verilog)) with 12 loads 1 time to improve timing.
 Timing driven replication report
-Added 4 Registers via timing driven replication
-Added 2 LUTs via timing driven replication
+Added 3 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
 
-   8		0h:00m:01s		    -1.83ns		 209 /       110
-   9		0h:00m:01s		    -1.83ns		 209 /       110
-  10		0h:00m:01s		    -1.83ns		 209 /       110
-  11		0h:00m:01s		    -1.83ns		 209 /       110
-  12		0h:00m:01s		    -1.83ns		 209 /       110
+   4		0h:00m:02s		    -1.97ns		 220 /       109
 
 
-  13		0h:00m:01s		    -1.83ns		 208 /       110
-  14		0h:00m:01s		    -1.83ns		 209 /       110
-  15		0h:00m:01s		    -1.83ns		 209 /       110
-  16		0h:00m:01s		    -1.83ns		 209 /       110
+   5		0h:00m:02s		    -1.97ns		 220 /       109
 
-Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 196MB peak: 196MB)
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 197MB peak: 197MB)
 
 @N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
 
-Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 196MB peak: 196MB)
+Finished restoring hierarchy (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 198MB peak: 198MB)
 
 
-Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 160MB peak: 196MB)
+Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:02s; Memory used current: 160MB peak: 198MB)
 
 Writing Analyst data base \\Mac\iCloud\Repos\RAM2GS\CPLD\LCMXO2-1200HC\impl1\synwork\RAM2GS_LCMXO2_1200HC_impl1_m.srm
 
-Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 197MB peak: 197MB)
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 198MB peak: 198MB)
 
 Writing EDIF Netlist and constraint files
 @N: FX1056 |Writing EDF file: \\Mac\iCloud\Repos\RAM2GS\CPLD\LCMXO2-1200HC\impl1\RAM2GS_LCMXO2_1200HC_impl1.edi
 @N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
 
-Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 201MB)
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 203MB peak: 203MB)
 
 
-Finished Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 202MB)
+Finished Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 203MB peak: 203MB)
 
 
-Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 200MB peak: 202MB)
+Start final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 201MB peak: 203MB)
 
-@W: MT246 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":43:8:43:10|Blackbox ODDRXE is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT246 :"\\mac\icloud\repos\ram2gs\cpld\ram2gs-lcmxo2.v":43:11:43:19|Blackbox ODDRXE is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @W: MT246 :"\\mac\icloud\repos\ram2gs\cpld\lcmxo2-1200hc\refb.v":78:8:78:16|Blackbox EFB is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
 @N: MT615 |Found clock RCLK with period 16.00ns 
 @N: MT615 |Found clock PHI2 with period 350.00ns 
@@ -471,7 +453,7 @@ Start final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:0
 
 
 ##### START OF TIMING REPORT #####[
-# Timing report written on Thu Oct 19 23:50:54 2023
+# Timing report written on Sat Nov 18 02:05:49 2023
 #
 
 
@@ -491,15 +473,15 @@ Performance Summary
 *******************
 
 
-Worst slack in design: -1.828
+Worst slack in design: -2.605
 
                    Requested     Estimated     Requested     Estimated                Clock        Clock           
 Starting Clock     Frequency     Frequency     Period        Period        Slack      Type         Group           
 -------------------------------------------------------------------------------------------------------------------
 PHI2               2.9 MHz       1.0 MHz       350.000       989.870       -1.828     declared     default_clkgroup
-RCLK               62.5 MHz      22.1 MHz      16.000        45.251        -0.784     declared     default_clkgroup
+RCLK               62.5 MHz      17.3 MHz      16.000        57.686        -0.784     declared     default_clkgroup
 nCCAS              2.9 MHz       NA            350.000       NA            NA         declared     default_clkgroup
-nCRAS              2.9 MHz       1.1 MHz       350.000       942.410       -1.693     declared     default_clkgroup
+nCRAS              2.9 MHz       0.8 MHz       350.000       1261.890      -2.605     declared     default_clkgroup
 System             100.0 MHz     NA            10.000        NA            12.918     system       system_clkgroup 
 ===================================================================================================================
 Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
@@ -522,12 +504,12 @@ Starting  Ending  |  constraint  slack   |  constraint  slack    |  constraint  
 ---------------------------------------------------------------------------------------------------------------
 System    RCLK    |  16.000      12.918  |  No paths    -        |  No paths    -        |  No paths    -      
 RCLK      System  |  16.000      14.956  |  No paths    -        |  No paths    -        |  No paths    -      
-RCLK      RCLK    |  16.000      9.100   |  No paths    -        |  No paths    -        |  No paths    -      
+RCLK      RCLK    |  16.000      9.237   |  No paths    -        |  No paths    -        |  No paths    -      
 RCLK      PHI2    |  2.000       0.216   |  No paths    -        |  1.000       -0.676   |  No paths    -      
 RCLK      nCRAS   |  No paths    -       |  No paths    -        |  1.000       -0.784   |  No paths    -      
 PHI2      RCLK    |  No paths    -       |  No paths    -        |  No paths    -        |  1.000       -1.828 
-PHI2      PHI2    |  No paths    -       |  350.000     347.156  |  175.000     169.041  |  175.000     173.428
-nCRAS     RCLK    |  No paths    -       |  No paths    -        |  No paths    -        |  1.000       -1.693 
+PHI2      PHI2    |  No paths    -       |  350.000     346.603  |  175.000     169.081  |  175.000     173.428
+nCRAS     RCLK    |  No paths    -       |  No paths    -        |  No paths    -        |  1.000       -2.605 
 ===============================================================================================================
  Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
        'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
@@ -561,30 +543,30 @@ CmdLEDEN          PHI2          FD1P3AX      Q       CmdLEDEN          1.044    
 Cmdn8MEGEN        PHI2          FD1P3AX      Q       Cmdn8MEGEN        1.044       -1.589 
 CmdUFMWrite       PHI2          FD1P3AX      Q       CmdUFMWrite       1.044       -0.572 
 CmdUFMData        PHI2          FD1P3AX      Q       CmdUFMData        0.972       -0.500 
-Bank_0io[0]       PHI2          IFS1P3DX     Q       Bank[0]           0.972       169.041
-Bank_0io[2]       PHI2          IFS1P3DX     Q       Bank[2]           0.972       169.041
-Bank_0io[4]       PHI2          IFS1P3DX     Q       Bank[4]           0.972       169.041
+Bank_0io[1]       PHI2          IFS1P3DX     Q       Bank[1]           0.972       169.081
+Bank_0io[2]       PHI2          IFS1P3DX     Q       Bank[2]           0.972       169.081
+Bank_0io[3]       PHI2          IFS1P3DX     Q       Bank[3]           0.972       169.081
 ==========================================================================================
 
 
 Ending Points with Worst Slack
 ******************************
 
-               Starting                                    Required           
-Instance       Reference     Type        Pin     Net       Time         Slack 
-               Clock                                                          
-------------------------------------------------------------------------------
-wb_adr[0]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[1]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[2]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[3]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[4]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[5]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[6]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_adr[7]      PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_dati[0]     PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-wb_dati[1]     PHI2          FD1P3AX     SP      N_122     0.528        -1.828
-==============================================================================
+               Starting                                      Required           
+Instance       Reference     Type        Pin     Net         Time         Slack 
+               Clock                                                            
+--------------------------------------------------------------------------------
+wb_adr[0]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[1]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[2]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[3]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[4]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[5]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[6]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_adr[7]      PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_dati[0]     PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+wb_dati[1]     PHI2          FD1P3AX     SP      N_126_i     0.528        -1.828
+================================================================================
 
 
 
@@ -600,7 +582,7 @@ Path information for path number 1:
 
     - Propagation time:                      2.357
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.828
+    = Slack (non-critical) :                 -1.828
 
     Number of logic level(s):                1
     Starting point:                          CmdUFMShift / Q
@@ -615,7 +597,7 @@ CmdUFMShift                FD1P3AX      Q        Out     1.044     1.044 r     -
 CmdUFMShift                Net          -        -       -         -           2         
 CmdValid_fast_RNI3K0H1     ORCALUT4     A        In      0.000     1.044 r     -         
 CmdValid_fast_RNI3K0H1     ORCALUT4     Z        Out     1.313     2.357 r     -         
-N_122                      Net          -        -       -         -           17        
+N_126_i                    Net          -        -       -         -           17        
 wb_adr[0]                  FD1P3AX      SP       In      0.000     2.357 r     -         
 =========================================================================================
 
@@ -628,7 +610,7 @@ Path information for path number 2:
 
     - Propagation time:                      2.357
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.828
+    = Slack (non-critical) :                 -1.828
 
     Number of logic level(s):                1
     Starting point:                          CmdUFMShift / Q
@@ -643,7 +625,7 @@ CmdUFMShift                FD1P3AX      Q        Out     1.044     1.044 r     -
 CmdUFMShift                Net          -        -       -         -           2         
 CmdValid_fast_RNI3K0H1     ORCALUT4     A        In      0.000     1.044 r     -         
 CmdValid_fast_RNI3K0H1     ORCALUT4     Z        Out     1.313     2.357 r     -         
-N_122                      Net          -        -       -         -           17        
+N_126_i                    Net          -        -       -         -           17        
 wb_adr[7]                  FD1P3AX      SP       In      0.000     2.357 r     -         
 =========================================================================================
 
@@ -656,7 +638,7 @@ Path information for path number 3:
 
     - Propagation time:                      2.357
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.828
+    = Slack (non-critical) :                 -1.828
 
     Number of logic level(s):                1
     Starting point:                          CmdUFMShift / Q
@@ -671,7 +653,7 @@ CmdUFMShift                FD1P3AX      Q        Out     1.044     1.044 r     -
 CmdUFMShift                Net          -        -       -         -           2         
 CmdValid_fast_RNI3K0H1     ORCALUT4     A        In      0.000     1.044 r     -         
 CmdValid_fast_RNI3K0H1     ORCALUT4     Z        Out     1.313     2.357 r     -         
-N_122                      Net          -        -       -         -           17        
+N_126_i                    Net          -        -       -         -           17        
 wb_adr[6]                  FD1P3AX      SP       In      0.000     2.357 r     -         
 =========================================================================================
 
@@ -684,7 +666,7 @@ Path information for path number 4:
 
     - Propagation time:                      2.357
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.828
+    = Slack (non-critical) :                 -1.828
 
     Number of logic level(s):                1
     Starting point:                          CmdUFMShift / Q
@@ -699,7 +681,7 @@ CmdUFMShift                FD1P3AX      Q        Out     1.044     1.044 r     -
 CmdUFMShift                Net          -        -       -         -           2         
 CmdValid_fast_RNI3K0H1     ORCALUT4     A        In      0.000     1.044 r     -         
 CmdValid_fast_RNI3K0H1     ORCALUT4     Z        Out     1.313     2.357 r     -         
-N_122                      Net          -        -       -         -           17        
+N_126_i                    Net          -        -       -         -           17        
 wb_adr[5]                  FD1P3AX      SP       In      0.000     2.357 r     -         
 =========================================================================================
 
@@ -712,7 +694,7 @@ Path information for path number 5:
 
     - Propagation time:                      2.357
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (critical) :                     -1.828
+    = Slack (non-critical) :                 -1.828
 
     Number of logic level(s):                1
     Starting point:                          CmdUFMShift / Q
@@ -727,7 +709,7 @@ CmdUFMShift                FD1P3AX      Q        Out     1.044     1.044 r     -
 CmdUFMShift                Net          -        -       -         -           2         
 CmdValid_fast_RNI3K0H1     ORCALUT4     A        In      0.000     1.044 r     -         
 CmdValid_fast_RNI3K0H1     ORCALUT4     Z        Out     1.313     2.357 r     -         
-N_122                      Net          -        -       -         -           17        
+N_126_i                    Net          -        -       -         -           17        
 wb_adr[4]                  FD1P3AX      SP       In      0.000     2.357 r     -         
 =========================================================================================
 
@@ -750,13 +732,13 @@ Instance       Reference     Type        Pin     Net            Time        Slac
 Ready_fast     RCLK          FD1S3AX     Q       Ready_fast     1.256       -0.784
 LEDEN          RCLK          FD1S3AX     Q       LEDEN          1.148       -0.676
 n8MEGEN        RCLK          FD1S3AX     Q       n8MEGEN        1.108       -0.636
-FS[12]         RCLK          FD1S3AX     Q       FS[12]         1.288       9.100 
-FS[11]         RCLK          FD1S3AX     Q       FS[11]         1.280       9.108 
-FS[9]          RCLK          FD1S3AX     Q       FS[9]          1.256       9.132 
-InitReady      RCLK          FD1S3AX     Q       InitReady      1.317       9.708 
-FS[16]         RCLK          FD1S3AX     Q       FS[16]         1.180       9.845 
-FS[17]         RCLK          FD1S3AX     Q       FS[17]         1.180       9.845 
-FS[15]         RCLK          FD1S3AX     Q       FS[15]         1.148       9.877 
+InitReady      RCLK          FD1S3AX     Q       InitReady      1.337       9.237 
+FS[16]         RCLK          FD1S3AX     Q       FS[16]         1.204       9.371 
+FS[17]         RCLK          FD1S3AX     Q       FS[17]         1.204       9.371 
+FS[15]         RCLK          FD1S3AX     Q       FS[15]         1.188       9.387 
+S[0]           RCLK          FD1S3IX     Q       CO0            1.244       9.873 
+S[1]           RCLK          FD1S3IX     Q       S[1]           1.236       9.881 
+RASr2          RCLK          FD1S3AX     Q       RASr2          1.228       9.889 
 ==================================================================================
 
 
@@ -853,6 +835,34 @@ Path information for path number 3:
 
     Number of logic level(s):                1
     Starting point:                          Ready_fast / Q
+    Ending point:                            RBA_0io[1] / D
+    The start point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
+    The end   point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin SCLK
+
+Instance / Net                  Pin      Pin               Arrival     No. of    
+Name               Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------
+Ready_fast         FD1S3AX      Q        Out     1.256     1.256 r     -         
+Ready_fast         Net          -        -       -         -           14        
+RBAd[1]            ORCALUT4     B        In      0.000     1.256 r     -         
+RBAd[1]            ORCALUT4     Z        Out     0.617     1.873 r     -         
+RBAd_0[1]          Net          -        -       -         -           1         
+RBA_0io[1]         OFS1P3DX     D        In      0.000     1.873 r     -         
+=================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      1.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.089
+
+    - Propagation time:                      1.873
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.784
+
+    Number of logic level(s):                1
+    Starting point:                          Ready_fast / Q
     Ending point:                            RowA[1] / D
     The start point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
     The end   point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
@@ -869,34 +879,6 @@ RowA[1]            FD1S3AX      D        In      0.000     1.873 r     -
 =================================================================================
 
 
-Path information for path number 4: 
-      Requested Period:                      1.000
-    - Setup time:                            -0.089
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.089
-
-    - Propagation time:                      1.873
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -0.784
-
-    Number of logic level(s):                1
-    Starting point:                          Ready_fast / Q
-    Ending point:                            RowA[4] / D
-    The start point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
-    The end   point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
-
-Instance / Net                  Pin      Pin               Arrival     No. of    
-Name               Type         Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------
-Ready_fast         FD1S3AX      Q        Out     1.256     1.256 r     -         
-Ready_fast         Net          -        -       -         -           14        
-RowAd[4]           ORCALUT4     B        In      0.000     1.256 r     -         
-RowAd[4]           ORCALUT4     Z        Out     0.617     1.873 r     -         
-RowAd_0[4]         Net          -        -       -         -           1         
-RowA[4]            FD1S3AX      D        In      0.000     1.873 r     -         
-=================================================================================
-
-
 Path information for path number 5: 
       Requested Period:                      1.000
     - Setup time:                            -0.089
@@ -909,7 +891,7 @@ Path information for path number 5:
 
     Number of logic level(s):                1
     Starting point:                          Ready_fast / Q
-    Ending point:                            RowA[2] / D
+    Ending point:                            RowA[5] / D
     The start point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
     The end   point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
 
@@ -918,10 +900,10 @@ Name               Type         Name     Dir     Delay     Time        Fan Out(s
 ---------------------------------------------------------------------------------
 Ready_fast         FD1S3AX      Q        Out     1.256     1.256 r     -         
 Ready_fast         Net          -        -       -         -           14        
-RowAd[2]           ORCALUT4     B        In      0.000     1.256 r     -         
-RowAd[2]           ORCALUT4     Z        Out     0.617     1.873 r     -         
-RowAd_0[2]         Net          -        -       -         -           1         
-RowA[2]            FD1S3AX      D        In      0.000     1.873 r     -         
+RowAd[5]           ORCALUT4     B        In      0.000     1.256 r     -         
+RowAd[5]           ORCALUT4     Z        Out     0.617     1.873 f     -         
+RowAd_0[5]         Net          -        -       -         -           1         
+RowA[5]            FD1S3AX      D        In      0.000     1.873 f     -         
 =================================================================================
 
 
@@ -936,15 +918,14 @@ Detailed Report for Clock: nCRAS
 Starting Points with Worst Slack
 ********************************
 
-              Starting                                        Arrival           
-Instance      Reference     Type        Pin     Net           Time        Slack 
-              Clock                                                             
---------------------------------------------------------------------------------
-CBR           nCRAS         FD1S3AX     Q       CBR           1.148       -1.693
-FWEr          nCRAS         FD1S3AX     Q       FWEr          1.148       -1.693
-CBR_fast      nCRAS         FD1S3AX     Q       CBR_fast      1.044       -1.661
-FWEr_fast     nCRAS         FD1S3AX     Q       FWEr_fast     0.972       -1.589
-================================================================================
+             Starting                                       Arrival           
+Instance     Reference     Type        Pin     Net          Time        Slack 
+             Clock                                                            
+------------------------------------------------------------------------------
+CBR_fast     nCRAS         FD1S3AX     Q       CBR_fast     0.972       -2.605
+CBR          nCRAS         FD1S3AX     Q       CBR          1.180       -1.797
+FWEr         nCRAS         FD1S3AX     Q       FWEr         1.180       -1.797
+==============================================================================
 
 
 Ending Points with Worst Slack
@@ -954,11 +935,11 @@ Ending Points with Worst Slack
 Instance       Reference     Type         Pin     Net                Time         Slack 
                Clock                                                                    
 ----------------------------------------------------------------------------------------
-RCKEEN         nCRAS         FD1S3AX      D       RCKEEN_8           1.089        -1.693
-nRCAS_0io      nCRAS         OFS1P3BX     D       N_242_i            1.089        -1.693
-nRCS_0io       nCRAS         OFS1P3BX     D       N_28_i             1.089        -1.693
-nRowColSel     nCRAS         FD1S3IX      D       nRowColSel_0_0     1.089        -1.693
-nRWE_0io       nCRAS         OFS1P3BX     D       N_37_i             1.089        -1.661
+nRCAS_0io      nCRAS         OFS1P3BX     D       N_251_i            1.089        -2.605
+nRCS_0io       nCRAS         OFS1P3BX     D       N_37_i             1.089        -1.797
+nRWE_0io       nCRAS         OFS1P3BX     D       N_252_i            1.089        -1.797
+nRowColSel     nCRAS         FD1S3IX      D       nRowColSel_0_0     1.089        -1.797
+RCKEEN         nCRAS         FD1S3AX      D       RCKEEN_8           1.089        -1.725
 ========================================================================================
 
 
@@ -973,29 +954,32 @@ Path information for path number 1:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         1.089
 
-    - Propagation time:                      2.781
+    - Propagation time:                      3.694
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.693
+    = Slack (critical) :                     -2.605
 
-    Number of logic level(s):                2
-    Starting point:                          CBR / Q
+    Number of logic level(s):                3
+    Starting point:                          CBR_fast / Q
     Ending point:                            nRCAS_0io / D
     The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
     The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin SCLK
 
-Instance / Net                   Pin      Pin               Arrival     No. of    
-Name                Type         Name     Dir     Delay     Time        Fan Out(s)
-----------------------------------------------------------------------------------
-CBR                 FD1S3AX      Q        Out     1.148     1.148 r     -         
-CBR                 Net          -        -       -         -           4         
-nRCAS_0io_RNO_0     ORCALUT4     A        In      0.000     1.148 r     -         
-nRCAS_0io_RNO_0     ORCALUT4     Z        Out     1.017     2.165 f     -         
-N_242_i_1           Net          -        -       -         -           1         
-nRCAS_0io_RNO       ORCALUT4     C        In      0.000     2.165 f     -         
-nRCAS_0io_RNO       ORCALUT4     Z        Out     0.617     2.781 r     -         
-N_242_i             Net          -        -       -         -           1         
-nRCAS_0io           OFS1P3BX     D        In      0.000     2.781 r     -         
-==================================================================================
+Instance / Net                     Pin      Pin               Arrival     No. of    
+Name                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+CBR_fast              FD1S3AX      Q        Out     0.972     0.972 r     -         
+CBR_fast              Net          -        -       -         -           1         
+CBR_fast_RNIQ31K1     ORCALUT4     A        In      0.000     0.972 r     -         
+CBR_fast_RNIQ31K1     ORCALUT4     Z        Out     1.089     2.061 r     -         
+nRCAS_0_sqmuxa_1      Net          -        -       -         -           2         
+nRCAS_0io_RNO_0       ORCALUT4     B        In      0.000     2.061 r     -         
+nRCAS_0io_RNO_0       ORCALUT4     Z        Out     1.017     3.077 r     -         
+N_251_i_sx            Net          -        -       -         -           1         
+nRCAS_0io_RNO         ORCALUT4     C        In      0.000     3.077 r     -         
+nRCAS_0io_RNO         ORCALUT4     Z        Out     0.617     3.694 f     -         
+N_251_i               Net          -        -       -         -           1         
+nRCAS_0io             OFS1P3BX     D        In      0.000     3.694 f     -         
+====================================================================================
 
 
 Path information for path number 2: 
@@ -1004,29 +988,29 @@ Path information for path number 2:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         1.089
 
-    - Propagation time:                      2.781
+    - Propagation time:                      2.885
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.693
+    = Slack (non-critical) :                 -1.797
 
     Number of logic level(s):                2
-    Starting point:                          FWEr / Q
-    Ending point:                            RCKEEN / D
+    Starting point:                          CBR / Q
+    Ending point:                            nRCS_0io / D
     The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
-    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
+    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin SCLK
 
-Instance / Net                  Pin      Pin               Arrival     No. of    
-Name               Type         Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------
-FWEr               FD1S3AX      Q        Out     1.148     1.148 r     -         
-FWEr               Net          -        -       -         -           4         
-RCKEEN_8_u_1_0     ORCALUT4     C        In      0.000     1.148 r     -         
-RCKEEN_8_u_1_0     ORCALUT4     Z        Out     1.017     2.165 r     -         
-RCKEEN_8_u_1       Net          -        -       -         -           1         
-RCKEEN_8_u         ORCALUT4     C        In      0.000     2.165 r     -         
-RCKEEN_8_u         ORCALUT4     Z        Out     0.617     2.781 r     -         
-RCKEEN_8           Net          -        -       -         -           1         
-RCKEEN             FD1S3AX      D        In      0.000     2.781 r     -         
-=================================================================================
+Instance / Net                     Pin      Pin               Arrival     No. of    
+Name                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+CBR                   FD1S3AX      Q        Out     1.180     1.180 r     -         
+CBR                   Net          -        -       -         -           5         
+RCKEEN_8_u_0_a2_2     ORCALUT4     A        In      0.000     1.180 r     -         
+RCKEEN_8_u_0_a2_2     ORCALUT4     Z        Out     1.089     2.269 f     -         
+N_141                 Net          -        -       -         -           2         
+nRCS_0io_RNO          ORCALUT4     A        In      0.000     2.269 f     -         
+nRCS_0io_RNO          ORCALUT4     Z        Out     0.617     2.885 r     -         
+N_37_i                Net          -        -       -         -           1         
+nRCS_0io              OFS1P3BX     D        In      0.000     2.885 r     -         
+====================================================================================
 
 
 Path information for path number 3: 
@@ -1035,71 +1019,9 @@ Path information for path number 3:
     + Clock delay at ending point:           0.000 (ideal)
     = Required time:                         1.089
 
-    - Propagation time:                      2.781
+    - Propagation time:                      2.885
     - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.693
-
-    Number of logic level(s):                2
-    Starting point:                          CBR / Q
-    Ending point:                            nRowColSel / D
-    The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
-    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
-
-Instance / Net                       Pin      Pin               Arrival     No. of    
-Name                    Type         Name     Dir     Delay     Time        Fan Out(s)
---------------------------------------------------------------------------------------
-CBR                     FD1S3AX      Q        Out     1.148     1.148 r     -         
-CBR                     Net          -        -       -         -           4         
-nRowColSel_0_0_a3_0     ORCALUT4     B        In      0.000     1.148 r     -         
-nRowColSel_0_0_a3_0     ORCALUT4     Z        Out     1.017     2.165 f     -         
-N_255                   Net          -        -       -         -           1         
-nRowColSel_0_0          ORCALUT4     B        In      0.000     2.165 f     -         
-nRowColSel_0_0          ORCALUT4     Z        Out     0.617     2.781 f     -         
-nRowColSel_0_0          Net          -        -       -         -           1         
-nRowColSel              FD1S3IX      D        In      0.000     2.781 f     -         
-======================================================================================
-
-
-Path information for path number 4: 
-      Requested Period:                      1.000
-    - Setup time:                            -0.089
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.089
-
-    - Propagation time:                      2.781
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.693
-
-    Number of logic level(s):                2
-    Starting point:                          FWEr / Q
-    Ending point:                            nRCS_0io / D
-    The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
-    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin SCLK
-
-Instance / Net                  Pin      Pin               Arrival     No. of    
-Name               Type         Name     Dir     Delay     Time        Fan Out(s)
----------------------------------------------------------------------------------
-FWEr               FD1S3AX      Q        Out     1.148     1.148 r     -         
-FWEr               Net          -        -       -         -           4         
-nRCS_0io_RNO_0     ORCALUT4     B        In      0.000     1.148 r     -         
-nRCS_0io_RNO_0     ORCALUT4     Z        Out     1.017     2.165 f     -         
-nRCS_0io_RNO_0     Net          -        -       -         -           1         
-nRCS_0io_RNO       ORCALUT4     B        In      0.000     2.165 f     -         
-nRCS_0io_RNO       ORCALUT4     Z        Out     0.617     2.781 r     -         
-N_28_i             Net          -        -       -         -           1         
-nRCS_0io           OFS1P3BX     D        In      0.000     2.781 r     -         
-=================================================================================
-
-
-Path information for path number 5: 
-      Requested Period:                      1.000
-    - Setup time:                            -0.089
-    + Clock delay at ending point:           0.000 (ideal)
-    = Required time:                         1.089
-
-    - Propagation time:                      2.781
-    - Clock delay at starting point:         0.000 (ideal)
-    = Slack (non-critical) :                 -1.693
+    = Slack (non-critical) :                 -1.797
 
     Number of logic level(s):                2
     Starting point:                          FWEr / Q
@@ -1110,16 +1032,78 @@ Path information for path number 5:
 Instance / Net                   Pin      Pin               Arrival     No. of    
 Name                Type         Name     Dir     Delay     Time        Fan Out(s)
 ----------------------------------------------------------------------------------
-FWEr                FD1S3AX      Q        Out     1.148     1.148 r     -         
-FWEr                Net          -        -       -         -           4         
-nRCAS_0io_RNO_0     ORCALUT4     C        In      0.000     1.148 r     -         
-nRCAS_0io_RNO_0     ORCALUT4     Z        Out     1.017     2.165 r     -         
-N_242_i_1           Net          -        -       -         -           1         
-nRCAS_0io_RNO       ORCALUT4     C        In      0.000     2.165 r     -         
-nRCAS_0io_RNO       ORCALUT4     Z        Out     0.617     2.781 f     -         
-N_242_i             Net          -        -       -         -           1         
-nRCAS_0io           OFS1P3BX     D        In      0.000     2.781 f     -         
+FWEr                FD1S3AX      Q        Out     1.180     1.180 r     -         
+FWEr                Net          -        -       -         -           5         
+nRCS_9_u_i_a2_0     ORCALUT4     B        In      0.000     1.180 r     -         
+nRCS_9_u_i_a2_0     ORCALUT4     Z        Out     1.089     2.269 f     -         
+N_251_i_1           Net          -        -       -         -           2         
+nRCAS_0io_RNO       ORCALUT4     A        In      0.000     2.269 f     -         
+nRCAS_0io_RNO       ORCALUT4     Z        Out     0.617     2.885 r     -         
+N_251_i             Net          -        -       -         -           1         
+nRCAS_0io           OFS1P3BX     D        In      0.000     2.885 r     -         
 ==================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      1.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.089
+
+    - Propagation time:                      2.885
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.797
+
+    Number of logic level(s):                2
+    Starting point:                          CBR / Q
+    Ending point:                            nRWE_0io / D
+    The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
+    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin SCLK
+
+Instance / Net                     Pin      Pin               Arrival     No. of    
+Name                  Type         Name     Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+CBR                   FD1S3AX      Q        Out     1.180     1.180 r     -         
+CBR                   Net          -        -       -         -           5         
+RCKEEN_8_u_0_a2_2     ORCALUT4     A        In      0.000     1.180 r     -         
+RCKEEN_8_u_0_a2_2     ORCALUT4     Z        Out     1.089     2.269 f     -         
+N_141                 Net          -        -       -         -           2         
+nRWE_0io_RNO          ORCALUT4     B        In      0.000     2.269 f     -         
+nRWE_0io_RNO          ORCALUT4     Z        Out     0.617     2.885 r     -         
+N_252_i               Net          -        -       -         -           1         
+nRWE_0io              OFS1P3BX     D        In      0.000     2.885 r     -         
+====================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      1.000
+    - Setup time:                            -0.089
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         1.089
+
+    - Propagation time:                      2.885
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -1.797
+
+    Number of logic level(s):                2
+    Starting point:                          FWEr / Q
+    Ending point:                            nRCAS_0io / D
+    The start point is clocked by            nCRAS [falling] (rise=0.000 fall=175.000 period=350.000) on pin CK
+    The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin SCLK
+
+Instance / Net                       Pin      Pin               Arrival     No. of    
+Name                    Type         Name     Dir     Delay     Time        Fan Out(s)
+--------------------------------------------------------------------------------------
+FWEr                    FD1S3AX      Q        Out     1.180     1.180 r     -         
+FWEr                    Net          -        -       -         -           5         
+nRowColSel_0_0_a2_1     ORCALUT4     B        In      0.000     1.180 r     -         
+nRowColSel_0_0_a2_1     ORCALUT4     Z        Out     1.089     2.269 r     -         
+N_251_i_1_0             Net          -        -       -         -           2         
+nRCAS_0io_RNO           ORCALUT4     B        In      0.000     2.269 r     -         
+nRCAS_0io_RNO           ORCALUT4     Z        Out     0.617     2.885 f     -         
+N_251_i                 Net          -        -       -         -           1         
+nRCAS_0io               OFS1P3BX     D        In      0.000     2.885 f     -         
+======================================================================================
 
 
 
@@ -1146,14 +1130,14 @@ ufmefb.EFBInst_0     System        EFB      WBDATO1     wb_dato[1]     0.000    
 Ending Points with Worst Slack
 ******************************
 
-               Starting                                         Required           
-Instance       Reference     Type        Pin     Net            Time         Slack 
-               Clock                                                               
------------------------------------------------------------------------------------
-LEDEN          System        FD1S3AX     D       LEDENe_0       16.089       12.918
-n8MEGEN        System        FD1S3AX     D       n8MEGENe_0     16.089       12.918
-wb_cyc_stb     System        FD1P3IX     SP      N_103          15.528       14.912
-===================================================================================
+               Starting                                                        Required           
+Instance       Reference     Type        Pin     Net                           Time         Slack 
+               Clock                                                                              
+--------------------------------------------------------------------------------------------------
+LEDEN          System        FD1S3AX     D       LEDENe_0                      16.089       12.918
+n8MEGEN        System        FD1S3AX     D       n8MEGENe_0                    16.089       12.918
+wb_cyc_stb     System        FD1P3IX     SP      wb_cyc_stb_2_sqmuxa_i_0_0     15.528       14.912
+==================================================================================================
 
 
 
@@ -1178,25 +1162,25 @@ Path information for path number 1:
     The start point is clocked by            System [rising]
     The end   point is clocked by            RCLK [rising] (rise=0.000 fall=8.000 period=16.000) on pin CK
 
-Instance / Net                                    Pin        Pin               Arrival     No. of    
-Name                                 Type         Name       Dir     Delay     Time        Fan Out(s)
------------------------------------------------------------------------------------------------------
-ufmefb.EFBInst_0                     EFB          WBACKO     Out     0.000     0.000 r     -         
-wb_ack                               Net          -          -       -         -           2         
-ufmefb.EFBInst_0_RNI8K48             ORCALUT4     C          In      0.000     0.000 r     -         
-ufmefb.EFBInst_0_RNI8K48             ORCALUT4     Z          Out     0.449     0.449 r     -         
-g0_0_a3_1                            Net          -          -       -         -           1         
-wb_cyc_stb_2_sqmuxa_i_o2_RNI167R     ORCALUT4     D          In      0.000     0.449 r     -         
-wb_cyc_stb_2_sqmuxa_i_o2_RNI167R     ORCALUT4     Z          Out     1.017     1.466 r     -         
-N_4                                  Net          -          -       -         -           1         
-CmdValid_RNITBH02                    ORCALUT4     C          In      0.000     1.466 r     -         
-CmdValid_RNITBH02                    ORCALUT4     Z          Out     1.089     2.554 r     -         
-CmdValid_RNITBH02                    Net          -          -       -         -           2         
-LEDENe                               ORCALUT4     B          In      0.000     2.554 r     -         
-LEDENe                               ORCALUT4     Z          Out     0.617     3.171 r     -         
-LEDENe_0                             Net          -          -       -         -           1         
-LEDEN                                FD1S3AX      D          In      0.000     3.171 r     -         
-=====================================================================================================
+Instance / Net                             Pin        Pin               Arrival     No. of    
+Name                          Type         Name       Dir     Delay     Time        Fan Out(s)
+----------------------------------------------------------------------------------------------
+ufmefb.EFBInst_0              EFB          WBACKO     Out     0.000     0.000 r     -         
+wb_ack                        Net          -          -       -         -           2         
+ufmefb.EFBInst_0_RNISGNB      ORCALUT4     D          In      0.000     0.000 r     -         
+ufmefb.EFBInst_0_RNISGNB      ORCALUT4     Z          Out     1.017     1.017 r     -         
+g0_0_a3_2                     Net          -          -       -         -           1         
+ufmefb.EFBInst_0_RNISI191     ORCALUT4     C          In      0.000     1.017 r     -         
+ufmefb.EFBInst_0_RNISI191     ORCALUT4     Z          Out     0.449     1.466 r     -         
+N_4                           Net          -          -       -         -           1         
+CmdValid_RNIOOBE2             ORCALUT4     C          In      0.000     1.466 r     -         
+CmdValid_RNIOOBE2             ORCALUT4     Z          Out     1.089     2.554 r     -         
+un1_FS_38_i                   Net          -          -       -         -           2         
+LEDENe                        ORCALUT4     C          In      0.000     2.554 r     -         
+LEDENe                        ORCALUT4     Z          Out     0.617     3.171 r     -         
+LEDENe_0                      Net          -          -       -         -           1         
+LEDEN                         FD1S3AX      D          In      0.000     3.171 r     -         
+==============================================================================================
 
 
 
@@ -1204,16 +1188,16 @@ LEDEN                                FD1S3AX      D          In      0.000     3
 
 Timing exceptions that could not be applied
 
-Finished final timing analysis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 202MB)
+Finished final timing analysis (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 202MB peak: 203MB)
 
 
-Finished timing report (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 201MB peak: 202MB)
+Finished timing report (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 202MB peak: 203MB)
 
 ---------------------------------------
 Resource Usage Report
 Part: lcmxo2_1200hc-4
 
-Register bits: 110 of 1280 (9%)
+Register bits: 109 of 1280 (9%)
 PIC Latch:       0
 I/O cells:       64
 
@@ -1224,7 +1208,7 @@ CCU2D:          10
 EFB:            1
 FD1P3AX:        25
 FD1P3IX:        2
-FD1S3AX:        54
+FD1S3AX:        53
 FD1S3IX:        4
 GSR:            1
 IB:             25
@@ -1235,15 +1219,16 @@ ODDRXE:         1
 OFS1P3BX:       4
 OFS1P3DX:       11
 OFS1P3JX:       1
-ORCALUT4:       203
+ORCALUT4:       212
+PFUMX:          2
 PUR:            1
 VHI:            2
 VLO:            2
 Mapper successful!
 
-At Mapper Exit (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 78MB peak: 202MB)
+At Mapper Exit (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 78MB peak: 203MB)
 
-Process took 0h:00m:03s realtime, 0h:00m:03s cputime
-# Thu Oct 19 23:50:54 2023
+Process took 0h:00m:04s realtime, 0h:00m:04s cputime
+# Sat Nov 18 02:05:49 2023
 
 ###########################################################]
