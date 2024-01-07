@@ -15,18 +15,18 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO256CTQFP100
 Target Performance:   3
 Mapper:  mj5g00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  09/21/23  05:38:29
+Mapped on:  01/06/24  06:24:57
 
 Design Summary
 --------------
 
    Number of PFU registers:    92 out of   256 (36%)
-   Number of SLICEs:        69 out of   128 (54%)
-      SLICEs as Logic/ROM:     69 out of   128 (54%)
+   Number of SLICEs:        76 out of   128 (59%)
+      SLICEs as Logic/ROM:     76 out of   128 (59%)
       SLICEs as RAM:            0 out of    64 (0%)
       SLICEs as Carry:          9 out of   128 (7%)
-   Number of LUT4s:        137 out of   256 (54%)
-      Number used as logic LUTs:        119
+   Number of LUT4s:        151 out of   256 (59%)
+      Number used as logic LUTs:        133
       Number used as distributed RAM:     0
       Number used as ripple logic:       18
       Number used as shift registers:     0
@@ -49,37 +49,38 @@ Design Summary
      Net nCCAS_c: 4 loads, 0 rising, 4 falling (Driver: PIO nCCAS )
    Number of Clock Enables:  5
      Net XOR8MEG18: 3 loads, 3 LSLICEs
-     Net N_31: 1 loads, 1 LSLICEs
-     Net N_33: 1 loads, 1 LSLICEs
-     Net N_159_i: 2 loads, 2 LSLICEs
+     Net N_24: 1 loads, 1 LSLICEs
+     Net N_26: 1 loads, 1 LSLICEs
+     Net N_153_i: 2 loads, 2 LSLICEs
      Net CmdUFMCLK_1_sqmuxa: 2 loads, 2 LSLICEs
-   Number of LSRs:  4
+   Number of LSRs:  5
      Net RA10s_i: 1 loads, 1 LSLICEs
      Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
-     Net RASr2: 2 loads, 2 LSLICEs
+     Net RASr2: 1 loads, 1 LSLICEs
      Net Ready_fast: 7 loads, 7 LSLICEs
+     Net RCKEEN_8_u_0_1_a1_0: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
-   Top 10 highest fanout non-clock nets:
 
                                     Page 1
 
 
 
 
-Design:  RAM2GS                                        Date:  09/21/23  05:38:29
+Design:  RAM2GS                                        Date:  01/06/24  06:24:57
 
 Design Summary (cont)
 ---------------------
-     Net InitReady: 16 loads
-     Net Ready: 16 loads
-     Net S[1]: 13 loads
-     Net CO0: 12 loads
+   Top 10 highest fanout non-clock nets:
+     Net Ready: 18 loads
+     Net InitReady: 17 loads
+     Net S[1]: 17 loads
+     Net CO0: 16 loads
+     Net RASr2: 13 loads
      Net nRowColSel: 12 loads
-     Net RASr2: 11 loads
      Net Din_c[5]: 10 loads
      Net Din_c[3]: 9 loads
      Net IS[0]: 9 loads
-     Net MAin_c[1]: 8 loads
+     Net IS[1]: 8 loads
 
 
 
@@ -125,17 +126,17 @@ IO (PIO) Attributes
 | nRWE                | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | RCKE                | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 
                                     Page 2
 
 
 
 
-Design:  RAM2GS                                        Date:  09/21/23  05:38:29
+Design:  RAM2GS                                        Date:  01/06/24  06:24:57
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+------------+------------+
 | RCLK                | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | nRCS                | OUTPUT    | LVCMOS33  |            |            |
@@ -191,17 +192,17 @@ IO (PIO) Attributes (cont)
 | nCCAS               | INPUT     | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | Dout[7]             | OUTPUT    | LVCMOS33  |            |            |
-+---------------------+-----------+-----------+------------+------------+
 
                                     Page 3
 
 
 
 
-Design:  RAM2GS                                        Date:  09/21/23  05:38:29
+Design:  RAM2GS                                        Date:  01/06/24  06:24:57
 
 IO (PIO) Attributes (cont)
 --------------------------
++---------------------+-----------+-----------+------------+------------+
 | Dout[6]             | OUTPUT    | LVCMOS33  |            |            |
 +---------------------+-----------+-----------+------------+------------+
 | Dout[5]             | OUTPUT    | LVCMOS33  |            |            |
@@ -258,13 +259,12 @@ IO (PIO) Attributes (cont)
 
 
 
-
                                     Page 4
 
 
 
 
-Design:  RAM2GS                                        Date:  09/21/23  05:38:29
+Design:  RAM2GS                                        Date:  01/06/24  06:24:57
 
 Removed logic
 -------------
@@ -275,7 +275,6 @@ Signal nFWE_c_i was merged into signal nFWE_c
 Signal nCRAS_c_i_0 was merged into signal nCRAS_c
 Signal nCCAS_c_i was merged into signal nCCAS_c
 Signal Ready_fast_i was merged into signal Ready_fast
-Signal IS_i[0] was merged into signal IS[0]
 Signal RASr2_i was merged into signal RASr2
 Signal XOR8MEG.CN was merged into signal PHI2_c
 Signal GND undriven or does not drive anything - clipped.
@@ -295,8 +294,7 @@ Block nFWE_pad_RNI420B was optimized away.
 Block RASr_RNO was optimized away.
 Block nCCAS_pad_RNISUR8 was optimized away.
 Block Ready_fast_RNI29NA was optimized away.
-Block IS_i[0] was optimized away.
-Block RASr2_RNIAFR1 was optimized away.
+Block S_RNO[1] was optimized away.
 Block XOR8MEG.CN was optimized away.
 Block GND was optimized away.
 Block VCC was optimized away.
@@ -308,6 +306,8 @@ Run Time and Memory Usage
    Total REAL Time: 0 secs  
    Peak Memory Usage: 50 MB
         
+
+
 
 
 

@@ -29,7 +29,7 @@ Performance Hardware Data Status: Version 1.124.
 // Package: TQFP100
 // ncd File: ram2gs_lcmxo640c_impl1.ncd
 // Version: Diamond (64-bit) 3.12.1.454
-// Written on Thu Sep 21 05:38:44 2023
+// Written on Sat Jan 06 06:25:22 2024
 // M: Minimum Performance Grade
 // iotiming RAM2GS_LCMXO640C_impl1.ncd RAM2GS_LCMXO640C_impl1.prf -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO640C/promote.xml
 
@@ -41,98 +41,98 @@ Worst Case Results across Performance Grades (M, 5, 4, 3):
 
 Port    Clock Edge  Setup Performance_Grade  Hold Performance_Grade
 ----------------------------------------------------------------------
-CROW[0] nCRAS F    -0.012      M       2.299     3
-CROW[1] nCRAS F    -0.094      M       2.568     3
-Din[0]  PHI2  F     5.117      3       2.324     3
-Din[0]  nCCAS F     1.863      3      -0.129     M
-Din[1]  PHI2  F     4.727      3       3.095     3
-Din[1]  nCCAS F     0.973      3       0.261     3
-Din[2]  PHI2  F     4.040      3       2.270     3
-Din[2]  nCCAS F     1.372      3      -0.027     M
-Din[3]  PHI2  F     4.809      3       1.454     3
-Din[3]  nCCAS F     0.916      3       0.298     3
-Din[4]  PHI2  F     6.041      3       2.279     3
-Din[4]  nCCAS F     1.531      3      -0.100     M
-Din[5]  PHI2  F     5.903      3       2.260     3
-Din[5]  nCCAS F     2.338      3      -0.268     M
-Din[6]  PHI2  F     6.028      3       1.422     3
-Din[6]  nCCAS F     1.099      3       0.266     3
-Din[7]  PHI2  F     6.673      3       2.385     3
-Din[7]  nCCAS F     0.940      3       0.417     3
-MAin[0] PHI2  F     4.543      3       0.820     3
-MAin[0] nCRAS F    -0.219      M       3.000     3
-MAin[1] PHI2  F     4.179      3       1.515     3
-MAin[1] nCRAS F    -0.122      M       2.681     3
-MAin[2] PHI2  F     9.178      3      -0.474     M
-MAin[2] nCRAS F    -0.219      M       3.000     3
-MAin[3] PHI2  F     9.642      3      -0.572     M
-MAin[3] nCRAS F    -0.200      M       2.949     3
-MAin[4] PHI2  F     9.311      3      -0.515     M
-MAin[4] nCRAS F     0.454      3       1.905     3
-MAin[5] PHI2  F     8.033      3      -0.256     M
-MAin[5] nCRAS F    -0.214      M       2.985     3
-MAin[6] PHI2  F     8.467      3      -0.339     M
-MAin[6] nCRAS F     0.019      3       2.253     3
-MAin[7] PHI2  F     8.283      3      -0.303     M
-MAin[7] nCRAS F    -0.200      M       2.949     3
-MAin[8] nCRAS F    -0.239      M       3.098     3
-MAin[9] nCRAS F    -0.200      M       2.952     3
+CROW[0] nCRAS F    -0.112      M       2.651     3
+CROW[1] nCRAS F    -0.021      M       2.351     3
+Din[0]  PHI2  F     4.317      3       1.888     3
+Din[0]  nCCAS F     1.401      3      -0.032     M
+Din[1]  PHI2  F     6.362      3       2.174     3
+Din[1]  nCCAS F     0.920      3       0.293     3
+Din[2]  PHI2  F     4.582      3       1.108     3
+Din[2]  nCCAS F     1.367      3      -0.025     M
+Din[3]  PHI2  F     6.558      3       2.698     3
+Din[3]  nCCAS F     0.619      3       0.544     3
+Din[4]  PHI2  F     7.083      3       0.535     3
+Din[4]  nCCAS F     0.558      3       0.857     3
+Din[5]  PHI2  F     6.015      3       2.171     3
+Din[5]  nCCAS F     0.035      3       1.300     3
+Din[6]  PHI2  F     6.445      3       1.417     3
+Din[6]  nCCAS F     1.089      3       0.272     3
+Din[7]  PHI2  F     6.645      3       2.275     3
+Din[7]  nCCAS F     0.961      3       0.396     3
+MAin[0] PHI2  F     7.871      3      -0.129     M
+MAin[0] nCRAS F    -0.325      M       3.376     3
+MAin[1] PHI2  F     8.822      3      -0.149     M
+MAin[1] nCRAS F    -0.467      M       3.889     3
+MAin[2] PHI2  F     7.393      3       0.809     3
+MAin[2] nCRAS F    -0.468      M       3.890     3
+MAin[3] PHI2  F     8.567      3      -0.143     M
+MAin[3] nCRAS F    -0.148      M       2.780     3
+MAin[4] PHI2  F     9.168      3      -0.113     M
+MAin[4] nCRAS F     0.492      3       1.836     3
+MAin[5] PHI2  F     7.300      3       0.076     3
+MAin[5] nCRAS F    -0.108      M       2.641     3
+MAin[6] PHI2  F     8.643      3      -0.385     M
+MAin[6] nCRAS F    -0.216      M       2.988     3
+MAin[7] PHI2  F     7.923      3      -0.224     M
+MAin[7] nCRAS F    -0.325      M       3.376     3
+MAin[8] nCRAS F    -0.328      M       3.387     3
+MAin[9] nCRAS F    -0.352      M       3.481     3
 PHI2    RCLK  R     2.024      3      -0.115     M
-UFMSDO  RCLK  R     2.747      3      -0.023     M
-nCCAS   RCLK  R     1.461      3       0.049     3
-nCCAS   nCRAS F     0.041      3       2.233     3
-nCRAS   RCLK  R     1.492      3       0.026     3
-nFWE    PHI2  F     9.958      3      -0.643     M
-nFWE    nCRAS F    -0.200      M       2.952     3
+UFMSDO  RCLK  R     2.286      3      -0.106     M
+nCCAS   RCLK  R     3.326      3      -0.370     M
+nCCAS   nCRAS F     0.813      3       1.646     3
+nCRAS   RCLK  R     5.235      3      -0.614     M
+nFWE    PHI2  F     5.814      3       0.503     3
+nFWE    nCRAS F     0.183      3       2.096     3
 
 
 // Clock to Output Delay
 
 Port   Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 ------------------------------------------------------------------------
-LED    RCLK  R    13.643         3        4.416          M
-LED    nCRAS F    18.132         3        5.318          M
-RA[0]  RCLK  R    10.790         3        2.216          M
-RA[0]  nCRAS F    13.344         3        2.709          M
+LED    RCLK  R    16.515         3        4.482          M
+LED    nCRAS F    17.585         3        5.197          M
+RA[0]  RCLK  R    11.366         3        2.326          M
+RA[0]  nCRAS F    13.548         3        2.745          M
 RA[10] RCLK  R     6.926         3        1.431          M
 RA[11] PHI2  R     9.183         3        1.867          M
-RA[1]  RCLK  R    11.242         3        2.314          M
-RA[1]  nCRAS F    14.215         3        2.899          M
-RA[2]  RCLK  R    10.691         3        2.207          M
-RA[2]  nCRAS F    13.021         3        2.641          M
-RA[3]  RCLK  R    11.553         3        2.371          M
-RA[3]  nCRAS F    13.307         3        2.703          M
-RA[4]  RCLK  R    10.653         3        2.186          M
-RA[4]  nCRAS F    12.915         3        2.624          M
-RA[5]  RCLK  R    11.976         3        2.463          M
-RA[5]  nCRAS F    13.269         3        2.696          M
-RA[6]  RCLK  R     9.986         3        2.078          M
-RA[6]  nCRAS F    12.404         3        2.531          M
-RA[7]  RCLK  R    10.257         3        2.107          M
-RA[7]  nCRAS F    12.647         3        2.563          M
-RA[8]  RCLK  R    11.577         3        2.383          M
-RA[8]  nCRAS F    13.570         3        2.740          M
-RA[9]  RCLK  R    11.562         3        2.371          M
-RA[9]  nCRAS F    14.266         3        2.895          M
-RBA[0] nCRAS F    10.698         3        2.157          M
-RBA[1] nCRAS F    12.177         3        2.478          M
+RA[1]  RCLK  R     9.283         3        1.909          M
+RA[1]  nCRAS F    12.064         3        2.463          M
+RA[2]  RCLK  R    11.466         3        2.345          M
+RA[2]  nCRAS F    13.609         3        2.759          M
+RA[3]  RCLK  R    10.239         3        2.114          M
+RA[3]  nCRAS F    12.115         3        2.471          M
+RA[4]  RCLK  R    10.462         3        2.158          M
+RA[4]  nCRAS F    12.460         3        2.541          M
+RA[5]  RCLK  R    11.714         3        2.410          M
+RA[5]  nCRAS F    14.027         3        2.856          M
+RA[6]  RCLK  R    10.222         3        2.111          M
+RA[6]  nCRAS F    12.507         3        2.549          M
+RA[7]  RCLK  R    10.118         3        2.066          M
+RA[7]  nCRAS F    13.612         3        2.768          M
+RA[8]  RCLK  R    11.860         3        2.450          M
+RA[8]  nCRAS F    13.529         3        2.745          M
+RA[9]  RCLK  R    11.723         3        2.414          M
+RA[9]  nCRAS F    14.189         3        2.884          M
+RBA[0] nCRAS F    12.165         3        2.476          M
+RBA[1] nCRAS F    10.690         3        2.155          M
 RCKE   RCLK  R     6.926         3        1.431          M
-RDQMH  RCLK  R    11.068         3        2.337          M
-RDQML  RCLK  R    11.619         3        2.421          M
-RD[0]  nCCAS F     8.787         3        1.927          M
-RD[1]  nCCAS F     8.785         3        1.927          M
-RD[2]  nCCAS F     8.076         3        1.799          M
-RD[3]  nCCAS F     9.246         3        2.027          M
-RD[4]  nCCAS F     9.626         3        2.112          M
-RD[5]  nCCAS F     9.183         3        2.015          M
-RD[6]  nCCAS F     8.537         3        1.898          M
-RD[7]  nCCAS F     9.704         3        2.117          M
+RDQMH  RCLK  R    12.309         3        2.582          M
+RDQML  RCLK  R    11.893         3        2.496          M
+RD[0]  nCCAS F     8.780         3        1.926          M
+RD[1]  nCCAS F     8.780         3        1.926          M
+RD[2]  nCCAS F     8.071         3        1.798          M
+RD[3]  nCCAS F     9.242         3        2.016          M
+RD[4]  nCCAS F    11.095         3        2.414          M
+RD[5]  nCCAS F    10.651         3        2.326          M
+RD[6]  nCCAS F     8.532         3        1.897          M
+RD[7]  nCCAS F     9.699         3        2.116          M
 UFMCLK RCLK  R     8.800         3        1.847          M
 UFMSDI RCLK  R     8.079         3        1.714          M
 nRCAS  RCLK  R     6.926         3        1.431          M
-nRCS   RCLK  R     7.765         3        1.590          M
-nRRAS  RCLK  R     8.554         3        1.749          M
-nRWE   RCLK  R     8.704         3        1.789          M
+nRCS   RCLK  R     6.926         3        1.431          M
+nRRAS  RCLK  R     8.147         3        1.667          M
+nRWE   RCLK  R     9.027         3        1.858          M
 nUFMCS RCLK  R     9.262         3        1.937          M
 WARNING: you must also run trce with hold speed: 3
 WARNING: you must also run trce with setup speed: M

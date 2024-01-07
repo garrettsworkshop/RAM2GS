@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.12.1.454
-Thu Sep 21 05:38:30 2023
+Sat Jan 06 06:24:59 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -38,46 +38,48 @@ BLOCK RESETPATHS
 
 ================================================================================
 Preference: FREQUENCY PORT "PHI2" 2.900000 MHz ;
-            129 items scored, 0 timing errors detected.
+            168 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 162.619ns (weighted slack = 325.238ns)
+Passed: The following path meets requirements by 160.807ns (weighted slack = 321.614ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              Bank[2]  (from PHI2_c +)
-   Destination:    FF         Data in        CmdSubmitted  (to PHI2_c -)
+   Source:         FF         Q              Bank[6]  (from PHI2_c +)
+   Destination:    FF         Data in        CmdEnable  (to PHI2_c -)
 
-   Delay:               9.621ns  (25.1% logic, 74.9% route), 6 logic levels.
+   Delay:              11.433ns  (24.4% logic, 75.6% route), 7 logic levels.
 
  Constraint Details:
 
-      9.621ns physical path delay SLICE_71 to SLICE_22 meets
+     11.433ns physical path delay SLICE_75 to SLICE_20 meets
     172.414ns delay constraint less
-      0.174ns DIN_SET requirement (totaling 172.240ns) by 162.619ns
+      0.174ns DIN_SET requirement (totaling 172.240ns) by 160.807ns
 
  Physical Path Details:
 
-      Data path SLICE_71 to SLICE_22:
+      Data path SLICE_75 to SLICE_20:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.560   SLICE_71.CLK to    SLICE_71.Q0 SLICE_71 (from PHI2_c)
-ROUTE         1   e 1.441    SLICE_71.Q0 to    SLICE_56.A1 Bank[2]
-CTOF_DEL    ---     0.371    SLICE_56.A1 to    SLICE_56.F1 SLICE_56
-ROUTE         1   e 1.441    SLICE_56.F1 to    SLICE_70.D1 C1WR_0_a2_0_11
-CTOF_DEL    ---     0.371    SLICE_70.D1 to    SLICE_70.F1 SLICE_70
-ROUTE         6   e 1.441    SLICE_70.F1 to    SLICE_67.D0 N_147
-CTOF_DEL    ---     0.371    SLICE_67.D0 to    SLICE_67.F0 SLICE_67
-ROUTE         5   e 1.441    SLICE_67.F0 to    SLICE_82.A0 XOR8MEG18
-CTOF_DEL    ---     0.371    SLICE_82.A0 to    SLICE_82.F0 SLICE_82
-ROUTE         1   e 1.441    SLICE_82.F0 to    SLICE_22.A0 CmdSubmitted_1_sqmuxa
-CTOF_DEL    ---     0.371    SLICE_22.A0 to    SLICE_22.F0 SLICE_22
-ROUTE         1   e 0.001    SLICE_22.F0 to   SLICE_22.DI0 N_460_0 (to PHI2_c)
+REG_DEL     ---     0.560   SLICE_75.CLK to    SLICE_75.Q0 SLICE_75 (from PHI2_c)
+ROUTE         1   e 1.441    SLICE_75.Q0 to    SLICE_77.C1 Bank[6]
+CTOF_DEL    ---     0.371    SLICE_77.C1 to    SLICE_77.F1 SLICE_77
+ROUTE         2   e 1.441    SLICE_77.F1 to    SLICE_79.D0 un1_Bank_1_5
+CTOF_DEL    ---     0.371    SLICE_79.D0 to    SLICE_79.F0 SLICE_79
+ROUTE         2   e 1.441    SLICE_79.F0 to    SLICE_76.B0 C1WR_7
+CTOF_DEL    ---     0.371    SLICE_76.B0 to    SLICE_76.F0 SLICE_76
+ROUTE         5   e 1.441    SLICE_76.F0 to    SLICE_70.B0 C1WR
+CTOF_DEL    ---     0.371    SLICE_70.B0 to    SLICE_70.F0 SLICE_70
+ROUTE         1   e 1.441    SLICE_70.F0 to    SLICE_14.C1 N_121
+CTOF_DEL    ---     0.371    SLICE_14.C1 to    SLICE_14.F1 SLICE_14
+ROUTE         1   e 1.441    SLICE_14.F1 to    SLICE_20.C0 un1_CmdEnable20_i
+CTOF_DEL    ---     0.371    SLICE_20.C0 to    SLICE_20.F0 SLICE_20
+ROUTE         1   e 0.001    SLICE_20.F0 to   SLICE_20.DI0 CmdEnable_s (to PHI2_c)
                   --------
-                    9.621   (25.1% logic, 74.9% route), 6 logic levels.
+                   11.433   (24.4% logic, 75.6% route), 7 logic levels.
 
-Report:   51.046MHz is the maximum frequency for this preference.
+Report:   43.077MHz is the maximum frequency for this preference.
 
 
 ================================================================================
@@ -118,46 +120,46 @@ Report:  400.000MHz is the maximum frequency for this preference.
 
 ================================================================================
 Preference: FREQUENCY PORT "RCLK" 62.500000 MHz ;
-            388 items scored, 0 timing errors detected.
+            392 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 4.695ns
+Passed: The following path meets requirements by 6.198ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              FS[17]  (from RCLK_c +)
-   Destination:    FF         Data in        LEDEN  (to RCLK_c +)
+   Destination:    FF         Data in        UFMSDI  (to RCLK_c +)
 
-   Delay:              11.061ns  (21.8% logic, 78.2% route), 6 logic levels.
+   Delay:               9.621ns  (25.1% logic, 74.9% route), 6 logic levels.
 
  Constraint Details:
 
-     11.061ns physical path delay SLICE_1 to SLICE_33 meets
+      9.621ns physical path delay SLICE_1 to SLICE_52 meets
      16.000ns delay constraint less
-      0.244ns CE_SET requirement (totaling 15.756ns) by 4.695ns
+      0.181ns DIN_SET requirement (totaling 15.819ns) by 6.198ns
 
  Physical Path Details:
 
-      Data path SLICE_1 to SLICE_33:
+      Data path SLICE_1 to SLICE_52:
 
    Name    Fanout   Delay (ns)          Site               Resource
 REG_DEL     ---     0.560    SLICE_1.CLK to     SLICE_1.Q1 SLICE_1 (from RCLK_c)
-ROUTE         3   e 1.441     SLICE_1.Q1 to    SLICE_81.D1 FS[17]
-CTOF_DEL    ---     0.371    SLICE_81.D1 to    SLICE_81.F1 SLICE_81
-ROUTE         1   e 1.441    SLICE_81.F1 to    SLICE_72.C1 UFMSDI_ens2_i_o2_0_3
-CTOF_DEL    ---     0.371    SLICE_72.C1 to    SLICE_72.F1 SLICE_72
-ROUTE         4   e 1.441    SLICE_72.F1 to    SLICE_58.C1 N_51
+ROUTE         3   e 1.441     SLICE_1.Q1 to    SLICE_86.D1 FS[17]
+CTOF_DEL    ---     0.371    SLICE_86.D1 to    SLICE_86.F1 SLICE_86
+ROUTE         1   e 1.441    SLICE_86.F1 to    SLICE_69.C1 UFMSDI_ens2_i_o2_0_3
+CTOF_DEL    ---     0.371    SLICE_69.C1 to    SLICE_69.F1 SLICE_69
+ROUTE         4   e 1.441    SLICE_69.F1 to    SLICE_58.C1 N_128
 CTOF_DEL    ---     0.371    SLICE_58.C1 to    SLICE_58.F1 SLICE_58
-ROUTE         2   e 1.441    SLICE_58.F1 to    SLICE_87.D0 N_151
-CTOF_DEL    ---     0.371    SLICE_87.D0 to    SLICE_87.F0 SLICE_87
-ROUTE         2   e 1.441    SLICE_87.F0 to    SLICE_69.C0 N_137_8
-CTOF_DEL    ---     0.371    SLICE_69.C0 to    SLICE_69.F0 SLICE_69
-ROUTE         1   e 1.441    SLICE_69.F0 to    SLICE_33.CE N_33 (to RCLK_c)
+ROUTE         3   e 1.441    SLICE_58.F1 to    SLICE_55.C0 N_94
+CTOF_DEL    ---     0.371    SLICE_55.C0 to    SLICE_55.F0 SLICE_55
+ROUTE         1   e 1.441    SLICE_55.F0 to    SLICE_52.D0 UFMSDI_r_xx_mm_1
+CTOF_DEL    ---     0.371    SLICE_52.D0 to    SLICE_52.F0 SLICE_52
+ROUTE         1   e 0.001    SLICE_52.F0 to   SLICE_52.DI0 UFMSDI_RNO (to RCLK_c)
                   --------
-                   11.061   (21.8% logic, 78.2% route), 6 logic levels.
+                    9.621   (25.1% logic, 74.9% route), 6 logic levels.
 
-Report:   88.456MHz is the maximum frequency for this preference.
+Report:  102.020MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -165,13 +167,13 @@ Report Summary
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY PORT "PHI2" 2.900000 MHz ;    |    2.900 MHz|   51.046 MHz|   6  
+FREQUENCY PORT "PHI2" 2.900000 MHz ;    |    2.900 MHz|   43.077 MHz|   7  
                                         |             |             |
 FREQUENCY PORT "nCCAS" 2.900000 MHz ;   |    2.900 MHz|  400.000 MHz|   0  
                                         |             |             |
 FREQUENCY PORT "nCRAS" 2.900000 MHz ;   |    2.900 MHz|  400.000 MHz|   0  
                                         |             |             |
-FREQUENCY PORT "RCLK" 62.500000 MHz ;   |   62.500 MHz|   88.456 MHz|   6  
+FREQUENCY PORT "RCLK" 62.500000 MHz ;   |   62.500 MHz|  102.020 MHz|   6  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -226,11 +228,11 @@ Timing summary (Setup):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 517 paths, 4 nets, and 395 connections (62.40% coverage)
+Constraints cover 560 paths, 4 nets, and 424 connections (62.26% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.12.1.454
-Thu Sep 21 05:38:30 2023
+Sat Jan 06 06:24:59 2024
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -255,7 +257,7 @@ BLOCK RESETPATHS
 
 ================================================================================
 Preference: FREQUENCY PORT "PHI2" 2.900000 MHz ;
-            129 items scored, 0 timing errors detected.
+            168 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -301,7 +303,7 @@ Preference: FREQUENCY PORT "nCRAS" 2.900000 MHz ;
 
 ================================================================================
 Preference: FREQUENCY PORT "RCLK" 62.500000 MHz ;
-            388 items scored, 0 timing errors detected.
+            392 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -316,17 +318,17 @@ Passed: The following path meets requirements by 0.342ns
 
  Constraint Details:
 
-      0.325ns physical path delay SLICE_75 to SLICE_75 meets
+      0.325ns physical path delay SLICE_74 to SLICE_74 meets
      -0.017ns M_HLD and
       0.000ns delay constraint requirement (totaling -0.017ns) by 0.342ns
 
  Physical Path Details:
 
-      Data path SLICE_75 to SLICE_75:
+      Data path SLICE_74 to SLICE_74:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.126   SLICE_75.CLK to    SLICE_75.Q0 SLICE_75 (from RCLK_c)
-ROUTE         1   e 0.199    SLICE_75.Q0 to    SLICE_75.M1 CASr (to RCLK_c)
+REG_DEL     ---     0.126   SLICE_74.CLK to    SLICE_74.Q0 SLICE_74 (from RCLK_c)
+ROUTE         1   e 0.199    SLICE_74.Q0 to    SLICE_74.M1 CASr (to RCLK_c)
                   --------
                     0.325   (38.8% logic, 61.2% route), 1 logic levels.
 
@@ -397,7 +399,7 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 517 paths, 4 nets, and 395 connections (62.40% coverage)
+Constraints cover 560 paths, 4 nets, and 424 connections (62.26% coverage)
 
 
 

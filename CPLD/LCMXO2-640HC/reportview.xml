@@ -3,7 +3,7 @@
 <ReportView version="2.0">
     <Implement name="impl1">
         <ToolReport id="tooldec" path="" status="0"/>
-        <ToolReport id="toolhle_genhierarchy" path="Y:/Repos/RAM2GS/CPLD/LCMXO2-640HC/impl1/hdla_gen_hierarchy.html" status="1"/>
+        <ToolReport id="toolhle_genhierarchy" path="//Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-640HC/impl1/hdla_gen_hierarchy.html" status="1"/>
         <ToolReport id="toolpio" path="" status="2"/>
         <ToolReport id="toolsso" path="" status="2"/>
     </Implement>
