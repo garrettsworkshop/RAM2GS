@@ -52,3 +52,4 @@ CPLD/LCMXO*/impl1/*
 !CPLD/LCMXO*/impl1/*.srr
 !CPLD/LCMXO*/impl1/*.twr
 !CPLD/LCMXO*/impl1/*.tw1
+*.kicad_prl
