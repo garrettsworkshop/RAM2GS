@@ -1,20 +1,7 @@
-# For PCBs designed using KiCad: http://www.kicad-pcb.org/
-# Format documentation: http://kicad-pcb.org/help/file-formats/
-
-# Temporary files
-*.000
-*.bak
-*.bck
-*.kicad_pcb-bak
-*.sch-bak
-*~
-_autosave-*
-*.tmp
-*-rescue.lib
-*-save.pro
-*-save.kicad_pcb
-fp-info-cache
+# KiCAD
+*.kicad_prl
 Hardware/*/*-backups
+fp-info-cache
 
 
 # Mac

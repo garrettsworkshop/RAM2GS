@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Sep 21 05:40:14 2023
+Sat Nov 18 02:06:26 2023
 
 
 Command: bitgen -g RamCfg:Reset -path //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-640HC -w -jedec -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-640HC/promote.xml RAM2GS_LCMXO2_640HC_impl1.ncd RAM2GS_LCMXO2_640HC_impl1.prf 
@@ -81,6 +81,6 @@ UFM Utilization: General Purpose Flash Memory.
 Available General Purpose Flash Memory:  191 Pages (Page 0 to Page 190).
 Initialized UFM Pages:                     1 Page (Page 190).
  
-Total CPU Time: 3 secs 
+Total CPU Time: 4 secs 
 Total REAL Time: 4 secs 
-Peak Memory Usage: 266 MB
+Peak Memory Usage: 267 MB

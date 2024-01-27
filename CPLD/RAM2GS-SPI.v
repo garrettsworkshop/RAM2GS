@@ -18,9 +18,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg CBR;
 
     /* Activity LED */
-    reg LEDEN = 0;
+    reg LEDEN;
     output LED;
-    assign LED = !(!nCRAS && !CBR && LEDEN);
+    assign LED = !(!nCRAS && !CBR && LEDEN && Ready);
 
     /* 65816 Data */
     input [7:0] Din;
@@ -134,7 +134,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     always @(posedge RCLK) begin
         // Wait ~4.178ms (at 62.5 MHz) before starting init sequence
         FS <= FS+18'h1;
-        if (FS[17:10] == 8'hFF) InitReady <= 1'b1;
+        if (FS[17:10]==8'hFF) InitReady <= 1'b1;
     end
 
     /* SDRAM CKE */

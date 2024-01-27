@@ -1,6 +1,6 @@
 module RAM2GS(PHI2, MAin, CROW, Din, Dout,
               nCCAS, nCRAS, nFWE, LED,
-              RBA, RA, RD, nRCS, RCLK, RCKE,
+              RBA, RA, RD, nRCS, RCLK, RCLKout, RCKE, 
               nRWE, nRRAS, nRCAS, RDQMH, RDQML);
 
 
@@ -18,9 +18,9 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg CBR;
 
     /* Activity LED */
-    reg LEDEN = 0;
+    reg LEDEN;
     output LED;
-    assign LED = !(!nCRAS && !CBR && LEDEN);
+    assign LED = !(!nCRAS && !CBR && LEDEN && Ready);
 
     /* 65816 Data */
     input [7:0] Din;
@@ -37,8 +37,11 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg n8MEGEN = 0;
     reg XOR8MEG = 0;
     
-    /* SDRAM Clock */
+    /* SDRAM Clock in/out */
     input RCLK;
+    output RCLKout;
+    ODDRXE rclk_oddr(.D0(1'b0), .D1(1'b1), 
+        .SCLK(RCLK), .RST(1'b0), .Q(RCLKout));
     
     /* SDRAM */
     reg RCKEEN;
@@ -59,7 +62,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     reg [7:0] WRD;
     inout [7:0] RD;
     assign RD[7:0] = (!nCCAS && !nFWE) ? WRD[7:0] : 8'bZ;
-
+	
     /* UFM Interface */
     reg wb_rst;
     reg wb_cyc_stb;
@@ -150,7 +153,7 @@ module RAM2GS(PHI2, MAin, CROW, Din, Dout,
     always @(posedge RCLK) begin
         // Wait ~4.178ms (at 62.5 MHz) before starting init sequence
         FS <= FS+18'h1;
-        if (FS[17:10] == 8'hFF) InitReady <= 1'b1;
+        if (FS[17:10]==8'hFF) InitReady <= 1'b1;
     end
 
     /* SDRAM CKE */

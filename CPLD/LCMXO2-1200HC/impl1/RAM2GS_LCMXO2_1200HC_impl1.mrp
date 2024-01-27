@@ -15,7 +15,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-1200HCTQFP100
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.12.1.454
-Mapped on:  09/21/23  05:39:45
+Mapped on:  11/18/23  02:05:52
 
 Design Summary
 --------------
@@ -27,12 +27,24 @@ Design Summary
       SLICEs as Logic/ROM:    120 out of   640 (19%)
       SLICEs as RAM:            0 out of   480 (0%)
       SLICEs as Carry:         10 out of   640 (2%)
-   Number of LUT4s:        237 out of  1280 (19%)
-      Number used as logic LUTs:        217
+   Number of LUT4s:        238 out of  1280 (19%)
+      Number used as logic LUTs:        218
       Number used as distributed RAM:     0
       Number used as ripple logic:       20
       Number used as shift registers:     0
-   Number of PIO sites used: 63 + 4(JTAG) out of 80 (84%)
+   Number of PIO sites used: 64 + 4(JTAG) out of 80 (85%)
+   Number of IDDR/ODDR/TDDR cells used: 1 out of 240 (0%)
+      Number of IDDR cells:   0
+      Number of ODDR cells:   1
+      Number of TDDR cells:   0
+   Number of PIO using at least one IDDR/ODDR/TDDR: 1 (0 differential)
+      Number of PIO using IDDR only:        0 (0 differential)
+      Number of PIO using ODDR only:        1 (0 differential)
+      Number of PIO using TDDR only:        0 (0 differential)
+      Number of PIO using IDDR/ODDR:        0 (0 differential)
+      Number of PIO using IDDR/TDDR:        0 (0 differential)
+      Number of PIO using ODDR/TDDR:        0 (0 differential)
+      Number of PIO using IDDR/ODDR/TDDR:   0 (0 differential)
    Number of block RAMs:  0 out of 7 (0%)
    Number of GSRs:        0 out of 1 (0%)
    EFB used :        Yes
@@ -48,6 +60,16 @@ Design Summary
    Number of DCCA:  0 out of 8 (0%)
    Number of DCMA:  0 out of 2 (0%)
    Number of PLLs:  0 out of 1 (0%)
+
+                                    Page 1
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
+Design Summary (cont)
+---------------------
    Number of DQSDLLs:  0 out of 2 (0%)
    Number of CLKDIVC:  0 out of 4 (0%)
    Number of ECLKSYNCA:  0 out of 4 (0%)
@@ -59,24 +81,14 @@ Design Summary
      ripple logic.
    Number of clocks:  4
      Net PHI2_c: 20 loads, 9 rising, 11 falling (Driver: PIO PHI2 )
-     Net RCLK_c: 47 loads, 47 rising, 0 falling (Driver: PIO RCLK )
-
-                                    Page 1
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-Design Summary (cont)
----------------------
+     Net RCLK_c: 48 loads, 48 rising, 0 falling (Driver: PIO RCLK )
      Net nCRAS_c: 9 loads, 0 rising, 9 falling (Driver: PIO nCRAS )
      Net nCCAS_c: 8 loads, 0 rising, 8 falling (Driver: PIO nCCAS )
    Number of Clock Enables:  5
-     Net N_178: 1 loads, 1 LSLICEs
+     Net wb_cyc_stb_2_sqmuxa_i_0_0: 1 loads, 1 LSLICEs
      Net XOR8MEG18: 5 loads, 5 LSLICEs
-     Net N_360_i: 2 loads, 2 LSLICEs
-     Net un1_wb_rst14_i_0: 9 loads, 9 LSLICEs
+     Net N_126_i: 9 loads, 9 LSLICEs
+     Net N_261_i: 2 loads, 2 LSLICEs
      Net CmdUFMData_1_sqmuxa: 1 loads, 1 LSLICEs
    Number of LSRs:  5
      Net RA10s_i: 1 loads, 0 LSLICEs
@@ -86,16 +98,16 @@ Design Summary (cont)
      Net RASr2: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net InitReady: 41 loads
-     Net FS[11]: 23 loads
+     Net InitReady: 40 loads
      Net FS[13]: 22 loads
-     Net FS[10]: 21 loads
-     Net FS[12]: 21 loads
-     Net FS[9]: 20 loads
-     Net FS[14]: 18 loads
-     Net CO0: 15 loads
+     Net FS[11]: 21 loads
+     Net FS[12]: 19 loads
+     Net FS[14]: 19 loads
+     Net FS[10]: 18 loads
+     Net FS[9]: 17 loads
+     Net Ready: 14 loads
      Net Ready_fast: 14 loads
-     Net N_214: 13 loads
+     Net CO0: 12 loads
 
 
 
@@ -114,6 +126,14 @@ WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
      Interface is disabled using Disable Configuration Interface command 0x26
      followed by Bypass command 0xFF. 
 
+
+                                    Page 2
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
 IO (PIO) Attributes
 -------------------
 
@@ -126,16 +146,6 @@ IO (PIO) Attributes
 | Dout[0]             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | PHI2                | INPUT     | LVCMOS33  | IN         |
-
-                                    Page 2
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | RDQML               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -148,6 +158,8 @@ IO (PIO) Attributes (cont)
 | nRWE                | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
 | RCKE                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RCLKout             | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | RCLK                | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -180,6 +192,16 @@ IO (PIO) Attributes (cont)
 | RA[6]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | RA[5]               | OUTPUT    | LVCMOS33  |            |
+
+                                    Page 3
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | RA[4]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -192,16 +214,6 @@ IO (PIO) Attributes (cont)
 | RA[0]               | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | RBA[1]              | OUTPUT    | LVCMOS33  | OUT        |
-
-                                    Page 3
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | RBA[0]              | OUTPUT    | LVCMOS33  | OUT        |
 +---------------------+-----------+-----------+------------+
@@ -246,6 +258,16 @@ IO (PIO) Attributes (cont)
 | CROW[1]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | CROW[0]             | INPUT     | LVCMOS33  |            |
+
+                                    Page 4
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
+IO (PIO) Attributes (cont)
+--------------------------
 +---------------------+-----------+-----------+------------+
 | MAin[9]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -258,16 +280,6 @@ IO (PIO) Attributes (cont)
 | MAin[5]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | MAin[4]             | INPUT     | LVCMOS33  |            |
-
-                                    Page 4
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-IO (PIO) Attributes (cont)
---------------------------
 +---------------------+-----------+-----------+------------+
 | MAin[3]             | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -285,7 +297,6 @@ Block GSR_INST undriven or does not drive anything - clipped.
 Signal nCRAS_c_i was merged into signal nCRAS_c
 Signal RASr2_i was merged into signal RASr2
 Signal XOR8MEG.CN was merged into signal PHI2_c
-Signal GND undriven or does not drive anything - clipped.
 Signal ufmefb/VCC undriven or does not drive anything - clipped.
 Signal ufmefb/GND undriven or does not drive anything - clipped.
 Signal FS_s_0_S1[17] undriven or does not drive anything - clipped.
@@ -313,6 +324,16 @@ Signal ufmefb/SPISCKEN undriven or does not drive anything - clipped.
 Signal ufmefb/SPISCKO undriven or does not drive anything - clipped.
 Signal ufmefb/I2C2IRQO undriven or does not drive anything - clipped.
 Signal ufmefb/I2C1IRQO undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
+Removed logic (cont)
+--------------------
 Signal ufmefb/I2C2SDAOEN undriven or does not drive anything - clipped.
 Signal ufmefb/I2C2SDAO undriven or does not drive anything - clipped.
 Signal ufmefb/I2C2SCLOEN undriven or does not drive anything - clipped.
@@ -324,16 +345,6 @@ Signal ufmefb/I2C1SCLO undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO0 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO1 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO2 undriven or does not drive anything - clipped.
-
-                                    Page 5
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-Removed logic (cont)
---------------------
 Signal ufmefb/PLLDATO3 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO4 undriven or does not drive anything - clipped.
 Signal ufmefb/PLLDATO5 undriven or does not drive anything - clipped.
@@ -360,7 +371,6 @@ Signal N_1 undriven or does not drive anything - clipped.
 Block nCRAS_pad_RNIBPVB was optimized away.
 Block RASr2_RNIAFR1 was optimized away.
 Block XOR8MEG.CN was optimized away.
-Block GND was optimized away.
 Block ufmefb/VCC was optimized away.
 Block ufmefb/GND was optimized away.
 
@@ -380,6 +390,16 @@ Embedded Functional Block Connection Summary
       Timer/Counter Mode:            WB
       UFM Connection:                ENABLED
       PLL0 Connection:               DISABLED
+
+                                    Page 6
+
+
+
+
+Design:  RAM2GS                                        Date:  11/18/23  02:05:52
+
+Embedded Functional Block Connection Summary (cont)
+---------------------------------------------------
       PLL1 Connection:               DISABLED
    I2C Function Summary:
    --------------------
@@ -390,16 +410,6 @@ Embedded Functional Block Connection Summary
    Timer/Counter Function Summary:
    ------------------------------
       None
-
-                                    Page 6
-
-
-
-
-Design:  RAM2GS                                        Date:  09/21/23  05:39:45
-
-Embedded Functional Block Connection Summary (cont)
----------------------------------------------------
    UFM Function Summary:
    --------------------
       UFM Utilization:        General Purpose Flash Memory
@@ -425,18 +435,8 @@ Run Time and Memory Usage
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 63 MB
+   Peak Memory Usage: 64 MB
         
-
-
-
-
-
-
-
-
-
-
 
 
 

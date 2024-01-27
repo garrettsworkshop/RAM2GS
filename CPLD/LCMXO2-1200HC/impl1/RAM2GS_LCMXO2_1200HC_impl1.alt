@@ -1,6 +1,6 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Thu Sep 21 05:40:22 2023 *
+NOTE DATE CREATED: Sat Nov 18 02:06:32 2023 *
 NOTE DESIGN NAME: RAM2GS *
 NOTE DEVICE NAME: LCMXO2-1200HC-4TQFP100 *
 NOTE PIN ASSIGNMENTS *
@@ -13,6 +13,7 @@ NOTE PINS nRCAS : 52 : out *
 NOTE PINS nRRAS : 54 : out *
 NOTE PINS nRWE : 49 : out *
 NOTE PINS RCKE : 53 : out *
+NOTE PINS RCLKout : 60 : out *
 NOTE PINS RCLK : 63 : in *
 NOTE PINS nRCS : 57 : out *
 NOTE PINS RD[7] : 43 : inout *
@@ -34,7 +35,7 @@ NOTE PINS RA[3] : 71 : out *
 NOTE PINS RA[2] : 69 : out *
 NOTE PINS RA[1] : 67 : out *
 NOTE PINS RA[0] : 66 : out *
-NOTE PINS RBA[1] : 60 : out *
+NOTE PINS RBA[1] : 47 : out *
 NOTE PINS RBA[0] : 58 : out *
 NOTE PINS LED : 34 : out *
 NOTE PINS nFWE : 15 : in *

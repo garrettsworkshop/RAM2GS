@@ -1,5 +1,5 @@
 Timing Analyzer report for RAM2GS
-Sat Sep 30 04:44:08 2023
+Sat Nov 11 04:34:51 2023
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
 
 
@@ -88,7 +88,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -97,8 +97,8 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; ../RAM2GS.sdc     ; OK     ; Sat Sep 30 04:44:08 2023 ;
-; ../RAM2GS-MAX.sdc ; OK     ; Sat Sep 30 04:44:08 2023 ;
+; ../RAM2GS.sdc     ; OK     ; Sat Nov 11 04:34:51 2023 ;
+; ../RAM2GS-MAX.sdc ; OK     ; Sat Nov 11 04:34:51 2023 ;
 +-------------------+--------+--------------------------+
 
 
@@ -959,7 +959,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 Patches 0.02std SJ Lite Edition
-    Info: Processing started: Sat Sep 30 04:44:06 2023
+    Info: Processing started: Sat Nov 11 04:34:50 2023
 Info: Command: quartus_sta RAM2GS-MAXV -c RAM2GS
 Info: qsta_default_script.tcl version: #1
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
@@ -1003,9 +1003,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 13092 megabytes
-    Info: Processing ended: Sat Sep 30 04:44:08 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 13067 megabytes
+    Info: Processing ended: Sat Nov 11 04:34:51 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 
