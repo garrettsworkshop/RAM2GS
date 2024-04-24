@@ -2240,11 +2240,6 @@
       (net 129 "/~{C60M}") (pinfunction "Y") (pintype "output") (tstamp c1a1fdfe-c6b5-4944-9d37-50ec77b7729b))
     (pad "5" smd roundrect (at -0.65 -0.85 180) (size 1 0.4) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 35 "+3V3") (pinfunction "Vcc") (pintype "power_in") (tstamp b50e0195-896e-4ed2-bcf9-0ce7bb650c3c))
-    (model "${KICAD6_3DMODEL_DIR}/Package_TO_SOT_SMD.3dshapes/SOT-353_SC-70-5.wrl"
-      (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 -90))
-    )
   )
 
   (footprint "stdpads:C_0603" (layer "F.Cu")
@@ -3589,11 +3584,6 @@
       (net 129 "/~{C60M}") (pintype "passive") (tstamp 2cb65190-e1bc-4216-8b2d-fb73d900369b))
     (pad "2" smd roundrect (at 0.8 0 180) (size 0.7 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 125 "/RCLK") (pintype "passive") (tstamp 327ab89b-b4d2-41b9-9c2d-90999d71a35e))
-    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
-      (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (footprint "stdpads:R_0603" (layer "F.Cu")
@@ -3645,11 +3635,6 @@
       (net 129 "/~{C60M}") (pintype "passive") (tstamp 49e67cd6-118b-4f3d-ab03-951eb294afad))
     (pad "2" smd roundrect (at 0.8 0) (size 0.7 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 127 "/FCLK") (pintype "passive") (tstamp df4a8909-213a-4bb6-9d96-b990ccea5b8a))
-    (model "${KICAD6_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0603_1608Metric.wrl"
-      (offset (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (footprint "stdpads:R_0805" (layer "F.Cu")
