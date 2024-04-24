@@ -2,8 +2,13 @@ KICAD = /Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 LAYERS = F.Cu,In1.Cu,In2.Cu,B.Cu,F.Paste,F.SilkS,B.SilkS,F.Mask,B.Mask,Edge.Cuts
 CHIPTYPE = $(shell echo $@ | cut -f2 -d"/")
 
+PYTHON = python3
+BOM_SCRIPT =  ../GW_KiCADBuild/export_bom.py
+
 F_PCB = $@/../RAM2GS.kicad_pcb
 F_SCH = $@/../RAM2GS.kicad_sch
+F_NETLIST = $@/RAM2GS-NET.xml
+F_BOM = $@/RAM2GS-BOM.csv
 F_POS_N = $@/RAM2GS-top-pos
 F_POS = $(F_POS_N).csv
 F_POS_VCORE = $(F_POS_N).VCORE.csv
@@ -17,6 +22,8 @@ OPT_GERBER = -l $(LAYERS) --subtract-soldermask --no-netlist --no-x2
 CMD_GERBER = pcb export gerbers $(OPT_GERBER) -o $@/ $(F_PCB)
 
 CMD_DRILL = pcb export drill -o $@/ $(F_PCB)
+
+CMD_NETLIST = sch export netlist --format kicadxml -o $(F_NETLIST) $(F_SCH)
 
 OPT_POS = --smd-only --units mm --side front --format csv
 CMD_POS = pcb export pos $(OPT_POS) -o $(F_POS) $(F_PCB)
@@ -43,6 +50,7 @@ Hardware/MAX/gerber Hardware/LCMXO/gerber Hardware/LCMXO2/gerber:
 	$(KICAD) $(CMD_GERBER)
 	$(KICAD) $(CMD_DRILL)
 	$(KICAD) $(CMD_POS)
+	$(KICAD) $(CMD_NETLIST)
 	sed -i '' 's/PosX/MidX/g' $(F_POS)
 	sed -i '' 's/PosY/MidY/g' $(F_POS)
 	sed -i '' 's/Rot/Rotation/g' $(F_POS)
