@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/RAM2GS.kicad_sch</source>
-    <date>Wednesday, April 24, 2024 at 05:33:26 AM</date>
+    <date>Tuesday, June 11, 2024 at 03:42:08 PM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -478,7 +478,7 @@
       <tstamps>00000000-0000-0000-0000-00008717dab7</tstamps>
     </comp>
     <comp ref="C30">
-      <value>15p</value>
+      <value>22p</value>
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C1653</field>
@@ -816,7 +816,7 @@
       <tstamps>4e6af49e-ff13-48e4-bbea-ae63546e2582</tstamps>
     </comp>
     <comp ref="U1">
-      <value>LCMXO2-640HC-TG100C</value>
+      <value>LCMXO2-640HC-4TG100C</value>
       <footprint>stdpads:TQFP-100_14x14mm_P0.5mm</footprint>
       <fields>
         <field name="LCSC Part">C1519051</field>
@@ -1150,7 +1150,7 @@
     <libpart lib="GW_PLD" part="LCMXO2-640-TG100">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">GW_PLD_LCMXO2-640-TG100</field>
+        <field name="Value">LCMXO2-640-TG100</field>
         <field name="Footprint">stdpads:TQFP-100</field>
       </fields>
       <pins>
@@ -1233,7 +1233,7 @@
         <pin num="79" name="GND" type="power_in"/>
         <pin num="80" name="VccIO0" type="power_in"/>
         <pin num="81" name="~{PROGRAM}/PT10D" type="bidirectional"/>
-        <pin num="82" name="~{JTAGEN}/PT10C" type="bidirectional"/>
+        <pin num="82" name="JTAGEN/PT10C" type="bidirectional"/>
         <pin num="83" name="PT10B" type="bidirectional"/>
         <pin num="84" name="PT10A" type="bidirectional"/>
         <pin num="85" name="SDA/PCLKC0_0/PT9D" type="bidirectional"/>
@@ -1389,13 +1389,13 @@
       <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
     </library>
     <library logical="GW_Logic">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_Logic.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_Logic.kicad_sym</uri>
     </library>
     <library logical="GW_PLD">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_PLD.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_PLD.kicad_sym</uri>
     </library>
     <library logical="GW_RAM">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_RAM.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO2/../../../GW_Parts/GW_RAM.kicad_sym</uri>
     </library>
     <library logical="Mechanical">
       <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Mechanical.kicad_sym</uri>
@@ -1438,6 +1438,7 @@
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R4" pin="1" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>
       <node ref="R7" pin="1" pintype="passive"/>
@@ -1631,7 +1632,7 @@
     </net>
     <net code="40" name="/Dout7">
       <node ref="R1" pin="1" pintype="passive"/>
-      <node ref="U1" pin="82" pinfunction="~{JTAGEN}/PT10C" pintype="bidirectional"/>
+      <node ref="U1" pin="82" pinfunction="JTAGEN/PT10C" pintype="bidirectional"/>
       <node ref="U4" pin="16" pinfunction="B2" pintype="bidirectional"/>
     </net>
     <net code="41" name="/FA10">
@@ -1971,7 +1972,6 @@
       <node ref="J1" pin="44" pinfunction="Pin_44" pintype="passive"/>
       <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R10" pin="1" pintype="passive"/>
       <node ref="U1" pin="22" pinfunction="GND" pintype="power_in"/>
       <node ref="U1" pin="33" pinfunction="GND" pintype="power_in"/>

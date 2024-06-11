@@ -1,7 +1,6 @@
 (sym_lib_table
   (version 7)
-  (lib (name "GW_Logic")(type "Legacy")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_Logic.lib")(options "")(descr ""))
-  (lib (name "GW_PLD")(type "Legacy")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_PLD.lib")(options "")(descr ""))
-  (lib (name "GW_RAM")(type "Legacy")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_RAM.lib")(options "")(descr ""))
-  (lib (name "RAM2GS-rescue")(type "KiCad")(uri "${KIPRJMOD}/RAM2GS-rescue.kicad_sym")(options "")(descr ""))
+  (lib (name "GW_Logic")(type "KiCad")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_Logic.kicad_sym")(options "")(descr ""))
+  (lib (name "GW_PLD")(type "KiCad")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_PLD.kicad_sym")(options "")(descr ""))
+  (lib (name "GW_RAM")(type "KiCad")(uri "$(KIPRJMOD)/../../../GW_Parts/GW_RAM.kicad_sym")(options "")(descr ""))
 )

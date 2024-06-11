@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO/RAM2GS.kicad_sch</source>
-    <date>Wednesday, April 24, 2024 at 05:33:24 AM</date>
+    <date>Tuesday, June 11, 2024 at 03:42:05 PM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -478,7 +478,7 @@
       <tstamps>00000000-0000-0000-0000-00008717dab7</tstamps>
     </comp>
     <comp ref="C30">
-      <value>15p</value>
+      <value>22p</value>
       <footprint>stdpads:C_0603</footprint>
       <fields>
         <field name="LCSC Part">C1653</field>
@@ -747,13 +747,13 @@
       <tstamps>00000000-0000-0000-0000-000060cc65da</tstamps>
     </comp>
     <comp ref="U1">
-      <value>LCMXO256C-4TN100C</value>
+      <value>LCMXO256C-3TN100C</value>
       <footprint>stdpads:TQFP-100_14x14mm_P0.5mm</footprint>
       <fields>
-        <field name="LCSC Part">C1550734</field>
+        <field name="LCSC Part">C1521848</field>
       </fields>
       <libsource lib="GW_PLD" part="LCMXO640-TQFP-100" description=""/>
-      <property name="LCSC Part" value="C1550734"/>
+      <property name="LCSC Part" value="C1521848"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="RAM2GS.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -2006,13 +2006,13 @@
       <node ref="U1" pin="13" pinfunction="PL4D" pintype="bidirectional+no_connect"/>
     </net>
     <net code="124" name="unconnected-(U1-PR9D-Pad59)">
-      <node ref="U1" pin="59" pinfunction="PR9D" pintype="bidirectional"/>
+      <node ref="U1" pin="59" pinfunction="PR9D" pintype="bidirectional+no_connect"/>
     </net>
     <net code="125" name="unconnected-(U1-PR11A-Pad54)">
-      <node ref="U1" pin="54" pinfunction="PR11A" pintype="bidirectional"/>
+      <node ref="U1" pin="54" pinfunction="PR11A" pintype="bidirectional+no_connect"/>
     </net>
     <net code="126" name="unconnected-(U1-PR11B-Pad52)">
-      <node ref="U1" pin="52" pinfunction="PR11B" pintype="bidirectional"/>
+      <node ref="U1" pin="52" pinfunction="PR11B" pintype="bidirectional+no_connect"/>
     </net>
     <net code="127" name="unconnected-(U9-NC-Pad1)">
       <node ref="U9" pin="1" pinfunction="NC" pintype="no_connect"/>

@@ -4582,7 +4582,7 @@
     (property "Reference" "U1" (at 158.75 82.55 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "EPM240T100" (at 158.75 85.09 0)
+    (property "Value" "EPM240T100C5N" (at 158.75 85.09 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "stdpads:TQFP-100_14x14mm_P0.5mm" (at 158.75 86.36 0)

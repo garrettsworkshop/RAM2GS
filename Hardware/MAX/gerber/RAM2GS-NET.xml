@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/RAM2GS.kicad_sch</source>
-    <date>Wednesday, April 24, 2024 at 05:33:22 AM</date>
+    <date>Tuesday, June 11, 2024 at 03:42:03 PM</date>
     <tool>Eeschema 7.0.10</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -702,7 +702,7 @@
       <tstamps>00000000-0000-0000-0000-000060c9013e</tstamps>
     </comp>
     <comp ref="U1">
-      <value>EPM240T100</value>
+      <value>EPM240T100C5N</value>
       <footprint>stdpads:TQFP-100_14x14mm_P0.5mm</footprint>
       <fields>
         <field name="LCSC Part">C10041</field>
@@ -1281,13 +1281,13 @@
       <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Device.kicad_sym</uri>
     </library>
     <library logical="GW_Logic">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_Logic.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_Logic.kicad_sym</uri>
     </library>
     <library logical="GW_PLD">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_PLD.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_PLD.kicad_sym</uri>
     </library>
     <library logical="GW_RAM">
-      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_RAM.lib</uri>
+      <uri>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/MAX/../../../GW_Parts/GW_RAM.kicad_sym</uri>
     </library>
     <library logical="Mechanical">
       <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Mechanical.kicad_sym</uri>
