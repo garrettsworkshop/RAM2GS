@@ -1,0 +1,58 @@
+----------------------------------------------------------------------
+Report for cell RAM2GS.verilog
+
+Register bits: 106 of 1280 (8%)
+PIC Latch:       0
+I/O cells:       63
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB        8       100.0
+                              CCU2D       10       100.0
+                                EFB        1       100.0
+                            EHXPLLJ        1       100.0
+                            FD1P3AX       28       100.0
+                            FD1P3IX        3       100.0
+                            FD1S3AX       37       100.0
+                            FD1S3IX        3       100.0
+                                GSR        1       100.0
+                                 IB       24       100.0
+                           IFS1P3DX        9       100.0
+                           IFS1P3IX       10       100.0
+                           IFS1P3JX        2       100.0
+                                INV        7       100.0
+                                 OB       31       100.0
+                             ODDRXE        1       100.0
+                           OFS1P3BX        4       100.0
+                           OFS1P3DX        8       100.0
+                           OFS1P3IX        1       100.0
+                           OFS1P3JX        1       100.0
+                           ORCALUT4      186       100.0
+                               OSCH        1       100.0
+                              PFUMX        2       100.0
+                                PUR        1       100.0
+                                VHI        2       100.0
+                                VLO        3       100.0
+SUB MODULES 
+                               REFB        1       100.0
+                               RPLL        1       100.0
+                            
+                         TOTAL           387           
+----------------------------------------------------------------------
+Report for cell REFB.netlist
+     Instance path:  ufmefb
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                EFB        1       100.0
+                                VHI        1        50.0
+                                VLO        1        33.3
+                            
+                         TOTAL             3           
+----------------------------------------------------------------------
+Report for cell RPLL.netlist
+     Instance path:  rpll
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLJ        1       100.0
+                                VLO        1        33.3
+                            
+                         TOTAL             2           

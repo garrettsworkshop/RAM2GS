@@ -1,0 +1,326 @@
+<HTML>
+<HEAD><TITLE>Place & Route Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Par"></A>PAR: Place And Route Diamond (64-bit) 3.11.3.469.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+Sun Jul 14 22:31:16 2024
+
+C:/lscc/diamond/3.11_x64/ispfpga\bin\nt64\par -f RAM2GS_LCMXO2_1200HC_impl1.p2t
+RAM2GS_LCMXO2_1200HC_impl1_map.ncd RAM2GS_LCMXO2_1200HC_impl1.dir
+RAM2GS_LCMXO2_1200HC_impl1.prf -gui -msgset
+//Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-1200HC-IntOsc/promote.xml
+
+
+Preference file: RAM2GS_LCMXO2_1200HC_impl1.prf.
+
+<A name="par_cts"></A><B><U><big>Cost Table Summary</big></U></B>
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            6.959        0            0.304        0            11           Completed
+* : Design saved.
+
+Total (real) run time for 1-seed: 11 secs 
+
+par done!
+
+Note: user must run &apos;Trace&apos; for timing closure signoff.
+
+Lattice Place and Route Report for Design &quot;RAM2GS_LCMXO2_1200HC_impl1_map.ncd&quot;
+Sun Jul 14 22:31:16 2024
+
+
+<A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
+PAR: Place And Route Diamond (64-bit) 3.11.3.469.
+Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-1200HC-IntOsc/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF RAM2GS_LCMXO2_1200HC_impl1_map.ncd RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd RAM2GS_LCMXO2_1200HC_impl1.prf
+Preference file: RAM2GS_LCMXO2_1200HC_impl1.prf.
+Placement level-cost: 5-1.
+Routing Iterations: 6
+
+Loading design for application par from file RAM2GS_LCMXO2_1200HC_impl1_map.ncd.
+Design name: RAM2GS
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-1200HC
+Package:     TQFP100
+Performance: 4
+Loading device for application par from file &apos;xo2c1200.nph&apos; in environment: C:/lscc/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.42.
+Performance Hardware Data Status:   Final          Version 34.4.
+License checked out.
+
+
+Ignore Preference Error(s):  True
+
+<A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
+
+   PIO (prelim)   63+4(JTAG)/108     62% used
+                  63+4(JTAG)/80      84% bonded
+   IOLOGIC           36/108          33% used
+
+   SLICE            106/640          16% used
+
+   OSC                1/1           100% used
+   PLL                1/1           100% used
+   EFB                1/1           100% used
+
+
+Number of Signals: 359
+Number of Connections: 970
+
+Pin Constraint Summary:
+   63 out of 63 pins locked (100% locked).
+
+The following 3 signals are selected to use the primary clock routing resources:
+    PCLK (driver: rpll/PLLInst_0, clk load #: 47)
+    PHI2_c (driver: PHI2, clk load #: 19)
+    nCRAS_c (driver: nCRAS, clk load #: 14)
+
+WARNING - par: Signal &quot;PHI2_c&quot; is selected to use Primary clock resources. However, its driver comp &quot;PHI2&quot; is located at &quot;8&quot;, which is not a dedicated pin for connecting to Primary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
+WARNING - par: Signal &quot;nCRAS_c&quot; is selected to use Primary clock resources. However, its driver comp &quot;nCRAS&quot; is located at &quot;17&quot;, which is not a dedicated pin for connecting to Primary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
+
+The following 3 signals are selected to use the secondary clock routing resources:
+    nCCAS_c (driver: nCCAS, clk load #: 8, sr load #: 0, ce load #: 0)
+    Ready (driver: SLICE_33, clk load #: 0, sr load #: 13, ce load #: 0)
+    N_239_i (driver: SLICE_75, clk load #: 0, sr load #: 0, ce load #: 10)
+
+WARNING - par: Signal &quot;nCCAS_c&quot; is selected to use Secondary clock resources. However, its driver comp &quot;nCCAS&quot; is located at &quot;9&quot;, which is not a dedicated pin for connecting to Secondary clock resources. General routing has to be used to route this signal, and it might suffer from excessive delay or skew.
+No signal is selected as Global Set/Reset.
+Starting Placer Phase 0.
+........
+Finished Placer Phase 0.  REAL time: 2 secs 
+
+Starting Placer Phase 1.
+...................
+Placer score = 73583.
+Finished Placer Phase 1.  REAL time: 6 secs 
+
+Starting Placer Phase 2.
+.
+Placer score =  73283
+Finished Placer Phase 2.  REAL time: 6 secs 
+
+
+
+<A name="par_clk"></A><B><U><big>Clock Report</big></U></B>
+
+Global Clock Resources:
+  CLK_PIN    : 0 out of 8 (0%)
+  General PIO: 3 out of 108 (2%)
+  PLL        : 1 out of 1 (100%)
+  DCM        : 0 out of 2 (0%)
+  DCC        : 0 out of 8 (0%)
+
+Global Clocks:
+  PRIMARY &quot;PCLK&quot; from CLKOP on comp &quot;rpll/PLLInst_0&quot; on PLL site &quot;LPLL&quot;, clk load = 47
+  PRIMARY &quot;PHI2_c&quot; from comp &quot;PHI2&quot; on PIO site &quot;8 (PL3D)&quot;, clk load = 19
+  PRIMARY &quot;nCRAS_c&quot; from comp &quot;nCRAS&quot; on PIO site &quot;17 (PL8B)&quot;, clk load = 14
+  SECONDARY &quot;nCCAS_c&quot; from comp &quot;nCCAS&quot; on PIO site &quot;9 (PL4A)&quot;, clk load = 8, ce load = 0, sr load = 0
+  SECONDARY &quot;Ready&quot; from Q0 on comp &quot;SLICE_33&quot; on site &quot;R7C14A&quot;, clk load = 0, ce load = 0, sr load = 13
+  SECONDARY &quot;N_239_i&quot; from F0 on comp &quot;SLICE_75&quot; on site &quot;R7C12D&quot;, clk load = 0, ce load = 10, sr load = 0
+
+  PRIMARY  : 3 out of 8 (37%)
+  SECONDARY: 3 out of 8 (37%)
+
+Edge Clocks:
+  No edge clock selected.
+
+
+
+
+I/O Usage Summary (final):
+   63 + 4(JTAG) out of 108 (62.0%) PIO sites used.
+   63 + 4(JTAG) out of 80 (83.8%) bonded PIO sites used.
+   Number of PIO comps: 63; differential: 0.
+   Number of Vref pins used: 0.
+
+I/O Bank Usage Summary:
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 13 / 19 ( 68%) | 3.3V       | -         |
+| 1        | 19 / 21 ( 90%) | 3.3V       | -         |
+| 2        | 13 / 20 ( 65%) | 3.3V       | -         |
+| 3        | 18 / 20 ( 90%) | 3.3V       | -         |
++----------+----------------+------------+-----------+
+
+Total placer CPU time: 5 secs 
+
+Dumping design to file RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd.
+
+0 connections routed; 970 unrouted.
+Starting router resource preassignment
+WARNING - par: The driver of primary clock net nCRAS_c is not placed on one of the sites dedicated for primary clocks. This primary clock will be routed to an H-spine through general routing resource and might suffer from excessive delay or skew.
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=ICLK loads=1 clock_loads=1
+
+Completed router resource preassignment. Real time: 9 secs 
+
+Start NBR router at 22:31:25 07/14/24
+
+*****************************************************************
+Info: NBR allows conflicts(one node used by more than one signal)
+      in the earlier iterations. In each iteration, it tries to  
+      solve the conflicts while keeping the critical connections 
+      routed as short as possible. The routing process is said to
+      be completed when no conflicts exist and all connections   
+      are routed.                                                
+Note: NBR uses a different method to calculate timing slacks. The
+      worst slack and total negative slack may not be the same as
+      that in TRCE report. You should always run TRCE to verify  
+      your design.                                               
+*****************************************************************
+
+Start NBR special constraint process at 22:31:25 07/14/24
+
+Start NBR section for initial routing at 22:31:26 07/14/24
+Level 1, iteration 1
+0(0.00%) conflict; 743(76.60%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 7.385ns/0.000ns; real time: 10 secs 
+Level 2, iteration 1
+0(0.00%) conflict; 735(75.77%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 7.429ns/0.000ns; real time: 10 secs 
+Level 3, iteration 1
+0(0.00%) conflict; 734(75.67%) untouched conns; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 7.556ns/0.000ns; real time: 10 secs 
+Level 4, iteration 1
+14(0.02%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 6.959ns/0.000ns; real time: 10 secs 
+
+Info: Initial congestion level at 75% usage is 0
+Info: Initial congestion area  at 75% usage is 0 (0.00%)
+
+Start NBR section for normal routing at 22:31:26 07/14/24
+Level 4, iteration 1
+4(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 6.959ns/0.000ns; real time: 10 secs 
+Level 4, iteration 2
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 6.959ns/0.000ns; real time: 10 secs 
+
+Start NBR section for setup/hold timing optimization with effort level 3 at 22:31:26 07/14/24
+
+Start NBR section for re-routing at 22:31:26 07/14/24
+Level 4, iteration 1
+0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; 
+Estimated worst slack/total negative slack&lt;setup&gt;: 6.959ns/0.000ns; real time: 10 secs 
+
+Start NBR section for post-routing at 22:31:26 07/14/24
+
+End NBR router with 0 unrouted connection
+
+NBR Summary
+-----------
+  Number of unrouted connections : 0 (0.00%)
+  Number of connections with timing violations : 0 (0.00%)
+  Estimated worst slack&lt;setup&gt; : 6.959ns
+  Timing score&lt;setup&gt; : 0
+-----------
+Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
+
+
+
+WARNING - par: The following clock signals will be routed by using generic routing resource and may suffer from excessive delay and/or skew.
+   Signal=ICLK loads=1 clock_loads=1
+
+Total CPU time 10 secs 
+Total REAL time: 11 secs 
+Completely routed.
+End of route.  970 routed (100.00%); 0 unrouted.
+
+Hold time timing score: 0, hold timing errors: 0
+
+Timing score: 0 
+
+Dumping design to file RAM2GS_LCMXO2_1200HC_impl1.dir/5_1.ncd.
+
+
+All signals are completely routed.
+
+
+PAR_SUMMARY::Run status = Completed
+PAR_SUMMARY::Number of unrouted conns = 0
+PAR_SUMMARY::Worst  slack&lt;setup/&lt;ns&gt;&gt; = 6.959
+PAR_SUMMARY::Timing score&lt;setup/&lt;ns&gt;&gt; = 0.000
+PAR_SUMMARY::Worst  slack&lt;hold /&lt;ns&gt;&gt; = 0.304
+PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = 0.000
+PAR_SUMMARY::Number of errors = 0
+
+Total CPU  time to completion: 10 secs 
+Total REAL time to completion: 11 secs 
+
+par done!
+
+Note: user must run &apos;Trace&apos; for timing closure signoff.
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

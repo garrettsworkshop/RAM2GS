@@ -1,0 +1,26 @@
+SCUBA, Version Diamond (64-bit) 3.11.3.469
+Sun Jul 14 22:23:22 2024
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights reserved.
+
+    Issued command   : C:\lscc\diamond\3.11_x64\ispfpga\bin\nt64\scuba.exe -w -n RPLL -lang verilog -synth synplify -arch xo2c00 -type pll -fin 133.0 -fclkop 61 -fclkop_tol 1.0 -trimp 0 -phasep 0 -trimp_r -phase_cntl STATIC -fb_mode 1 
+    Circuit name     : RPLL
+    Module type      : pll
+    Module Version   : 5.7
+    Ports            : 
+	Inputs       : CLKI
+	Outputs      : CLKOP
+    I/O buffer       : not inserted
+    EDIF output      : RPLL.edn
+    Verilog output   : RPLL.v
+    Verilog template : RPLL_tmpl.v
+    Verilog purpose  : for synthesis and simulation
+    Bus notation     : big endian
+    Report output    : RPLL.srp
+    Element Usage    :
+        EHXPLLJ : 1
+    Estimated Resource Usage:

@@ -1,0 +1,600 @@
+
+            Lattice Mapping Report File for Design Module 'RAM2GS'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-1200HC -t TQFP100 -s 4 -oc Commercial
+     RAM2GS_LCMXO2_1200HC_impl1.ngd -o RAM2GS_LCMXO2_1200HC_impl1_map.ncd -pr
+     RAM2GS_LCMXO2_1200HC_impl1.prf -mp RAM2GS_LCMXO2_1200HC_impl1.mrp -lpf //Ma
+     c/iCloud/Repos/RAM2GS/CPLD/LCMXO2-1200HC-IntOsc/impl1/RAM2GS_LCMXO2_1200HC_
+     impl1_synplify.lpf -lpf //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf -c
+     0 -gui -msgset
+     //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-1200HC-IntOsc/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-1200HCTQFP100
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.3.469
+Mapped on:  07/14/24  22:31:15
+
+Design Summary
+--------------
+
+   Number of registers:    106 out of  1520 (7%)
+      PFU registers:           71 out of  1280 (6%)
+      PIO registers:           35 out of   240 (15%)
+   Number of SLICEs:       106 out of   640 (17%)
+      SLICEs as Logic/ROM:    106 out of   640 (17%)
+      SLICEs as RAM:            0 out of   480 (0%)
+      SLICEs as Carry:         10 out of   640 (2%)
+   Number of LUT4s:        210 out of  1280 (16%)
+      Number used as logic LUTs:        190
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       20
+      Number used as shift registers:     0
+   Number of PIO sites used: 63 + 4(JTAG) out of 80 (84%)
+   Number of IDDR/ODDR/TDDR cells used: 1 out of 240 (0%)
+      Number of IDDR cells:   0
+      Number of ODDR cells:   1
+      Number of TDDR cells:   0
+   Number of PIO using at least one IDDR/ODDR/TDDR: 1 (0 differential)
+      Number of PIO using IDDR only:        0 (0 differential)
+      Number of PIO using ODDR only:        1 (0 differential)
+      Number of PIO using TDDR only:        0 (0 differential)
+      Number of PIO using IDDR/ODDR:        0 (0 differential)
+      Number of PIO using IDDR/TDDR:        0 (0 differential)
+      Number of PIO using ODDR/TDDR:        0 (0 differential)
+      Number of PIO using IDDR/ODDR/TDDR:   0 (0 differential)
+   Number of block RAMs:  0 out of 7 (0%)
+   Number of GSRs:        0 out of 1 (0%)
+   EFB used :        Yes
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+
+                                    Page 1
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+Design Summary (cont)
+---------------------
+   Number of PLLs:  1 out of 1 (100%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  5
+     Net ICLK: 1 loads, 1 rising, 0 falling (Driver: OSCH_inst )
+     Net PHI2_c: 19 loads, 9 rising, 10 falling (Driver: PIO PHI2 )
+     Net PCLK: 48 loads, 48 rising, 0 falling (Driver: rpll/PLLInst_0 )
+     Net nCRAS_c: 14 loads, 0 rising, 14 falling (Driver: PIO nCRAS )
+     Net nCCAS_c: 8 loads, 0 rising, 8 falling (Driver: PIO nCCAS )
+   Number of Clock Enables:  7
+     Net N_51: 1 loads, 1 LSLICEs
+     Net XOR8MEG17: 5 loads, 5 LSLICEs
+     Net N_94_i: 2 loads, 2 LSLICEs
+     Net CmdUFMData_1_sqmuxa: 1 loads, 1 LSLICEs
+     Net N_239_i: 10 loads, 10 LSLICEs
+     Net N_63: 2 loads, 2 LSLICEs
+     Net N_258_i: 2 loads, 2 LSLICEs
+   Number of LSRs:  6
+     Net RA10s_i: 1 loads, 0 LSLICEs
+     Net wb_rst7: 3 loads, 3 LSLICEs
+     Net wb_rst: 1 loads, 0 LSLICEs
+     Net Ready: 13 loads, 0 LSLICEs
+     Net nRRAS_0_sqmuxa: 1 loads, 1 LSLICEs
+     Net RASr2: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net InitReady: 35 loads
+     Net Ready: 27 loads
+     Net FS[12]: 21 loads
+     Net FS[13]: 19 loads
+     Net FS[11]: 18 loads
+     Net N_242: 18 loads
+     Net FS[10]: 17 loads
+     Net FS[14]: 17 loads
+     Net FS[9]: 17 loads
+     Net S[0]: 12 loads
+
+
+
+
+   Number of warnings:  4
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: //Mac/iCloud/Repos/RAM2GS/CPLD/LCMXO2-1200HC-IntOsc/impl1/RAM2GS_
+     LCMXO2_1200HC_impl1_synplify.lpf(9): Semantic error in "FREQUENCY PORT
+
+                                    Page 2
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+Design Errors/Warnings (cont)
+-----------------------------
+     "RCLK" 62.500000 MHz ;": "RCLK" matches no ports in the design.  This
+     preference has been disabled.
+WARNING - map: //Mac/iCloud/Repos/RAM2GS/CPLD/RAM2GS-LCMXO2.lpf(68): Semantic
+     error in "IOBUF PORT "RCLK" IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "RCLK"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: UFM was enabled in EFB: Enabling the configuration interface will
+     temporarily disable certain features of the device including Power
+     Controller, GSR, Hardened User SPI Port, Hardened Primary User I2C Port.
+     Functionality is restored after the Flash Memory (UFM/Configuration)
+     Interface is disabled using Disable Configuration Interface command 0x26
+     followed by Bypass command 0xFF. 
+WARNING - map: IO buffer missing for top level port RCLK...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| RD[0]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| Dout[0]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| PHI2                | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| RDQML               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RDQMH               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nRCAS               | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| nRRAS               | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| nRWE                | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RCKE                | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RCLKout             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nRCS                | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[7]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[6]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[5]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[4]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[3]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[2]               | BIDIR     | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RD[1]               | BIDIR     | LVCMOS33  | OUT        |
+
+                                    Page 3
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| RA[11]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RA[10]              | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| RA[9]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[8]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[7]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[6]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[5]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[4]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[3]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[2]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[1]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RA[0]               | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RBA[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| RBA[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| LED                 | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nFWE                | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nCRAS               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| nCCAS               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[7]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[6]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[5]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[4]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[3]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[2]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Dout[1]             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| Din[7]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[6]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[5]              | INPUT     | LVCMOS33  | IN         |
+
+                                    Page 4
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| Din[4]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[3]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[2]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[1]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| Din[0]              | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| CROW[1]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| CROW[0]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[9]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[8]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[7]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[6]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[5]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[4]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[3]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[2]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[1]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| MAin[0]             | INPUT     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block GSR_INST undriven or does not drive anything - clipped.
+Signal nCRAS_c_i was merged into signal nCRAS_c
+Signal RASr2_i was merged into signal RASr2
+Signal Ready_i was merged into signal Ready
+Signal XOR8MEG.CN was merged into signal PHI2_c
+Signal rpll/GND undriven or does not drive anything - clipped.
+Signal ufmefb/VCC undriven or does not drive anything - clipped.
+Signal ufmefb/GND undriven or does not drive anything - clipped.
+Signal FS_s_0_S1[17] undriven or does not drive anything - clipped.
+Signal FS_s_0_COUT[17] undriven or does not drive anything - clipped.
+Signal rpll/CLKINTFB undriven or does not drive anything - clipped.
+Signal rpll/DPHSRC undriven or does not drive anything - clipped.
+Signal rpll/PLLACK undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO0 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO1 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO2 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO3 undriven or does not drive anything - clipped.
+
+                                    Page 5
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+Removed logic (cont)
+--------------------
+Signal rpll/PLLDATO4 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO5 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO6 undriven or does not drive anything - clipped.
+Signal rpll/PLLDATO7 undriven or does not drive anything - clipped.
+Signal rpll/REFCLK undriven or does not drive anything - clipped.
+Signal rpll/INTLOCK undriven or does not drive anything - clipped.
+Signal rpll/LOCK undriven or does not drive anything - clipped.
+Signal rpll/CLKOS3 undriven or does not drive anything - clipped.
+Signal rpll/CLKOS2 undriven or does not drive anything - clipped.
+Signal rpll/CLKOS undriven or does not drive anything - clipped.
+Signal ufmefb/CFGSTDBY undriven or does not drive anything - clipped.
+Signal ufmefb/CFGWAKE undriven or does not drive anything - clipped.
+Signal ufmefb/wbc_ufm_irq undriven or does not drive anything - clipped.
+Signal ufmefb/TCOC undriven or does not drive anything - clipped.
+Signal ufmefb/TCINT undriven or does not drive anything - clipped.
+Signal ufmefb/SPIIRQO undriven or does not drive anything - clipped.
+Signal ufmefb/SPICSNEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN7 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN6 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN5 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN4 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN3 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN2 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN1 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMCSN0 undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMOSIEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMOSIO undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMISOEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPIMISOO undriven or does not drive anything - clipped.
+Signal ufmefb/SPISCKEN undriven or does not drive anything - clipped.
+Signal ufmefb/SPISCKO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2IRQO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1IRQO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SDAOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SDAO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SCLOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C2SCLO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SDAOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SDAO undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SCLOEN undriven or does not drive anything - clipped.
+Signal ufmefb/I2C1SCLO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO0_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO1_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO2_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO3_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO4_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO5_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO6_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLDATO7_0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO0 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO1 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO2 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO3 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLADRO4 undriven or does not drive anything - clipped.
+Signal ufmefb/PLLWEO undriven or does not drive anything - clipped.
+Signal ufmefb/PLL1STBO undriven or does not drive anything - clipped.
+
+                                    Page 6
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+Removed logic (cont)
+--------------------
+Signal ufmefb/PLL0STBO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLRSTO undriven or does not drive anything - clipped.
+Signal ufmefb/PLLCLKO undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[2] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[3] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[4] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[5] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[6] undriven or does not drive anything - clipped.
+Signal ufmefb/wb_dat_o_1[7] undriven or does not drive anything - clipped.
+Signal FS_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal OSCH_inst_SEDSTDBY undriven or does not drive anything - clipped.
+Block nCRAS_pad_RNIBPVB was optimized away.
+Block RASr2_RNIAFR1 was optimized away.
+Block Ready_RNILCP9 was optimized away.
+Block C1Submitted.CN was optimized away.
+Block rpll/GND was optimized away.
+Block ufmefb/VCC was optimized away.
+Block ufmefb/GND was optimized away.
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                rpll/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             NODE     ICLK
+  Output Clock(P):                         NODE     PCLK
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     PCLK
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+
+                                    Page 7
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+PLL/DLL Summary (cont)
+----------------------
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      133.0000
+  Output Clock(P) Frequency (MHz):                  61.3846
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     13
+  CLKFB Divider:                                    6
+  CLKOP Divider:                                    8
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                OSCH_inst
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     ICLK
+  OSC Nominal Frequency (MHz):                      133.00
+
+
+
+
+                                    Page 8
+
+
+
+
+Design:  RAM2GS                                        Date:  07/14/24  22:31:15
+
+Embedded Functional Block Connection Summary
+--------------------------------------------
+
+   Desired WISHBONE clock frequency: 66.7 MHz
+   Clock source:                     PCLK
+   Reset source:                     wb_rst
+   Functions mode:
+      I2C #1 (Primary) Function:     DISABLED
+      I2C #2 (Secondary) Function:   DISABLED
+      SPI Function:                  DISABLED
+      Timer/Counter Function:        DISABLED
+      Timer/Counter Mode:            WB
+      UFM Connection:                ENABLED
+      PLL0 Connection:               DISABLED
+      PLL1 Connection:               DISABLED
+   I2C Function Summary:
+   --------------------
+      None
+   SPI Function Summary:
+   --------------------
+      None
+   Timer/Counter Function Summary:
+   ------------------------------
+      None
+   UFM Function Summary:
+   --------------------
+      UFM Utilization:        General Purpose Flash Memory
+      Initialized UFM Pages:  321 Pages (321*128 Bits)
+      Available General
+      Purpose Flash Memory:   511 Pages (511*128 Bits)
+
+           EBR Blocks with Unique
+      Initialization Data:    0
+
+           WID		EBR Instance
+      ---		------------
+
+
+ASIC Components
+---------------
+
+Instance Name: OSCH_inst
+         Type: OSCH
+Instance Name: ufmefb/EFBInst_0
+         Type: EFB
+Instance Name: rpll/PLLInst_0
+         Type: EHXPLLJ
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 64 MB
+        
+
+
+
+
+                                    Page 9
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2020 Lattice Semiconductor Corporation,  All rights
+     reserved.
