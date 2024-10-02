@@ -54,6 +54,7 @@ Hardware/MAX/gerber Hardware/LCMXO/gerber Hardware/LCMXO2/gerber:
 	sed -i '' 's/PosX/MidX/g' $(F_POS)
 	sed -i '' 's/PosY/MidY/g' $(F_POS)
 	sed -i '' 's/Rot/Rotation/g' $(F_POS)
+	$(PYTHON) $(BOM_SCRIPT) $(F_NETLIST) $(F_BOM)
 	cp $(F_POS) $(F_POS_VCORE)
 	cp $(F_POS) $(F_POS_JUMPER)
 	sed -i '' '/"R4"/d' $(F_POS_VCORE)
