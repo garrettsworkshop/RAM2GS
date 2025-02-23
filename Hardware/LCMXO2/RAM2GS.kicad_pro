@@ -86,7 +86,7 @@
         "item_on_disabled_layer": "error",
         "items_not_allowed": "error",
         "length_out_of_range": "error",
-        "lib_footprint_issues": "ignore",
+        "lib_footprint_issues": "warning",
         "lib_footprint_mismatch": "warning",
         "malformed_courtyard": "error",
         "microvia_drill_out_of_range": "error",
@@ -627,7 +627,7 @@
   "sheets": [
     [
       "0fd24f5c-4245-40b1-8698-6faceb999cd9",
-      ""
+      "Root"
     ],
     [
       "00000000-0000-0000-0000-00005ee767bf",

@@ -6,8 +6,8 @@
 	(paper "USLetter")
 	(title_block
 		(title "GW4201D (RAM2GS II) - EPM240 / 5M240Z / AG256")
-		(date "2024-04-24")
-		(rev "2.2")
+		(date "2025-02-14")
+		(rev "2.3")
 		(company "Garrett's Workshop")
 	)
 	(lib_symbols
@@ -4768,7 +4768,7 @@
 					)
 				)
 			)
-			(property "Value" "GW_RAM_SDRAM-16Mx16-TSOP2-54"
+			(property "Value" "SDRAM-16Mx16-TSOP2-54"
 				(at 0 0 90)
 				(effects
 					(font
@@ -4810,7 +4810,7 @@
 					(end 7.62 -35.56)
 					(stroke
 						(width 0.254)
-						(type solid)
+						(type default)
 					)
 					(fill
 						(type background)
@@ -5423,6 +5423,24 @@
 						)
 					)
 					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 11.43 -20.32 180)
+					(length 3.81)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7168,6 +7186,10 @@
 	(no_connect
 		(at 184.15 55.88)
 		(uuid "cb75bc42-b84b-4f45-8f13-520cfb211a9b")
+	)
+	(no_connect
+		(at 250.19 93.98)
+		(uuid "cd7cf81b-0ebf-4d55-8603-668f0f068b29")
 	)
 	(no_connect
 		(at 184.15 99.06)
@@ -13249,6 +13271,9 @@
 		)
 		(pin "9"
 			(uuid "1c9801ea-b0bb-4048-bd00-522f30f0914e")
+		)
+		(pin "40"
+			(uuid "28de3104-155f-4b8a-bf90-b075de4789c3")
 		)
 		(instances
 			(project "RAM2GS"
@@ -19456,7 +19481,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 19.05 87.376 0)
 			(effects
 				(font
@@ -19519,7 +19544,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 44.45 87.376 0)
 			(effects
 				(font
@@ -19582,7 +19607,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 31.75 87.376 0)
 			(effects
 				(font
@@ -19710,7 +19735,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 69.85 88.646 0)
 			(effects
 				(font
@@ -19776,7 +19801,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" ""
+		(property "Value" "~"
 			(at 57.15 87.376 0)
 			(effects
 				(font

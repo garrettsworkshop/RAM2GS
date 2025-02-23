@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "8.0.5"
+      "Version": "8.0.6"
     },
-    "CreationDate": "2024-10-02T03:22:58-04:00"
+    "CreationDate": "2025-02-14T01:26:43-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "RAM2GS",
       "GUID": "52414d32-4753-42e6-9b69-6361645f7063",
-      "Revision": "2.2"
+      "Revision": "2.3"
     },
     "Size": {
       "X": 67.46,

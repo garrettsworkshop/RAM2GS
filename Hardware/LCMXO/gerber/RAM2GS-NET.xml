@@ -2,14 +2,14 @@
 <export version="E">
   <design>
     <source>/Users/zane/Library/Mobile Documents/com~apple~CloudDocs/Repos/RAM2GS/Hardware/LCMXO/RAM2GS.kicad_sch</source>
-    <date>2024-10-02T03:22:56-0400</date>
-    <tool>Eeschema 8.0.5</tool>
+    <date>2025-02-14T01:26:41-0500</date>
+    <tool>Eeschema 8.0.6</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>GW4201D (RAM2GS II) - LCMXO256 / LCMXO640</title>
         <company>Garrett's Workshop</company>
-        <rev>2.2</rev>
-        <date>2024-04-24</date>
+        <rev>2.3</rev>
+        <date>2025-02-14</date>
         <source>RAM2GS.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -26,8 +26,8 @@
       <title_block>
         <title>GW4201D (RAM2GS II) - LCMXO256 / LCMXO640</title>
         <company>Garrett's Workshop</company>
-        <rev>2.2</rev>
-        <date>2024-04-24</date>
+        <rev>2.3</rev>
+        <date>2025-02-14</date>
         <source>Docs.kicad_sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
@@ -1322,8 +1322,8 @@
     <libpart lib="GW_PLD" part="LCMXO640-TQFP-100">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">GW_PLD_LCMXO640-TQFP-100</field>
-        <field name="Footprint">stdpads:TQFP-100</field>
+        <field name="Value">LCMXO640-TQFP-100</field>
+        <field name="Footprint">stdpads:TQFP-100_14x14mm_P0.5mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -1433,7 +1433,7 @@
     <libpart lib="GW_RAM" part="SDRAM-16Mx16-TSOP2-54">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">GW_RAM_SDRAM-16Mx16-TSOP2-54</field>
+        <field name="Value">SDRAM-16Mx16-TSOP2-54</field>
         <field name="Footprint">stdpads:Winbond_TSOPII-54</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -1478,6 +1478,7 @@
         <pin num="37" name="CKE" type="input"/>
         <pin num="38" name="CLK" type="input"/>
         <pin num="39" name="DQMH" type="input"/>
+        <pin num="40" name="NC" type="no_connect"/>
         <pin num="41" name="VSS" type="power_in"/>
         <pin num="42" name="DQ8" type="bidirectional"/>
         <pin num="43" name="VDDQ" type="power_in"/>
@@ -2254,13 +2255,16 @@
     <net code="126" name="unconnected-(U1-PR11B-Pad52)">
       <node ref="U1" pin="52" pinfunction="PR11B" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="127" name="unconnected-(U9-NC-Pad1)">
+    <net code="127" name="unconnected-(U2-NC-Pad40)">
+      <node ref="U2" pin="40" pinfunction="NC" pintype="no_connect"/>
+    </net>
+    <net code="128" name="unconnected-(U9-NC-Pad1)">
       <node ref="U9" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="128" name="unconnected-(U10-NC-Pad1)">
+    <net code="129" name="unconnected-(U10-NC-Pad1)">
       <node ref="U10" pin="1" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="129" name="unconnected-(U11-NC-Pad4)">
+    <net code="130" name="unconnected-(U11-NC-Pad4)">
       <node ref="U11" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
   </nets>
